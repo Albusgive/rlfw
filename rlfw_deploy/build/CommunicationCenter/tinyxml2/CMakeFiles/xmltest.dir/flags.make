@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -D_FILE_OFFSET_BITS=64
 
-CXX_INCLUDES = -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver -isystem /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/include
+CXX_INCLUDES = -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/tinyxml2
 
 CXX_FLAGS = -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wpedantic
 

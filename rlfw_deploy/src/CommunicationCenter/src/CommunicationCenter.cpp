@@ -4,19 +4,22 @@
 CommunicationCenter::CommunicationCenter(const std::string &node_name)
     : rclcpp::Node(node_name) {
 
-  loadXML();
-  initGamePad();
-  motor_publisher = this->create_publisher<rlfw_msgs::msg::Motor>(
-      "Com2Motor", rclcpp::QoS(2));
+  xml_decoder.load(motor_cfg_path);
+  if(!xml_decoder.check())
+    std::cout<<"xml load check fail"<<std::endl;
 
-  sub_motor = this->create_subscription<rlfw_msgs::msg::MotorCtrl>(
-      "MotorCtrl", 2,
-      std::bind(&CommunicationCenter::sendMotor, this, std::placeholders::_1));
+  // initGamePad();
+  // motor_publisher = this->create_publisher<rlfw_msgs::msg::Motor>(
+  //     "Com2Motor", rclcpp::QoS(2));
 
-  // 寻找所有pcan 全部开启
-  pcan = new PCAN();
-  auto available = pcan->initAvailableCAN();
-  std::cout << "available num:" << available.size() << std::endl;
+  // sub_motor = this->create_subscription<rlfw_msgs::msg::MotorCtrl>(
+  //     "MotorCtrl", 2,
+  //     std::bind(&CommunicationCenter::sendMotor, this, std::placeholders::_1));
+
+  // // 寻找所有pcan 全部开启
+  // pcan = new PCAN();
+  // auto available = pcan->initAvailableCAN();
+  // std::cout << "available num:" << available.size() << std::endl;
 }
 
 CommunicationCenter::~CommunicationCenter() {}
@@ -25,33 +28,6 @@ void CommunicationCenter::timer_callback() {}
 
 void CommunicationCenter::sendMotor(
     std::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg) {}
-
-void CommunicationCenter::loadXML(std::string path) {
-  tinyxml2::XMLError error = doc.LoadFile(path.c_str());
-  if (error != tinyxml2::XML_SUCCESS) {
-    std::cerr << "加载失败: " << doc.ErrorStr() << std::endl;
-    return;
-  }
-  tinyxml2::XMLElement *root = doc.RootElement();
-  if (!root || strcmp(root->Name(), "rlfw") != 0) {
-    std::cerr << "无效的根节点" << std::endl;
-    return;
-  }
-  for (auto *motor = root->FirstChildElement("motor"); motor;
-       motor = motor->NextSiblingElement("motor")) {
-    const char *type = motor->Attribute("type");
-    const char *joint = motor->Attribute("jointname");
-    const char *invert = motor->Attribute("invert");
-
-    if (type && joint && invert) {
-      std::cout << "发现电机配置: "
-                << "\n  类型: " << type << "\n  关节名: " << joint
-                << "\n  反转: " << invert << std::endl;
-    } else {
-      std::cerr << "缺失必要属性" << std::endl;
-    }
-  }
-}
 
 void CommunicationCenter::initGamePad() {
   //     gamepad = new GamePad();

@@ -1,0 +1,19 @@
+[0.011s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter -- -j12 -l12
+[0.052s] [ 14%] Built target tinyxml2
+[0.064s] [35m[1mConsolidate compiler generated dependencies of target CommunicationCenter[0m
+[0.068s] [ 28%] Built target xmltest
+[0.080s] [ 35%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o[0m
+[0.362s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp:[m[K In member function ‘[01m[Kbool XMLDecoder::load(std::string)[m[K’:
+[0.362s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp:68:44:[m[K [01;31m[Kerror: [m[K‘[01m[KmType[m[K’ was not declared in this scope
+[0.362s]    68 |       std::cout << "  |- Motor 类型: " << ([01;31m[KmType[m[K ? mType : "未知")
+[0.362s]       |                                            [01;31m[K^~~~~[m[K
+[0.363s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp:69:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint[m[K’ was not declared in this scope
+[0.363s]    69 |                 << " | 关节: " << ([01;31m[Kjoint[m[K ? joint : "未命名")
+[0.363s]       |                                    [01;31m[K^~~~~[m[K
+[0.364s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp:70:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kinvert[m[K’ was not declared in this scope
+[0.364s]    70 |                 << " | 反转: " << ([01;31m[Kinvert[m[K ? invert : "false") << std::endl;
+[0.364s]       |                                    [01;31m[K^~~~~~[m[K
+[0.492s] gmake[2]: *** [CMakeFiles/CommunicationCenter.dir/build.make:104：CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o] 错误 1
+[0.492s] gmake[1]: *** [CMakeFiles/Makefile2:202：CMakeFiles/CommunicationCenter.dir/all] 错误 2
+[0.492s] gmake: *** [Makefile:146：all] 错误 2
+[0.493s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter -- -j12 -l12

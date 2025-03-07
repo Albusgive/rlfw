@@ -720,6 +720,30 @@ src/PCAN.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.s
 .PHONY : src/PCAN.cpp.s
 
+src/XMLDecoder.o: src/XMLDecoder.cpp.o
+.PHONY : src/XMLDecoder.o
+
+# target to build an object file
+src/XMLDecoder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o
+.PHONY : src/XMLDecoder.cpp.o
+
+src/XMLDecoder.i: src/XMLDecoder.cpp.i
+.PHONY : src/XMLDecoder.i
+
+# target to preprocess a source file
+src/XMLDecoder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.i
+.PHONY : src/XMLDecoder.cpp.i
+
+src/XMLDecoder.s: src/XMLDecoder.cpp.s
+.PHONY : src/XMLDecoder.s
+
+# target to generate assembly for a file
+src/XMLDecoder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.s
+.PHONY : src/XMLDecoder.cpp.s
+
 src/gamepad.o: src/gamepad.cpp.o
 .PHONY : src/gamepad.o
 
@@ -853,6 +877,9 @@ help:
 	@echo "... src/PCAN.o"
 	@echo "... src/PCAN.i"
 	@echo "... src/PCAN.s"
+	@echo "... src/XMLDecoder.o"
+	@echo "... src/XMLDecoder.i"
+	@echo "... src/XMLDecoder.s"
 	@echo "... src/gamepad.o"
 	@echo "... src/gamepad.i"
 	@echo "... src/gamepad.s"

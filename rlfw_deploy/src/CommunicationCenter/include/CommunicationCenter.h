@@ -1,6 +1,6 @@
 #pragma once
-#include "MotorDriver.h"
 #include "PCAN.hpp"
+#include "XMLDecoder.hpp"
 #include "gamepad.h"
 #include "geometry_msgs/msg/twist.hpp"
 #include "rclcpp/rclcpp.hpp"
@@ -8,17 +8,8 @@
 #include "rlfw_msgs/msg/motor_cfg.hpp"
 #include "rlfw_msgs/msg/motor_ctrl.hpp"
 #include "serial.hpp"
-#include "tinyxml2.h"
 #include <atomic>
 #include <string>
-
-
-
-class Communication {
-public:
-  std::string name;
-
-};
 
 class CommunicationCenter : public rclcpp::Node {
 public:
@@ -43,12 +34,10 @@ public:
   void sendMotor(std::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg);
 
 private:
-  tinyxml2::XMLDocument doc;
-  void loadXML(std::string path = "./install/" + std::string(PROJECT_NAME) +
-                                  "/share/motor_cfg.xml");
+  std::string motor_cfg_path =
+      "./install/" + std::string(PROJECT_NAME) + "/share/motor_cfg.xml";
 
-  std::thread th;
-  std::atomic<bool> flag{true};
+  XMLDecoder xml_decoder;
 
   GamePad *gamepad;
   void initGamePad();

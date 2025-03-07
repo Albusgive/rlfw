@@ -1,0 +1,89 @@
+[ 14%] Built target tinyxml2
+[35m[1mConsolidate compiler generated dependencies of target CommunicationCenter[0m
+[ 28%] Built target xmltest
+[ 35%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp:1[m[K:
+/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp: In instantiation of ‘[01m[KEnum XMLDecoder::string2enum(const std::string&) [with Enum = ComType; std::string = std::__cxx11::basic_string<char>][m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp:22:46:[m[K   required from here
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:39:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kenum_index<ComType>(const char [4])[m[K’
+   28 |           [01;31m[Kmagic_enum::enum_index<Enum>("ERR")[m[K.value());
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/Communication.hpp:2[m[K,
+                 from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:2[m[K:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1238:30:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class E, magic_enum::detail::enum_subtype S> constexpr magic_enum::detail::enable_if_t<E, std::optional<long unsigned int> > magic_enum::enum_index(E)[m[K’
+ 1238 | [[nodiscard]] constexpr auto [01;36m[Kenum_index[m[K(E value) noexcept -> detail::enable_if_t<E, optional<std::size_t>> {
+      |                              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1238:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:40:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K"ERR"[m[K’ (type ‘[01m[Kconst char [4][m[K’) to type ‘[01m[KComType[m[K’
+   28 |           magic_enum::enum_index<Enum>([01;36m[K"ERR"[m[K).value());
+      |                                        [01;36m[K^~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1269:30:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<magic_enum::detail::enum_subtype S, class E> constexpr magic_enum::detail::enable_if_t<E, std::optional<long unsigned int> > magic_enum::enum_index(E)[m[K’
+ 1269 | [[nodiscard]] constexpr auto [01;36m[Kenum_index[m[K(E value) noexcept -> detail::enable_if_t<E, optional<std::size_t>> {
+      |                              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1269:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:39:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<magic_enum::detail::enum_subtype S, class E> constexpr magic_enum::detail::enable_if_t<E, std::optional<long unsigned int> > magic_enum::enum_index(E)[m[K’
+   28 |           [01;31m[Kmagic_enum::enum_index<Enum>("ERR")[m[K.value());
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:39:[m[K [01;36m[Knote: [m[K  expected a constant of type ‘[01m[Kmagic_enum::detail::enum_subtype[m[K’, got ‘[01m[KComType[m[K’
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1278:30:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<auto V, magic_enum::detail::enum_subtype S> constexpr magic_enum::detail::enable_if_t<decltype (V), long unsigned int> magic_enum::enum_index()[m[K’
+ 1278 | [[nodiscard]] constexpr auto [01;36m[Kenum_index[m[K() noexcept -> detail::enable_if_t<decltype(V), std::size_t> {\
+      |                              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1278:30:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp: In instantiation of ‘[01m[KEnum XMLDecoder::string2enum(const std::string&) [with Enum = Motortype; std::string = std::__cxx11::basic_string<char>][m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp:49:46:[m[K   required from here
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:39:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kenum_index<Motortype>(const char [4])[m[K’
+   28 |           [01;31m[Kmagic_enum::enum_index<Enum>("ERR")[m[K.value());
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1238:30:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class E, magic_enum::detail::enum_subtype S> constexpr magic_enum::detail::enable_if_t<E, std::optional<long unsigned int> > magic_enum::enum_index(E)[m[K’
+ 1238 | [[nodiscard]] constexpr auto [01;36m[Kenum_index[m[K(E value) noexcept -> detail::enable_if_t<E, optional<std::size_t>> {
+      |                              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1238:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:40:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K"ERR"[m[K’ (type ‘[01m[Kconst char [4][m[K’) to type ‘[01m[KMotortype[m[K’
+   28 |           magic_enum::enum_index<Enum>([01;36m[K"ERR"[m[K).value());
+      |                                        [01;36m[K^~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1269:30:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<magic_enum::detail::enum_subtype S, class E> constexpr magic_enum::detail::enable_if_t<E, std::optional<long unsigned int> > magic_enum::enum_index(E)[m[K’
+ 1269 | [[nodiscard]] constexpr auto [01;36m[Kenum_index[m[K(E value) noexcept -> detail::enable_if_t<E, optional<std::size_t>> {
+      |                              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1269:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:39:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<magic_enum::detail::enum_subtype S, class E> constexpr magic_enum::detail::enable_if_t<E, std::optional<long unsigned int> > magic_enum::enum_index(E)[m[K’
+   28 |           [01;31m[Kmagic_enum::enum_index<Enum>("ERR")[m[K.value());
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:39:[m[K [01;36m[Knote: [m[K  expected a constant of type ‘[01m[Kmagic_enum::detail::enum_subtype[m[K’, got ‘[01m[KMotortype[m[K’
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1278:30:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<auto V, magic_enum::detail::enum_subtype S> constexpr magic_enum::detail::enable_if_t<decltype (V), long unsigned int> magic_enum::enum_index()[m[K’
+ 1278 | [[nodiscard]] constexpr auto [01;36m[Kenum_index[m[K() noexcept -> detail::enable_if_t<decltype(V), std::size_t> {\
+      |                              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1278:30:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp: In instantiation of ‘[01m[KEnum XMLDecoder::string2enum(const std::string&) [with Enum = MotorCtrlType; std::string = std::__cxx11::basic_string<char>][m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp:52:37:[m[K   required from here
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:39:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kenum_index<MotorCtrlType>(const char [4])[m[K’
+   28 |           [01;31m[Kmagic_enum::enum_index<Enum>("ERR")[m[K.value());
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1238:30:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class E, magic_enum::detail::enum_subtype S> constexpr magic_enum::detail::enable_if_t<E, std::optional<long unsigned int> > magic_enum::enum_index(E)[m[K’
+ 1238 | [[nodiscard]] constexpr auto [01;36m[Kenum_index[m[K(E value) noexcept -> detail::enable_if_t<E, optional<std::size_t>> {
+      |                              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1238:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:40:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K"ERR"[m[K’ (type ‘[01m[Kconst char [4][m[K’) to type ‘[01m[KMotorCtrlType[m[K’
+   28 |           magic_enum::enum_index<Enum>([01;36m[K"ERR"[m[K).value());
+      |                                        [01;36m[K^~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1269:30:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<magic_enum::detail::enum_subtype S, class E> constexpr magic_enum::detail::enable_if_t<E, std::optional<long unsigned int> > magic_enum::enum_index(E)[m[K’
+ 1269 | [[nodiscard]] constexpr auto [01;36m[Kenum_index[m[K(E value) noexcept -> detail::enable_if_t<E, optional<std::size_t>> {
+      |                              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1269:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:39:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<magic_enum::detail::enum_subtype S, class E> constexpr magic_enum::detail::enable_if_t<E, std::optional<long unsigned int> > magic_enum::enum_index(E)[m[K’
+   28 |           [01;31m[Kmagic_enum::enum_index<Enum>("ERR")[m[K.value());
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp:28:39:[m[K [01;36m[Knote: [m[K  expected a constant of type ‘[01m[Kmagic_enum::detail::enum_subtype[m[K’, got ‘[01m[KMotorCtrlType[m[K’
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1278:30:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<auto V, magic_enum::detail::enum_subtype S> constexpr magic_enum::detail::enable_if_t<decltype (V), long unsigned int> magic_enum::enum_index()[m[K’
+ 1278 | [[nodiscard]] constexpr auto [01;36m[Kenum_index[m[K() noexcept -> detail::enable_if_t<decltype(V), std::size_t> {\
+      |                              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp:1278:30:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+gmake[2]: *** [CMakeFiles/CommunicationCenter.dir/build.make:104：CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:[m[K In member function ‘[01m[Kvoid CommunicationCenter::sendMotor(std::shared_ptr<rlfw_msgs::msg::MotorCtrl_<std::allocator<void> > >)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:27:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   27 |     [01;35m[Kstd::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg[m[K) {}
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+gmake[1]: *** [CMakeFiles/Makefile2:202：CMakeFiles/CommunicationCenter.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

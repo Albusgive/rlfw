@@ -1,0 +1,286 @@
+[0.010s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter
+[0.045s] -- The C compiler identification is GNU 12.3.0
+[0.082s] -- The CXX compiler identification is GNU 12.3.0
+[0.086s] -- Detecting C compiler ABI info
+[0.135s] -- Detecting C compiler ABI info - done
+[0.139s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.140s] -- Detecting C compile features
+[0.140s] -- Detecting C compile features - done
+[0.142s] -- Detecting CXX compiler ABI info
+[0.193s] -- Detecting CXX compiler ABI info - done
+[0.197s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.198s] -- Detecting CXX compile features
+[0.198s] -- Detecting CXX compile features - done
+[0.199s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.301s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.354s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.380s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.383s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.389s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.396s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.405s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.429s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.431s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.478s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.494s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.519s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.523s] -- Looking for pthread.h
+[0.569s] -- Looking for pthread.h - found
+[0.569s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.617s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.618s] -- Found Threads: TRUE  
+[0.654s] -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
+[0.679s] -- Found rlfw_msgs: 0.0.0 (/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake)
+[0.687s] -- Found tf2_geometry_msgs: 0.25.12 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.703s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.704s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.704s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.765s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.788s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.824s] WARNING: Package name "CommunicationCenter" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[0.851s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.851s] -- Configured cppcheck include dirs: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include;/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver
+[0.851s] -- Configured cppcheck exclude dirs and/or files: 
+[0.854s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.857s] -- Added test 'lint_cmake' to check CMake code style
+[0.860s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.877s] -- Added test 'uncrustify' to check C / C++ code style
+[0.878s] -- Configured uncrustify additional arguments: 
+[0.880s] -- Added test 'xmllint' to check XML markup files
+[0.881s] -- Configuring done
+[0.897s] -- Generating done
+[0.903s] -- Build files have been written to: /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter
+[0.911s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter
+[0.911s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter -- -j12 -l12
+[0.945s] [  7%] [32mBuilding CXX object tinyxml2/CMakeFiles/tinyxml2.dir/tinyxml2.cpp.o[0m
+[1.181s] [ 14%] [32m[1mLinking CXX static library libtinyxml2.a[0m
+[1.222s] [ 14%] Built target tinyxml2
+[1.237s] [ 42%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o[0m
+[1.237s] [ 42%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o[0m
+[1.237s] [ 42%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o[0m
+[1.237s] [ 42%] [32mBuilding CXX object tinyxml2/CMakeFiles/xmltest.dir/xmltest.cpp.o[0m
+[1.237s] [ 50%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o[0m
+[1.238s] [ 64%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o[0m
+[1.238s] [ 64%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o[0m
+[1.238s] [ 71%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o[0m
+[1.238s] [ 78%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o[0m
+[1.242s] [ 85%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o[0m
+[1.666s] [ 92%] [32m[1mLinking CXX executable xmltest[0m
+[1.765s] [ 92%] Built target xmltest
+[1.853s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kvoid Serial::search_device_serial()[m[K’:
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:327:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.854s]   327 |     [01;35m[Kdelete udev[m[K;
+[1.854s]       |     [01;35m[K^~~~~~~~~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:290:18:[m[K [01;35m[Kwarning: [m[K‘[01m[Kudev[m[K’ has incomplete type
+[1.854s]   290 |     struct udev *[01;35m[Kudev[m[K = udev_new();
+[1.854s]       |                  [01;35m[K^~~~[m[K
+[1.854s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/serial.hpp:22[m[K,
+[1.854s]                  from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:1[m[K:
+[1.854s] [01m[K/usr/include/libudev.h:20:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev[m[K’
+[1.854s]    20 | struct [01;36m[Kudev[m[K;
+[1.854s]       |        [01;36m[K^~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:327:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.854s]   327 |     [01;36m[Kdelete udev[m[K;
+[1.854s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:328:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.854s]   328 |     [01;35m[Kdelete enumerate[m[K;
+[1.854s]       |     [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:297:28:[m[K [01;35m[Kwarning: [m[K‘[01m[Kenumerate[m[K’ has incomplete type
+[1.854s]   297 |     struct udev_enumerate *[01;35m[Kenumerate[m[K = udev_enumerate_new(udev);
+[1.854s]       |                            [01;35m[K^~~~~~~~~[m[K
+[1.855s] [01m[K/usr/include/libudev.h:126:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_enumerate[m[K’
+[1.855s]   126 | struct [01;36m[Kudev_enumerate[m[K;
+[1.855s]       |        [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:328:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.855s]   328 |     [01;36m[Kdelete enumerate[m[K;
+[1.855s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:329:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.855s]   329 |     [01;35m[Kdelete devices[m[K;
+[1.855s]       |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:303:29:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdevices[m[K’ has incomplete type
+[1.855s]   303 |     struct udev_list_entry *[01;35m[Kdevices[m[K = udev_enumerate_get_list_entry(enumerate);
+[1.855s]       |                             [01;35m[K^~~~~~~[m[K
+[1.855s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.855s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.855s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:329:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.855s]   329 |     [01;36m[Kdelete devices[m[K;
+[1.855s]       |     [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:330:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.855s]   330 |     [01;35m[Kdelete entry[m[K;
+[1.855s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:305:29:[m[K [01;35m[Kwarning: [m[K‘[01m[Kentry[m[K’ has incomplete type
+[1.856s]   305 |     struct udev_list_entry *[01;35m[Kentry[m[K;
+[1.856s]       |                             [01;35m[K^~~~~[m[K
+[1.856s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.856s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.856s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:330:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.856s]   330 |     [01;36m[Kdelete entry[m[K;
+[1.856s]       |     [01;36m[K^~~~~~~~~~~~[m[K
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kstd::string Serial::get_attrs_serial(const std::string&)[m[K’:
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:389:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.856s]   389 |     [01;35m[Kdelete udev[m[K;
+[1.856s]       |     [01;35m[K^~~~~~~~~~~[m[K
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:336:18:[m[K [01;35m[Kwarning: [m[K‘[01m[Kudev[m[K’ has incomplete type
+[1.856s]   336 |     struct udev *[01;35m[Kudev[m[K = udev_new();
+[1.856s]       |                  [01;35m[K^~~~[m[K
+[1.856s] [01m[K/usr/include/libudev.h:20:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev[m[K’
+[1.856s]    20 | struct [01;36m[Kudev[m[K;
+[1.857s]       |        [01;36m[K^~~~[m[K
+[1.857s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:389:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.857s]   389 |     [01;36m[Kdelete udev[m[K;
+[1.857s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[1.859s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:390:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.859s]   390 |     [01;35m[Kdelete enumerate[m[K;
+[1.859s]       |     [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.859s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:343:28:[m[K [01;35m[Kwarning: [m[K‘[01m[Kenumerate[m[K’ has incomplete type
+[1.859s]   343 |     struct udev_enumerate *[01;35m[Kenumerate[m[K = udev_enumerate_new(udev);
+[1.860s]       |                            [01;35m[K^~~~~~~~~[m[K
+[1.860s] [01m[K/usr/include/libudev.h:126:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_enumerate[m[K’
+[1.860s]   126 | struct [01;36m[Kudev_enumerate[m[K;
+[1.860s]       |        [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.860s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:390:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.860s]   390 |     [01;36m[Kdelete enumerate[m[K;
+[1.860s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.860s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:391:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.860s]   391 |     [01;35m[Kdelete devices[m[K;
+[1.860s]       |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.860s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:349:29:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdevices[m[K’ has incomplete type
+[1.860s]   349 |     struct udev_list_entry *[01;35m[Kdevices[m[K = udev_enumerate_get_list_entry(enumerate);
+[1.860s]       |                             [01;35m[K^~~~~~~[m[K
+[1.860s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.860s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.860s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.860s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:391:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.860s]   391 |     [01;36m[Kdelete devices[m[K;
+[1.860s]       |     [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.860s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:392:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.860s]   392 |     [01;35m[Kdelete entry[m[K;
+[1.860s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.861s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:351:29:[m[K [01;35m[Kwarning: [m[K‘[01m[Kentry[m[K’ has incomplete type
+[1.861s]   351 |     struct udev_list_entry *[01;35m[Kentry[m[K;
+[1.861s]       |                             [01;35m[K^~~~~[m[K
+[1.861s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.861s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.861s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.861s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:392:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.861s]   392 |     [01;36m[Kdelete entry[m[K;
+[1.861s]       |     [01;36m[K^~~~~~~~~~~~[m[K
+[1.861s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kstd::string Serial::search_usb_port(std::string)[m[K’:
+[1.861s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:456:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.861s]   456 |     [01;35m[Kdelete udev[m[K;
+[1.861s]       |     [01;35m[K^~~~~~~~~~~[m[K
+[1.861s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:396:18:[m[K [01;35m[Kwarning: [m[K‘[01m[Kudev[m[K’ has incomplete type
+[1.861s]   396 |     struct udev *[01;35m[Kudev[m[K;
+[1.861s]       |                  [01;35m[K^~~~[m[K
+[1.861s] [01m[K/usr/include/libudev.h:20:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev[m[K’
+[1.861s]    20 | struct [01;36m[Kudev[m[K;
+[1.861s]       |        [01;36m[K^~~~[m[K
+[1.861s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:456:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.861s]   456 |     [01;36m[Kdelete udev[m[K;
+[1.861s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[1.861s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:457:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.863s]   457 |     [01;35m[Kdelete enumerate[m[K;
+[1.863s]       |     [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.863s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:397:28:[m[K [01;35m[Kwarning: [m[K‘[01m[Kenumerate[m[K’ has incomplete type
+[1.863s]   397 |     struct udev_enumerate *[01;35m[Kenumerate[m[K;
+[1.863s]       |                            [01;35m[K^~~~~~~~~[m[K
+[1.863s] [01m[K/usr/include/libudev.h:126:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_enumerate[m[K’
+[1.863s]   126 | struct [01;36m[Kudev_enumerate[m[K;
+[1.863s]       |        [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.863s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:457:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.863s]   457 |     [01;36m[Kdelete enumerate[m[K;
+[1.864s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.864s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:458:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.864s]   458 |     [01;35m[Kdelete devices[m[K;
+[1.864s]       |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.864s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:398:29:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdevices[m[K’ has incomplete type
+[1.864s]   398 |     struct udev_list_entry *[01;35m[Kdevices[m[K, *entry;
+[1.864s]       |                             [01;35m[K^~~~~~~[m[K
+[1.864s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.864s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.864s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.864s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:458:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.864s]   458 |     [01;36m[Kdelete devices[m[K;
+[1.864s]       |     [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.864s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:459:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.864s]   459 |     [01;35m[Kdelete entry[m[K;
+[1.864s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.864s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:398:39:[m[K [01;35m[Kwarning: [m[K‘[01m[Kentry[m[K’ has incomplete type
+[1.864s]   398 |     struct udev_list_entry *devices, *[01;35m[Kentry[m[K;
+[1.864s]       |                                       [01;35m[K^~~~~[m[K
+[1.864s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.864s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.864s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.865s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:459:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.865s]   459 |     [01;36m[Kdelete entry[m[K;
+[1.865s]       |     [01;36m[K^~~~~~~~~~~~[m[K
+[1.865s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In lambda function:
+[1.865s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:470:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<char>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[1.865s]   470 |                 if ([01;35m[Klast_size == recv_queue.size()[m[K)
+[1.865s]       |                     [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.903s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:[m[K In member function ‘[01m[KUSBHubPort<short unsigned int> PCAN::findPCAN()[m[K’:
+[1.903s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:99:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<int, std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[1.903s]    99 |   for (int i = 0; [01;35m[Ki < port_time.size() - 1[m[K; i++) {
+[1.903s]       |                   [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.903s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:100:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<int, std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[1.903s]   100 |     for (int j = 0; [01;35m[Kj < port_time.size() - 1 - i[m[K; j++) {
+[1.903s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.904s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:130:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<int, std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[1.904s]   130 |   for (int i = 0; [01;35m[Ki < port_time.size()[m[K; i++) {
+[1.904s]       |                   [01;35m[K~~^~~~~~~~~~~~~~~~~~[m[K
+[1.931s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kbool Serial::OpenSerial(std::string, E_BaudRate, E_DataSize, E_Parity, E_StopBit)[m[K’:
+[1.931s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:78:21:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[1.931s]    78 |         Opt.c_cflag [01;35m[K|[m[K= CS6;
+[1.931s]       |                     [01;35m[K^[m[K
+[1.931s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:79:5:[m[K [01;36m[Knote: [m[Khere
+[1.931s]    79 |     [01;36m[Kcase[m[K E_DataSize::_7:
+[1.931s]       |     [01;36m[K^~~~[m[K
+[1.935s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kstd::string Serial::get_attrs_serial(const std::string&)[m[K’:
+[1.935s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:393:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[1.935s]   393 | [01;35m[K}[m[K
+[1.936s]       | [01;35m[K^[m[K
+[1.936s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kstd::string Serial::search_usb_port(std::string)[m[K’:
+[1.936s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:460:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[1.936s]   460 | [01;35m[K}[m[K
+[1.936s]       | [01;35m[K^[m[K
+[1.968s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:[m[K In lambda function:
+[1.968s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:129:3:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[1.968s]   129 |   [01;35m[K}[m[K;
+[1.968s]       |   [01;35m[K^[m[K
+[3.225s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:[m[K In member function ‘[01m[Kvoid CommunicationCenter::sendMotor(std::shared_ptr<rlfw_msgs::msg::MotorCtrl_<std::allocator<void> > >)[m[K’:
+[3.226s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:27:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.226s]    27 |     [01;35m[Kstd::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg[m[K) {}
+[3.226s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[7.536s] [100%] [32m[1mLinking CXX executable CommunicationCenter[0m
+[7.821s] [100%] Built target CommunicationCenter
+[7.828s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter -- -j12 -l12
+[7.829s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter
+[7.834s] -- Install configuration: ""
+[7.834s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/CommunicationCenter/CommunicationCenter
+[7.836s] -- Set runtime path of "/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/CommunicationCenter/CommunicationCenter" to ""
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/motor_cfg.xml
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/ament_index/resource_index/package_run_dependencies/CommunicationCenter
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/ament_index/resource_index/parent_prefix_path/CommunicationCenter
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/ament_prefix_path.sh
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/ament_prefix_path.dsv
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/path.sh
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/path.dsv
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.bash
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.sh
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.zsh
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.dsv
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/package.dsv
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/ament_index/resource_index/packages/CommunicationCenter
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/cmake/CommunicationCenterConfig.cmake
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/cmake/CommunicationCenterConfig-version.cmake
+[7.836s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/package.xml
+[7.837s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/libtinyxml2.a
+[7.837s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-static-targets.cmake
+[7.837s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-static-targets-noconfig.cmake
+[7.837s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-config.cmake
+[7.837s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-config-version.cmake
+[7.837s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/include/tinyxml2.h
+[7.837s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/pkgconfig/tinyxml2.pc
+[7.839s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter

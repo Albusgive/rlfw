@@ -62,22 +62,6 @@ public:
   }
 };
 
-//电机参数
-enum class MotorParameter {
-  PosKP,
-  PosKD,
-  VelKP,
-  VelKI,
-  TorqueKP,
-  TorqueKI,
-  SafeTorque,
-  SafePos,
-  SafeVel
-};
-
-//控制模式
-enum class MotorCtrlType { MIT, POS, VEL, TORQUE, POS_VEL };
-
 class Motor {
 public:
   // MIT

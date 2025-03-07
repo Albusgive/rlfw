@@ -1,0 +1,22 @@
+[0.009s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping -- -j12 -l12
+[0.052s] [100%] Built target mujoco_mapping
+[0.064s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping -- -j12 -l12
+[0.071s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping
+[0.075s] -- Install configuration: ""
+[0.075s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/lib/mujoco_mapping/mujoco_mapping
+[0.075s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/ament_index/resource_index/package_run_dependencies/mujoco_mapping
+[0.075s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/ament_index/resource_index/parent_prefix_path/mujoco_mapping
+[0.075s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/environment/ament_prefix_path.sh
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/environment/ament_prefix_path.dsv
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/environment/path.sh
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/environment/path.dsv
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/local_setup.bash
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/local_setup.sh
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/local_setup.zsh
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/local_setup.dsv
+[0.076s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/package.dsv
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/ament_index/resource_index/packages/mujoco_mapping
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/cmake/mujoco_mappingConfig.cmake
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/cmake/mujoco_mappingConfig-version.cmake
+[0.076s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/package.xml
+[0.077s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping

@@ -92,7 +92,7 @@ xmltest_EXTERNAL_OBJECTS =
 
 tinyxml2/xmltest: tinyxml2/CMakeFiles/xmltest.dir/xmltest.cpp.o
 tinyxml2/xmltest: tinyxml2/CMakeFiles/xmltest.dir/build.make
-tinyxml2/xmltest: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/libtinyxml2.a
+tinyxml2/xmltest: tinyxml2/libtinyxml2.a
 tinyxml2/xmltest: tinyxml2/CMakeFiles/xmltest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable xmltest"
 	cd /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter/tinyxml2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xmltest.dir/link.txt --verbose=$(VERBOSE)

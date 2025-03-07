@@ -1,4 +1,0 @@
-[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:[m[K In member function ‘[01m[Kvoid CommunicationCenter::sendMotor(std::shared_ptr<rlfw_msgs::msg::MotorCtrl_<std::allocator<void> > >)[m[K’:
-[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:28:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
-   28 |     [01;35m[Kstd::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg[m[K) {}
-      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
