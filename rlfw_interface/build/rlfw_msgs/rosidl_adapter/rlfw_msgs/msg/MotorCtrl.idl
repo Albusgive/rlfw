@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rlfw_msgs/msg/MotorCtrl.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rlfw_msgs {
+  module msg {
+    struct MotorCtrl {
+      std_msgs::msg::Header joint;
+
+      int8 motor_id;
+
+      @verbatim (language="comment", text=
+        "MIT,POS,VEL,TORQUE,POS_VEL")
+      string ctrl_type;
+
+      @verbatim (language="comment", text=
+        "扭矩")
+      float torque;
+
+      @verbatim (language="comment", text=
+        "位置")
+      float angle;
+
+      @verbatim (language="comment", text=
+        "角速度")
+      float ang_vel;
+
+      float kp;
+
+      float kd;
+    };
+  };
+};

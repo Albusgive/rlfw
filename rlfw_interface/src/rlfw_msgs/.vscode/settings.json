@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/rmer/cartographer_ws/install/cartographer_ros_msgs/local/lib/python3.10/dist-packages",
+        "/home/rmer/ros_test_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rmer/cartographer_ws/install/cartographer_ros_msgs/local/lib/python3.10/dist-packages",
+        "/home/rmer/ros_test_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "files.associations": {
+        "chassis_msg,msg": "cpp",
+        "string": "cpp"
+    }
+}

@@ -1,0 +1,6 @@
+Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_deploy/src/nz-imu -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu
+Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_deploy/src/nz-imu -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu
+Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu -- -j12 -l12
+Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu -- -j12 -l12
+Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu
+Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu

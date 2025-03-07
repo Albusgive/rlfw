@@ -1,0 +1,16 @@
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/lib/nz-imu/hwt906
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/package_run_dependencies/nz-imu
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/parent_prefix_path/nz-imu
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/ament_prefix_path.sh
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/ament_prefix_path.dsv
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/path.sh
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/path.dsv
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.bash
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.sh
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.zsh
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.dsv
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/package.dsv
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/packages/nz-imu
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/cmake/nz-imuConfig.cmake
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/cmake/nz-imuConfig-version.cmake
+/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/package.xml

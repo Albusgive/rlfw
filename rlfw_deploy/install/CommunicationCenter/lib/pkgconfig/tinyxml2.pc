@@ -1,0 +1,10 @@
+prefix=/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: TinyXML2
+Description: simple, small, C++ XML parser
+Version: 10.0.0
+Libs: -L${libdir} -ltinyxml2::tinyxml2
+Cflags: -I${includedir}

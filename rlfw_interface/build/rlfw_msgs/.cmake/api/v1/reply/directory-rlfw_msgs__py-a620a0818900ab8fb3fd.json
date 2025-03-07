@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "rlfw_msgs__py",
+		"source" : "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rlfw_msgs__py"
+	}
+}

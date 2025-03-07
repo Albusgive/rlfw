@@ -1,0 +1,4 @@
+<rlfw>
+    <motor type="Mi" jointname="left_wheel_joint" invert="false" />
+    <motor type="DM" jointname="left_calf_joint" invert="true" />
+</rlfw>

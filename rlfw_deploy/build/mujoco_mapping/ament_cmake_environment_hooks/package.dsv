@@ -1,0 +1,4 @@
+source;share/mujoco_mapping/local_setup.bash
+source;share/mujoco_mapping/local_setup.dsv
+source;share/mujoco_mapping/local_setup.sh
+source;share/mujoco_mapping/local_setup.zsh

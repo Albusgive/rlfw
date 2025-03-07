@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rlfw_msgs/msg/MotorCfg.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rlfw_msgs {
+  module msg {
+    struct MotorCfg {
+      std_msgs::msg::Header joint;
+
+      int8 motor_id;
+
+      @verbatim (language="comment", text=
+        "PosKP , PosKD ," "\n"
+        "VelKP , VelKI ," "\n"
+        "TorqueKP , TorqueKI ," "\n"
+        "SafeTorque , SafePos , SafeVel")
+      string parameter_type;
+
+      float parameter;
+    };
+  };
+};

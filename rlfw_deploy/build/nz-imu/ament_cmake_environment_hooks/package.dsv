@@ -1,0 +1,4 @@
+source;share/nz-imu/local_setup.bash
+source;share/nz-imu/local_setup.dsv
+source;share/nz-imu/local_setup.sh
+source;share/nz-imu/local_setup.zsh

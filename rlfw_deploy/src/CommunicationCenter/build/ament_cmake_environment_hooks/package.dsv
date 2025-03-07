@@ -1,0 +1,4 @@
+source;share/CommunicationCenter/local_setup.bash
+source;share/CommunicationCenter/local_setup.dsv
+source;share/CommunicationCenter/local_setup.sh
+source;share/CommunicationCenter/local_setup.zsh

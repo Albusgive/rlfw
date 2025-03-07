@@ -1,0 +1,99 @@
+[0.010s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_deploy/src/nz-imu -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu
+[0.045s] -- The C compiler identification is GNU 12.3.0
+[0.081s] -- The CXX compiler identification is GNU 12.3.0
+[0.086s] -- Detecting C compiler ABI info
+[0.132s] -- Detecting C compiler ABI info - done
+[0.141s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.141s] -- Detecting C compile features
+[0.141s] -- Detecting C compile features - done
+[0.144s] -- Detecting CXX compiler ABI info
+[0.197s] -- Detecting CXX compiler ABI info - done
+[0.202s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.202s] -- Detecting CXX compile features
+[0.203s] -- Detecting CXX compile features - done
+[0.204s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.305s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.361s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.384s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.387s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.392s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.399s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.409s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.435s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.436s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.487s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.504s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.530s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.534s] -- Looking for pthread.h
+[0.581s] -- Looking for pthread.h - found
+[0.581s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.632s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.633s] -- Found Threads: TRUE  
+[0.665s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.686s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.738s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.738s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/include>
+[0.738s] -- Configured cppcheck exclude dirs and/or files: 
+[0.738s] -- Added test 'lint_cmake' to check CMake code style
+[0.739s] -- Added test 'uncrustify' to check C / C++ code style
+[0.739s] -- Configured uncrustify additional arguments: 
+[0.739s] -- Added test 'xmllint' to check XML markup files
+[0.740s] -- Configuring done
+[0.746s] -- Generating done
+[0.749s] -- Build files have been written to: /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu
+[0.755s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_deploy/src/nz-imu -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu
+[0.757s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu -- -j12 -l12
+[0.790s] [ 75%] [32mBuilding CXX object CMakeFiles/hwt906.dir/hwt906/wit_c_sdk.cpp.o[0m
+[0.791s] [ 75%] [32mBuilding CXX object CMakeFiles/hwt906.dir/hwt906/serial.cpp.o[0m
+[0.791s] [ 75%] [32mBuilding CXX object CMakeFiles/hwt906.dir/hwt906/main.cpp.o[0m
+[0.810s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:[m[K In function ‘[01m[Kvoid WitSerialDataIn(uint8_t)[m[K’:
+[0.810s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:181:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[0.811s]   181 |                 if([01;35m[Ks_uiWitDataCnt < (s_ucWitDataBuff[2] + 5)[m[K)return ;
+[0.811s]       |                    [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.815s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:[m[K In function ‘[01m[Kvoid WitCanDataIn(uint8_t*, uint8_t)[m[K’:
+[0.815s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:238:25:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[0.815s]   238 |                         [01;35m[Kif[m[K(ucData[1] == 0x53)
+[0.815s]       |                         [01;35m[K^~[m[K
+[0.815s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:251:19:[m[K [01;36m[Knote: [m[Khere
+[0.815s]   251 |                   [01;36m[Kcase[m[K WIT_PROTOCOL_CAN:
+[0.815s]       |                   [01;36m[K^~~~[m[K
+[2.671s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.671s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:42:34:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KfAngle[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[2.671s]    42 |         float fAcc[3], fGyro[3], [01;35m[KfAngle[m[K[3], fQuat[4];
+[2.671s]       |                                  [01;35m[K^~~~~~[m[K
+[2.671s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:43:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.671s]    43 |         int i, [01;35m[Kret[m[K;
+[2.671s]       |                [01;35m[K^~~[m[K
+[2.674s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:[m[K In function ‘[01m[Kvoid SensorDataUpdata(uint32_t, uint32_t)[m[K’:
+[2.674s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:120:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.674s]   120 |         for (i = 0; [01;35m[Ki < uiRegNum[m[K; i++)
+[2.674s]       |                     [01;35m[K~~^~~~~~~~~~[m[K
+[3.261s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:145:39:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[3.261s]   145 |                         s_cDataUpdate [01;35m[K|[m[K= QUAT_UPDATE;
+[3.261s]       |                                       [01;35m[K^[m[K
+[3.261s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:146:17:[m[K [01;36m[Knote: [m[Khere
+[3.261s]   146 |                 [01;36m[Kdefault[m[K:
+[3.261s]       |                 [01;36m[K^~~~~~~[m[K
+[4.167s] [100%] [32m[1mLinking CXX executable hwt906[0m
+[4.300s] [100%] Built target hwt906
+[4.309s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu -- -j12 -l12
+[4.310s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu
+[4.316s] -- Install configuration: ""
+[4.316s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/lib/nz-imu/hwt906
+[4.317s] -- Set runtime path of "/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/lib/nz-imu/hwt906" to ""
+[4.317s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/package_run_dependencies/nz-imu
+[4.317s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/parent_prefix_path/nz-imu
+[4.317s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/ament_prefix_path.sh
+[4.317s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/ament_prefix_path.dsv
+[4.317s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/path.sh
+[4.317s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/path.dsv
+[4.317s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.bash
+[4.318s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.sh
+[4.318s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.zsh
+[4.318s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.dsv
+[4.318s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/package.dsv
+[4.318s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/packages/nz-imu
+[4.318s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/cmake/nz-imuConfig.cmake
+[4.318s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/cmake/nz-imuConfig-version.cmake
+[4.318s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/package.xml
+[4.320s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu

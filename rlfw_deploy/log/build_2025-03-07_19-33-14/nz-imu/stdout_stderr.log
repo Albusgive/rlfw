@@ -1,0 +1,93 @@
+-- The C compiler identification is GNU 12.3.0
+-- The CXX compiler identification is GNU 12.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/albusgive2/rlfw/rlfw_deploy/build/nz-imu
+[ 75%] [32mBuilding CXX object CMakeFiles/hwt906.dir/hwt906/wit_c_sdk.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/hwt906.dir/hwt906/serial.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/hwt906.dir/hwt906/main.cpp.o[0m
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:[m[K In function ‘[01m[Kvoid WitSerialDataIn(uint8_t)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:181:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  181 |                 if([01;35m[Ks_uiWitDataCnt < (s_ucWitDataBuff[2] + 5)[m[K)return ;
+      |                    [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:[m[K In function ‘[01m[Kvoid WitCanDataIn(uint8_t*, uint8_t)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:238:25:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+  238 |                         [01;35m[Kif[m[K(ucData[1] == 0x53)
+      |                         [01;35m[K^~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:251:19:[m[K [01;36m[Knote: [m[Khere
+  251 |                   [01;36m[Kcase[m[K WIT_PROTOCOL_CAN:
+      |                   [01;36m[K^~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:42:34:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KfAngle[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   42 |         float fAcc[3], fGyro[3], [01;35m[KfAngle[m[K[3], fQuat[4];
+      |                                  [01;35m[K^~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:43:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   43 |         int i, [01;35m[Kret[m[K;
+      |                [01;35m[K^~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:[m[K In function ‘[01m[Kvoid SensorDataUpdata(uint32_t, uint32_t)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:120:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  120 |         for (i = 0; [01;35m[Ki < uiRegNum[m[K; i++)
+      |                     [01;35m[K~~^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:145:39:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+  145 |                         s_cDataUpdate [01;35m[K|[m[K= QUAT_UPDATE;
+      |                                       [01;35m[K^[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:146:17:[m[K [01;36m[Knote: [m[Khere
+  146 |                 [01;36m[Kdefault[m[K:
+      |                 [01;36m[K^~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable hwt906[0m
+[100%] Built target hwt906
+-- Install configuration: ""
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/lib/nz-imu/hwt906
+-- Set runtime path of "/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/lib/nz-imu/hwt906" to ""
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/package_run_dependencies/nz-imu
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/parent_prefix_path/nz-imu
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/ament_prefix_path.sh
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/ament_prefix_path.dsv
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/path.sh
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/path.dsv
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.bash
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.sh
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.zsh
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.dsv
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/package.dsv
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/packages/nz-imu
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/cmake/nz-imuConfig.cmake
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/cmake/nz-imuConfig-version.cmake
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/package.xml

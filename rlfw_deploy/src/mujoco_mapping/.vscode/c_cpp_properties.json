@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/rmer/self_msgs/install/more_interfaces/include/**",
+                "/home/rmer/ros2_carto_ws/install/cartographer_ros/include/**",
+                "/opt/ros/humble/include/**",
+                "include/**",
+                "/usr/include/**",
+                "/opt/ros/humble/include/cartographer",
+                "/opt/ros/humble/include/rclcpp",
+                "/opt/mujoco",
+                "/opt/mujoco/include",
+                "/opt/ros/humble/include/sensor_msgs"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
+}

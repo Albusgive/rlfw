@@ -1,0 +1,28 @@
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:[m[K In function ‘[01m[Kvoid WitSerialDataIn(uint8_t)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:181:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  181 |                 if([01;35m[Ks_uiWitDataCnt < (s_ucWitDataBuff[2] + 5)[m[K)return ;
+      |                    [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:[m[K In function ‘[01m[Kvoid WitCanDataIn(uint8_t*, uint8_t)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:238:25:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+  238 |                         [01;35m[Kif[m[K(ucData[1] == 0x53)
+      |                         [01;35m[K^~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/wit_c_sdk.cpp:251:19:[m[K [01;36m[Knote: [m[Khere
+  251 |                   [01;36m[Kcase[m[K WIT_PROTOCOL_CAN:
+      |                   [01;36m[K^~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:42:34:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KfAngle[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   42 |         float fAcc[3], fGyro[3], [01;35m[KfAngle[m[K[3], fQuat[4];
+      |                                  [01;35m[K^~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:43:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kret[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   43 |         int i, [01;35m[Kret[m[K;
+      |                [01;35m[K^~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:[m[K In function ‘[01m[Kvoid SensorDataUpdata(uint32_t, uint32_t)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:120:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  120 |         for (i = 0; [01;35m[Ki < uiRegNum[m[K; i++)
+      |                     [01;35m[K~~^~~~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:145:39:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+  145 |                         s_cDataUpdate [01;35m[K|[m[K= QUAT_UPDATE;
+      |                                       [01;35m[K^[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/nz-imu/hwt906/main.cpp:146:17:[m[K [01;36m[Knote: [m[Khere
+  146 |                 [01;36m[Kdefault[m[K:
+      |                 [01;36m[K^~~~~~~[m[K

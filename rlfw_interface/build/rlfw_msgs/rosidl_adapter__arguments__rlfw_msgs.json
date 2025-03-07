@@ -1,0 +1,8 @@
+{
+  "package_name": "rlfw_msgs",
+  "non_idl_tuples": [
+    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/Motor.msg",
+    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/MotorCtrl.msg",
+    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/MotorCfg.msg"
+  ]
+}
