@@ -7,7 +7,7 @@
 module rlfw_msgs {
   module msg {
     struct Motor {
-      std_msgs::msg::Header joint;
+      std_msgs::msg::Header jointname;
 
       int8 motor_id;
 

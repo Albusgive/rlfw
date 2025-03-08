@@ -15,7 +15,7 @@
 #include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
-// Member 'joint'
+// Member 'jointname'
 #include "std_msgs/msg/detail/header__traits.hpp"
 
 namespace rlfw_msgs
@@ -29,24 +29,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: joint
+  // member: jointname
   {
-    out << "joint: ";
-    to_flow_style_yaml(msg.joint, out);
-    out << ", ";
-  }
-
-  // member: motor_id
-  {
-    out << "motor_id: ";
-    rosidl_generator_traits::value_to_yaml(msg.motor_id, out);
-    out << ", ";
-  }
-
-  // member: ctrl_type
-  {
-    out << "ctrl_type: ";
-    rosidl_generator_traits::value_to_yaml(msg.ctrl_type, out);
+    out << "jointname: ";
+    to_flow_style_yaml(msg.jointname, out);
     out << ", ";
   }
 
@@ -90,33 +76,13 @@ inline void to_block_style_yaml(
   const MotorCtrl & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: joint
+  // member: jointname
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "joint:\n";
-    to_block_style_yaml(msg.joint, out, indentation + 2);
-  }
-
-  // member: motor_id
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "motor_id: ";
-    rosidl_generator_traits::value_to_yaml(msg.motor_id, out);
-    out << "\n";
-  }
-
-  // member: ctrl_type
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "ctrl_type: ";
-    rosidl_generator_traits::value_to_yaml(msg.ctrl_type, out);
-    out << "\n";
+    out << "jointname:\n";
+    to_block_style_yaml(msg.jointname, out, indentation + 2);
   }
 
   // member: torque
@@ -216,11 +182,11 @@ inline const char * name<rlfw_msgs::msg::MotorCtrl>()
 
 template<>
 struct has_fixed_size<rlfw_msgs::msg::MotorCtrl>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_fixed_size<std_msgs::msg::Header>::value> {};
 
 template<>
 struct has_bounded_size<rlfw_msgs::msg::MotorCtrl>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_bounded_size<std_msgs::msg::Header>::value> {};
 
 template<>
 struct is_message<rlfw_msgs::msg::MotorCtrl>

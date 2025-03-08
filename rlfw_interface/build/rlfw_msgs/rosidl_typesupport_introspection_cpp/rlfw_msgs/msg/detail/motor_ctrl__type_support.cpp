@@ -37,50 +37,16 @@ void MotorCtrl_fini_function(void * message_memory)
   typed_message->~MotorCtrl();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember MotorCtrl_message_member_array[8] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember MotorCtrl_message_member_array[6] = {
   {
-    "joint",  // name
+    "jointname",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Header>(),  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(rlfw_msgs::msg::MotorCtrl, joint),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "motor_id",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rlfw_msgs::msg::MotorCtrl, motor_id),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "ctrl_type",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rlfw_msgs::msg::MotorCtrl, ctrl_type),  // bytes offset in struct
+    offsetof(rlfw_msgs::msg::MotorCtrl, jointname),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -179,7 +145,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MotorCtrl_mes
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers MotorCtrl_message_members = {
   "rlfw_msgs::msg",  // message namespace
   "MotorCtrl",  // message name
-  8,  // number of fields
+  6,  // number of fields
   sizeof(rlfw_msgs::msg::MotorCtrl),
   MotorCtrl_message_member_array,  // message members
   MotorCtrl_init_function,  // function to initialize message memory (memory has to be allocated)

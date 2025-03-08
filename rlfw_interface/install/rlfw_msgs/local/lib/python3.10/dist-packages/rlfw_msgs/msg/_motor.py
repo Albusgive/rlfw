@@ -61,7 +61,7 @@ class Motor(metaclass=Metaclass_Motor):
     """Message class 'Motor'."""
 
     __slots__ = [
-        '_joint',
+        '_jointname',
         '_motor_id',
         '_angle',
         '_number_laps',
@@ -73,7 +73,7 @@ class Motor(metaclass=Metaclass_Motor):
     ]
 
     _fields_and_field_types = {
-        'joint': 'std_msgs/Header',
+        'jointname': 'std_msgs/Header',
         'motor_id': 'int8',
         'angle': 'float',
         'number_laps': 'float',
@@ -101,7 +101,7 @@ class Motor(metaclass=Metaclass_Motor):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from std_msgs.msg import Header
-        self.joint = kwargs.get('joint', Header())
+        self.jointname = kwargs.get('jointname', Header())
         self.motor_id = kwargs.get('motor_id', int())
         self.angle = kwargs.get('angle', float())
         self.number_laps = kwargs.get('number_laps', float())
@@ -140,7 +140,7 @@ class Motor(metaclass=Metaclass_Motor):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.joint != other.joint:
+        if self.jointname != other.jointname:
             return False
         if self.motor_id != other.motor_id:
             return False
@@ -166,18 +166,18 @@ class Motor(metaclass=Metaclass_Motor):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def joint(self):
-        """Message field 'joint'."""
-        return self._joint
+    def jointname(self):
+        """Message field 'jointname'."""
+        return self._jointname
 
-    @joint.setter
-    def joint(self, value):
+    @jointname.setter
+    def jointname(self, value):
         if __debug__:
             from std_msgs.msg import Header
             assert \
                 isinstance(value, Header), \
-                "The 'joint' field must be a sub message of type 'Header'"
-        self._joint = value
+                "The 'jointname' field must be a sub message of type 'Header'"
+        self._jointname = value
 
     @builtins.property
     def motor_id(self):

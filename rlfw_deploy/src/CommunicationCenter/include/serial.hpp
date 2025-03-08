@@ -72,7 +72,8 @@ class Serial
 public:
     Serial();
     ~Serial();
-
+    //是否独立线程
+    bool only_thread=false;
     bool OpenSerial(std::string SerialID, E_BaudRate Bps, E_DataSize DataSize, E_Parity Parity, E_StopBit StopBit);
     // 发送函数
     int Send(const void*Buff, int length);

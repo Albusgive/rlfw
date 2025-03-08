@@ -2,7 +2,7 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: \
  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp \
  /usr/include/stdc-predef.h \
  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp \
- /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/Communication.hpp \
+ /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/ComCfg.hpp \
  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp \
  /usr/include/c++/12/array /usr/include/c++/12/compare \
  /usr/include/c++/12/initializer_list \

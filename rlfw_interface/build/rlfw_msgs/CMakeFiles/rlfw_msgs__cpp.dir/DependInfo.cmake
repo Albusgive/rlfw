@@ -16,15 +16,10 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__struct.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__traits.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__type_support.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
-  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_cfg__builder.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
-  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_cfg__struct.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
-  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_cfg__traits.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
-  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_cfg__type_support.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
-  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor_cfg.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor_ctrl.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   )
 

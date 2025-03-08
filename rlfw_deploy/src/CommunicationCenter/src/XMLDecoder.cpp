@@ -21,14 +21,15 @@ bool XMLDecoder::load(std::string path) {
   }
   for (; com; com = com->NextSiblingElement("com")) {
 
-    Communication communication;
+    ComCfg ComCfg;
     // 解析 com 节点属性
-    communication.type =
+    ComCfg.type =
         string2enum<ComType>(Attribute2String(com->Attribute("type")));
-    communication.attrs = Attribute2String(com->Attribute("attrs"));
-    communication.channel = com->IntAttribute("channel", 1.0);
-    communication.name = Attribute2String(com->Attribute("name"));
-    communication.port = Attribute2String(com->Attribute("port"));
+    ComCfg.attrs = Attribute2String(com->Attribute("attrs"));
+    ComCfg.channel = com->IntAttribute("channel", 1.0);
+    ComCfg.name = Attribute2String(com->Attribute("name"));
+    ComCfg.port = Attribute2String(com->Attribute("port"));
+    ComCfg.only_thred = com->BoolAttribute("thread",false);
 
     // 解析子 motor 节点
     XMLElement *motor = com->FirstChildElement("motor");
@@ -41,7 +42,8 @@ bool XMLDecoder::load(std::string path) {
       XMLMotor xml_motor;
       xml_motor.type =
           string2enum<Motortype>(Attribute2String(motor->Attribute("type")));
-      xml_motor.jointname = Attribute2String(motor->Attribute("jointname"));
+      xml_motor.joint_name = Attribute2String(motor->Attribute("jointname"));
+      xml_motor.id = motor->IntAttribute("id", -1);
       xml_motor.ctrl_type = string2enum<MotorCtrlType>(
           Attribute2String(motor->Attribute("ctrltype")));
       xml_motor.invert = motor->BoolAttribute("invert", false);
@@ -54,9 +56,9 @@ bool XMLDecoder::load(std::string path) {
       xml_motor.SafePos = motor->FloatAttribute("SafePos", -1.0);
       xml_motor.SafeVel = motor->FloatAttribute("SafeVel", -1.0);
       xml_motor.SafeTorque = motor->FloatAttribute("SafeTorque", -1.0);
-      communication.xml_motors.push_back(xml_motor);
+      ComCfg.xml_motors.push_back(xml_motor);
     }
-    coms.push_back(communication);
+    coms.push_back(ComCfg);
   }
   return true;
 }

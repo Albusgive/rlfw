@@ -88,10 +88,8 @@
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_generator_py.so
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/Motor.idl
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/MotorCtrl.idl
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/MotorCfg.idl
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/Motor.msg
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/MotorCtrl.msg
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/MotorCfg.msg
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/ament_index/resource_index/package_run_dependencies/rlfw_msgs
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/ament_index/resource_index/parent_prefix_path/rlfw_msgs
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/environment/ament_prefix_path.sh

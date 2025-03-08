@@ -149,15 +149,15 @@ private:
   ::rlfw_msgs::msg::Motor msg_;
 };
 
-class Init_Motor_joint
+class Init_Motor_jointname
 {
 public:
-  Init_Motor_joint()
+  Init_Motor_jointname()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Motor_motor_id joint(::rlfw_msgs::msg::Motor::_joint_type arg)
+  Init_Motor_motor_id jointname(::rlfw_msgs::msg::Motor::_jointname_type arg)
   {
-    msg_.joint = std::move(arg);
+    msg_.jointname = std::move(arg);
     return Init_Motor_motor_id(msg_);
   }
 
@@ -176,7 +176,7 @@ template<>
 inline
 auto build<::rlfw_msgs::msg::Motor>()
 {
-  return rlfw_msgs::msg::builder::Init_Motor_joint();
+  return rlfw_msgs::msg::builder::Init_Motor_jointname();
 }
 
 }  // namespace rlfw_msgs

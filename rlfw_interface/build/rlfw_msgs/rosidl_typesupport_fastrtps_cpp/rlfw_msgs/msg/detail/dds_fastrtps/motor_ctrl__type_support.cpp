@@ -56,14 +56,10 @@ cdr_serialize(
   const rlfw_msgs::msg::MotorCtrl & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: joint
+  // Member: jointname
   std_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.joint,
+    ros_message.jointname,
     cdr);
-  // Member: motor_id
-  cdr << ros_message.motor_id;
-  // Member: ctrl_type
-  cdr << ros_message.ctrl_type;
   // Member: torque
   cdr << ros_message.torque;
   // Member: angle
@@ -83,15 +79,9 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   rlfw_msgs::msg::MotorCtrl & ros_message)
 {
-  // Member: joint
+  // Member: jointname
   std_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.joint);
-
-  // Member: motor_id
-  cdr >> ros_message.motor_id;
-
-  // Member: ctrl_type
-  cdr >> ros_message.ctrl_type;
+    cdr, ros_message.jointname);
 
   // Member: torque
   cdr >> ros_message.torque;
@@ -124,21 +114,11 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: joint
+  // Member: jointname
 
   current_alignment +=
     std_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.joint, current_alignment);
-  // Member: motor_id
-  {
-    size_t item_size = sizeof(ros_message.motor_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: ctrl_type
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.ctrl_type.size() + 1);
+    ros_message.jointname, current_alignment);
   // Member: torque
   {
     size_t item_size = sizeof(ros_message.torque);
@@ -193,7 +173,7 @@ max_serialized_size_MotorCtrl(
   is_plain = true;
 
 
-  // Member: joint
+  // Member: jointname
   {
     size_t array_size = 1;
 
@@ -209,27 +189,6 @@ max_serialized_size_MotorCtrl(
       current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
-    }
-  }
-
-  // Member: motor_id
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: ctrl_type
-  {
-    size_t array_size = 1;
-
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
     }
   }
 

@@ -1,0 +1,8 @@
+[ 14%] Built target tinyxml2
+[35m[1mConsolidate compiler generated dependencies of target CommunicationCenter[0m
+[ 28%] Built target xmltest
+[ 35%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o[0m

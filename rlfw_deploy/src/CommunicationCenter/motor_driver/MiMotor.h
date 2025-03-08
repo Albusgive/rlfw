@@ -1,11 +1,10 @@
 #pragma once
+#include "BaseCAN.h"
 #include "Motor.hpp"
-#include "PCANBasic.h"
 #include <cstdint>
 #include <cstring>
 #include <iomanip>
 #include <iostream>
-#include <cstdint>
 #include <math.h>
 #define P_MIN -12.5f
 #define P_MAX 12.5f
@@ -97,7 +96,7 @@ struct MI_EXT_ID {
     std::cout << "  Data: " << data << std::endl;
     std::cout << "  ComType: " << com_type << std::endl;
   }
-  DWORD toEXTID() {
+  uint32_t toEXTID() {
     return (com_type << 24) | (data << 8) | device_id;
     ;
   }
@@ -116,10 +115,10 @@ struct MI_EXT_ID {
 };
 
 // CAN数据
-class MiCANMsg : public TPCANMsg {
+class MiCANMsg : public CANMSG {
 public:
   MiCANMsg() = default;
-  MiCANMsg(const TPCANMsg &base_msg) : TPCANMsg(base_msg) {}
+  MiCANMsg(const CANMSG &base_msg) : CANMSG(base_msg) {}
   void print() {
     struct MI_EXT_ID *id_info = (struct MI_EXT_ID *)&this->ID;
     id_info->print();
@@ -133,18 +132,21 @@ public:
   MI_EXT_ID *get_ext_id() { return (struct MI_EXT_ID *)&this->ID; }
 };
 
-class MiMotor : public Motor {
+class MiMotor : public CANMotor {
 public:
   MiMotor();
   ~MiMotor();
 
   MiCANMsg *enableMotor(uint8_t motor_id, bool enable,
                         bool clear_fault = false) override;
-  MotorBack decode(TPCANMsg msg) override;
+  MotorBack decode(CANMSG msg) override;
 
   // 运动控制
   MiCANMsg *locomotion(uint8_t motor_id, float torque, float pos, float ang_vel,
                        float kp, float kd) override;
+  // 速度控制
+  MiCANMsg *ctrl_vel(uint8_t motor_id, float vel) override;
+
   // 位置PD
   MiCANMsg *setPosKP(uint8_t motor_id, float kp) override;
   MiCANMsg *setPosKD(uint8_t motor_id, float kd) override;
@@ -171,6 +173,19 @@ public:
   // 设置id
   MiCANMsg *set_can_id(uint8_t motor_id, uint8_t id);
   MiCANMsg *set_zero_point(uint8_t motor_id);
+
+  // 位置
+  CANMSG *ctrl_pos(uint8_t motor_id, float pos) { return nullptr; };
+  // 速度位置
+  CANMSG *ctrl_pos_vel(uint8_t motor_id, float pos, float vel) {
+    return nullptr;
+  };
+  // 扭矩/电流
+  CANMSG *ctrl_torque(uint8_t motor_id, float torque) {
+    return nullptr;
+  };
+  /*--------电机参数设置----*/
+  MiCANMsg *setSafePos(uint8_t motor_id, float pos) { return nullptr; };
 
 private:
   int float_to_uint(float x, float x_min, float x_max, int bits);

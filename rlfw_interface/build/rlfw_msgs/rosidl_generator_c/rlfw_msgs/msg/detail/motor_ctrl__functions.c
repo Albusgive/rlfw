@@ -12,10 +12,8 @@
 
 
 // Include directives for member types
-// Member `joint`
+// Member `jointname`
 #include "std_msgs/msg/detail/header__functions.h"
-// Member `ctrl_type`
-#include "rosidl_runtime_c/string_functions.h"
 
 bool
 rlfw_msgs__msg__MotorCtrl__init(rlfw_msgs__msg__MotorCtrl * msg)
@@ -23,14 +21,8 @@ rlfw_msgs__msg__MotorCtrl__init(rlfw_msgs__msg__MotorCtrl * msg)
   if (!msg) {
     return false;
   }
-  // joint
-  if (!std_msgs__msg__Header__init(&msg->joint)) {
-    rlfw_msgs__msg__MotorCtrl__fini(msg);
-    return false;
-  }
-  // motor_id
-  // ctrl_type
-  if (!rosidl_runtime_c__String__init(&msg->ctrl_type)) {
+  // jointname
+  if (!std_msgs__msg__Header__init(&msg->jointname)) {
     rlfw_msgs__msg__MotorCtrl__fini(msg);
     return false;
   }
@@ -48,11 +40,8 @@ rlfw_msgs__msg__MotorCtrl__fini(rlfw_msgs__msg__MotorCtrl * msg)
   if (!msg) {
     return;
   }
-  // joint
-  std_msgs__msg__Header__fini(&msg->joint);
-  // motor_id
-  // ctrl_type
-  rosidl_runtime_c__String__fini(&msg->ctrl_type);
+  // jointname
+  std_msgs__msg__Header__fini(&msg->jointname);
   // torque
   // angle
   // ang_vel
@@ -66,19 +55,9 @@ rlfw_msgs__msg__MotorCtrl__are_equal(const rlfw_msgs__msg__MotorCtrl * lhs, cons
   if (!lhs || !rhs) {
     return false;
   }
-  // joint
+  // jointname
   if (!std_msgs__msg__Header__are_equal(
-      &(lhs->joint), &(rhs->joint)))
-  {
-    return false;
-  }
-  // motor_id
-  if (lhs->motor_id != rhs->motor_id) {
-    return false;
-  }
-  // ctrl_type
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->ctrl_type), &(rhs->ctrl_type)))
+      &(lhs->jointname), &(rhs->jointname)))
   {
     return false;
   }
@@ -113,17 +92,9 @@ rlfw_msgs__msg__MotorCtrl__copy(
   if (!input || !output) {
     return false;
   }
-  // joint
+  // jointname
   if (!std_msgs__msg__Header__copy(
-      &(input->joint), &(output->joint)))
-  {
-    return false;
-  }
-  // motor_id
-  output->motor_id = input->motor_id;
-  // ctrl_type
-  if (!rosidl_runtime_c__String__copy(
-      &(input->ctrl_type), &(output->ctrl_type)))
+      &(input->jointname), &(output->jointname)))
   {
     return false;
   }

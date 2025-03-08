@@ -61,9 +61,7 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
     """Message class 'MotorCtrl'."""
 
     __slots__ = [
-        '_joint',
-        '_motor_id',
-        '_ctrl_type',
+        '_jointname',
         '_torque',
         '_angle',
         '_ang_vel',
@@ -72,9 +70,7 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
     ]
 
     _fields_and_field_types = {
-        'joint': 'std_msgs/Header',
-        'motor_id': 'int8',
-        'ctrl_type': 'string',
+        'jointname': 'std_msgs/Header',
         'torque': 'float',
         'angle': 'float',
         'ang_vel': 'float',
@@ -84,8 +80,6 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -98,9 +92,7 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from std_msgs.msg import Header
-        self.joint = kwargs.get('joint', Header())
-        self.motor_id = kwargs.get('motor_id', int())
-        self.ctrl_type = kwargs.get('ctrl_type', str())
+        self.jointname = kwargs.get('jointname', Header())
         self.torque = kwargs.get('torque', float())
         self.angle = kwargs.get('angle', float())
         self.ang_vel = kwargs.get('ang_vel', float())
@@ -136,11 +128,7 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.joint != other.joint:
-            return False
-        if self.motor_id != other.motor_id:
-            return False
-        if self.ctrl_type != other.ctrl_type:
+        if self.jointname != other.jointname:
             return False
         if self.torque != other.torque:
             return False
@@ -160,46 +148,18 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def joint(self):
-        """Message field 'joint'."""
-        return self._joint
+    def jointname(self):
+        """Message field 'jointname'."""
+        return self._jointname
 
-    @joint.setter
-    def joint(self, value):
+    @jointname.setter
+    def jointname(self, value):
         if __debug__:
             from std_msgs.msg import Header
             assert \
                 isinstance(value, Header), \
-                "The 'joint' field must be a sub message of type 'Header'"
-        self._joint = value
-
-    @builtins.property
-    def motor_id(self):
-        """Message field 'motor_id'."""
-        return self._motor_id
-
-    @motor_id.setter
-    def motor_id(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'motor_id' field must be of type 'int'"
-            assert value >= -128 and value < 128, \
-                "The 'motor_id' field must be an integer in [-128, 127]"
-        self._motor_id = value
-
-    @builtins.property
-    def ctrl_type(self):
-        """Message field 'ctrl_type'."""
-        return self._ctrl_type
-
-    @ctrl_type.setter
-    def ctrl_type(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, str), \
-                "The 'ctrl_type' field must be of type 'str'"
-        self._ctrl_type = value
+                "The 'jointname' field must be a sub message of type 'Header'"
+        self._jointname = value
 
     @builtins.property
     def torque(self):

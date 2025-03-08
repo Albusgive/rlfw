@@ -56,9 +56,9 @@ cdr_serialize(
   const rlfw_msgs::msg::Motor & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: joint
+  // Member: jointname
   std_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.joint,
+    ros_message.jointname,
     cdr);
   // Member: motor_id
   cdr << ros_message.motor_id;
@@ -85,9 +85,9 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   rlfw_msgs::msg::Motor & ros_message)
 {
-  // Member: joint
+  // Member: jointname
   std_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.joint);
+    cdr, ros_message.jointname);
 
   // Member: motor_id
   cdr >> ros_message.motor_id;
@@ -129,11 +129,11 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: joint
+  // Member: jointname
 
   current_alignment +=
     std_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.joint, current_alignment);
+    ros_message.jointname, current_alignment);
   // Member: motor_id
   {
     size_t item_size = sizeof(ros_message.motor_id);
@@ -206,7 +206,7 @@ max_serialized_size_Motor(
   is_plain = true;
 
 
-  // Member: joint
+  // Member: jointname
   {
     size_t array_size = 1;
 

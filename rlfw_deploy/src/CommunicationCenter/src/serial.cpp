@@ -507,10 +507,10 @@ void Serial::decode()
         return ;
     }
     decode_lambda();
-    for(auto it:recv_queue)
-    {
-        std::cout <<it<<" ";
-    }
+    // for(auto it:recv_queue)
+    // {
+    //     std::cout <<it<<" ";
+    // }
     recv_queue.clear();
     std::cout<<std::endl;
 }

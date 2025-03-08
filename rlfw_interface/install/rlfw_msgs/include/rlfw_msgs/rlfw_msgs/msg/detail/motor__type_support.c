@@ -13,9 +13,9 @@
 
 
 // Include directives for member types
-// Member `joint`
+// Member `jointname`
 #include "std_msgs/msg/header.h"
-// Member `joint`
+// Member `jointname`
 #include "std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
@@ -39,14 +39,14 @@ void rlfw_msgs__msg__Motor__rosidl_typesupport_introspection_c__Motor_fini_funct
 
 static rosidl_typesupport_introspection_c__MessageMember rlfw_msgs__msg__Motor__rosidl_typesupport_introspection_c__Motor_message_member_array[9] = {
   {
-    "joint",  // name
+    "jointname",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(rlfw_msgs__msg__Motor, joint),  // bytes offset in struct
+    offsetof(rlfw_msgs__msg__Motor, jointname),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

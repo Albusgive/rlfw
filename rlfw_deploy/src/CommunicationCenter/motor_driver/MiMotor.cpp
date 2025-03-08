@@ -13,7 +13,7 @@ MiCANMsg *MiMotor::enableMotor(uint8_t motor_id, bool enable,
   else
     ext_id.com_type = static_cast<uint32_t>(com_type::Stop);
   msg.ID = ext_id.toEXTID();
-  msg.MSGTYPE = PCAN_MESSAGE_EXTENDED;
+  msg.MSGTYPE = CAN_EXTENDED;
   msg.LEN = 8;
   if (clear_fault)
     msg.DATA[0] = 1;
@@ -22,7 +22,7 @@ MiCANMsg *MiMotor::enableMotor(uint8_t motor_id, bool enable,
   return &mi_can_msg;
 }
 
-MotorBack MiMotor::decode(TPCANMsg msg) {
+MotorBack MiMotor::decode(CANMSG msg) {
   MiCANMsg mi_msg(msg);
   MotorBack motor;
   auto ext_id = mi_msg.get_ext_id();
@@ -63,7 +63,7 @@ MiCANMsg *MiMotor::locomotion(uint8_t motor_id, float torque, float pos,
   ext_id.data = float_to_uint(torque, T_MIN, T_MAX, 16);
   ext_id.com_type = static_cast<uint32_t>(com_type::Loc);
   msg.ID = ext_id.toEXTID();
-  msg.MSGTYPE = PCAN_MESSAGE_EXTENDED;
+  msg.MSGTYPE = CAN_EXTENDED;
   msg.LEN = 8;
   msg.DATA[0] = float_to_uint(pos, P_MIN, P_MAX, 16) >> 8;
   msg.DATA[1] = float_to_uint(pos, P_MIN, P_MAX, 16);
@@ -76,6 +76,11 @@ MiCANMsg *MiMotor::locomotion(uint8_t motor_id, float torque, float pos,
 
   mi_can_msg = msg;
   return &mi_can_msg;
+}
+
+MiCANMsg *MiMotor::ctrl_vel(uint8_t motor_id, float vel)
+{
+  return set_parameter(motor_id, motor_indexs::spd_ref, vel);
 }
 
 MiCANMsg *MiMotor::setPosKP(uint8_t motor_id, float kp){
@@ -118,7 +123,7 @@ MiCANMsg *MiMotor::set_parameter(uint8_t motor_id, motor_indexs index,
   ext_id.data = 0;
   ext_id.com_type = static_cast<uint32_t>(com_type::SetParameter);
   msg.ID = ext_id.toEXTID();
-  msg.MSGTYPE = PCAN_MESSAGE_EXTENDED;
+  msg.MSGTYPE = CAN_EXTENDED;
   msg.LEN = 8;
   uint16_t motor_index = static_cast<uint16_t>(index);
   memcpy(msg.DATA, &motor_index, sizeof(uint16_t));
@@ -139,7 +144,7 @@ MiCANMsg *MiMotor::set_fix_parameter(uint8_t motor_id,
   ext_id.data = 253;
   ext_id.com_type = static_cast<uint32_t>(com_type::SetFixParameter);
   msg.ID = ext_id.toEXTID();
-  msg.MSGTYPE = PCAN_MESSAGE_EXTENDED;
+  msg.MSGTYPE = CAN_EXTENDED;
   msg.LEN = 8;
   uint16_t motor_index = static_cast<uint16_t>(index);
   memcpy(msg.DATA, &motor_index, sizeof(uint16_t));
@@ -158,7 +163,7 @@ MiCANMsg *MiMotor::ok_fix_parameter(uint8_t motor_id) {
   ext_id.data = 765;
   ext_id.com_type = static_cast<uint32_t>(com_type::SetFixParameter);
   msg.ID = ext_id.toEXTID();
-  msg.MSGTYPE = PCAN_MESSAGE_EXTENDED;
+  msg.MSGTYPE = CAN_EXTENDED;
   msg.LEN = 8;
   mi_can_msg = msg;
   return &mi_can_msg;
@@ -171,7 +176,7 @@ MiCANMsg *MiMotor::request_parameter(uint8_t motor_id, motor_indexs index) {
   ext_id.data = 0;
   ext_id.com_type = static_cast<uint32_t>(com_type::RequestParameter);
   msg.ID = ext_id.toEXTID();
-  msg.MSGTYPE = PCAN_MESSAGE_EXTENDED;
+  msg.MSGTYPE = CAN_EXTENDED;
   msg.LEN = 8;
   uint16_t motor_index = static_cast<uint16_t>(index);
   memcpy(msg.DATA, &motor_index, sizeof(uint16_t));
@@ -186,7 +191,7 @@ MiCANMsg *MiMotor::set_can_id(uint8_t motor_id, uint8_t id) {
   ext_id.data = id << 8;
   ext_id.com_type = static_cast<uint32_t>(com_type::SetCANID);
   msg.ID = ext_id.toEXTID();
-  msg.MSGTYPE = PCAN_MESSAGE_EXTENDED;
+  msg.MSGTYPE = CAN_EXTENDED;
   msg.LEN = 8;
   mi_can_msg = msg;
   return &mi_can_msg;
@@ -199,7 +204,7 @@ MiCANMsg *MiMotor::set_zero_point(uint8_t motor_id) {
   ext_id.data = 0;
   ext_id.com_type = static_cast<uint32_t>(com_type::SetZero);
   msg.ID = ext_id.toEXTID();
-  msg.MSGTYPE = PCAN_MESSAGE_EXTENDED;
+  msg.MSGTYPE = CAN_EXTENDED;
   msg.LEN = 8;
   mi_can_msg = msg;
   return &mi_can_msg;

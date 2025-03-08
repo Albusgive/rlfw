@@ -84,7 +84,6 @@ rosidl_generator_c/rlfw_msgs/msg/motor.h: /opt/ros/humble/share/rosidl_generator
 rosidl_generator_c/rlfw_msgs/msg/motor.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/rlfw_msgs/msg/motor.h: rosidl_adapter/rlfw_msgs/msg/Motor.idl
 rosidl_generator_c/rlfw_msgs/msg/motor.h: rosidl_adapter/rlfw_msgs/msg/MotorCtrl.idl
-rosidl_generator_c/rlfw_msgs/msg/motor.h: rosidl_adapter/rlfw_msgs/msg/MotorCfg.idl
 rosidl_generator_c/rlfw_msgs/msg/motor.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_c/rlfw_msgs/msg/motor.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_c/rlfw_msgs/msg/motor.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -141,26 +140,11 @@ rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__struct.h: rosidl_generator_c
 rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__type_support.h: rosidl_generator_c/rlfw_msgs/msg/motor.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__type_support.h
 
-rosidl_generator_c/rlfw_msgs/msg/motor_cfg.h: rosidl_generator_c/rlfw_msgs/msg/motor.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rlfw_msgs/msg/motor_cfg.h
-
-rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.h: rosidl_generator_c/rlfw_msgs/msg/motor.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.h
-
-rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__struct.h: rosidl_generator_c/rlfw_msgs/msg/motor.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__struct.h
-
-rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__type_support.h: rosidl_generator_c/rlfw_msgs/msg/motor.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__type_support.h
-
 rosidl_generator_c/rlfw_msgs/msg/detail/motor__functions.c: rosidl_generator_c/rlfw_msgs/msg/motor.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rlfw_msgs/msg/detail/motor__functions.c
 
 rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.c: rosidl_generator_c/rlfw_msgs/msg/motor.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.c
-
-rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c: rosidl_generator_c/rlfw_msgs/msg/motor.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c
 
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor__functions.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor__functions.c.o: rosidl_generator_c/rlfw_msgs/msg/detail/motor__functions.c
@@ -190,39 +174,23 @@ CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/de
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.c -o CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.c.s
 
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/flags.make
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.o: rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.o -MF CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.o.d -o CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.o -c /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c
-
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c > CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.i
-
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c -o CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.s
-
 # Object files for target rlfw_msgs__rosidl_generator_c
 rlfw_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor__functions.c.o" \
-"CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.c.o" \
-"CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.o"
+"CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.c.o"
 
 # External object files for target rlfw_msgs__rosidl_generator_c
 rlfw_msgs__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 librlfw_msgs__rosidl_generator_c.so: CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor__functions.c.o
 librlfw_msgs__rosidl_generator_c.so: CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.c.o
-librlfw_msgs__rosidl_generator_c.so: CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c.o
 librlfw_msgs__rosidl_generator_c.so: CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/build.make
 librlfw_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 librlfw_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
 librlfw_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 librlfw_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 librlfw_msgs__rosidl_generator_c.so: CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library librlfw_msgs__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library librlfw_msgs__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -237,16 +205,11 @@ CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msg
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor__functions.h
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor__struct.h
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor__type_support.h
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.c
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.h
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__struct.h
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__type_support.h
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.c
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.h
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__struct.h
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__type_support.h
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/motor.h
-CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/motor_cfg.h
 CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/rlfw_msgs/msg/motor_ctrl.h
 	cd /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/depend

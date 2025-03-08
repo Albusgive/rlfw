@@ -54,12 +54,12 @@ bool rlfw_msgs__msg__motor__convert_from_py(PyObject * _pymsg, void * _ros_messa
     assert(strncmp("rlfw_msgs.msg._motor.Motor", full_classname_dest, 26) == 0);
   }
   rlfw_msgs__msg__Motor * ros_message = _ros_message;
-  {  // joint
-    PyObject * field = PyObject_GetAttrString(_pymsg, "joint");
+  {  // jointname
+    PyObject * field = PyObject_GetAttrString(_pymsg, "jointname");
     if (!field) {
       return false;
     }
-    if (!std_msgs__msg__header__convert_from_py(field, &ros_message->joint)) {
+    if (!std_msgs__msg__header__convert_from_py(field, &ros_message->jointname)) {
       Py_DECREF(field);
       return false;
     }
@@ -159,14 +159,14 @@ PyObject * rlfw_msgs__msg__motor__convert_to_py(void * raw_ros_message)
     }
   }
   rlfw_msgs__msg__Motor * ros_message = (rlfw_msgs__msg__Motor *)raw_ros_message;
-  {  // joint
+  {  // jointname
     PyObject * field = NULL;
-    field = std_msgs__msg__header__convert_to_py(&ros_message->joint);
+    field = std_msgs__msg__header__convert_to_py(&ros_message->jointname);
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "joint", field);
+      int rc = PyObject_SetAttrString(_pymessage, "jointname", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -39,14 +39,14 @@ void Motor_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember Motor_message_member_array[9] = {
   {
-    "joint",  // name
+    "jointname",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Header>(),  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(rlfw_msgs::msg::Motor, joint),  // bytes offset in struct
+    offsetof(rlfw_msgs::msg::Motor, jointname),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

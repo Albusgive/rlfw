@@ -13,12 +13,10 @@
 
 
 // Include directives for member types
-// Member `joint`
+// Member `jointname`
 #include "std_msgs/msg/header.h"
-// Member `joint`
+// Member `jointname`
 #include "std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h"
-// Member `ctrl_type`
-#include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -39,50 +37,16 @@ void rlfw_msgs__msg__MotorCtrl__rosidl_typesupport_introspection_c__MotorCtrl_fi
   rlfw_msgs__msg__MotorCtrl__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember rlfw_msgs__msg__MotorCtrl__rosidl_typesupport_introspection_c__MotorCtrl_message_member_array[8] = {
+static rosidl_typesupport_introspection_c__MessageMember rlfw_msgs__msg__MotorCtrl__rosidl_typesupport_introspection_c__MotorCtrl_message_member_array[6] = {
   {
-    "joint",  // name
+    "jointname",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(rlfw_msgs__msg__MotorCtrl, joint),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "motor_id",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rlfw_msgs__msg__MotorCtrl, motor_id),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "ctrl_type",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rlfw_msgs__msg__MotorCtrl, ctrl_type),  // bytes offset in struct
+    offsetof(rlfw_msgs__msg__MotorCtrl, jointname),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -181,7 +145,7 @@ static rosidl_typesupport_introspection_c__MessageMember rlfw_msgs__msg__MotorCt
 static const rosidl_typesupport_introspection_c__MessageMembers rlfw_msgs__msg__MotorCtrl__rosidl_typesupport_introspection_c__MotorCtrl_message_members = {
   "rlfw_msgs__msg",  // message namespace
   "MotorCtrl",  // message name
-  8,  // number of fields
+  6,  // number of fields
   sizeof(rlfw_msgs__msg__MotorCtrl),
   rlfw_msgs__msg__MotorCtrl__rosidl_typesupport_introspection_c__MotorCtrl_message_member_array,  // message members
   rlfw_msgs__msg__MotorCtrl__rosidl_typesupport_introspection_c__MotorCtrl_init_function,  // function to initialize message memory (memory has to be allocated)

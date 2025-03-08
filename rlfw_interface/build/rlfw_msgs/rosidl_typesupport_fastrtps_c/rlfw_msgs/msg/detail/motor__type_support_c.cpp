@@ -34,7 +34,7 @@ extern "C"
 {
 #endif
 
-#include "std_msgs/msg/detail/header__functions.h"  // joint
+#include "std_msgs/msg/detail/header__functions.h"  // jointname
 
 // forward declare type support functions
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rlfw_msgs
@@ -64,7 +64,7 @@ static bool _Motor__cdr_serialize(
     return false;
   }
   const _Motor__ros_msg_type * ros_message = static_cast<const _Motor__ros_msg_type *>(untyped_ros_message);
-  // Field name: joint
+  // Field name: jointname
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
@@ -72,7 +72,7 @@ static bool _Motor__cdr_serialize(
         rosidl_typesupport_fastrtps_c, std_msgs, msg, Header
       )()->data);
     if (!callbacks->cdr_serialize(
-        &ros_message->joint, cdr))
+        &ros_message->jointname, cdr))
     {
       return false;
     }
@@ -130,7 +130,7 @@ static bool _Motor__cdr_deserialize(
     return false;
   }
   _Motor__ros_msg_type * ros_message = static_cast<_Motor__ros_msg_type *>(untyped_ros_message);
-  // Field name: joint
+  // Field name: jointname
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
@@ -138,7 +138,7 @@ static bool _Motor__cdr_deserialize(
         rosidl_typesupport_fastrtps_c, std_msgs, msg, Header
       )()->data);
     if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->joint))
+        cdr, &ros_message->jointname))
     {
       return false;
     }
@@ -201,10 +201,10 @@ size_t get_serialized_size_rlfw_msgs__msg__Motor(
   (void)padding;
   (void)wchar_size;
 
-  // field.name joint
+  // field.name jointname
 
   current_alignment += get_serialized_size_std_msgs__msg__Header(
-    &(ros_message->joint), current_alignment);
+    &(ros_message->jointname), current_alignment);
   // field.name motor_id
   {
     size_t item_size = sizeof(ros_message->motor_id);
@@ -282,7 +282,7 @@ size_t max_serialized_size_rlfw_msgs__msg__Motor(
   full_bounded = true;
   is_plain = true;
 
-  // member: joint
+  // member: jointname
   {
     size_t array_size = 1;
 

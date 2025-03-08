@@ -101,48 +101,16 @@ private:
   ::rlfw_msgs::msg::MotorCtrl msg_;
 };
 
-class Init_MotorCtrl_ctrl_type
+class Init_MotorCtrl_jointname
 {
 public:
-  explicit Init_MotorCtrl_ctrl_type(::rlfw_msgs::msg::MotorCtrl & msg)
-  : msg_(msg)
-  {}
-  Init_MotorCtrl_torque ctrl_type(::rlfw_msgs::msg::MotorCtrl::_ctrl_type_type arg)
-  {
-    msg_.ctrl_type = std::move(arg);
-    return Init_MotorCtrl_torque(msg_);
-  }
-
-private:
-  ::rlfw_msgs::msg::MotorCtrl msg_;
-};
-
-class Init_MotorCtrl_motor_id
-{
-public:
-  explicit Init_MotorCtrl_motor_id(::rlfw_msgs::msg::MotorCtrl & msg)
-  : msg_(msg)
-  {}
-  Init_MotorCtrl_ctrl_type motor_id(::rlfw_msgs::msg::MotorCtrl::_motor_id_type arg)
-  {
-    msg_.motor_id = std::move(arg);
-    return Init_MotorCtrl_ctrl_type(msg_);
-  }
-
-private:
-  ::rlfw_msgs::msg::MotorCtrl msg_;
-};
-
-class Init_MotorCtrl_joint
-{
-public:
-  Init_MotorCtrl_joint()
+  Init_MotorCtrl_jointname()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_MotorCtrl_motor_id joint(::rlfw_msgs::msg::MotorCtrl::_joint_type arg)
+  Init_MotorCtrl_torque jointname(::rlfw_msgs::msg::MotorCtrl::_jointname_type arg)
   {
-    msg_.joint = std::move(arg);
-    return Init_MotorCtrl_motor_id(msg_);
+    msg_.jointname = std::move(arg);
+    return Init_MotorCtrl_torque(msg_);
   }
 
 private:
@@ -160,7 +128,7 @@ template<>
 inline
 auto build<::rlfw_msgs::msg::MotorCtrl>()
 {
-  return rlfw_msgs::msg::builder::Init_MotorCtrl_joint();
+  return rlfw_msgs::msg::builder::Init_MotorCtrl_jointname();
 }
 
 }  // namespace rlfw_msgs

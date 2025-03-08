@@ -1,6 +1,8 @@
 #pragma once
+#include "BaseCAN.h"
 #include "PCANBasic.h"
 #include <atomic>
+#include <functional>
 #include <iomanip>
 #include <iostream>
 #include <libudev.h>
@@ -12,25 +14,26 @@
 #include <tuple>
 #include <unistd.h> // 在gcc编译器中，使用的头文件因gcc版本的不同而不同
 #include <vector>
+#include "rclcpp/rclcpp.hpp"
 
 // PCAN-USB interface, channel
 #define PCAN_NONEBUS 0x00U
-#define CAN1 0x51U
-#define CAN2 0x52U
-#define CAN3 0x53U
-#define CAN4 0x54U
-#define CAN5 0x55U
-#define CAN6 0x56U
-#define CAN7 0x57U
-#define CAN8 0x58U
-#define CAN9 0x509U
-#define CAN10 0x50AU
-#define CAN11 0x50BU
-#define CAN12 0x50CU
-#define CAN13 0x50DU
-#define CAN14 0x50EU
-#define CAN15 0x50FU
-#define CAN16 0x510U
+#define PCAN1 0x51U
+#define PCAN2 0x52U
+#define PCAN3 0x53U
+#define PCAN4 0x54U
+#define PCAN5 0x55U
+#define PCAN6 0x56U
+#define PCAN7 0x57U
+#define PCAN8 0x58U
+#define PCAN9 0x509U
+#define PCAN10 0x50AU
+#define PCAN11 0x50BU
+#define PCAN12 0x50CU
+#define PCAN13 0x50DU
+#define PCAN14 0x50EU
+#define PCAN15 0x50FU
+#define PCAN16 0x510U
 
 #define BAUD_1MBPS 0x0014U   //   1 MBit/s
 #define BAUD_800KBPS 0x0016U // 800 kBit/s
@@ -51,26 +54,9 @@
 // TPCANHandle Channel,
 // TPCANBaudrate Btr0Btr1,
 
-class CompensateAngle {
-public:
-  int m1 = -1;
-  int m2 = -1;
-  int m3 = -1;
-  int m4 = -1;
-  int m5 = -1;
-  int m6 = -1;
-  int m7 = -1;
-  int m8 = -1;
-  int m9 = -1;
-  int m10 = -1;
-  int m11 = -1;
-  int m12 = -1;
-  int m13 = -1;
-  std::map<int, int> getCompensateAngle();
-};
-//USB最多挂8路CAN
+// USB最多挂8路CAN
 struct PChannel {
-  TPCANHandle PCAN1, PCAN2, PCAN3, PCAN4, PCAN5, PCAN6, PCAN7, PCAN8;
+  TPCANHandle CAN1, CAN2, CAN3, CAN4, CAN5, CAN6, CAN7, CAN8;
 };
 
 // USB 端口映射值
@@ -82,7 +68,7 @@ public:
   T port4;
 };
 
-class PCAN {
+class PCAN : public BaseCAN {
 public:
   PCAN();
   ~PCAN();
@@ -94,13 +80,18 @@ public:
       将PCAN挂载到HUB上，返回HUB对应端口及通道 USBTreePort对应物理端口
   */
   USBHubPort<TPCANHandle> findPCAN();
-  //从PCAN的id来映射通道
+  // 从PCAN的id来映射通道
   PChannel findPChannel();
-  //寻找所有能用的PCAN并初始化 返回可用CAN通道
+  // 寻找所有能用的PCAN并初始化 返回可用CAN通道
   std::vector<TPCANHandle> initAvailableCAN();
 
-  void send(TPCANHandle CANx, TPCANMsg msg);
-  std::tuple<bool, TPCANMsg> read(TPCANHandle CANx);
+  void send(uint16_t CANx, CANMSG *msg) override;
+  std::tuple<bool, CANMSG> read(uint16_t CANx) override;
+
+  void connectDecode(std::function<void(CANMSG,std::vector<int> motor_ids)> lambda);
+  // 独立接受线程
+  void RunRecv();
+  void closeRecv();
 
 private:
   std::vector<TPCANHandle> tpcan;
@@ -108,11 +99,10 @@ private:
   int compareStrNum(std::string str1, std::string str2);
 
   void print(TPCANMsg msg);
-  // // 线程列表 对应接收线程
-  std::atomic<bool> thread_state{true};
-  std::vector<std::thread> threads;
-  std::vector<TPCANHandle> readmsgs_map;
-  std::mutex mtx;
+  std::function<void(CANMSG,std::vector<int> motor_ids)> decode_lambda = [=](CANMSG,std::vector<int>) {
+    std::cout << "pcan no bind decode" << std::endl;
+  };
+  std::atomic_bool is_only_thread{false};   //端口打开标志
 
   // static void sendRMMotor(TPCANHandle CANx, DWORD ID, WORD M1, WORD M2, WORD
   // M3, WORD M4, bool is_open);

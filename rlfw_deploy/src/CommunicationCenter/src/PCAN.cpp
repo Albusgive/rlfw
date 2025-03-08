@@ -1,14 +1,15 @@
 #include "PCAN.hpp"
+#include <mutex>
 
 PCAN::PCAN() {
-  tpcan.push_back(CAN1);
-  tpcan.push_back(CAN2);
-  tpcan.push_back(CAN3);
-  tpcan.push_back(CAN4);
-  tpcan.push_back(CAN5);
-  tpcan.push_back(CAN6);
-  tpcan.push_back(CAN7);
-  tpcan.push_back(CAN8);
+  tpcan.push_back(PCAN1);
+  tpcan.push_back(PCAN2);
+  tpcan.push_back(PCAN3);
+  tpcan.push_back(PCAN4);
+  tpcan.push_back(PCAN5);
+  tpcan.push_back(PCAN6);
+  tpcan.push_back(PCAN7);
+  tpcan.push_back(PCAN8);
 }
 
 PCAN::~PCAN() {}
@@ -21,7 +22,6 @@ bool PCAN::initPCAN(TPCANHandle CANx, TPCANBaudrate Btr0Btr1) {
     //           << status << std::endl;
     return false;
   }
-  readmsgs_map.push_back(CANx);
   return true;
 }
 
@@ -112,16 +112,16 @@ USBHubPort<TPCANHandle> PCAN::findPCAN() {
     std::cout << "open:" << i << std::endl;
     switch (i) {
     case 0:
-      return CAN1;
+      return PCAN1;
       break;
     case 1:
-      return CAN2;
+      return PCAN2;
       break;
     case 2:
-      return CAN3;
+      return PCAN3;
       break;
     case 3:
-      return CAN4;
+      return PCAN4;
       break;
     default:
       break;
@@ -156,28 +156,28 @@ PChannel PCAN::findPChannel() {
     std::cout << "id:" << id << " channel:" << channel << std::endl;
     switch (id) {
     case 1:
-      pc.PCAN1 = channel;
+      pc.CAN1 = channel;
       break;
     case 2:
-      pc.PCAN2 = channel;
+      pc.CAN2 = channel;
       break;
     case 3:
-      pc.PCAN3 = channel;
+      pc.CAN3 = channel;
       break;
     case 4:
-      pc.PCAN4 = channel;
+      pc.CAN4 = channel;
       break;
     case 5:
-      pc.PCAN5 = channel;
+      pc.CAN5 = channel;
       break;
     case 6:
-      pc.PCAN6 = channel;
+      pc.CAN6 = channel;
       break;
     case 7:
-      pc.PCAN7 = channel;
+      pc.CAN7 = channel;
       break;
     case 8:
-      pc.PCAN8 = channel;
+      pc.CAN8 = channel;
       break;
     default:
       break;
@@ -204,8 +204,7 @@ std::vector<TPCANHandle> PCAN::initAvailableCAN() {
   available = std::vector<TPCANHandle>();
   for (auto i : tpcan) {
     bool is = initPCAN(i, BAUD_1MBPS);
-    if (!is)
-    {
+    if (!is) {
       CAN_Uninitialize(i);
       continue;
     }
@@ -214,24 +213,26 @@ std::vector<TPCANHandle> PCAN::initAvailableCAN() {
   return available;
 }
 
-void PCAN::send(TPCANHandle CANx, TPCANMsg msg) {
-
-  //   msg.MSGTYPE = PCAN_MESSAGE_STANDARD; // PCAN_MESSAGE_EXTENDED
-  TPCANStatus status = CAN_Write(CANx, &msg);
+void PCAN::send(uint16_t CANx, CANMSG *msg) {
+  if (msg == nullptr) {
+    std::cout << "send msg is nullptr" << std::endl;
+    return;
+  }
+  TPCANStatus status = CAN_Write(CANx, (TPCANMsg *)msg);
   if (status != PCAN_ERROR_OK) {
     std::cout << "Failed to write CAN message. Error: " << std::hex << status
               << std::endl;
   } else {
-    std::cout << "Send Success" << std::endl;
+    // std::cout << "Send Success" << std::endl;
   }
 }
 
-std::tuple<bool, TPCANMsg> PCAN::read(TPCANHandle CANx) {
+std::tuple<bool, CANMSG> PCAN::read(uint16_t CANx) {
   TPCANMsg msg;
   TPCANTimestamp timestamp;
   TPCANStatus state = CAN_Read(CANx, &msg, &timestamp);
   if (state != PCAN_ERROR_OK) {
-    return {false, msg};
+    return {false, *(CANMSG *)&msg};
     // std::cout << "Failed to read CAN message. Error: " << std::hex << state
     // << std::endl;
   } else {
@@ -247,8 +248,32 @@ std::tuple<bool, TPCANMsg> PCAN::read(TPCANHandle CANx) {
     //  }
     //  std::cout <<std::endl;
     //  std::cout<<"    Message Timestamp: " << timestamp.micros << std::endl;
-    return {true, msg};
+    return {true, *(CANMSG *)&msg};
   }
+}
+
+void PCAN::connectDecode(std::function<void(CANMSG,std::vector<int> motor_ids)> lambda) {
+  decode_lambda = lambda;
+}
+
+void PCAN::RunRecv() {
+  is_only_thread.store(true);
+  std::thread ThRecv = std::thread{[&]() {
+    while (is_only_thread.load()&&rclcpp::ok()) {
+      auto [is, msg] = read(channel);
+      if (is)
+      {
+        decode_lambda(msg,devive_ids);
+      }
+      // std::this_thread::sleep_for(std::chrono::milliseconds(1));
+    }
+  }};
+  ThRecv.detach();
+}
+
+void PCAN::closeRecv()
+{
+  is_only_thread.store(false);
 }
 
 int PCAN::compareStrNum(std::string str1, std::string str2) {

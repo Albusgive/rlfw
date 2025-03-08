@@ -19,13 +19,13 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'joint'
+// Member 'jointname'
 #include "std_msgs/msg/detail/header__struct.h"
 
 /// Struct defined in msg/Motor in the package rlfw_msgs.
 typedef struct rlfw_msgs__msg__Motor
 {
-  std_msgs__msg__Header joint;
+  std_msgs__msg__Header jointname;
   int8_t motor_id;
   /// angle
   float angle;

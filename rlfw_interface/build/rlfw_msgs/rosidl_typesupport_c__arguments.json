@@ -4,8 +4,7 @@
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_c/resource",
   "idl_tuples": [
     "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/Motor.idl",
-    "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/MotorCtrl.idl",
-    "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/MotorCfg.idl"
+    "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/MotorCtrl.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/Bool.idl",
@@ -50,7 +49,6 @@
     "/opt/ros/humble/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em",
     "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/Motor.idl",
     "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/MotorCtrl.idl",
-    "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/MotorCfg.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",
     "/opt/ros/humble/share/std_msgs/msg/Byte.idl",
     "/opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl",

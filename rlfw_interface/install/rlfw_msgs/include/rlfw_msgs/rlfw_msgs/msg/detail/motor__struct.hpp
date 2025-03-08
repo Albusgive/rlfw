@@ -16,7 +16,7 @@
 
 
 // Include directives for member types
-// Member 'joint'
+// Member 'jointname'
 #include "std_msgs/msg/detail/header__struct.hpp"
 
 #ifndef _WIN32
@@ -38,7 +38,7 @@ struct Motor_
   using Type = Motor_<ContainerAllocator>;
 
   explicit Motor_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : joint(_init)
+  : jointname(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -55,7 +55,7 @@ struct Motor_
   }
 
   explicit Motor_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : joint(_alloc, _init)
+  : jointname(_alloc, _init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -72,9 +72,9 @@ struct Motor_
   }
 
   // field types and members
-  using _joint_type =
+  using _jointname_type =
     std_msgs::msg::Header_<ContainerAllocator>;
-  _joint_type joint;
+  _jointname_type jointname;
   using _motor_id_type =
     int8_t;
   _motor_id_type motor_id;
@@ -101,10 +101,10 @@ struct Motor_
   _state_type state;
 
   // setters for named parameter idiom
-  Type & set__joint(
+  Type & set__jointname(
     const std_msgs::msg::Header_<ContainerAllocator> & _arg)
   {
-    this->joint = _arg;
+    this->jointname = _arg;
     return *this;
   }
   Type & set__motor_id(
@@ -198,7 +198,7 @@ struct Motor_
   // comparison operators
   bool operator==(const Motor_ & other) const
   {
-    if (this->joint != other.joint) {
+    if (this->jointname != other.jointname) {
       return false;
     }
     if (this->motor_id != other.motor_id) {

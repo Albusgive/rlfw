@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o.d"
   "CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o"
   "CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o.d"
+  "CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o"
+  "CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o.d"
   "CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o"
   "CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o.d"
   "CMakeFiles/CommunicationCenter.dir/src/main.cpp.o"

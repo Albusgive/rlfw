@@ -1,4 +1,4 @@
-std_msgs/Header joint
+std_msgs/Header jointname
 int8 motor_id
 #angle 
 float32 angle

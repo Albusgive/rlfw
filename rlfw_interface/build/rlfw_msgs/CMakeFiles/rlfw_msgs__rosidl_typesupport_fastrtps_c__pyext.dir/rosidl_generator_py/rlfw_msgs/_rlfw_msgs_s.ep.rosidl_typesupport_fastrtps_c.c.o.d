@@ -211,7 +211,4 @@ CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_
  /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor__functions.h \
  /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__type_support.h \
  /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__struct.h \
- /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.h \
- /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__type_support.h \
- /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__struct.h \
- /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_cfg__functions.h
+ /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.h

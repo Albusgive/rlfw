@@ -1,7 +1,5 @@
-std_msgs/Header joint
-int8 motor_id
-# MIT,POS,VEL,TORQUE,POS_VEL
-string ctrl_type
+#需要jointname 剩下的需要什么发什么
+std_msgs/Header jointname
 # 扭矩
 float32 torque
 # 位置

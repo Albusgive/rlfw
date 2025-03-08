@@ -1,5 +1,5 @@
 #pragma once
-#include "Communication.hpp"
+#include "ComCfg.hpp"
 #include "tinyxml2.h"
 #include <stdexcept>
 #include <string>
@@ -13,7 +13,7 @@ public:
   ~XMLDecoder();
   bool load(std::string path);
 
-  std::vector<Communication> coms;
+  std::vector<ComCfg> coms;
   bool check();
 
 private:

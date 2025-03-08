@@ -5,7 +5,7 @@ DMMotor::~DMMotor() {}
 DMCANMsg* DMMotor::enableMotor(uint8_t motor_id, bool enable, bool clear_fault) {
   DMCANMsg dm_msg;
   dm_msg.ID = motor_id;
-  dm_msg.MSGTYPE = PCAN_MESSAGE_STANDARD;
+  dm_msg.MSGTYPE = CAN_STANDARD;
   dm_msg.LEN = 8;
   if (enable) {
     dm_msg.DATA[0] = 0xFF;
@@ -31,7 +31,7 @@ DMCANMsg* DMMotor::enableMotor(uint8_t motor_id, bool enable, bool clear_fault) 
   return &dm_can_msg;
 }
 
-MotorBack DMMotor::decode(TPCANMsg msg) {
+MotorBack DMMotor::decode(CANMSG msg) {
   DMCANMsg dm_msg(msg);
   MotorBack motor;
   // 解码
@@ -72,7 +72,7 @@ DMCANMsg* DMMotor::locomotion(uint8_t motor_id, float torque, float pos,
                              float ang_vel, float kp, float kd) {
   DMCANMsg dm_msg;
   dm_msg.ID = motor_id;
-  dm_msg.MSGTYPE = PCAN_MESSAGE_STANDARD;
+  dm_msg.MSGTYPE = CAN_STANDARD;
   dm_msg.LEN = 8;
   uint16_t pos_tmp, vel_tmp, kp_tmp, kd_tmp, tor_tmp;
   pos_tmp = float_to_uint(pos, DM_P_MIN, DM_P_MAX, 16);

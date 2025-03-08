@@ -97,10 +97,24 @@ CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp -o CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.s
 
+CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: CMakeFiles/CommunicationCenter.dir/flags.make
+CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp
+CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: CMakeFiles/CommunicationCenter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o -MF CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o.d -o CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp
+
+CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp > CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.i
+
+CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp -o CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.s
+
 CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o: CMakeFiles/CommunicationCenter.dir/flags.make
 CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o: ../src/gamepad.cpp
 CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o: CMakeFiles/CommunicationCenter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o -MF CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o.d -o CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/gamepad.cpp
 
 CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.s: cmake_force
 CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: CMakeFiles/CommunicationCenter.dir/flags.make
 CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: CMakeFiles/CommunicationCenter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CommunicationCenter.dir/src/main.cpp.o -MF CMakeFiles/CommunicationCenter.dir/src/main.cpp.o.d -o CMakeFiles/CommunicationCenter.dir/src/main.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/main.cpp
 
 CMakeFiles/CommunicationCenter.dir/src/main.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.s: cmake_force
 CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: CMakeFiles/CommunicationCenter.dir/flags.make
 CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp
 CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: CMakeFiles/CommunicationCenter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o -MF CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o.d -o CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp
 
 CMakeFiles/CommunicationCenter.dir/src/serial.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.s: cmake_force
 CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o: CMakeFiles/CommunicationCenter.dir/flags.make
 CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o: ../motor_driver/DMMotor.cpp
 CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o: CMakeFiles/CommunicationCenter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o -MF CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o.d -o CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.cpp
 
 CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.s: cmake_force
 CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o: CMakeFiles/CommunicationCenter.dir/flags.make
 CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o: ../motor_driver/MiMotor.cpp
 CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o: CMakeFiles/CommunicationCenter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o -MF CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o.d -o CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.cpp
 
 CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.s: cmake_force
 CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o: CMakeFiles/CommunicationCenter.dir/flags.make
 CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o: ../motor_driver/RMMotor.cpp
 CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o: CMakeFiles/CommunicationCenter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o -MF CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o.d -o CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/RMMotor.cpp
 
 CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.i: cmake_force
@@ -185,6 +199,7 @@ CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.s: cmake_force
 CommunicationCenter_OBJECTS = \
 "CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o" \
 "CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o" \
+"CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o" \
 "CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o" \
 "CMakeFiles/CommunicationCenter.dir/src/main.cpp.o" \
 "CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o" \
@@ -197,6 +212,7 @@ CommunicationCenter_EXTERNAL_OBJECTS =
 
 CommunicationCenter: CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o
 CommunicationCenter: CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o
+CommunicationCenter: CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o
 CommunicationCenter: CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o
 CommunicationCenter: CMakeFiles/CommunicationCenter.dir/src/main.cpp.o
 CommunicationCenter: CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o
@@ -330,7 +346,7 @@ CommunicationCenter: /opt/ros/humble/lib/librcpputils.so
 CommunicationCenter: /opt/ros/humble/lib/librosidl_runtime_c.so
 CommunicationCenter: /opt/ros/humble/lib/librcutils.so
 CommunicationCenter: CMakeFiles/CommunicationCenter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable CommunicationCenter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable CommunicationCenter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CommunicationCenter.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

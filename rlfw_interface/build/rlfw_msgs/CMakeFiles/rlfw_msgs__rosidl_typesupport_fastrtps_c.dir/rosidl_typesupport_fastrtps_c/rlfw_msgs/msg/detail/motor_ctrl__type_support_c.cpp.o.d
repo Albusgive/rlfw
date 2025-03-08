@@ -190,6 +190,5 @@ CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastr
  /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/detail/motor_ctrl__functions.h \
  /usr/include/c++/12/stdlib.h \
  /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_c/rlfw_msgs/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__functions.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h

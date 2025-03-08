@@ -15,7 +15,7 @@
 #include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
-// Member 'joint'
+// Member 'jointname'
 #include "std_msgs/msg/detail/header__traits.hpp"
 
 namespace rlfw_msgs
@@ -29,10 +29,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: joint
+  // member: jointname
   {
-    out << "joint: ";
-    to_flow_style_yaml(msg.joint, out);
+    out << "jointname: ";
+    to_flow_style_yaml(msg.jointname, out);
     out << ", ";
   }
 
@@ -97,13 +97,13 @@ inline void to_block_style_yaml(
   const Motor & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: joint
+  // member: jointname
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "joint:\n";
-    to_block_style_yaml(msg.joint, out, indentation + 2);
+    out << "jointname:\n";
+    to_block_style_yaml(msg.jointname, out, indentation + 2);
   }
 
   // member: motor_id

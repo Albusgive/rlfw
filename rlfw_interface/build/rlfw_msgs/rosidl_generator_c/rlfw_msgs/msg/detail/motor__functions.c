@@ -12,7 +12,7 @@
 
 
 // Include directives for member types
-// Member `joint`
+// Member `jointname`
 #include "std_msgs/msg/detail/header__functions.h"
 
 bool
@@ -21,8 +21,8 @@ rlfw_msgs__msg__Motor__init(rlfw_msgs__msg__Motor * msg)
   if (!msg) {
     return false;
   }
-  // joint
-  if (!std_msgs__msg__Header__init(&msg->joint)) {
+  // jointname
+  if (!std_msgs__msg__Header__init(&msg->jointname)) {
     rlfw_msgs__msg__Motor__fini(msg);
     return false;
   }
@@ -43,8 +43,8 @@ rlfw_msgs__msg__Motor__fini(rlfw_msgs__msg__Motor * msg)
   if (!msg) {
     return;
   }
-  // joint
-  std_msgs__msg__Header__fini(&msg->joint);
+  // jointname
+  std_msgs__msg__Header__fini(&msg->jointname);
   // motor_id
   // angle
   // number_laps
@@ -61,9 +61,9 @@ rlfw_msgs__msg__Motor__are_equal(const rlfw_msgs__msg__Motor * lhs, const rlfw_m
   if (!lhs || !rhs) {
     return false;
   }
-  // joint
+  // jointname
   if (!std_msgs__msg__Header__are_equal(
-      &(lhs->joint), &(rhs->joint)))
+      &(lhs->jointname), &(rhs->jointname)))
   {
     return false;
   }
@@ -110,9 +110,9 @@ rlfw_msgs__msg__Motor__copy(
   if (!input || !output) {
     return false;
   }
-  // joint
+  // jointname
   if (!std_msgs__msg__Header__copy(
-      &(input->joint), &(output->joint)))
+      &(input->jointname), &(output->jointname)))
   {
     return false;
   }
