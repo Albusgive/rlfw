@@ -16,10 +16,6 @@ public:
   std::vector<ComCfg> coms;
   bool check();
 
-private:
-  XMLDocument doc;
-  std::string Attribute2String(const char *name);
-
   template <typename Enum> Enum string2enum(const std::string &name) {
     auto result = magic_enum::enum_cast<Enum>(name);
     if (result) {
@@ -33,4 +29,8 @@ private:
       }
     }
   }
+
+private:
+  XMLDocument doc;
+  std::string Attribute2String(const char *name);
 };

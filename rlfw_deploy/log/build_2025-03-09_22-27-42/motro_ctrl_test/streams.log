@@ -1,0 +1,26 @@
+[0.015s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/motro_ctrl_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/motro_ctrl_test -- -j12 -l12
+[0.045s] [35m[1mConsolidate compiler generated dependencies of target motro_ctrl_test[0m
+[0.056s] [ 50%] [32mBuilding CXX object CMakeFiles/motro_ctrl_test.dir/src/main.cpp.o[0m
+[7.164s] [100%] [32m[1mLinking CXX executable motro_ctrl_test[0m
+[7.793s] [100%] Built target motro_ctrl_test
+[7.800s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/motro_ctrl_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/motro_ctrl_test -- -j12 -l12
+[7.801s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/motro_ctrl_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/motro_ctrl_test
+[7.805s] -- Install configuration: ""
+[7.805s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/lib/motro_ctrl_test/motro_ctrl_test
+[7.808s] -- Set runtime path of "/home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/lib/motro_ctrl_test/motro_ctrl_test" to ""
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/ament_index/resource_index/package_run_dependencies/motro_ctrl_test
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/ament_index/resource_index/parent_prefix_path/motro_ctrl_test
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/environment/ament_prefix_path.sh
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/environment/ament_prefix_path.dsv
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/environment/path.sh
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/environment/path.dsv
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/local_setup.bash
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/local_setup.sh
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/local_setup.zsh
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/local_setup.dsv
+[7.808s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/package.dsv
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/ament_index/resource_index/packages/motro_ctrl_test
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/cmake/motro_ctrl_testConfig.cmake
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/cmake/motro_ctrl_testConfig-version.cmake
+[7.808s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/package.xml
+[7.809s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/motro_ctrl_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/motro_ctrl_test

@@ -8,9 +8,9 @@
     <!-- <com type="serial" name="commm" port="/dev/ttyUSB0">
         <motor type="UNITREE" ctrltype="POS" jointname="left_hip_joint" invert="true" />
     </com> -->
-
     <!-- 仅通讯 -->
-
-    <!-- <com type="pcan" name="other2" channel="2" />
-    <com type="serial" name="other" attrs="114514" /> -->
+    <!-- <com type="pcan" name="other2" channel="2" /> -->
+    <com type="serial" name="s1" port="/dev/ttyUSB0" bps="921600" datasize="8" parity="0" stopbit="1"/>
+    <com type="serial" name="s2" port="/dev/ttyCH341USB0" bps="921600" datasize="8" parity="0" stopbit="1"/>
+    <com type="serial" name="s3" port="/dev/ttyACM0" bps="115200" datasize="8" parity="0" stopbit="1"/>
 </rlfw>

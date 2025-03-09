@@ -62,6 +62,7 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
 
     __slots__ = [
         '_jointname',
+        '_ctrl_type',
         '_torque',
         '_angle',
         '_ang_vel',
@@ -71,6 +72,7 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
 
     _fields_and_field_types = {
         'jointname': 'std_msgs/Header',
+        'ctrl_type': 'string',
         'torque': 'float',
         'angle': 'float',
         'ang_vel': 'float',
@@ -80,6 +82,7 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -93,6 +96,7 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from std_msgs.msg import Header
         self.jointname = kwargs.get('jointname', Header())
+        self.ctrl_type = kwargs.get('ctrl_type', str())
         self.torque = kwargs.get('torque', float())
         self.angle = kwargs.get('angle', float())
         self.ang_vel = kwargs.get('ang_vel', float())
@@ -130,6 +134,8 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
             return False
         if self.jointname != other.jointname:
             return False
+        if self.ctrl_type != other.ctrl_type:
+            return False
         if self.torque != other.torque:
             return False
         if self.angle != other.angle:
@@ -160,6 +166,19 @@ class MotorCtrl(metaclass=Metaclass_MotorCtrl):
                 isinstance(value, Header), \
                 "The 'jointname' field must be a sub message of type 'Header'"
         self._jointname = value
+
+    @builtins.property
+    def ctrl_type(self):
+        """Message field 'ctrl_type'."""
+        return self._ctrl_type
+
+    @ctrl_type.setter
+    def ctrl_type(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'ctrl_type' field must be of type 'str'"
+        self._ctrl_type = value
 
     @builtins.property
     def torque(self):

@@ -101,16 +101,32 @@ private:
   ::rlfw_msgs::msg::MotorCtrl msg_;
 };
 
+class Init_MotorCtrl_ctrl_type
+{
+public:
+  explicit Init_MotorCtrl_ctrl_type(::rlfw_msgs::msg::MotorCtrl & msg)
+  : msg_(msg)
+  {}
+  Init_MotorCtrl_torque ctrl_type(::rlfw_msgs::msg::MotorCtrl::_ctrl_type_type arg)
+  {
+    msg_.ctrl_type = std::move(arg);
+    return Init_MotorCtrl_torque(msg_);
+  }
+
+private:
+  ::rlfw_msgs::msg::MotorCtrl msg_;
+};
+
 class Init_MotorCtrl_jointname
 {
 public:
   Init_MotorCtrl_jointname()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_MotorCtrl_torque jointname(::rlfw_msgs::msg::MotorCtrl::_jointname_type arg)
+  Init_MotorCtrl_ctrl_type jointname(::rlfw_msgs::msg::MotorCtrl::_jointname_type arg)
   {
     msg_.jointname = std::move(arg);
-    return Init_MotorCtrl_torque(msg_);
+    return Init_MotorCtrl_ctrl_type(msg_);
   }
 
 private:

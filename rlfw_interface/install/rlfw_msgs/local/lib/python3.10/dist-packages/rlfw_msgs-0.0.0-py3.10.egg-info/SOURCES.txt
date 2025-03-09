@@ -4,7 +4,3 @@ rlfw_msgs.egg-info/PKG-INFO
 rlfw_msgs.egg-info/SOURCES.txt
 rlfw_msgs.egg-info/dependency_links.txt
 rlfw_msgs.egg-info/top_level.txt
-rlfw_msgs/msg/__init__.py
-rlfw_msgs/msg/_motor.py
-rlfw_msgs/msg/_motor_cfg.py
-rlfw_msgs/msg/_motor_ctrl.py

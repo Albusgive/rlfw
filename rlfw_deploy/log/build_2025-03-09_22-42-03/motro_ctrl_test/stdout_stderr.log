@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target motro_ctrl_test[0m
+[100%] Built target motro_ctrl_test
+-- Install configuration: ""
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/lib/motro_ctrl_test/motro_ctrl_test
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/ament_index/resource_index/package_run_dependencies/motro_ctrl_test
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/ament_index/resource_index/parent_prefix_path/motro_ctrl_test
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/environment/ament_prefix_path.sh
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/environment/path.sh
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/environment/path.dsv
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/local_setup.bash
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/local_setup.sh
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/local_setup.zsh
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/local_setup.dsv
+-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/package.dsv
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/ament_index/resource_index/packages/motro_ctrl_test
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/cmake/motro_ctrl_testConfig.cmake
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/cmake/motro_ctrl_testConfig-version.cmake
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/motro_ctrl_test/share/motro_ctrl_test/package.xml

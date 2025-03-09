@@ -14,6 +14,8 @@
 // Include directives for member types
 // Member `jointname`
 #include "std_msgs/msg/detail/header__functions.h"
+// Member `ctrl_type`
+#include "rosidl_runtime_c/string_functions.h"
 
 bool
 rlfw_msgs__msg__MotorCtrl__init(rlfw_msgs__msg__MotorCtrl * msg)
@@ -23,6 +25,11 @@ rlfw_msgs__msg__MotorCtrl__init(rlfw_msgs__msg__MotorCtrl * msg)
   }
   // jointname
   if (!std_msgs__msg__Header__init(&msg->jointname)) {
+    rlfw_msgs__msg__MotorCtrl__fini(msg);
+    return false;
+  }
+  // ctrl_type
+  if (!rosidl_runtime_c__String__init(&msg->ctrl_type)) {
     rlfw_msgs__msg__MotorCtrl__fini(msg);
     return false;
   }
@@ -42,6 +49,8 @@ rlfw_msgs__msg__MotorCtrl__fini(rlfw_msgs__msg__MotorCtrl * msg)
   }
   // jointname
   std_msgs__msg__Header__fini(&msg->jointname);
+  // ctrl_type
+  rosidl_runtime_c__String__fini(&msg->ctrl_type);
   // torque
   // angle
   // ang_vel
@@ -58,6 +67,12 @@ rlfw_msgs__msg__MotorCtrl__are_equal(const rlfw_msgs__msg__MotorCtrl * lhs, cons
   // jointname
   if (!std_msgs__msg__Header__are_equal(
       &(lhs->jointname), &(rhs->jointname)))
+  {
+    return false;
+  }
+  // ctrl_type
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->ctrl_type), &(rhs->ctrl_type)))
   {
     return false;
   }
@@ -95,6 +110,12 @@ rlfw_msgs__msg__MotorCtrl__copy(
   // jointname
   if (!std_msgs__msg__Header__copy(
       &(input->jointname), &(output->jointname)))
+  {
+    return false;
+  }
+  // ctrl_type
+  if (!rosidl_runtime_c__String__copy(
+      &(input->ctrl_type), &(output->ctrl_type)))
   {
     return false;
   }

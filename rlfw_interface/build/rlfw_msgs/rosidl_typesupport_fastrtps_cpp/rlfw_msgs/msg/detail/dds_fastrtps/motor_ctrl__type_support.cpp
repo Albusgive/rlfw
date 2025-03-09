@@ -60,6 +60,8 @@ cdr_serialize(
   std_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.jointname,
     cdr);
+  // Member: ctrl_type
+  cdr << ros_message.ctrl_type;
   // Member: torque
   cdr << ros_message.torque;
   // Member: angle
@@ -82,6 +84,9 @@ cdr_deserialize(
   // Member: jointname
   std_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.jointname);
+
+  // Member: ctrl_type
+  cdr >> ros_message.ctrl_type;
 
   // Member: torque
   cdr >> ros_message.torque;
@@ -119,6 +124,10 @@ get_serialized_size(
   current_alignment +=
     std_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.jointname, current_alignment);
+  // Member: ctrl_type
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.ctrl_type.size() + 1);
   // Member: torque
   {
     size_t item_size = sizeof(ros_message.torque);
@@ -189,6 +198,19 @@ max_serialized_size_MotorCtrl(
       current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: ctrl_type
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
     }
   }
 

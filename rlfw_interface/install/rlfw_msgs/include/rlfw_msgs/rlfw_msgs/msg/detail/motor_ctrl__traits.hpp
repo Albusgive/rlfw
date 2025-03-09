@@ -36,6 +36,13 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: ctrl_type
+  {
+    out << "ctrl_type: ";
+    rosidl_generator_traits::value_to_yaml(msg.ctrl_type, out);
+    out << ", ";
+  }
+
   // member: torque
   {
     out << "torque: ";
@@ -83,6 +90,16 @@ inline void to_block_style_yaml(
     }
     out << "jointname:\n";
     to_block_style_yaml(msg.jointname, out, indentation + 2);
+  }
+
+  // member: ctrl_type
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "ctrl_type: ";
+    rosidl_generator_traits::value_to_yaml(msg.ctrl_type, out);
+    out << "\n";
   }
 
   // member: torque
@@ -182,11 +199,11 @@ inline const char * name<rlfw_msgs::msg::MotorCtrl>()
 
 template<>
 struct has_fixed_size<rlfw_msgs::msg::MotorCtrl>
-  : std::integral_constant<bool, has_fixed_size<std_msgs::msg::Header>::value> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<rlfw_msgs::msg::MotorCtrl>
-  : std::integral_constant<bool, has_bounded_size<std_msgs::msg::Header>::value> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<rlfw_msgs::msg::MotorCtrl>

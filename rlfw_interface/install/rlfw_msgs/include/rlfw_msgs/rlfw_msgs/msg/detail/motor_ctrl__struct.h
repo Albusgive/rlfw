@@ -21,14 +21,19 @@ extern "C"
 // Include directives for member types
 // Member 'jointname'
 #include "std_msgs/msg/detail/header__struct.h"
+// Member 'ctrl_type'
+#include "rosidl_runtime_c/string.h"
 
 /// Struct defined in msg/MotorCtrl in the package rlfw_msgs.
 /**
-  * 需要jointname 剩下的需要什么发什么
+  * 需要jointname 选择好控制类型剩下的需要什么发什么
+  * jointname的frame_id为关节名称
  */
 typedef struct rlfw_msgs__msg__MotorCtrl
 {
   std_msgs__msg__Header jointname;
+  /// MIT, POS, VEL, TORQUE, POS_VEL
+  rosidl_runtime_c__String ctrl_type;
   /// 扭矩
   float torque;
   /// 位置

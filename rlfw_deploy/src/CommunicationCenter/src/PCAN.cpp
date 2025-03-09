@@ -252,7 +252,7 @@ std::tuple<bool, CANMSG> PCAN::read(uint16_t CANx) {
   }
 }
 
-void PCAN::connectDecode(std::function<void(CANMSG,std::vector<int> motor_ids)> lambda) {
+void PCAN::connectDecode(std::function<void(CANMSG&,std::vector<int>& motor_ids,std::string& name)> lambda) {
   decode_lambda = lambda;
 }
 
@@ -263,7 +263,7 @@ void PCAN::RunRecv() {
       auto [is, msg] = read(channel);
       if (is)
       {
-        decode_lambda(msg,devive_ids);
+        decode_lambda(msg,devive_ids,this->name);
       }
       // std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }

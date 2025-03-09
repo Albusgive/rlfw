@@ -1,2 +1,4 @@
 /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/Motor.idl
 /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/MotorCtrl.idl
+/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/CanMsg.idl
+/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/SerialMsg.idl

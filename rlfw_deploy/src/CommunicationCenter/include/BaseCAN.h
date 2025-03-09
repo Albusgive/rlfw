@@ -24,10 +24,17 @@ class BaseCAN {
 public:
   BaseCAN(){};
   int channel = -1;
+  std::string name;
   bool only_thread=false;
   virtual void send(uint16_t /*CANx*/, CANMSG* /*msg*/)=0;
   virtual std::tuple<bool, CANMSG> read(uint16_t /*CANx*/)=0;
-  
+
+  void send(CANMSG* msg){
+    send(channel,msg);
+  };
+  std::tuple<bool, CANMSG> read(){
+    return read(channel);
+  };
   //该总线上设备的id
   std::vector<int> devive_ids;
 };

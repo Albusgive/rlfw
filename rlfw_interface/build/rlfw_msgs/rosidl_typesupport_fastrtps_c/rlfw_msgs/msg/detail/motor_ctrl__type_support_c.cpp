@@ -34,6 +34,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/string.h"  // ctrl_type
+#include "rosidl_runtime_c/string_functions.h"  // ctrl_type
 #include "std_msgs/msg/detail/header__functions.h"  // jointname
 
 // forward declare type support functions
@@ -76,6 +78,20 @@ static bool _MotorCtrl__cdr_serialize(
     {
       return false;
     }
+  }
+
+  // Field name: ctrl_type
+  {
+    const rosidl_runtime_c__String * str = &ros_message->ctrl_type;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   // Field name: torque
@@ -129,6 +145,22 @@ static bool _MotorCtrl__cdr_deserialize(
     }
   }
 
+  // Field name: ctrl_type
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->ctrl_type.data) {
+      rosidl_runtime_c__String__init(&ros_message->ctrl_type);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->ctrl_type,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'ctrl_type'\n");
+      return false;
+    }
+  }
+
   // Field name: torque
   {
     cdr >> ros_message->torque;
@@ -175,6 +207,10 @@ size_t get_serialized_size_rlfw_msgs__msg__MotorCtrl(
 
   current_alignment += get_serialized_size_std_msgs__msg__Header(
     &(ros_message->jointname), current_alignment);
+  // field.name ctrl_type
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->ctrl_type.size + 1);
   // field.name torque
   {
     size_t item_size = sizeof(ros_message->torque);
@@ -251,6 +287,18 @@ size_t max_serialized_size_rlfw_msgs__msg__MotorCtrl(
       current_alignment += inner_size;
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
+    }
+  }
+  // member: ctrl_type
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
     }
   }
   // member: torque

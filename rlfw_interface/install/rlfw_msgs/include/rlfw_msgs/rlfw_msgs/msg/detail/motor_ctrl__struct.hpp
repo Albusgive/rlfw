@@ -43,6 +43,7 @@ struct MotorCtrl_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->ctrl_type = "";
       this->torque = 0.0f;
       this->angle = 0.0f;
       this->ang_vel = 0.0f;
@@ -52,11 +53,13 @@ struct MotorCtrl_
   }
 
   explicit MotorCtrl_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : jointname(_alloc, _init)
+  : jointname(_alloc, _init),
+    ctrl_type(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->ctrl_type = "";
       this->torque = 0.0f;
       this->angle = 0.0f;
       this->ang_vel = 0.0f;
@@ -69,6 +72,9 @@ struct MotorCtrl_
   using _jointname_type =
     std_msgs::msg::Header_<ContainerAllocator>;
   _jointname_type jointname;
+  using _ctrl_type_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _ctrl_type_type ctrl_type;
   using _torque_type =
     float;
   _torque_type torque;
@@ -90,6 +96,12 @@ struct MotorCtrl_
     const std_msgs::msg::Header_<ContainerAllocator> & _arg)
   {
     this->jointname = _arg;
+    return *this;
+  }
+  Type & set__ctrl_type(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->ctrl_type = _arg;
     return *this;
   }
   Type & set__torque(
@@ -166,6 +178,9 @@ struct MotorCtrl_
   bool operator==(const MotorCtrl_ & other) const
   {
     if (this->jointname != other.jointname) {
+      return false;
+    }
+    if (this->ctrl_type != other.ctrl_type) {
       return false;
     }
     if (this->torque != other.torque) {

@@ -1,0 +1,513 @@
+[0.010s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter
+[0.044s] -- The C compiler identification is GNU 12.3.0
+[0.084s] -- The CXX compiler identification is GNU 12.3.0
+[0.090s] -- Detecting C compiler ABI info
+[0.137s] -- Detecting C compiler ABI info - done
+[0.142s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.142s] -- Detecting C compile features
+[0.142s] -- Detecting C compile features - done
+[0.144s] -- Detecting CXX compiler ABI info
+[0.196s] -- Detecting CXX compiler ABI info - done
+[0.204s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.205s] -- Detecting CXX compile features
+[0.205s] -- Detecting CXX compile features - done
+[0.207s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.303s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.360s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.383s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.385s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.390s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.397s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.406s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.431s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.432s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.480s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.496s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.520s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.525s] -- Looking for pthread.h
+[0.570s] -- Looking for pthread.h - found
+[0.570s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.618s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.618s] -- Found Threads: TRUE  
+[0.649s] -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
+[0.674s] -- Found rlfw_msgs: 0.0.0 (/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake)
+[0.682s] -- Found tf2_geometry_msgs: 0.25.12 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.698s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.699s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.699s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.747s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.766s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.802s] WARNING: Package name "CommunicationCenter" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[0.848s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.848s] -- Configured cppcheck include dirs: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include;/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver
+[0.848s] -- Configured cppcheck exclude dirs and/or files: 
+[0.852s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.860s] -- Added test 'lint_cmake' to check CMake code style
+[0.863s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.883s] -- Added test 'uncrustify' to check C / C++ code style
+[0.883s] -- Configured uncrustify additional arguments: 
+[0.885s] -- Added test 'xmllint' to check XML markup files
+[0.886s] -- Configuring done
+[0.901s] -- Generating done
+[0.907s] -- Build files have been written to: /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter
+[0.914s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter
+[0.916s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter -- -j12 -l12
+[0.949s] [  7%] [32mBuilding CXX object tinyxml2/CMakeFiles/tinyxml2.dir/tinyxml2.cpp.o[0m
+[1.180s] [ 14%] [32m[1mLinking CXX static library libtinyxml2.a[0m
+[1.223s] [ 14%] Built target tinyxml2
+[1.238s] [ 21%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o[0m
+[1.238s] [ 28%] [32mBuilding CXX object tinyxml2/CMakeFiles/xmltest.dir/xmltest.cpp.o[0m
+[1.238s] [ 35%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o[0m
+[1.239s] [ 42%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o[0m
+[1.239s] [ 50%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o[0m
+[1.241s] [ 57%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o[0m
+[1.243s] [ 64%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o[0m
+[1.243s] [ 71%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o[0m
+[1.244s] [ 78%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o[0m
+[1.255s] [ 85%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o[0m
+[1.644s] [ 92%] [32m[1mLinking CXX executable xmltest[0m
+[1.797s] [ 92%] Built target xmltest
+[1.847s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kvoid Serial::search_device_serial()[m[K’:
+[1.847s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:267:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.847s]   267 |   [01;35m[Kdelete udev[m[K;
+[1.847s]       |   [01;35m[K^~~~~~~~~~~[m[K
+[1.847s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:233:16:[m[K [01;35m[Kwarning: [m[K‘[01m[Kudev[m[K’ has incomplete type
+[1.847s]   233 |   struct udev *[01;35m[Kudev[m[K = udev_new();
+[1.847s]       |                [01;35m[K^~~~[m[K
+[1.847s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/serial.hpp:21[m[K,
+[1.850s]                  from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:1[m[K:
+[1.850s] [01m[K/usr/include/libudev.h:20:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev[m[K’
+[1.850s]    20 | struct [01;36m[Kudev[m[K;
+[1.850s]       |        [01;36m[K^~~~[m[K
+[1.850s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:267:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.850s]   267 |   [01;36m[Kdelete udev[m[K;
+[1.850s]       |   [01;36m[K^~~~~~~~~~~[m[K
+[1.850s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:268:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.850s]   268 |   [01;35m[Kdelete enumerate[m[K;
+[1.850s]       |   [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.852s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:239:26:[m[K [01;35m[Kwarning: [m[K‘[01m[Kenumerate[m[K’ has incomplete type
+[1.852s]   239 |   struct udev_enumerate *[01;35m[Kenumerate[m[K = udev_enumerate_new(udev);
+[1.852s]       |                          [01;35m[K^~~~~~~~~[m[K
+[1.852s] [01m[K/usr/include/libudev.h:126:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_enumerate[m[K’
+[1.852s]   126 | struct [01;36m[Kudev_enumerate[m[K;
+[1.852s]       |        [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.852s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:268:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.852s]   268 |   [01;36m[Kdelete enumerate[m[K;
+[1.852s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.852s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:269:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.852s]   269 |   [01;35m[Kdelete devices[m[K;
+[1.852s]       |   [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.852s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:245:27:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdevices[m[K’ has incomplete type
+[1.852s]   245 |   struct udev_list_entry *[01;35m[Kdevices[m[K = udev_enumerate_get_list_entry(enumerate);
+[1.852s]       |                           [01;35m[K^~~~~~~[m[K
+[1.852s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.853s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.853s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.853s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:269:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.853s]   269 |   [01;36m[Kdelete devices[m[K;
+[1.853s]       |   [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.853s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:270:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.853s]   270 |   [01;35m[Kdelete entry[m[K;
+[1.853s]       |   [01;35m[K^~~~~~~~~~~~[m[K
+[1.853s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:247:27:[m[K [01;35m[Kwarning: [m[K‘[01m[Kentry[m[K’ has incomplete type
+[1.853s]   247 |   struct udev_list_entry *[01;35m[Kentry[m[K;
+[1.853s]       |                           [01;35m[K^~~~~[m[K
+[1.853s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.854s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.854s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:270:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.854s]   270 |   [01;36m[Kdelete entry[m[K;
+[1.854s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kstd::string Serial::get_attrs_serial(const std::string&)[m[K’:
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:322:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.854s]   322 |   [01;35m[Kdelete udev[m[K;
+[1.854s]       |   [01;35m[K^~~~~~~~~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:275:16:[m[K [01;35m[Kwarning: [m[K‘[01m[Kudev[m[K’ has incomplete type
+[1.854s]   275 |   struct udev *[01;35m[Kudev[m[K = udev_new();
+[1.854s]       |                [01;35m[K^~~~[m[K
+[1.854s] [01m[K/usr/include/libudev.h:20:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev[m[K’
+[1.854s]    20 | struct [01;36m[Kudev[m[K;
+[1.854s]       |        [01;36m[K^~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:322:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.854s]   322 |   [01;36m[Kdelete udev[m[K;
+[1.854s]       |   [01;36m[K^~~~~~~~~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:323:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.854s]   323 |   [01;35m[Kdelete enumerate[m[K;
+[1.854s]       |   [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.854s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:281:26:[m[K [01;35m[Kwarning: [m[K‘[01m[Kenumerate[m[K’ has incomplete type
+[1.855s]   281 |   struct udev_enumerate *[01;35m[Kenumerate[m[K = udev_enumerate_new(udev);
+[1.855s]       |                          [01;35m[K^~~~~~~~~[m[K
+[1.855s] [01m[K/usr/include/libudev.h:126:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_enumerate[m[K’
+[1.855s]   126 | struct [01;36m[Kudev_enumerate[m[K;
+[1.855s]       |        [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:323:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.855s]   323 |   [01;36m[Kdelete enumerate[m[K;
+[1.855s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:324:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.855s]   324 |   [01;35m[Kdelete devices[m[K;
+[1.855s]       |   [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:287:27:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdevices[m[K’ has incomplete type
+[1.855s]   287 |   struct udev_list_entry *[01;35m[Kdevices[m[K = udev_enumerate_get_list_entry(enumerate);
+[1.855s]       |                           [01;35m[K^~~~~~~[m[K
+[1.855s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.855s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.855s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.855s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:324:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.855s]   324 |   [01;36m[Kdelete devices[m[K;
+[1.855s]       |   [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:325:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.856s]   325 |   [01;35m[Kdelete entry[m[K;
+[1.856s]       |   [01;35m[K^~~~~~~~~~~~[m[K
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:289:27:[m[K [01;35m[Kwarning: [m[K‘[01m[Kentry[m[K’ has incomplete type
+[1.856s]   289 |   struct udev_list_entry *[01;35m[Kentry[m[K;
+[1.856s]       |                           [01;35m[K^~~~~[m[K
+[1.856s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.856s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.856s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:325:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.856s]   325 |   [01;36m[Kdelete entry[m[K;
+[1.856s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kstd::string Serial::search_usb_port(std::string)[m[K’:
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:383:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.856s]   383 |   [01;35m[Kdelete udev[m[K;
+[1.856s]       |   [01;35m[K^~~~~~~~~~~[m[K
+[1.856s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:328:16:[m[K [01;35m[Kwarning: [m[K‘[01m[Kudev[m[K’ has incomplete type
+[1.856s]   328 |   struct udev *[01;35m[Kudev[m[K;
+[1.856s]       |                [01;35m[K^~~~[m[K
+[1.856s] [01m[K/usr/include/libudev.h:20:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev[m[K’
+[1.856s]    20 | struct [01;36m[Kudev[m[K;
+[1.856s]       |        [01;36m[K^~~~[m[K
+[1.857s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:383:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.857s]   383 |   [01;36m[Kdelete udev[m[K;
+[1.857s]       |   [01;36m[K^~~~~~~~~~~[m[K
+[1.857s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:384:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.857s]   384 |   [01;35m[Kdelete enumerate[m[K;
+[1.857s]       |   [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.857s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:329:26:[m[K [01;35m[Kwarning: [m[K‘[01m[Kenumerate[m[K’ has incomplete type
+[1.857s]   329 |   struct udev_enumerate *[01;35m[Kenumerate[m[K;
+[1.857s]       |                          [01;35m[K^~~~~~~~~[m[K
+[1.857s] [01m[K/usr/include/libudev.h:126:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_enumerate[m[K’
+[1.857s]   126 | struct [01;36m[Kudev_enumerate[m[K;
+[1.857s]       |        [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.857s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:384:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.857s]   384 |   [01;36m[Kdelete enumerate[m[K;
+[1.857s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[1.857s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:385:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.857s]   385 |   [01;35m[Kdelete devices[m[K;
+[1.857s]       |   [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.857s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:330:27:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdevices[m[K’ has incomplete type
+[1.857s]   330 |   struct udev_list_entry *[01;35m[Kdevices[m[K, *entry;
+[1.857s]       |                           [01;35m[K^~~~~~~[m[K
+[1.857s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.858s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.858s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.858s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:385:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.858s]   385 |   [01;36m[Kdelete devices[m[K;
+[1.858s]       |   [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.858s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:386:3:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[1.858s]   386 |   [01;35m[Kdelete entry[m[K;
+[1.858s]       |   [01;35m[K^~~~~~~~~~~~[m[K
+[1.858s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:330:37:[m[K [01;35m[Kwarning: [m[K‘[01m[Kentry[m[K’ has incomplete type
+[1.858s]   330 |   struct udev_list_entry *devices, *[01;35m[Kentry[m[K;
+[1.858s]       |                                     [01;35m[K^~~~~[m[K
+[1.858s] [01m[K/usr/include/libudev.h:38:8:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kstruct udev_list_entry[m[K’
+[1.858s]    38 | struct [01;36m[Kudev_list_entry[m[K;
+[1.858s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[1.858s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:386:3:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[1.858s]   386 |   [01;36m[Kdelete entry[m[K;
+[1.858s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.858s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In lambda function:
+[1.858s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:393:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<char>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[1.858s]   393 |       if ([01;35m[Klast_size == recv_queue.size()[m[K) {
+[1.858s]       |           [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.918s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.cpp:1[m[K:
+[1.918s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:[m[K In member function ‘[01m[Kvirtual CANMSG* MiMotor::ctrl_pos(uint8_t, float)[m[K’:
+[1.918s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:178:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.919s]   178 |   CANMSG *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) { return nullptr; };
+[1.919s]       |                    [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[1.919s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:178:44:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.919s]   178 |   CANMSG *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) { return nullptr; };
+[1.919s]       |                                      [01;35m[K~~~~~~^~~[m[K
+[1.919s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:[m[K In member function ‘[01m[Kvirtual CANMSG* MiMotor::ctrl_pos_vel(uint8_t, float, float)[m[K’:
+[1.919s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:180:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.919s]   180 |   CANMSG *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) {
+[1.920s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[1.920s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:180:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.921s]   180 |   CANMSG *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) {
+[1.921s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[1.921s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:180:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.921s]   180 |   CANMSG *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) {
+[1.922s]       |                                                     [01;35m[K~~~~~~^~~[m[K
+[1.922s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:[m[K In member function ‘[01m[Kvirtual CANMSG* MiMotor::ctrl_torque(uint8_t, float)[m[K’:
+[1.922s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:184:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.923s]   184 |   CANMSG *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) {
+[1.923s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[1.923s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:184:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.923s]   184 |   CANMSG *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) {
+[1.923s]       |                                         [01;35m[K~~~~~~^~~~~~[m[K
+[1.923s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:[m[K In member function ‘[01m[Kvirtual MiCANMsg* MiMotor::setSafePos(uint8_t, float)[m[K’:
+[1.923s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:188:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.923s]   188 |   MiCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) { return nullptr; };
+[1.923s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[1.923s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:188:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.923s]   188 |   MiCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) { return nullptr; };
+[1.923s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[1.964s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kbool Serial::OpenSerial(std::string, int, int, int, int)[m[K’:
+[1.964s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:40:17:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[1.964s]    40 |     Opt.c_cflag [01;35m[K|[m[K= CS6;
+[1.964s]       |                 [01;35m[K^[m[K
+[1.964s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:41:3:[m[K [01;36m[Knote: [m[Khere
+[1.964s]    41 |   [01;36m[Kcase[m[K 7:
+[1.964s]       |   [01;36m[K^~~~[m[K
+[1.969s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kstd::string Serial::get_attrs_serial(const std::string&)[m[K’:
+[1.969s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:326:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[1.970s]   326 | [01;35m[K}[m[K
+[1.970s]       | [01;35m[K^[m[K
+[1.970s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kstd::string Serial::search_usb_port(std::string)[m[K’:
+[1.970s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:387:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[1.970s]   387 | [01;35m[K}[m[K
+[1.970s]       | [01;35m[K^[m[K
+[2.002s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.cpp:1[m[K:
+[2.002s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::ctrl_pos(uint8_t, float)[m[K’:
+[2.003s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:55:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.004s]    55 |   DMCANMsg *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) { return nullptr; };
+[2.004s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:55:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.004s]    55 |   DMCANMsg *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) { return nullptr; };
+[2.004s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::ctrl_vel(uint8_t, float)[m[K’:
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.004s]    57 |   DMCANMsg *ctrl_vel([01;35m[Kuint8_t motor_id[m[K, float vel) { return nullptr; };
+[2.004s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.004s]    57 |   DMCANMsg *ctrl_vel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) { return nullptr; };
+[2.004s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::ctrl_pos_vel(uint8_t, float, float)[m[K’:
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.005s]    59 |   DMCANMsg *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) {
+[2.005s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.005s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.005s]    59 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) {
+[2.005s]       |                                            [01;35m[K~~~~~~^~~[m[K
+[2.005s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.005s]    59 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) {
+[2.005s]       |                                                       [01;35m[K~~~~~~^~~[m[K
+[2.005s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::ctrl_torque(uint8_t, float)[m[K’:
+[2.005s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:63:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.005s]    63 |   DMCANMsg *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) { return nullptr; };
+[2.005s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.005s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:63:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.005s]    63 |   DMCANMsg *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) { return nullptr; };
+[2.005s]       |                                           [01;35m[K~~~~~~^~~~~~[m[K
+[2.005s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setPosKP(uint8_t, float)[m[K’:
+[2.005s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.005s]    65 |   DMCANMsg *setPosKP([01;35m[Kuint8_t motor_id[m[K, float kp) { return nullptr; };
+[2.005s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.005s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.005s]    65 |   DMCANMsg *setPosKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) { return nullptr; };
+[2.005s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setPosKD(uint8_t, float)[m[K’:
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:66:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.006s]    66 |   DMCANMsg *setPosKD([01;35m[Kuint8_t motor_id[m[K, float kd) { return nullptr; };
+[2.006s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:66:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.006s]    66 |   DMCANMsg *setPosKD(uint8_t motor_id, [01;35m[Kfloat kd[m[K) { return nullptr; };
+[2.006s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setVelKP(uint8_t, float)[m[K’:
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:68:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.006s]    68 |   DMCANMsg *setVelKP([01;35m[Kuint8_t motor_id[m[K, float kp) { return nullptr; };
+[2.006s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:68:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.006s]    68 |   DMCANMsg *setVelKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) { return nullptr; };
+[2.006s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setVelKI(uint8_t, float)[m[K’:
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:69:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.006s]    69 |   DMCANMsg *setVelKI([01;35m[Kuint8_t motor_id[m[K, float ki) { return nullptr; };
+[2.006s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:69:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.006s]    69 |   DMCANMsg *setVelKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) { return nullptr; };
+[2.006s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.006s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setTorqueKP(uint8_t, float)[m[K’:
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.007s]    71 |   DMCANMsg *setTorqueKP([01;35m[Kuint8_t motor_id[m[K, float kp) { return nullptr; };
+[2.007s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.007s]    71 |   DMCANMsg *setTorqueKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) { return nullptr; };
+[2.007s]       |                                           [01;35m[K~~~~~~^~[m[K
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setTorqueKI(uint8_t, float)[m[K’:
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:72:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.007s]    72 |   DMCANMsg *setTorqueKI([01;35m[Kuint8_t motor_id[m[K, float ki) { return nullptr; };
+[2.007s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:72:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.007s]    72 |   DMCANMsg *setTorqueKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) { return nullptr; };
+[2.007s]       |                                           [01;35m[K~~~~~~^~[m[K
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setSafeTorque(uint8_t, float)[m[K’:
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.007s]    74 |   DMCANMsg *setSafeTorque([01;35m[Kuint8_t motor_id[m[K, float torque) { return nullptr; };
+[2.007s]       |                           [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.007s]    74 |   DMCANMsg *setSafeTorque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) { return nullptr; };
+[2.007s]       |                                             [01;35m[K~~~~~~^~~~~~[m[K
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setSafePos(uint8_t, float)[m[K’:
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:75:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.008s]    75 |   DMCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) { return nullptr; };
+[2.008s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.008s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:75:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.008s]    75 |   DMCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) { return nullptr; };
+[2.008s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[2.008s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setSafeVel(uint8_t, float)[m[K’:
+[2.008s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.008s]    76 |   DMCANMsg *setSafeVel([01;35m[Kuint8_t motor_id[m[K, float vel) { return nullptr; };
+[2.008s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.008s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.008s]    76 |   DMCANMsg *setSafeVel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) { return nullptr; };
+[2.008s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[3.305s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:[m[K In member function ‘[01m[KUSBHubPort<short unsigned int> PCAN::findPCAN()[m[K’:
+[3.305s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:99:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<int, std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.306s]    99 |   for (int i = 0; [01;35m[Ki < port_time.size() - 1[m[K; i++) {
+[3.306s]       |                   [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.306s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:100:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<int, std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.306s]   100 |     for (int j = 0; [01;35m[Kj < port_time.size() - 1 - i[m[K; j++) {
+[3.306s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.307s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:130:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<int, std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.307s]   130 |   for (int i = 0; [01;35m[Ki < port_time.size()[m[K; i++) {
+[3.307s]       |                   [01;35m[K~~^~~~~~~~~~~~~~~~~~[m[K
+[3.333s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:4[m[K:
+[3.333s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::ctrl_pos(uint8_t, float)[m[K’:
+[3.333s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:55:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.333s]    55 |   DMCANMsg *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) { return nullptr; };
+[3.333s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.333s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:55:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.333s]    55 |   DMCANMsg *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) { return nullptr; };
+[3.333s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[3.333s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::ctrl_vel(uint8_t, float)[m[K’:
+[3.333s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.334s]    57 |   DMCANMsg *ctrl_vel([01;35m[Kuint8_t motor_id[m[K, float vel) { return nullptr; };
+[3.334s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.334s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.334s]    57 |   DMCANMsg *ctrl_vel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) { return nullptr; };
+[3.334s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[3.334s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::ctrl_pos_vel(uint8_t, float, float)[m[K’:
+[3.334s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.334s]    59 |   DMCANMsg *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) {
+[3.334s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.334s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.334s]    59 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) {
+[3.334s]       |                                            [01;35m[K~~~~~~^~~[m[K
+[3.334s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.334s]    59 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) {
+[3.334s]       |                                                       [01;35m[K~~~~~~^~~[m[K
+[3.334s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::ctrl_torque(uint8_t, float)[m[K’:
+[3.334s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:63:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.334s]    63 |   DMCANMsg *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) { return nullptr; };
+[3.334s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.334s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:63:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.334s]    63 |   DMCANMsg *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) { return nullptr; };
+[3.335s]       |                                           [01;35m[K~~~~~~^~~~~~[m[K
+[3.335s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setPosKP(uint8_t, float)[m[K’:
+[3.335s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.335s]    65 |   DMCANMsg *setPosKP([01;35m[Kuint8_t motor_id[m[K, float kp) { return nullptr; };
+[3.335s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.335s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.335s]    65 |   DMCANMsg *setPosKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) { return nullptr; };
+[3.335s]       |                                        [01;35m[K~~~~~~^~[m[K
+[3.335s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setPosKD(uint8_t, float)[m[K’:
+[3.335s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:66:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.335s]    66 |   DMCANMsg *setPosKD([01;35m[Kuint8_t motor_id[m[K, float kd) { return nullptr; };
+[3.335s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.335s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:66:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.335s]    66 |   DMCANMsg *setPosKD(uint8_t motor_id, [01;35m[Kfloat kd[m[K) { return nullptr; };
+[3.335s]       |                                        [01;35m[K~~~~~~^~[m[K
+[3.335s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setVelKP(uint8_t, float)[m[K’:
+[3.335s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:68:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.336s]    68 |   DMCANMsg *setVelKP([01;35m[Kuint8_t motor_id[m[K, float kp) { return nullptr; };
+[3.336s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.336s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:68:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.336s]    68 |   DMCANMsg *setVelKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) { return nullptr; };
+[3.336s]       |                                        [01;35m[K~~~~~~^~[m[K
+[3.336s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setVelKI(uint8_t, float)[m[K’:
+[3.336s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:69:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.336s]    69 |   DMCANMsg *setVelKI([01;35m[Kuint8_t motor_id[m[K, float ki) { return nullptr; };
+[3.336s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.336s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:69:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.336s]    69 |   DMCANMsg *setVelKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) { return nullptr; };
+[3.336s]       |                                        [01;35m[K~~~~~~^~[m[K
+[3.336s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setTorqueKP(uint8_t, float)[m[K’:
+[3.336s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.336s]    71 |   DMCANMsg *setTorqueKP([01;35m[Kuint8_t motor_id[m[K, float kp) { return nullptr; };
+[3.336s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.336s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.336s]    71 |   DMCANMsg *setTorqueKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) { return nullptr; };
+[3.336s]       |                                           [01;35m[K~~~~~~^~[m[K
+[3.336s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setTorqueKI(uint8_t, float)[m[K’:
+[3.336s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:72:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.336s]    72 |   DMCANMsg *setTorqueKI([01;35m[Kuint8_t motor_id[m[K, float ki) { return nullptr; };
+[3.337s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.337s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:72:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.337s]    72 |   DMCANMsg *setTorqueKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) { return nullptr; };
+[3.337s]       |                                           [01;35m[K~~~~~~^~[m[K
+[3.337s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setSafeTorque(uint8_t, float)[m[K’:
+[3.337s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.337s]    74 |   DMCANMsg *setSafeTorque([01;35m[Kuint8_t motor_id[m[K, float torque) { return nullptr; };
+[3.337s]       |                           [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.337s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.337s]    74 |   DMCANMsg *setSafeTorque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) { return nullptr; };
+[3.337s]       |                                             [01;35m[K~~~~~~^~~~~~[m[K
+[3.337s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setSafePos(uint8_t, float)[m[K’:
+[3.337s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:75:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.337s]    75 |   DMCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) { return nullptr; };
+[3.337s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.337s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:75:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.337s]    75 |   DMCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) { return nullptr; };
+[3.337s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[3.337s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::setSafeVel(uint8_t, float)[m[K’:
+[3.337s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.337s]    76 |   DMCANMsg *setSafeVel([01;35m[Kuint8_t motor_id[m[K, float vel) { return nullptr; };
+[3.337s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.338s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.338s]    76 |   DMCANMsg *setSafeVel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) { return nullptr; };
+[3.338s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[3.338s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:5[m[K:
+[3.338s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:[m[K In member function ‘[01m[Kvirtual CANMSG* MiMotor::ctrl_pos(uint8_t, float)[m[K’:
+[3.338s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:178:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.338s]   178 |   CANMSG *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) { return nullptr; };
+[3.338s]       |                    [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.338s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:178:44:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.338s]   178 |   CANMSG *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) { return nullptr; };
+[3.338s]       |                                      [01;35m[K~~~~~~^~~[m[K
+[3.338s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:[m[K In member function ‘[01m[Kvirtual CANMSG* MiMotor::ctrl_pos_vel(uint8_t, float, float)[m[K’:
+[3.338s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:180:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.338s]   180 |   CANMSG *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) {
+[3.338s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.338s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:180:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.338s]   180 |   CANMSG *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) {
+[3.338s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[3.338s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:180:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.338s]   180 |   CANMSG *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) {
+[3.338s]       |                                                     [01;35m[K~~~~~~^~~[m[K
+[3.338s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:[m[K In member function ‘[01m[Kvirtual CANMSG* MiMotor::ctrl_torque(uint8_t, float)[m[K’:
+[3.339s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:184:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.339s]   184 |   CANMSG *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) {
+[3.339s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.339s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:184:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.339s]   184 |   CANMSG *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) {
+[3.339s]       |                                         [01;35m[K~~~~~~^~~~~~[m[K
+[3.339s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:[m[K In member function ‘[01m[Kvirtual MiCANMsg* MiMotor::setSafePos(uint8_t, float)[m[K’:
+[3.339s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:188:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.339s]   188 |   MiCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) { return nullptr; };
+[3.339s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[3.339s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h:188:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.339s]   188 |   MiCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) { return nullptr; };
+[3.339s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[3.629s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:[m[K In lambda function:
+[3.629s] [01m[K/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp:129:3:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[3.629s]   129 |   [01;35m[K}[m[K;
+[3.629s]       |   [01;35m[K^[m[K
+[8.537s] [100%] [32m[1mLinking CXX executable CommunicationCenter[0m
+[8.574s] /usr/bin/ld: CMakeFiles/CommunicationCenter.dir/src/main.cpp.o:(.bss+0x0): multiple definition of `baudrate_map'; CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o:(.bss+0x0): first defined here
+[8.575s] /usr/bin/ld: CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o:(.bss+0x0): multiple definition of `baudrate_map'; CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o:(.bss+0x0): first defined here
+[8.845s] collect2: error: ld returned 1 exit status
+[8.846s] gmake[2]: *** [CMakeFiles/CommunicationCenter.dir/build.make:350：CommunicationCenter] 错误 1
+[8.846s] gmake[1]: *** [CMakeFiles/Makefile2:202：CMakeFiles/CommunicationCenter.dir/all] 错误 2
+[8.847s] gmake: *** [Makefile:146：all] 错误 2
+[8.848s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter -- -j12 -l12

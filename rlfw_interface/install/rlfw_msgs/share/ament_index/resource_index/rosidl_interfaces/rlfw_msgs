@@ -1,4 +1,8 @@
+msg/CanMsg.idl
+msg/CanMsg.msg
 msg/Motor.idl
 msg/Motor.msg
 msg/MotorCtrl.idl
 msg/MotorCtrl.msg
+msg/SerialMsg.idl
+msg/SerialMsg.msg

@@ -1,4 +1,4 @@
-#include "CommunicationCenter.h"
+#include "CommunicationCenter.hpp"
 using namespace std;
 
 int main(int argc, char ** argv)

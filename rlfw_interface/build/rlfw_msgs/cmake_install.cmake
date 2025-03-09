@@ -364,11 +364,27 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/CanMsg.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/SerialMsg.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Motor.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/MotorCtrl.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/CanMsg.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/SerialMsg.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

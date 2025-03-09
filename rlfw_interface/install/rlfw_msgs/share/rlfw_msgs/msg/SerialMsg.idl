@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rlfw_msgs/msg/SerialMsg.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rlfw_msgs {
+  module msg {
+    struct SerialMsg {
+      std_msgs::msg::Header comname;
+
+      sequence<uint8> data;
+    };
+  };
+};

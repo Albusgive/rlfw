@@ -1,11 +1,14 @@
 <rlfw>
-    <com type="pcan" attrs="aa" name="leg" channel="1">
-        <motor type="Mi" jointname="left_wheel_joint" invert="false" ctrltype="MIT" PosKP="1.0"/>
-        <motor type="DM" jointname="left_calf_joint" invert="true" ctrltype="MIT"/>
+    <com type="pcan" name="com_can_1" channel="1" thread="false">
+        <motor type="Mi" id="10" jointname="left_wheel_joint" invert="false" ctrltype="VEL" VelKP="1.0" VelKI="0.0021"/>
     </com>
-    <com type="serial" name="commm" port="/dev/ttyUSB0" >
+    <com type="pcan" name="com_can_2" channel="2">
+        <motor type="DM" id="0x05" jointname="left_calf_joint" invert="true" ctrltype="MIT" />
+    </com>
+    <!-- <com type="serial" name="commm" port="/dev/ttyUSB0">
         <motor type="UNITREE" ctrltype="POS" jointname="left_hip_joint" invert="true" />
-    </com>
-    <com type="pcan" name="other2" channel="2"/>
-    <com type="serial" name="other" attrs="114514"/><!-- 仅通讯 -->
+    </com> -->
+    <!-- 仅通讯 -->
+    <!-- <com type="pcan" name="other2" channel="2" /> -->
+    <com type="serial" name="s1" port="/dev/ttyUSB0" bps="921600" datasize="8" parity="0" stopbit="1"/>
 </rlfw>

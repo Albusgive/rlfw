@@ -14,7 +14,7 @@ enum class ComType {
 enum class Motortype { Mi, DM, RM, UNITREE, ERR };
 
 // 控制模式
-enum class MotorCtrlType { MIT, POS, VEL, TORQUE, POS_VEL, ERR };
+enum class MotorCtrlType { MIT = 0, POS, VEL, TORQUE, POS_VEL, ERR };
 
 class XMLMotor {
 public:
@@ -60,11 +60,18 @@ class ComCfg {
 public:
   std::string name = "";
   ComType type = ComType::ERR;
-  std::string port = "";  // 端口名tty
-  int channel = 0;        // can通道
-  std::string attrs = ""; // 串口号
+  bool only_thred = false; // 独立线程
   std::vector<XMLMotor> xml_motors;
-  bool only_thred = false; //独立线程
+  /*--------can--------*/
+  int channel = 0; // can通道
+  /*--------serial--------*/
+  std::string attrs = ""; // 串口号
+  std::string port = "";  // 端口名tty
+  int bps;                // 115200
+  int datasize;           // 5/6/7/8
+  int parity;             // 0/1/2 无/奇/偶
+  int stopbit;            // 1/2
+
   bool check() {
     if (name == "") {
       std::cout << "com no name" << std::endl;

@@ -88,7 +88,7 @@ public:
   void send(uint16_t CANx, CANMSG *msg) override;
   std::tuple<bool, CANMSG> read(uint16_t CANx) override;
 
-  void connectDecode(std::function<void(CANMSG,std::vector<int> motor_ids)> lambda);
+  void connectDecode(std::function<void(CANMSG&,std::vector<int>& motor_ids,std::string& name)> lambda);
   // 独立接受线程
   void RunRecv();
   void closeRecv();
@@ -99,7 +99,7 @@ private:
   int compareStrNum(std::string str1, std::string str2);
 
   void print(TPCANMsg msg);
-  std::function<void(CANMSG,std::vector<int> motor_ids)> decode_lambda = [=](CANMSG,std::vector<int>) {
+  std::function<void(CANMSG&,std::vector<int>&,std::string&)> decode_lambda = [=](CANMSG,std::vector<int>,std::string) {
     std::cout << "pcan no bind decode" << std::endl;
   };
   std::atomic_bool is_only_thread{false};   //端口打开标志

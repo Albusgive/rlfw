@@ -7,9 +7,14 @@
 module rlfw_msgs {
   module msg {
     @verbatim (language="comment", text=
-      "需要jointname 剩下的需要什么发什么")
+      "需要jointname 选择好控制类型剩下的需要什么发什么" "\n"
+      "jointname的frame_id为关节名称")
     struct MotorCtrl {
       std_msgs::msg::Header jointname;
+
+      @verbatim (language="comment", text=
+        "MIT, POS, VEL, TORQUE, POS_VEL")
+      string ctrl_type;
 
       @verbatim (language="comment", text=
         "扭矩")

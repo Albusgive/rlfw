@@ -769,7 +769,7 @@ CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o: /home/albusgive2/
 
 CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp \
   /usr/include/stdc-predef.h \
-  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.h \
+  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.hpp \
   /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/BaseCAN.h \
   /usr/include/c++/12/iostream \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -1548,6 +1548,16 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: /home/albusgiv
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/can_msg.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/serial.hpp \
   /usr/include/x86_64-linux-gnu/sys/signal.h \
   /usr/include/dirent.h \
@@ -2797,7 +2807,7 @@ CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o: /home/albusgive2/rlfw/rlfw
 
 CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/main.cpp \
   /usr/include/stdc-predef.h \
-  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.h \
+  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.hpp \
   /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/BaseCAN.h \
   /usr/include/c++/12/iostream \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -3576,6 +3586,16 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: /home/albusgive2/rlfw/rlfw_de
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/can_msg.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/serial.hpp \
   /usr/include/x86_64-linux-gnu/sys/signal.h \
   /usr/include/dirent.h \
@@ -3592,8 +3612,7 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: /home/albusgive2/rlfw/rlfw_de
 CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp \
   /usr/include/stdc-predef.h \
   /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/serial.hpp \
-  /usr/include/c++/12/stdlib.h \
-  /usr/include/c++/12/cstdlib \
+  /usr/include/c++/12/cstdint \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
   /usr/include/features.h \
@@ -3606,111 +3625,15 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
   /usr/include/c++/12/pstl/pstl_config.h \
-  /usr/include/stdlib.h \
+  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
+  /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/12/bits/std_abs.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/x86_64-linux-gnu/sys/signal.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx.h \
-  /usr/include/linux/stat.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/linux/errno.h \
@@ -3718,6 +3641,18 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
+  /usr/include/linux/falloc.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
   /usr/include/limits.h \
@@ -3728,6 +3663,36 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/c++/12/stdlib.h \
+  /usr/include/c++/12/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/12/bits/std_abs.h \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/c++/12/string \
@@ -3738,17 +3703,12 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
   /usr/include/c++/12/cwchar \
   /usr/include/wchar.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/c++/12/type_traits \
-  /usr/include/c++/12/cstdint \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/c++/12/bits/allocator.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
   /usr/include/c++/12/bits/new_allocator.h \
@@ -3806,9 +3766,59 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
   /usr/include/c++/12/cerrno \
   /usr/include/c++/12/bits/charconv.h \
   /usr/include/c++/12/bits/basic_string.tcc \
+  /usr/include/x86_64-linux-gnu/sys/signal.h \
+  /usr/include/signal.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
   /usr/include/dirent.h \
   /usr/include/x86_64-linux-gnu/bits/dirent.h \
   /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
+  /usr/include/linux/serial.h \
+  /usr/include/linux/tty_flags.h \
   /usr/include/x86_64-linux-gnu/sys/ioctl.h \
   /usr/include/x86_64-linux-gnu/bits/ioctls.h \
   /usr/include/x86_64-linux-gnu/asm/ioctls.h \
@@ -3817,8 +3827,7 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
   /usr/include/x86_64-linux-gnu/asm/ioctl.h \
   /usr/include/asm-generic/ioctl.h \
   /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
-  /usr/include/linux/serial.h \
-  /usr/include/linux/tty_flags.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
   /usr/include/c++/12/thread \
   /usr/include/c++/12/bits/std_thread.h \
   /usr/include/c++/12/tuple \
@@ -3844,13 +3853,38 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
   /usr/include/c++/12/limits \
   /usr/include/c++/12/ctime \
   /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/atomic \
+  /usr/include/c++/12/bits/atomic_base.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
   /usr/include/c++/12/iostream \
   /usr/include/c++/12/ostream \
   /usr/include/c++/12/ios \
   /usr/include/c++/12/exception \
   /usr/include/c++/12/bits/exception_ptr.h \
   /usr/include/c++/12/bits/cxxabi_init_exception.h \
-  /usr/include/c++/12/typeinfo \
   /usr/include/c++/12/bits/nested_exception.h \
   /usr/include/c++/12/bits/ios_base.h \
   /usr/include/c++/12/ext/atomicity.h \
@@ -3876,43 +3910,29 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/list \
-  /usr/include/c++/12/bits/stl_list.h \
-  /usr/include/c++/12/bits/allocated_ptr.h \
-  /usr/include/c++/12/ext/aligned_buffer.h \
-  /usr/include/c++/12/bits/list.tcc \
   /usr/include/libudev.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
-  /usr/include/c++/12/vector \
-  /usr/include/c++/12/bits/stl_uninitialized.h \
-  /usr/include/c++/12/bits/stl_vector.h \
-  /usr/include/c++/12/bits/stl_bvector.h \
-  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/bits/list.tcc \
   /usr/include/c++/12/queue \
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
-  /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/stl_queue.h \
-  /usr/include/c++/12/atomic \
-  /usr/include/c++/12/bits/atomic_base.h \
-  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/12/functional \
-  /usr/include/c++/12/bits/std_function.h \
-  /usr/include/c++/12/unordered_map \
-  /usr/include/c++/12/bits/hashtable.h \
-  /usr/include/c++/12/bits/hashtable_policy.h \
-  /usr/include/c++/12/bits/enable_special_members.h \
-  /usr/include/c++/12/bits/node_handle.h \
-  /usr/include/c++/12/bits/unordered_map.h \
-  /usr/include/c++/12/bits/erase_if.h \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/bits/stl_algo.h \
-  /usr/include/c++/12/bits/algorithmfwd.h \
-  /usr/include/c++/12/bits/stl_tempbuf.h \
-  /usr/include/c++/12/bits/uniform_int_dist.h
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h
 
 
 /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp:
@@ -3930,6 +3950,14 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 /usr/include/x86_64-linux-gnu/bits/dirent.h:
 
 /usr/include/x86_64-linux-gnu/sys/signal.h:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__traits.hpp:
 
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp:
 
@@ -4311,6 +4339,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /usr/include/asm-generic/posix_types.h:
 
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.hpp:
+
 /usr/include/c++/12/bits/algorithmfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
@@ -4398,6 +4428,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 /usr/include/c++/12/bits/basic_string.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/can_msg.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
@@ -4767,6 +4799,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /usr/include/c++/12/istream:
 
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__struct.hpp:
+
 /usr/include/c++/12/stdexcept:
 
 /opt/ros/humble/include/rcl/rcl/network_flow_endpoints.h:
@@ -4878,6 +4912,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_content_filter_options.hpp:
 
 /usr/include/c++/12/bits/allocator.h:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -5021,7 +5057,17 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:
 
-/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.h:
+/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.hpp:
+
+/usr/include/c++/12/bits/unordered_map.h:
+
+/usr/include/c++/12/bits/stl_set.h:
+
+/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
+
+/usr/include/linux/input-event-codes.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
 
 /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/PCAN.hpp:
 
@@ -5053,6 +5099,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /usr/include/c++/12/condition_variable:
 
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp:
+
 /usr/include/c++/12/mutex:
 
 /usr/include/c++/12/bits/parse_numbers.h:
@@ -5070,6 +5118,14 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 /usr/include/x86_64-linux-gnu/bits/termios-baud.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp:
+
+/usr/include/c++/12/bits/stl_construct.h:
+
+/opt/ros/humble/include/rmw/rmw/event.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
 
@@ -5315,24 +5371,6 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/sequence_bound.h:
 
-/opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp:
-
-/usr/include/c++/12/bits/stl_construct.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
-
-/opt/ros/humble/include/rmw/rmw/event.h:
-
-/usr/include/c++/12/bits/unordered_map.h:
-
-/usr/include/c++/12/bits/stl_set.h:
-
-/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
-
-/usr/include/linux/input-event-codes.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
-
 /opt/ros/humble/include/rmw/rmw/publisher_options.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/storage_policy_common.hpp:
@@ -5444,6 +5482,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 /opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__builder.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:
 

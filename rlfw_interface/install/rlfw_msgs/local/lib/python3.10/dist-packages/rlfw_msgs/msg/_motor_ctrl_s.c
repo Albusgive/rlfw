@@ -16,6 +16,9 @@
 #include "rlfw_msgs/msg/detail/motor_ctrl__struct.h"
 #include "rlfw_msgs/msg/detail/motor_ctrl__functions.h"
 
+#include "rosidl_runtime_c/string.h"
+#include "rosidl_runtime_c/string_functions.h"
+
 ROSIDL_GENERATOR_C_IMPORT
 bool std_msgs__msg__header__convert_from_py(PyObject * _pymsg, void * _ros_message);
 ROSIDL_GENERATOR_C_IMPORT
@@ -63,6 +66,21 @@ bool rlfw_msgs__msg__motor_ctrl__convert_from_py(PyObject * _pymsg, void * _ros_
       Py_DECREF(field);
       return false;
     }
+    Py_DECREF(field);
+  }
+  {  // ctrl_type
+    PyObject * field = PyObject_GetAttrString(_pymsg, "ctrl_type");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->ctrl_type, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
   {  // torque
@@ -140,6 +158,23 @@ PyObject * rlfw_msgs__msg__motor_ctrl__convert_to_py(void * raw_ros_message)
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "jointname", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // ctrl_type
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->ctrl_type.data,
+      strlen(ros_message->ctrl_type.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "ctrl_type", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

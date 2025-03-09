@@ -1,48 +1,66 @@
-#include "CommunicationCenter.h"
+#include "CommunicationCenter.hpp"
 #include "BaseCAN.h"
 #include "ComCfg.hpp"
 #include "DMMotor.h"
 #include "MiMotor.h"
 #include "Motor.hpp"
 #include "PCAN.hpp"
+#include "serial.hpp"
 #include <chrono>
 #include <functional>
 #include <iostream>
 #include <memory>
 #include <mutex>
 #include <ratio>
+#include <rclcpp/logging.hpp>
+#include <rlfw_msgs/msg/detail/can_msg__struct.hpp>
+#include <rlfw_msgs/msg/detail/serial_msg__struct.hpp>
+#include <utility>
 #include <vector>
 
 CommunicationCenter::CommunicationCenter(const std::string &node_name)
     : rclcpp::Node(node_name) {
+  // topic发送基础can接收到的数据
+  can_publisher = this->create_publisher<rlfw_msgs::msg::CanMsg>(
+      "rlfwCANBack", rclcpp::QoS(2));
+  // topic发送can电机接收到的数据
   motor_publisher = this->create_publisher<rlfw_msgs::msg::Motor>(
-      "Com2Motor", rclcpp::QoS(2));
+      "rlfwMotorBack", rclcpp::QoS(2));
+  // topic接收发送给电机
+  sub_motor = this->create_subscription<rlfw_msgs::msg::MotorCtrl>(
+      "rlfwMotorCtrl", rclcpp::QoS(2),
+      std::bind(&CommunicationCenter::sendMotor, this, std::placeholders::_1));
+  // topic接收发送给设备
+  can_sub = this->create_subscription<rlfw_msgs::msg::CanMsg>(
+      "rlfwCANSend", rclcpp::QoS(2),
+      std::bind(&CommunicationCenter::sendCAN, this, std::placeholders::_1));
+  // topic发送基础serial接收到的数据
+  serial_publisher = this->create_publisher<rlfw_msgs::msg::SerialMsg>(
+      "rlfwSerialBack", rclcpp::QoS(2));
+  // serial接收发送给设备
+  serial_sub = this->create_subscription<rlfw_msgs::msg::SerialMsg>(
+      "rlfwSerialSend", rclcpp::QoS(2),
+      std::bind(&CommunicationCenter::sendSerial, this, std::placeholders::_1));
+
   xml_decoder.load(motor_cfg_path);
   if (xml_decoder.check())
     std::cout << "xml load check succeed" << std::endl;
   buildMap();
   RunRecv();
 
-  can_motor_map["left_wheel_joint"]->enableMotor(true);
-  can_motor_map["left_calf_joint"]->enableMotor(true);
-  // can_motor_map["left_wheel_joint"]->ctrl_vel(1.0);
-  can_motor_map["left_wheel_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
-  can_motor_map["left_calf_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
-  while (rclcpp::ok()) {
-    can_motor_map["left_wheel_joint"]->locomotion(0.0, 0.0, 2.0, 0.0, 0.3);
-    can_motor_map["left_calf_joint"]->locomotion(0.0, 0.0, 2.0, 0.0, 0.3);
-    std::this_thread::sleep_for(std::chrono::microseconds(500));
-  }
-  std::this_thread::sleep_for(std::chrono::seconds(2));
-  can_motor_map["left_wheel_joint"]->enableMotor(false);
-  can_motor_map["left_calf_joint"]->enableMotor(false);
+  // can_motor_map["left_wheel_joint"]->enableMotor(true);
+  // can_motor_map["left_calf_joint"]->enableMotor(true);
+  // // can_motor_map["left_wheel_joint"]->ctrl_vel(1.0);
+  // can_motor_map["left_wheel_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
+  // can_motor_map["left_calf_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
+  // while (rclcpp::ok()) {
+  //   std::this_thread::sleep_for(std::chrono::microseconds(500));
+  // }
+  // std::this_thread::sleep_for(std::chrono::seconds(5));
+  // can_motor_map["left_wheel_joint"]->enableMotor(false);
+  // can_motor_map["left_calf_joint"]->enableMotor(false);
 
   // initGamePad();
-
-  // sub_motor = this->create_subscription<rlfw_msgs::msg::MotorCtrl>(
-  //     "MotorCtrl", 2,
-  //     std::bind(&CommunicationCenter::sendMotor, this,
-  //     std::placeholders::_1));
 
   // // 寻找所有pcan 全部开启
   // pcan = new PCAN();
@@ -50,44 +68,70 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   // std::cout << "available num:" << available.size() << std::endl;
 }
 
-CommunicationCenter::~CommunicationCenter() {}
+CommunicationCenter::~CommunicationCenter() {
+  // 电机全部失能
+  for (auto m : can_motor_map) {
+    m.second->enableMotor(false);
+  }
+  // 关闭全部串口
+  for (auto s : serials) {
+    s->Close();
+  }
+}
 
-void CommunicationCenter::fromCanMotor(CANMSG msg, std::vector<int> motor_ids) {
+void CommunicationCenter::fromCan(CANMSG &msg, std::vector<int> &device_ids,
+                                  std::string &com_name) {
   std::lock_guard<std::mutex> lock(com_mutex);
-  // 解码器
+  auto stamp = this->now();
+  rlfw_msgs::msg::CanMsg pub_can_msg;
+  pub_can_msg.comname.set__frame_id(com_name);
+  pub_can_msg.comname.set__stamp(stamp);
+  pub_can_msg.id = msg.ID;
+  pub_can_msg.len = msg.LEN;
+  for (int i = 0; i < 8; i++) {
+    pub_can_msg.data.push_back(msg.DATA[i]);
+  }
+  can_publisher->publish(pub_can_msg);
+  // 电机（设备）解码器
   MotorBack motor_back;
   for (auto deceder : can_moter_decoders) {
     motor_back = deceder->decode(msg);
-    for (auto id : motor_ids) {
+    for (auto id : device_ids) {
       if (id == motor_back.id) {
-        rlfw_msgs::msg::Motor pub_msg;
-        pub_msg.set__motor_id(motor_back.id);
+        rlfw_msgs::msg::Motor pub_motor_msg;
+        pub_motor_msg.set__motor_id(motor_back.id);
         rlfw_msgs::msg::Motor::_jointname_type jointname;
         jointname.frame_id = id2string[motor_back.id];
-        jointname.stamp = this->now();
-        pub_msg.set__jointname(jointname);
-        pub_msg.set__angle(motor_back.angle);
-        pub_msg.set__ang_vel(motor_back.ang_vel);
-        pub_msg.set__current(motor_back.current);
-        pub_msg.set__number_laps(motor_back.number_laps);
-        pub_msg.set__temperature(motor_back.temperature);
-        pub_msg.set__torque(motor_back.torque);
-        pub_msg.set__state(static_cast<int>(motor_back.warning));
-        motor_publisher->publish(pub_msg);
+        jointname.stamp = stamp;
+        pub_motor_msg.set__jointname(jointname);
+        pub_motor_msg.set__angle(motor_back.angle);
+        pub_motor_msg.set__ang_vel(motor_back.ang_vel);
+        pub_motor_msg.set__current(motor_back.current);
+        pub_motor_msg.set__number_laps(motor_back.number_laps);
+        pub_motor_msg.set__temperature(motor_back.temperature);
+        pub_motor_msg.set__torque(motor_back.torque);
+        pub_motor_msg.set__state(static_cast<int>(motor_back.warning));
+        motor_publisher->publish(pub_motor_msg);
         return;
       }
     }
   }
 }
 
+void CommunicationCenter::fromSerial(std::vector<uint8_t> &msg,
+                                     std::string com_name) {
+  std::lock_guard<std::mutex> lock(com_mutex);
+  rlfw_msgs::msg::SerialMsg pub_serial_msg;
+  auto stamp = this->now();
+  pub_serial_msg.comname.set__frame_id(com_name);
+  pub_serial_msg.comname.set__stamp(stamp);
+  pub_serial_msg.data = msg;
+  serial_publisher->publish(pub_serial_msg);
+}
+
 void CommunicationCenter::RunRecv() {
   int cnt = 0;
   for (auto it : cans) {
-    if (!it->only_thread) {
-      cnt += 1;
-    }
-  }
-  for (auto it : serials) {
     if (!it->only_thread) {
       cnt += 1;
     }
@@ -100,10 +144,7 @@ void CommunicationCenter::RunRecv() {
       for (auto it : cans) {
         auto [is, can_msg] = it->read(it->channel);
         if (is)
-          fromCanMotor(can_msg, it->devive_ids);
-      }
-      for (auto it : serials) {
-        // TODO
+          fromCan(can_msg, it->devive_ids, it->name);
       }
       // std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
@@ -114,7 +155,103 @@ void CommunicationCenter::RunRecv() {
 void CommunicationCenter::timer_callback() {}
 
 void CommunicationCenter::sendMotor(
-    std::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg) {}
+    std::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg) {
+  auto joint_name = msg->jointname.frame_id;
+  auto can_motor_safe_get =
+      [this](const std::string &name) -> std::shared_ptr<CANMotor> {
+    std::unique_lock<std::mutex> lock(com_mutex);
+    auto it = can_motor_map.find(name);
+    lock.unlock();
+    if (it == can_motor_map.end()) {
+      RCLCPP_WARN(this->get_logger(), "CANMotor not found: %s", name.c_str());
+      return nullptr;
+    }
+    return it->second;
+  };
+  // 判断控制类型
+  auto motor = can_motor_safe_get(joint_name);
+  auto ctrl_type = xml_decoder.string2enum<MotorCtrlType>(msg->ctrl_type);
+  if (motor == nullptr)
+    return;
+  switch (ctrl_type) {
+  case MotorCtrlType::MIT: {
+    motor->locomotion(msg->torque, msg->angle, msg->ang_vel, msg->kp, msg->kd);
+    break;
+  }
+  case MotorCtrlType::POS: {
+    motor->ctrl_pos(msg->angle);
+    break;
+  }
+  case MotorCtrlType::VEL: {
+    motor->ctrl_vel(msg->ang_vel);
+    break;
+  }
+  case MotorCtrlType::TORQUE: {
+    motor->ctrl_torque(msg->torque);
+    break;
+  }
+  case MotorCtrlType::POS_VEL: {
+    motor->ctrl_pos_vel(msg->angle, msg->ang_vel);
+    break;
+  }
+  case MotorCtrlType::ERR: {
+    std::cout << "MotorCtrlType is ERR:\n"
+              << "please use: MIT, POS, VEL, TORQUE, POS_VEL" << std::endl;
+    break;
+  }
+  }
+}
+
+void CommunicationCenter::sendCAN(std::shared_ptr<rlfw_msgs::msg::CanMsg> msg) {
+  auto can_safe_get = [this](const std::string &name) -> int {
+    std::unique_lock<std::mutex> lock(com_mutex);
+    auto it = cans_map.find(name);
+    lock.unlock();
+    if (it == cans_map.end()) {
+      RCLCPP_WARN(this->get_logger(), "no mount can device: %s", name.c_str());
+      return -1;
+    }
+    return it->second;
+  };
+  int idx = can_safe_get(msg->comname.frame_id);
+  if (idx == -1) {
+    return;
+  } else {
+    CANMSG send_msg;
+    send_msg.ID = msg->id;
+    send_msg.LEN = msg->len;
+    send_msg.MSGTYPE = msg->msgtype;
+    for (int i = 0; i < msg->data.size(); i++) {
+      send_msg.DATA[i] = msg->data[i];
+    }
+    cans[idx]->send(&send_msg);
+  }
+}
+
+void CommunicationCenter::sendSerial(
+    std::shared_ptr<rlfw_msgs::msg::SerialMsg> msg) {
+  auto serial_safe_get = [this](const std::string &name) -> int {
+    std::unique_lock<std::mutex> lock(com_mutex);
+    auto it = serials_map.find(name);
+    lock.unlock();
+    if (it == serials_map.end()) {
+      RCLCPP_WARN(this->get_logger(), "no mount serial device: %s",
+                  name.c_str());
+      return -1;
+    }
+    return it->second;
+  };
+  int idx = serial_safe_get(msg->comname.frame_id);
+  if (idx == -1) {
+    return;
+  } else {
+    int is = serials[idx]->Send(msg->data);
+    if (is == -1)
+      RCLCPP_WARN(this->get_logger(), "serials send err:%s",
+                  serials[idx]->name.c_str());
+  }
+  return;
+}
 
 void CommunicationCenter::registeredCANMotorDecoder(Motortype motor_type) {
   for (auto type : registered_can_types) {
@@ -153,6 +290,7 @@ void CommunicationCenter::buildMap() {
     case ComType::pcan: {
       auto pcan = std::make_shared<PCAN>();
       pcan->channel = PCAN1 + com.channel - 1;
+      pcan->name = com.name;
       if (pcan->initPCAN(pcan->channel, BAUD_1MBPS)) {
         // 增加电机
         for (auto motor : com.xml_motors) {
@@ -175,9 +313,9 @@ void CommunicationCenter::buildMap() {
           }
         }
         if (com.only_thred) {
-          pcan->connectDecode(std::bind(&CommunicationCenter::fromCanMotor,
-                                        this, std::placeholders::_1,
-                                        std::placeholders::_2));
+          pcan->connectDecode(std::bind(
+              &CommunicationCenter::fromCan, this, std::placeholders::_1,
+              std::placeholders::_2, std::placeholders::_3));
           pcan->RunRecv();
         }
         cans_map[com.name] = cans.size();
@@ -188,7 +326,20 @@ void CommunicationCenter::buildMap() {
       break;
     }
     case ComType::serial: {
-      std::cout << "Serial type not implemented yet" << std::endl;
+      auto serial = std::make_shared<Serial>();
+      serial->only_thread = com.only_thred;
+      serial->name = com.name;
+      bool is = serial->OpenSerial(com.port, com.bps, com.datasize, com.parity,
+                                   com.stopbit);
+      if (!is)
+        RCLCPP_ERROR(this->get_logger(), "serials open err %s",
+                     com.name.c_str());
+      serial->connectDecode(std::bind(&CommunicationCenter::fromSerial, this,
+                                      std::placeholders::_1,
+                                      std::placeholders::_2));
+      serial->RunRecv();
+      serials_map[com.name] = serials.size();
+      serials.push_back(serial);
       break;
     }
     case ComType::canable: {
@@ -201,10 +352,22 @@ void CommunicationCenter::buildMap() {
     }
     }
   }
+  std::cout << "succeed mount:" << std::endl;
+  std::cout << "can device: ";
+  for (auto com : cans) {
+    std::cout << com->name << " ";
+  }
+  std::cout << std::endl;
+  std::cout << "serial device: ";
+  for (auto com : serials) {
+    std::cout << com->name << " ";
+  }
+  std::cout << std::endl;
 }
 
 void CommunicationCenter::initCanMotor(std::shared_ptr<CANMotor> can_motor,
                                        XMLMotor xml_motor) {
+  can_motor->enableMotor(true);
   can_motor->setPosKP(xml_motor.PosKP);
   can_motor->setPosKP(xml_motor.PosKD);
   can_motor->setVelKP(xml_motor.VelKP);
