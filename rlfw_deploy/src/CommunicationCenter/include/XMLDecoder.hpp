@@ -14,6 +14,7 @@ public:
   bool load(std::string path);
 
   std::vector<ComCfg> coms;
+  std::vector<XMLRemote> remotes;
   bool check();
 
   template <typename Enum> Enum string2enum(const std::string &name) {

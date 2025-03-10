@@ -3,18 +3,12 @@
 #include "PCANBasic.h"
 #include <atomic>
 #include <functional>
-#include <iomanip>
 #include <iostream>
 #include <libudev.h>
-#include <map>
-#include <memory>
-#include <mutex>
 #include <termios.h>
-#include <thread>
 #include <tuple>
 #include <unistd.h> // 在gcc编译器中，使用的头文件因gcc版本的不同而不同
 #include <vector>
-#include "rclcpp/rclcpp.hpp"
 
 // PCAN-USB interface, channel
 #define PCAN_NONEBUS 0x00U

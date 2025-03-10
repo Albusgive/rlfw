@@ -18,9 +18,16 @@ set(msg_files
 "msg/MotorCtrl.msg"
 "msg/CanMsg.msg"
 "msg/SerialMsg.msg"
+"msg/Remote.msg"
 )
+
+set(srv_files
+"srv/ComParameter.srv"
+)
+
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
+  ${srv_files}
   DEPENDENCIES std_msgs
 )
 ament_export_dependencies(rosidl_default_runtime)

@@ -1,0 +1,36 @@
+[  8%] [34m[1mGenerating include/moc_MotorCTRL.cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target motor_ctrl[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/main.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o[0m
+In file included from [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/moc_MotorCTRL.cpp:10[m[K:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::request()[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:128:17:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::executor[m[K’ has not been declared
+  128 |         rclcpp::[01;31m[Kexecutor[m[K::FutureReturnCode::SUCCESS) {
+      |                 [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:5[m[K,
+                 from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/src/main.cpp:1[m[K:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::request()[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:128:17:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::executor[m[K’ has not been declared
+  128 |         rclcpp::[01;31m[Kexecutor[m[K::FutureReturnCode::SUCCESS) {
+      |                 [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:5[m[K,
+                 from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/src/mainwindow.cpp:1[m[K:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::request()[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:128:17:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::executor[m[K’ has not been declared
+  128 |         rclcpp::[01;31m[Kexecutor[m[K::FutureReturnCode::SUCCESS) {
+      |                 [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/mainwindow.h:5[m[K,
+                 from [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/moc_mainwindow.cpp:10[m[K:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::request()[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:128:17:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp::executor[m[K’ has not been declared
+  128 |         rclcpp::[01;31m[Kexecutor[m[K::FutureReturnCode::SUCCESS) {
+      |                 [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:155：CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:113：CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o] 错误 1
+gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:169：CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o] 错误 1
+gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:99：CMakeFiles/motor_ctrl.dir/src/main.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/motor_ctrl.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

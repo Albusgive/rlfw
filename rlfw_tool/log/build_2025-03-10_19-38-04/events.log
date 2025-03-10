@@ -1,0 +1,160 @@
+[0.000000] (-) TimerEvent: {}
+[0.000412] (motor_ctrl) JobQueued: {'identifier': 'motor_ctrl', 'dependencies': OrderedDict()}
+[0.000455] (motor_ctrl) JobStarted: {'identifier': 'motor_ctrl'}
+[0.005000] (motor_ctrl) JobProgress: {'identifier': 'motor_ctrl', 'progress': 'cmake'}
+[0.005332] (motor_ctrl) JobProgress: {'identifier': 'motor_ctrl', 'progress': 'build'}
+[0.005699] (motor_ctrl) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl', '--', '-j12', '-l12'], 'cwd': '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/mujoco/lib:/usr/local/cuda/lib64:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1744'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4e938ebcbfc5b3a28575d87567cbe3ed'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_tool/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/cuda-12.4/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1744,unix/albusgive2:/tmp/.ICE-unix/1744'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2c83ff81_2da2_47d9_834d_a002f2a9bec0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e4d7754ee8.sock'), ('GNOME_TERMINAL_SERVICE', ':1.141'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4e938ebcbfc5b3a28575d87567cbe3ed'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[0.036208] (motor_ctrl) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating include/moc_MotorCTRL.cpp\x1b[0m\n'}
+[0.046104] (motor_ctrl) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target motor_ctrl\x1b[0m\n'}
+[0.060981] (motor_ctrl) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/main.cpp.o\x1b[0m\n'}
+[0.061184] (motor_ctrl) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o\x1b[0m\n'}
+[0.061275] (motor_ctrl) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[0.061578] (motor_ctrl) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o\x1b[0m\n'}
+[0.099860] (-) TimerEvent: {}
+[0.200103] (-) TimerEvent: {}
+[0.300310] (-) TimerEvent: {}
+[0.400541] (-) TimerEvent: {}
+[0.500770] (-) TimerEvent: {}
+[0.601002] (-) TimerEvent: {}
+[0.701225] (-) TimerEvent: {}
+[0.801454] (-) TimerEvent: {}
+[0.901660] (-) TimerEvent: {}
+[1.001891] (-) TimerEvent: {}
+[1.102127] (-) TimerEvent: {}
+[1.202341] (-) TimerEvent: {}
+[1.302582] (-) TimerEvent: {}
+[1.402814] (-) TimerEvent: {}
+[1.503052] (-) TimerEvent: {}
+[1.603291] (-) TimerEvent: {}
+[1.703533] (-) TimerEvent: {}
+[1.803764] (-) TimerEvent: {}
+[1.818525] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/moc_MotorCTRL.cpp:10\x1b[m\x1b[K:\n'}
+[1.818703] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::printRemoteData(rlfw_msgs::msg::Remote_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.818772] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:53:64:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.818818] (motor_ctrl) StderrLine: {'line': b'   53 |   void printRemoteData(\x1b[01;35m\x1b[Kconst rlfw_msgs::msg::Remote::SharedPtr msg\x1b[m\x1b[K) {\n'}
+[1.818858] (motor_ctrl) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[1.903840] (-) TimerEvent: {}
+[1.966933] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:5\x1b[m\x1b[K,\n'}
+[1.967056] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/src/main.cpp:1\x1b[m\x1b[K:\n'}
+[1.967105] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::printRemoteData(rlfw_msgs::msg::Remote_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.967136] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:53:64:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.967166] (motor_ctrl) StderrLine: {'line': b'   53 |   void printRemoteData(\x1b[01;35m\x1b[Kconst rlfw_msgs::msg::Remote::SharedPtr msg\x1b[m\x1b[K) {\n'}
+[1.967193] (motor_ctrl) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[1.971222] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:5\x1b[m\x1b[K,\n'}
+[1.971280] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[1.971309] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::printRemoteData(rlfw_msgs::msg::Remote_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.971337] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:53:64:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.971365] (motor_ctrl) StderrLine: {'line': b'   53 |   void printRemoteData(\x1b[01;35m\x1b[Kconst rlfw_msgs::msg::Remote::SharedPtr msg\x1b[m\x1b[K) {\n'}
+[1.971390] (motor_ctrl) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[1.973177] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/mainwindow.h:5\x1b[m\x1b[K,\n'}
+[1.973209] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/moc_mainwindow.cpp:10\x1b[m\x1b[K:\n'}
+[1.973244] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::printRemoteData(rlfw_msgs::msg::Remote_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.973269] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:53:64:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.973301] (motor_ctrl) StderrLine: {'line': b'   53 |   void printRemoteData(\x1b[01;35m\x1b[Kconst rlfw_msgs::msg::Remote::SharedPtr msg\x1b[m\x1b[K) {\n'}
+[1.973325] (motor_ctrl) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[2.003924] (-) TimerEvent: {}
+[2.104113] (-) TimerEvent: {}
+[2.204353] (-) TimerEvent: {}
+[2.304590] (-) TimerEvent: {}
+[2.404809] (-) TimerEvent: {}
+[2.505087] (-) TimerEvent: {}
+[2.605305] (-) TimerEvent: {}
+[2.705546] (-) TimerEvent: {}
+[2.805788] (-) TimerEvent: {}
+[2.906000] (-) TimerEvent: {}
+[3.006217] (-) TimerEvent: {}
+[3.106440] (-) TimerEvent: {}
+[3.206706] (-) TimerEvent: {}
+[3.306944] (-) TimerEvent: {}
+[3.407136] (-) TimerEvent: {}
+[3.507341] (-) TimerEvent: {}
+[3.607561] (-) TimerEvent: {}
+[3.707765] (-) TimerEvent: {}
+[3.807994] (-) TimerEvent: {}
+[3.908227] (-) TimerEvent: {}
+[4.008469] (-) TimerEvent: {}
+[4.108706] (-) TimerEvent: {}
+[4.208914] (-) TimerEvent: {}
+[4.309132] (-) TimerEvent: {}
+[4.409329] (-) TimerEvent: {}
+[4.509550] (-) TimerEvent: {}
+[4.609770] (-) TimerEvent: {}
+[4.709991] (-) TimerEvent: {}
+[4.810200] (-) TimerEvent: {}
+[4.910421] (-) TimerEvent: {}
+[5.010646] (-) TimerEvent: {}
+[5.110868] (-) TimerEvent: {}
+[5.211111] (-) TimerEvent: {}
+[5.311323] (-) TimerEvent: {}
+[5.411539] (-) TimerEvent: {}
+[5.511756] (-) TimerEvent: {}
+[5.611950] (-) TimerEvent: {}
+[5.712105] (-) TimerEvent: {}
+[5.812303] (-) TimerEvent: {}
+[5.912522] (-) TimerEvent: {}
+[6.012737] (-) TimerEvent: {}
+[6.112933] (-) TimerEvent: {}
+[6.213132] (-) TimerEvent: {}
+[6.313352] (-) TimerEvent: {}
+[6.413575] (-) TimerEvent: {}
+[6.513769] (-) TimerEvent: {}
+[6.613962] (-) TimerEvent: {}
+[6.714183] (-) TimerEvent: {}
+[6.814374] (-) TimerEvent: {}
+[6.914569] (-) TimerEvent: {}
+[7.014789] (-) TimerEvent: {}
+[7.114985] (-) TimerEvent: {}
+[7.215215] (-) TimerEvent: {}
+[7.315427] (-) TimerEvent: {}
+[7.415640] (-) TimerEvent: {}
+[7.515854] (-) TimerEvent: {}
+[7.616046] (-) TimerEvent: {}
+[7.716266] (-) TimerEvent: {}
+[7.816484] (-) TimerEvent: {}
+[7.916702] (-) TimerEvent: {}
+[8.016911] (-) TimerEvent: {}
+[8.117103] (-) TimerEvent: {}
+[8.217320] (-) TimerEvent: {}
+[8.317537] (-) TimerEvent: {}
+[8.417753] (-) TimerEvent: {}
+[8.517951] (-) TimerEvent: {}
+[8.618111] (-) TimerEvent: {}
+[8.718301] (-) TimerEvent: {}
+[8.818506] (-) TimerEvent: {}
+[8.918738] (-) TimerEvent: {}
+[9.018974] (-) TimerEvent: {}
+[9.119211] (-) TimerEvent: {}
+[9.219475] (-) TimerEvent: {}
+[9.319700] (-) TimerEvent: {}
+[9.325445] (motor_ctrl) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable motor_ctrl\x1b[0m\n'}
+[9.419811] (-) TimerEvent: {}
+[9.520046] (-) TimerEvent: {}
+[9.620266] (-) TimerEvent: {}
+[9.720506] (-) TimerEvent: {}
+[9.820707] (-) TimerEvent: {}
+[9.920938] (-) TimerEvent: {}
+[9.931569] (motor_ctrl) StdoutLine: {'line': b'[100%] Built target motor_ctrl\n'}
+[9.938495] (motor_ctrl) CommandEnded: {'returncode': 0}
+[9.938892] (motor_ctrl) JobProgress: {'identifier': 'motor_ctrl', 'progress': 'install'}
+[9.944895] (motor_ctrl) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl'], 'cwd': '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/mujoco/lib:/usr/local/cuda/lib64:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1744'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4e938ebcbfc5b3a28575d87567cbe3ed'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_tool/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/cuda-12.4/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1744,unix/albusgive2:/tmp/.ICE-unix/1744'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2c83ff81_2da2_47d9_834d_a002f2a9bec0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e4d7754ee8.sock'), ('GNOME_TERMINAL_SERVICE', ':1.141'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4e938ebcbfc5b3a28575d87567cbe3ed'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[9.949967] (motor_ctrl) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.950044] (motor_ctrl) StdoutLine: {'line': b'-- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/lib/motor_ctrl/motor_ctrl\n'}
+[9.953768] (motor_ctrl) StdoutLine: {'line': b'-- Set runtime path of "/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/lib/motor_ctrl/motor_ctrl" to ""\n'}
+[9.953945] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/package_run_dependencies/motor_ctrl\n'}
+[9.953986] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/parent_prefix_path/motor_ctrl\n'}
+[9.954020] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/ament_prefix_path.sh\n'}
+[9.954061] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/ament_prefix_path.dsv\n'}
+[9.954128] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/path.sh\n'}
+[9.954167] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/path.dsv\n'}
+[9.954210] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.bash\n'}
+[9.954257] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.sh\n'}
+[9.954295] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.zsh\n'}
+[9.954333] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.dsv\n'}
+[9.954371] (motor_ctrl) StdoutLine: {'line': b'-- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/package.dsv\n'}
+[9.954403] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/packages/motor_ctrl\n'}
+[9.954438] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/cmake/motor_ctrlConfig.cmake\n'}
+[9.954465] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/cmake/motor_ctrlConfig-version.cmake\n'}
+[9.954493] (motor_ctrl) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/package.xml\n'}
+[9.955528] (motor_ctrl) CommandEnded: {'returncode': 0}
+[9.964291] (motor_ctrl) JobEnded: {'identifier': 'motor_ctrl', 'rc': 0}
+[9.964636] (-) EventReactorShutdown: {}

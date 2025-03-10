@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = -DTINYXML2_DEBUG -D_FILE_OFFSET_BITS=64
 
-CXX_INCLUDES = -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/tinyxml2
+CXX_INCLUDES = -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver -I/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/tinyxml2
 
 CXX_FLAGS = -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wpedantic
 

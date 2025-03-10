@@ -1,0 +1,7 @@
+#请求类型 （这么长的名字是故意还是不小心的）
+string request_communication_center_parameter
+---
+#通信接口名字 com,motor,remote
+string[] device_name
+#通信类型
+string[] device_type

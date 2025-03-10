@@ -1,0 +1,6 @@
+[  8%] [34m[1mGenerating include/moc_MotorCTRL.cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target motor_ctrl[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/main.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o[0m

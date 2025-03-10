@@ -79,6 +79,8 @@ rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp: rosidl_adapter/rlfw_
 rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/msg/MotorCtrl.idl
 rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/msg/CanMsg.idl
 rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/msg/SerialMsg.idl
+rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/msg/Remote.idl
+rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/srv/ComParameter.idl
 rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -122,6 +124,12 @@ rosidl_typesupport_c/rlfw_msgs/msg/can_msg__type_support.cpp: rosidl_typesupport
 
 rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp: rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp
+
+rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp: rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp
+
+rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp: rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp
 
 CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp.o: rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp
@@ -179,12 +187,42 @@ CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/ms
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp -o CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp.s
 
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o: rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o -MF CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o.d -o CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o -c /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp > CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.i
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp -o CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.s
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o: rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o -MF CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o.d -o CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o -c /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp > CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.i
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp -o CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.s
+
 # Object files for target rlfw_msgs__rosidl_typesupport_c
 rlfw_msgs__rosidl_typesupport_c_OBJECTS = \
 "CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp.o" \
 "CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/motor_ctrl__type_support.cpp.o" \
 "CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/can_msg__type_support.cpp.o" \
-"CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp.o"
+"CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp.o" \
+"CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o" \
+"CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o"
 
 # External object files for target rlfw_msgs__rosidl_typesupport_c
 rlfw_msgs__rosidl_typesupport_c_EXTERNAL_OBJECTS =
@@ -193,6 +231,8 @@ librlfw_msgs__rosidl_typesupport_c.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_
 librlfw_msgs__rosidl_typesupport_c.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/motor_ctrl__type_support.cpp.o
 librlfw_msgs__rosidl_typesupport_c.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/can_msg__type_support.cpp.o
 librlfw_msgs__rosidl_typesupport_c.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp.o
+librlfw_msgs__rosidl_typesupport_c.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o
+librlfw_msgs__rosidl_typesupport_c.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o
 librlfw_msgs__rosidl_typesupport_c.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/build.make
 librlfw_msgs__rosidl_typesupport_c.so: librlfw_msgs__rosidl_generator_c.so
 librlfw_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
@@ -203,7 +243,7 @@ librlfw_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/libbuiltin_interfaces
 librlfw_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 librlfw_msgs__rosidl_typesupport_c.so: /opt/ros/humble/lib/librcutils.so
 librlfw_msgs__rosidl_typesupport_c.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library librlfw_msgs__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library librlfw_msgs__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -217,7 +257,9 @@ CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/clean:
 CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/rlfw_msgs/msg/can_msg__type_support.cpp
 CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/rlfw_msgs/msg/motor__type_support.cpp
 CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/rlfw_msgs/msg/motor_ctrl__type_support.cpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp
 CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp
 	cd /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/depend
 

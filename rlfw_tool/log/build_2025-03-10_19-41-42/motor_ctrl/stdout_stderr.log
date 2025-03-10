@@ -1,0 +1,29 @@
+[  8%] [34m[1mGenerating ui_mainwindow.h[0m
+[35m[1mConsolidate compiler generated dependencies of target motor_ctrl[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o[0m
+In file included from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:5[m[K,
+                 from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/src/mainwindow.cpp:1[m[K:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::printRemoteData(rlfw_msgs::msg::Remote_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:53:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   53 |   void printRemoteData([01;35m[Kconst rlfw_msgs::msg::Remote::SharedPtr msg[m[K) {
+      |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[ 25%] [32m[1mLinking CXX executable motor_ctrl[0m
+[100%] Built target motor_ctrl
+-- Install configuration: ""
+-- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/lib/motor_ctrl/motor_ctrl
+-- Set runtime path of "/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/lib/motor_ctrl/motor_ctrl" to ""
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/package_run_dependencies/motor_ctrl
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/parent_prefix_path/motor_ctrl
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/ament_prefix_path.sh
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/path.sh
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/path.dsv
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.bash
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.sh
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.zsh
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.dsv
+-- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/package.dsv
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/packages/motor_ctrl
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/cmake/motor_ctrlConfig.cmake
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/cmake/motor_ctrlConfig-version.cmake
+-- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/package.xml

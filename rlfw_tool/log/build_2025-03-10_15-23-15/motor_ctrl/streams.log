@@ -1,0 +1,11 @@
+[0.008s] Invoking command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl -- -j12 -l12
+[0.038s] [  8%] [34m[1mGenerating include/moc_MotorCTRL.cpp[0m
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target motor_ctrl[0m
+[0.063s] [ 16%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/main.cpp.o[0m
+[0.064s] [ 25%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o[0m
+[0.065s] [ 33%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o[0m
+[0.065s] [ 41%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o[0m
+[7.766s] gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:113: CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o] 中断
+[7.766s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/motor_ctrl.dir/all] 中断
+[7.767s] gmake: *** [Makefile:146: all] 中断
+[7.807s] Invoked command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl -- -j12 -l12

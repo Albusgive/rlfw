@@ -372,6 +372,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/Remote.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/srv" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/srv/ComParameter.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Motor.msg")
 endif()
 
@@ -385,6 +393,22 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/SerialMsg.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Remote.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/srv" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/srv/ComParameter.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/srv" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_cmake/srv/ComParameter_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/srv" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_cmake/srv/ComParameter_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

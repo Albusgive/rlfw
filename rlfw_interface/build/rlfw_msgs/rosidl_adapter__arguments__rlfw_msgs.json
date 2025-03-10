@@ -4,6 +4,8 @@
     "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/Motor.msg",
     "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/MotorCtrl.msg",
     "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/CanMsg.msg",
-    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/SerialMsg.msg"
+    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/SerialMsg.msg",
+    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/Remote.msg",
+    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:srv/ComParameter.srv"
   ]
 }

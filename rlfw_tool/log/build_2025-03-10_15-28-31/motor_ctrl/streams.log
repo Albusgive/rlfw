@@ -1,0 +1,30 @@
+[0.006s] Invoking command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl -- -j12 -l12
+[0.037s] [  8%] [34m[1mGenerating include/moc_MotorCTRL.cpp[0m
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target motor_ctrl[0m
+[0.063s] [ 16%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/main.cpp.o[0m
+[0.065s] [ 25%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o[0m
+[0.065s] [ 33%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o[0m
+[0.066s] [ 41%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o[0m
+[7.509s] [ 50%] [32m[1mLinking CXX executable motor_ctrl[0m
+[8.014s] [100%] Built target motor_ctrl
+[8.021s] Invoked command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl -- -j12 -l12
+[8.027s] Invoking command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl
+[8.032s] -- Install configuration: ""
+[8.032s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/lib/motor_ctrl/motor_ctrl
+[8.035s] -- Set runtime path of "/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/lib/motor_ctrl/motor_ctrl" to ""
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/package_run_dependencies/motor_ctrl
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/parent_prefix_path/motor_ctrl
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/ament_prefix_path.sh
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/ament_prefix_path.dsv
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/path.sh
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/path.dsv
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.bash
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.sh
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.zsh
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.dsv
+[8.035s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/package.dsv
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/packages/motor_ctrl
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/cmake/motor_ctrlConfig.cmake
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/cmake/motor_ctrlConfig-version.cmake
+[8.035s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/package.xml
+[8.036s] Invoked command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl

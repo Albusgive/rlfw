@@ -25,12 +25,22 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__builder.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__struct.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__traits.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__type_support.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__builder.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__struct.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__traits.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor_ctrl.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/remote.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/serial_msg.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/srv/com_parameter.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__builder.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__struct.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__traits.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
+  "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.hpp" "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp"
   )
 
 

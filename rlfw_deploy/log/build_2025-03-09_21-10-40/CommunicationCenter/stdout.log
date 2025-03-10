@@ -1,8 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target tinyxml2[0m
-[ 14%] Built target tinyxml2
-[35m[1mConsolidate compiler generated dependencies of target xmltest[0m
-[35m[1mConsolidate compiler generated dependencies of target CommunicationCenter[0m
-[ 28%] Built target xmltest
-[ 35%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o[0m
-[ 42%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o[0m
-[ 50%] [32m[1mLinking CXX executable CommunicationCenter[0m

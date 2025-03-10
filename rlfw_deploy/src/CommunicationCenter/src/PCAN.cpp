@@ -1,5 +1,5 @@
 #include "PCAN.hpp"
-#include <mutex>
+#include <thread>
 
 PCAN::PCAN() {
   tpcan.push_back(PCAN1);
@@ -12,7 +12,9 @@ PCAN::PCAN() {
   tpcan.push_back(PCAN8);
 }
 
-PCAN::~PCAN() {}
+PCAN::~PCAN() {
+  is_only_thread.store(false);
+}
 
 bool PCAN::initPCAN(TPCANHandle CANx, TPCANBaudrate Btr0Btr1) {
   // 初始化 PCAN 通道
@@ -96,8 +98,8 @@ USBHubPort<TPCANHandle> PCAN::findPCAN() {
   }
   std::cout << "----------------------------------" << std::endl;
   // 按照h的第一个元素从小到大排序
-  for (int i = 0; i < port_time.size() - 1; i++) {
-    for (int j = 0; j < port_time.size() - 1 - i; j++) {
+  for (int i = 0; i < static_cast<int>(port_time.size()) - 1; i++) {
+    for (int j = 0; j < static_cast<int>(port_time.size()) - 1 - i; j++) {
       if (compareStrNum(port_time[j].second, port_time[j + 1].second) == 1) {
         // std::cout << "hub端口" << port_time[j].first << " time" <<
         // port_time[j].second << std::endl; std::swap(port_time[j], port_time[j
@@ -124,10 +126,11 @@ USBHubPort<TPCANHandle> PCAN::findPCAN() {
       return PCAN4;
       break;
     default:
+      return PCAN1;
       break;
     }
   };
-  for (int i = 0; i < port_time.size(); i++) {
+  for (int i = 0; i < static_cast<int>(port_time.size()); i++) {
     switch (port_time[i].first) {
     case 1:
       usbhubport.port1 = setchannel(i);
@@ -259,7 +262,7 @@ void PCAN::connectDecode(std::function<void(CANMSG&,std::vector<int>& motor_ids,
 void PCAN::RunRecv() {
   is_only_thread.store(true);
   std::thread ThRecv = std::thread{[&]() {
-    while (is_only_thread.load()&&rclcpp::ok()) {
+    while (is_only_thread.load()) {
       auto [is, msg] = read(channel);
       if (is)
       {

@@ -13,7 +13,7 @@ module rlfw_msgs {
       std_msgs::msg::Header jointname;
 
       @verbatim (language="comment", text=
-        "MIT, POS, VEL, TORQUE, POS_VEL")
+        "MIT, POS, VEL, TORQUE, POS_VEL,ENABLE(kd为0时失能，不为0使能)")
       string ctrl_type;
 
       @verbatim (language="comment", text=

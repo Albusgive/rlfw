@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rlfw_msgs/msg/Remote.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rlfw_msgs {
+  module msg {
+    struct Remote {
+      std_msgs::msg::Header remotename;
+
+      @verbatim (language="comment", text=
+        "对应功能")
+      sequence<string> key;
+
+      @verbatim (language="comment", text=
+        "数值")
+      sequence<float> value;
+    };
+  };
+};

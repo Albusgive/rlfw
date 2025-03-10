@@ -2,3 +2,5 @@
 /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/MotorCtrl.idl
 /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/CanMsg.idl
 /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/SerialMsg.idl
+/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:msg/Remote.idl
+/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs:srv/ComParameter.idl

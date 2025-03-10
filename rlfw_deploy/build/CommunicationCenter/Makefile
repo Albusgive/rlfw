@@ -672,6 +672,30 @@ motor_driver/RMMotor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.s
 .PHONY : motor_driver/RMMotor.cpp.s
 
+remote_driver/gamepad.o: remote_driver/gamepad.cpp.o
+.PHONY : remote_driver/gamepad.o
+
+# target to build an object file
+remote_driver/gamepad.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o
+.PHONY : remote_driver/gamepad.cpp.o
+
+remote_driver/gamepad.i: remote_driver/gamepad.cpp.i
+.PHONY : remote_driver/gamepad.i
+
+# target to preprocess a source file
+remote_driver/gamepad.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.i
+.PHONY : remote_driver/gamepad.cpp.i
+
+remote_driver/gamepad.s: remote_driver/gamepad.cpp.s
+.PHONY : remote_driver/gamepad.s
+
+# target to generate assembly for a file
+remote_driver/gamepad.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.s
+.PHONY : remote_driver/gamepad.cpp.s
+
 src/CommunicationCenter.o: src/CommunicationCenter.cpp.o
 .PHONY : src/CommunicationCenter.o
 
@@ -743,30 +767,6 @@ src/XMLDecoder.s: src/XMLDecoder.cpp.s
 src/XMLDecoder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.s
 .PHONY : src/XMLDecoder.cpp.s
-
-src/gamepad.o: src/gamepad.cpp.o
-.PHONY : src/gamepad.o
-
-# target to build an object file
-src/gamepad.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o
-.PHONY : src/gamepad.cpp.o
-
-src/gamepad.i: src/gamepad.cpp.i
-.PHONY : src/gamepad.i
-
-# target to preprocess a source file
-src/gamepad.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.i
-.PHONY : src/gamepad.cpp.i
-
-src/gamepad.s: src/gamepad.cpp.s
-.PHONY : src/gamepad.s
-
-# target to generate assembly for a file
-src/gamepad.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.s
-.PHONY : src/gamepad.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -871,6 +871,9 @@ help:
 	@echo "... motor_driver/RMMotor.o"
 	@echo "... motor_driver/RMMotor.i"
 	@echo "... motor_driver/RMMotor.s"
+	@echo "... remote_driver/gamepad.o"
+	@echo "... remote_driver/gamepad.i"
+	@echo "... remote_driver/gamepad.s"
 	@echo "... src/CommunicationCenter.o"
 	@echo "... src/CommunicationCenter.i"
 	@echo "... src/CommunicationCenter.s"
@@ -880,9 +883,6 @@ help:
 	@echo "... src/XMLDecoder.o"
 	@echo "... src/XMLDecoder.i"
 	@echo "... src/XMLDecoder.s"
-	@echo "... src/gamepad.o"
-	@echo "... src/gamepad.i"
-	@echo "... src/gamepad.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

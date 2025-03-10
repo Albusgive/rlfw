@@ -156,11 +156,8 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc \
- /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp \
- /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp \
- /usr/include/c++/12/array /usr/include/c++/12/compare \
- /usr/include/c++/12/cstddef /usr/include/c++/12/functional \
- /usr/include/c++/12/bits/std_function.h \
+ /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver/BaseRemote.h \
+ /usr/include/c++/12/functional /usr/include/c++/12/bits/std_function.h \
  /usr/include/c++/12/unordered_map \
  /usr/include/c++/12/ext/aligned_buffer.h \
  /usr/include/c++/12/bits/hashtable.h \
@@ -168,11 +165,15 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /usr/include/c++/12/bits/enable_special_members.h \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/unordered_map.h \
- /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/bits/stl_algo.h \
+ /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/array \
+ /usr/include/c++/12/compare /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
  /usr/include/c++/12/bits/stl_tempbuf.h \
- /usr/include/c++/12/bits/uniform_int_dist.h /usr/include/c++/12/limits \
+ /usr/include/c++/12/bits/uniform_int_dist.h \
+ /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp \
+ /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum/include/magic_enum/magic_enum.hpp \
+ /usr/include/c++/12/cstddef /usr/include/c++/12/limits \
  /usr/include/c++/12/utility /usr/include/c++/12/bits/stl_relops.h \
  /usr/include/c++/12/optional /usr/include/c++/12/cassert \
  /usr/include/assert.h /usr/include/c++/12/memory \
@@ -201,23 +202,8 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /usr/include/asm-generic/posix_types.h /usr/include/linux/ioctl.h \
  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
  /usr/include/asm-generic/ioctl.h /usr/include/c++/12/atomic \
- /usr/include/c++/12/iomanip /usr/include/c++/12/locale \
- /usr/include/c++/12/bits/locale_facets_nonio.h /usr/include/c++/12/ctime \
- /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/12/bits/codecvt.h \
- /usr/include/c++/12/bits/locale_facets_nonio.tcc \
- /usr/include/c++/12/bits/locale_conv.h \
- /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/sstream \
- /usr/include/c++/12/bits/sstream.tcc /usr/include/libudev.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/c++/12/map \
- /usr/include/c++/12/bits/stl_tree.h /usr/include/c++/12/bits/stl_map.h \
- /usr/include/c++/12/bits/stl_multimap.h /usr/include/c++/12/mutex \
- /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
- /usr/include/c++/12/bits/parse_numbers.h \
- /usr/include/c++/12/bits/std_mutex.h \
- /usr/include/c++/12/bits/unique_lock.h /usr/include/termios.h \
+ /usr/include/libudev.h /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/termios.h \
  /usr/include/x86_64-linux-gnu/bits/termios.h \
  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
@@ -228,9 +214,7 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
- /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
- /usr/include/c++/12/thread /usr/include/c++/12/bits/std_thread.h \
- /usr/include/c++/12/bits/this_thread_sleep.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/sys/ttydefaults.h /usr/include/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
@@ -238,6 +222,72 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
+ /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp \
+ /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/ComCfg.hpp \
+ /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver/gamepad.h \
+ /usr/include/c++/12/map /usr/include/c++/12/bits/stl_tree.h \
+ /usr/include/c++/12/bits/stl_map.h \
+ /usr/include/c++/12/bits/stl_multimap.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/c++/12/thread \
+ /usr/include/c++/12/bits/std_thread.h \
+ /usr/include/c++/12/bits/this_thread_sleep.h \
+ /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
+ /usr/include/c++/12/ctime /usr/include/c++/12/bits/parse_numbers.h \
+ /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver/gamepadkey.h \
+ /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /usr/include/linux/input.h /usr/include/x86_64-linux-gnu/sys/time.h \
+ /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+ /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+ /usr/include/x86_64-linux-gnu/asm/ioctls.h \
+ /usr/include/asm-generic/ioctls.h \
+ /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+ /usr/include/linux/input-event-codes.h /usr/include/linux/joystick.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+ /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/tinyxml2/tinyxml2.h \
+ /usr/include/c++/12/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/12/cstring \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
+ /usr/include/c++/12/algorithm \
+ /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+ /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
+ /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
+ /usr/include/c++/12/sstream /usr/include/c++/12/bits/sstream.tcc \
+ /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
+ /usr/include/c++/12/codecvt /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/c++/12/iomanip /usr/include/c++/12/locale \
+ /usr/include/c++/12/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/12/bits/locale_conv.h \
+ /usr/include/c++/12/bits/quoted_string.h \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp \
+ /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/message_type_support.hpp \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/12/csignal /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -262,16 +312,18 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
  /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp \
- /usr/include/c++/12/future /usr/include/c++/12/condition_variable \
+ /usr/include/c++/12/future /usr/include/c++/12/mutex \
+ /usr/include/c++/12/bits/std_mutex.h \
+ /usr/include/c++/12/bits/unique_lock.h \
+ /usr/include/c++/12/condition_variable \
  /usr/include/c++/12/bits/atomic_futex.h \
  /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
  /usr/include/c++/12/chrono /usr/include/c++/12/set \
  /usr/include/c++/12/bits/stl_set.h \
  /usr/include/c++/12/bits/stl_multiset.h \
  /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp \
- /usr/include/c++/12/algorithm \
- /usr/include/c++/12/pstl/glue_algorithm_defs.h /usr/include/c++/12/list \
- /usr/include/c++/12/bits/stl_list.h /usr/include/c++/12/bits/list.tcc \
+ /usr/include/c++/12/list /usr/include/c++/12/bits/stl_list.h \
+ /usr/include/c++/12/bits/list.tcc \
  /opt/ros/humble/include/rcl/rcl/guard_condition.h \
  /opt/ros/humble/include/rcl/rcl/allocator.h \
  /opt/ros/humble/include/rcutils/rcutils/allocator.h \
@@ -297,8 +349,7 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /opt/ros/humble/include/rmw/rmw/types.h \
  /opt/ros/humble/include/rcutils/rcutils/logging.h \
  /opt/ros/humble/include/rcutils/rcutils/error_handling.h \
- /usr/include/c++/12/stdlib.h /usr/include/string.h \
- /usr/include/strings.h \
+ /usr/include/c++/12/stdlib.h \
  /opt/ros/humble/include/rcutils/rcutils/snprintf.h \
  /opt/ros/humble/include/rcutils/rcutils/time.h \
  /opt/ros/humble/include/rcutils/rcutils/types.h \
@@ -327,8 +378,6 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /opt/ros/humble/include/rcl/rcl/wait.h \
  /opt/ros/humble/include/rcl/rcl/client.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
- /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /opt/ros/humble/include/rcl/rcl/event_callback.h \
  /opt/ros/humble/include/rmw/rmw/event_callback_type.h \
  /opt/ros/humble/include/rcl/rcl/node.h \
@@ -336,7 +385,6 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /opt/ros/humble/include/rcl/rcl/domain_id.h \
  /opt/ros/humble/include/rcl/rcl/service.h \
  /opt/ros/humble/include/rcl/rcl/subscription.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
  /opt/ros/humble/include/rmw/rmw/message_sequence.h \
  /opt/ros/humble/include/rcl/rcl/timer.h \
  /opt/ros/humble/include/rcl/rcl/time.h \
@@ -389,16 +437,10 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/duration.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp \
- /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
- /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp \
- /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
- /usr/include/c++/12/codecvt \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__type_support.hpp \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
- /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/message_type_support.hpp \
  /opt/ros/humble/include/rcl/rcl/logging_rosout.h \
  /opt/ros/humble/include/rmw/rmw/incompatible_qos_events_statuses.h \
  /opt/ros/humble/include/rclcpp/rclcpp/type_support_decl.hpp \
@@ -427,7 +469,6 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/subscription_base.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/any_subscription_callback.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/allocator/allocator_common.hpp \
- /usr/include/c++/12/cstring \
  /opt/ros/humble/include/rclcpp/rclcpp/allocator/allocator_deleter.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/detail/subscription_callback_type_helper.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/message_info.hpp \
@@ -650,69 +691,39 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
- /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/XMLDecoder.hpp \
- /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/ComCfg.hpp \
- /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/tinyxml2/tinyxml2.h \
- /usr/include/c++/12/climits \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/gamepad.h \
- /usr/include/x86_64-linux-gnu/sys/stat.h \
- /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
- /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
- /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
- /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
- /usr/include/linux/falloc.h /usr/include/linux/input.h \
- /usr/include/x86_64-linux-gnu/sys/time.h \
- /usr/include/x86_64-linux-gnu/sys/ioctl.h \
- /usr/include/x86_64-linux-gnu/bits/ioctls.h \
- /usr/include/x86_64-linux-gnu/asm/ioctls.h \
- /usr/include/asm-generic/ioctls.h \
- /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
- /usr/include/linux/input-event-codes.h /usr/include/linux/joystick.h \
- /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/gamepadkey.h \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/can_msg.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__builder.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/motor.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__struct.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__builder.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__type_support.hpp \
- /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/motor_ctrl.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp \
- /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/can_msg.hpp \
- /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__struct.hpp \
- /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__builder.hpp \
- /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__traits.hpp \
- /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp \
  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/remote.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__struct.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__builder.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__traits.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/com_parameter.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__struct.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__builder.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__traits.hpp \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__type_support.hpp \
  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/serial.hpp \
  /usr/include/x86_64-linux-gnu/sys/signal.h /usr/include/dirent.h \
  /usr/include/x86_64-linux-gnu/bits/dirent.h \
@@ -720,4 +731,5 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: \
  /usr/include/linux/serial.h /usr/include/linux/tty_flags.h \
  /usr/include/c++/12/queue /usr/include/c++/12/deque \
  /usr/include/c++/12/bits/stl_deque.h /usr/include/c++/12/bits/deque.tcc \
- /usr/include/c++/12/bits/stl_queue.h
+ /usr/include/c++/12/bits/stl_queue.h \
+ /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/rl_srv__struct.hpp

@@ -1,0 +1,49 @@
+[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindOpenGL.cmake:315 (message):
+  Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+  available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  FindOpenGL found both a legacy GL library:
+
+    OPENGL_gl_LIBRARY: /usr/lib/x86_64-linux-gnu/libGL.so
+
+  and GLVND libraries for OpenGL and GLX:
+
+    OPENGL_opengl_LIBRARY: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+    OPENGL_glx_LIBRARY: /usr/lib/x86_64-linux-gnu/libGLX.so
+
+  OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+  compatibility with CMake 3.10 and below the legacy GL library will be used.
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake:47 (find_package)
+  /opt/mujoco/lib/cmake/mujoco/mujocoConfig.cmake:42 (find_dependency)
+  CMakeLists.txt:13 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:[m[K In function ‘[01m[Kvoid keyboard(GLFWwindow*, int, int, int, int)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:60:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   60 | void keyboard([01;35m[KGLFWwindow *window[m[K, int key, int scancode, int act, int mods)
+      |               [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:60:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscancode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   60 | void keyboard(GLFWwindow *window, int key, [01;35m[Kint scancode[m[K, int act, int mods)
+      |                                            [01;35m[K~~~~^~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:60:71:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   60 | void keyboard(GLFWwindow *window, int key, int scancode, int act, [01;35m[Kint mods[m[K)
+      |                                                                   [01;35m[K~~~~^~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:[m[K In function ‘[01m[Kvoid mouse_button(GLFWwindow*, int, int, int)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:71:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbutton[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   71 | void mouse_button(GLFWwindow *window, [01;35m[Kint button[m[K, int act, int mods)
+      |                                       [01;35m[K~~~~^~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:71:55:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kact[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   71 | void mouse_button(GLFWwindow *window, int button, [01;35m[Kint act[m[K, int mods)
+      |                                                   [01;35m[K~~~~^~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:71:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   71 | void mouse_button(GLFWwindow *window, int button, int act, [01;35m[Kint mods[m[K)
+      |                                                            [01;35m[K~~~~^~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:[m[K In function ‘[01m[Kvoid scroll(GLFWwindow*, double, double)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:125:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  125 | void scroll([01;35m[KGLFWwindow *window[m[K, double xoffset, double yoffset)
+      |             [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp:125:40:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kxoffset[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  125 | void scroll(GLFWwindow *window, [01;35m[Kdouble xoffset[m[K, double yoffset)
+      |                                 [01;35m[K~~~~~~~^~~~~~~[m[K

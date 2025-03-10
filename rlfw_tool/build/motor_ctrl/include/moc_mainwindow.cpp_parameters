@@ -1,0 +1,7 @@
+-I/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include
+-I/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl
+-I/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl
+-I/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl
+-o
+/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/moc_mainwindow.cpp
+/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h

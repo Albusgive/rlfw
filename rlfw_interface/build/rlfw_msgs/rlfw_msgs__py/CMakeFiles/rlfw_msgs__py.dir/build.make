@@ -73,11 +73,16 @@ rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_motor
 rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl.py
 rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_can_msg.py
 rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_serial_msg.py
+rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_remote.py
+rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/srv/_com_parameter.py
 rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/__init__.py
+rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/srv/__init__.py
 rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_motor_s.c
 rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c
 rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_can_msg_s.c
 rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_serial_msg_s.c
+rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_remote_s.c
+rlfw_msgs__py/CMakeFiles/rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/srv/_com_parameter_s.c
 
 rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -96,6 +101,8 @@ rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: r
 rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rlfw_msgs/msg/MotorCtrl.idl
 rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rlfw_msgs/msg/CanMsg.idl
 rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rlfw_msgs/msg/SerialMsg.idl
+rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rlfw_msgs/msg/Remote.idl
+rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rlfw_msgs/srv/ComParameter.idl
 rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -149,8 +156,17 @@ rosidl_generator_py/rlfw_msgs/msg/_can_msg.py: rosidl_generator_py/rlfw_msgs/_rl
 rosidl_generator_py/rlfw_msgs/msg/_serial_msg.py: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rlfw_msgs/msg/_serial_msg.py
 
+rosidl_generator_py/rlfw_msgs/msg/_remote.py: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rlfw_msgs/msg/_remote.py
+
+rosidl_generator_py/rlfw_msgs/srv/_com_parameter.py: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rlfw_msgs/srv/_com_parameter.py
+
 rosidl_generator_py/rlfw_msgs/msg/__init__.py: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rlfw_msgs/msg/__init__.py
+
+rosidl_generator_py/rlfw_msgs/srv/__init__.py: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rlfw_msgs/srv/__init__.py
 
 rosidl_generator_py/rlfw_msgs/msg/_motor_s.c: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rlfw_msgs/msg/_motor_s.c
@@ -164,6 +180,12 @@ rosidl_generator_py/rlfw_msgs/msg/_can_msg_s.c: rosidl_generator_py/rlfw_msgs/_r
 rosidl_generator_py/rlfw_msgs/msg/_serial_msg_s.c: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rlfw_msgs/msg/_serial_msg_s.c
 
+rosidl_generator_py/rlfw_msgs/msg/_remote_s.c: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rlfw_msgs/msg/_remote_s.c
+
+rosidl_generator_py/rlfw_msgs/srv/_com_parameter_s.c: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rlfw_msgs/srv/_com_parameter_s.c
+
 rlfw_msgs__py: rlfw_msgs__py/CMakeFiles/rlfw_msgs__py
 rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_c.c
 rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -175,8 +197,13 @@ rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_motor.py
 rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl.py
 rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c
 rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_motor_s.c
+rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_remote.py
+rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_remote_s.c
 rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_serial_msg.py
 rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/msg/_serial_msg_s.c
+rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/srv/__init__.py
+rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/srv/_com_parameter.py
+rlfw_msgs__py: rosidl_generator_py/rlfw_msgs/srv/_com_parameter_s.c
 rlfw_msgs__py: rlfw_msgs__py/CMakeFiles/rlfw_msgs__py.dir/build.make
 .PHONY : rlfw_msgs__py
 

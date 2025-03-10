@@ -1,0 +1,514 @@
+[0.000000] (-) TimerEvent: {}
+[0.000116] (motor_ctrl) JobQueued: {'identifier': 'motor_ctrl', 'dependencies': OrderedDict()}
+[0.000521] (motor_ctrl) JobStarted: {'identifier': 'motor_ctrl'}
+[0.004884] (motor_ctrl) JobProgress: {'identifier': 'motor_ctrl', 'progress': 'cmake'}
+[0.005288] (motor_ctrl) JobProgress: {'identifier': 'motor_ctrl', 'progress': 'build'}
+[0.005808] (motor_ctrl) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl', '--', '-j12', '-l12'], 'cwd': '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/mujoco/lib:/usr/local/cuda/lib64:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_tool/src'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1744'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4e938ebcbfc5b3a28575d87567cbe3ed'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_tool/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/cuda-12.4/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1744,unix/albusgive2:/tmp/.ICE-unix/1744'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2c83ff81_2da2_47d9_834d_a002f2a9bec0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e4d7754ee8.sock'), ('GNOME_TERMINAL_SERVICE', ':1.141'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=4e938ebcbfc5b3a28575d87567cbe3ed'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[0.033792] (motor_ctrl) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating include/moc_MotorCTRL.cpp\x1b[0m\n'}
+[0.043305] (motor_ctrl) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target motor_ctrl\x1b[0m\n'}
+[0.057160] (motor_ctrl) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/main.cpp.o\x1b[0m\n'}
+[0.057397] (motor_ctrl) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[0.057509] (motor_ctrl) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o\x1b[0m\n'}
+[0.057964] (motor_ctrl) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o\x1b[0m\n'}
+[0.099904] (-) TimerEvent: {}
+[0.200137] (-) TimerEvent: {}
+[0.300348] (-) TimerEvent: {}
+[0.400555] (-) TimerEvent: {}
+[0.500779] (-) TimerEvent: {}
+[0.601011] (-) TimerEvent: {}
+[0.701240] (-) TimerEvent: {}
+[0.801477] (-) TimerEvent: {}
+[0.901643] (-) TimerEvent: {}
+[1.001852] (-) TimerEvent: {}
+[1.102061] (-) TimerEvent: {}
+[1.202307] (-) TimerEvent: {}
+[1.302540] (-) TimerEvent: {}
+[1.402756] (-) TimerEvent: {}
+[1.502994] (-) TimerEvent: {}
+[1.603217] (-) TimerEvent: {}
+[1.703431] (-) TimerEvent: {}
+[1.708759] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/moc_MotorCTRL.cpp:10\x1b[m\x1b[K:\n'}
+[1.708931] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:129:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 after class definition\n'}
+[1.709008] (motor_ctrl) StderrLine: {'line': b'  129 |   }\n'}
+[1.709057] (motor_ctrl) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.709099] (motor_ctrl) StderrLine: {'line': b'      |    \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[1.713115] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMotorCTRL::MotorCTRL(const std::string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.713264] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:27:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.713328] (motor_ctrl) StderrLine: {'line': b'   27 |     \x1b[01;31m\x1b[Knode\x1b[m\x1b[K = std::make_shared<rclcpp::Node>(node_name);\n'}
+[1.713374] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.718623] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:29:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.718804] (motor_ctrl) StderrLine: {'line': b'   29 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K =\n'}
+[1.718859] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.718901] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.718939] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:30:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.718981] (motor_ctrl) StderrLine: {'line': b'   30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwMotorCtrl", 2);\n'}
+[1.719021] (motor_ctrl) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.719060] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:30:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.719099] (motor_ctrl) StderrLine: {'line': b'   30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl>(\x1b[01;35m\x1b[K"rlfwMotorCtrl"\x1b[m\x1b[K, 2);\n'}
+[1.719135] (motor_ctrl) StderrLine: {'line': b'      |                                                           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.723446] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcan_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.723622] (motor_ctrl) StderrLine: {'line': b'   31 |     \x1b[01;31m\x1b[Kcan_pub\x1b[m\x1b[K = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend", 2);\n'}
+[1.723678] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.723720] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.723772] (motor_ctrl) StderrLine: {'line': b'   31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwCANSend", 2);\n'}
+[1.723811] (motor_ctrl) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.723847] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:62:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.723892] (motor_ctrl) StderrLine: {'line': b'   31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>(\x1b[01;35m\x1b[K"rlfwCANSend"\x1b[m\x1b[K, 2);\n'}
+[1.723930] (motor_ctrl) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.728847] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:32:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.729043] (motor_ctrl) StderrLine: {'line': b'   32 |     \x1b[01;31m\x1b[Kserial_pub\x1b[m\x1b[K =\n'}
+[1.729099] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.729140] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:33:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.729182] (motor_ctrl) StderrLine: {'line': b'   33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwSerialSend", 2);\n'}
+[1.729222] (motor_ctrl) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.729268] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:33:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.729307] (motor_ctrl) StderrLine: {'line': b'   33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg>(\x1b[01;35m\x1b[K"rlfwSerialSend"\x1b[m\x1b[K, 2);\n'}
+[1.729345] (motor_ctrl) StderrLine: {'line': b'      |                                                           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.734195] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:34:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksub_motor_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.734369] (motor_ctrl) StderrLine: {'line': b'   34 |     \x1b[01;31m\x1b[Ksub_motor_\x1b[m\x1b[K = node->create_subscription<rlfw_msgs::msg::Motor>(\n'}
+[1.734428] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.734474] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:34:65:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.734519] (motor_ctrl) StderrLine: {'line': b'   34 |     sub_motor_ = node->create_subscription<rlfw_msgs::msg::Motor\x1b[01;31m\x1b[K>\x1b[m\x1b[K(\n'}
+[1.734573] (motor_ctrl) StderrLine: {'line': b'      |                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.734626] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:35:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.734673] (motor_ctrl) StderrLine: {'line': b'   35 |         \x1b[01;35m\x1b[K"rlfwMotorBack"\x1b[m\x1b[K, 10,\n'}
+[1.734716] (motor_ctrl) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.739053] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:36:69:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.739209] (motor_ctrl) StderrLine: {'line': b'   36 |         std::bind(&MotorCTRL::printData, this, std::placeholders::_1\x1b[01;35m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.739265] (motor_ctrl) StderrLine: {'line': b'      |                                                                     \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.743480] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:37:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.743637] (motor_ctrl) StderrLine: {'line': b'   37 |     \x1b[01;31m\x1b[Kclient\x1b[m\x1b[K = node->create_client<rlfw_msgs::srv::ComParameter>(\n'}
+[1.743700] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.743749] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:37:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.743798] (motor_ctrl) StderrLine: {'line': b'   37 |     client = node->create_client<rlfw_msgs::srv::ComParameter\x1b[01;31m\x1b[K>\x1b[m\x1b[K(\n'}
+[1.743842] (motor_ctrl) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.750039] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::printData(rlfw_msgs::msg::Motor_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.750198] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:44:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitTopicData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.750255] (motor_ctrl) StderrLine: {'line': b'   44 |     \x1b[01;31m\x1b[KemitTopicData\x1b[m\x1b[K(QString("ang_vel:") + QString::number(msg->ang_vel));\n'}
+[1.750297] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.753999] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::pub()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.754153] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:48:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.754231] (motor_ctrl) StderrLine: {'line': b'   48 |     auto stamp = \x1b[01;31m\x1b[Knode\x1b[m\x1b[K->now();\n'}
+[1.754277] (motor_ctrl) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.759245] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:56:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.759404] (motor_ctrl) StderrLine: {'line': b'   56 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(msg);\n'}
+[1.759464] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.759507] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.763985] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:69:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcan_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.764119] (motor_ctrl) StderrLine: {'line': b'   69 |     \x1b[01;31m\x1b[Kcan_pub\x1b[m\x1b[K->publish(can_msg);\n'}
+[1.764177] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.769173] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:76:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kserial_msg\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.769332] (motor_ctrl) StderrLine: {'line': b'   76 |     \x1b[01;31m\x1b[Kserial_pub\x1b[m\x1b[K->publish(serial_msg);\n'}
+[1.769392] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.769433] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kserial_msg\x1b[m\x1b[K\n'}
+[1.773066] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::stop()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.773205] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:80:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.773267] (motor_ctrl) StderrLine: {'line': b'   80 |     auto stamp = \x1b[01;31m\x1b[Knode\x1b[m\x1b[K->now();\n'}
+[1.773314] (motor_ctrl) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.778474] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:88:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.778638] (motor_ctrl) StderrLine: {'line': b'   88 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(msg);\n'}
+[1.778700] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.778747] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.783517] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::request()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.783677] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:102:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.783744] (motor_ctrl) StderrLine: {'line': b'  102 |     while (!\x1b[01;31m\x1b[Kclient\x1b[m\x1b[K->wait_for_service(std::chrono::seconds(1))) {\n'}
+[1.783795] (motor_ctrl) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.789949] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:112:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.790113] (motor_ctrl) StderrLine: {'line': b'  112 |     auto future = \x1b[01;31m\x1b[Kclient\x1b[m\x1b[K->async_send_request(\n'}
+[1.790177] (motor_ctrl) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.803523] (-) TimerEvent: {}
+[1.805456] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In lambda function:\n'}
+[1.805607] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:126:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitSrvData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.805687] (motor_ctrl) StderrLine: {'line': b'  126 |           \x1b[01;31m\x1b[KemitSrvData\x1b[m\x1b[K(emit_str);\n'}
+[1.805774] (motor_ctrl) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.805822] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K At global scope:\n'}
+[1.805868] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:131:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kprivate\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.805914] (motor_ctrl) StderrLine: {'line': b'  131 | \x1b[01;31m\x1b[Kprivate\x1b[m\x1b[K:\n'}
+[1.805959] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.840531] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid poorer_callback(rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedFuture)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.840764] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:149:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitSrvData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.840835] (motor_ctrl) StderrLine: {'line': b'  149 |     \x1b[01;31m\x1b[KemitSrvData\x1b[m\x1b[K(emit_str);\n'}
+[1.840885] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.840933] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K At global scope:\n'}
+[1.840977] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:152:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kprotected\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.841022] (motor_ctrl) StderrLine: {'line': b'  152 | \x1b[01;31m\x1b[Kprotected\x1b[m\x1b[K:\n'}
+[1.841070] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.841111] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:46\x1b[m\x1b[K,\n'}
+[1.841152] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h:45\x1b[m\x1b[K,\n'}
+[1.841194] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h:43\x1b[m\x1b[K,\n'}
+[1.841234] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h:49\x1b[m\x1b[K,\n'}
+[1.841273] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug:1\x1b[m\x1b[K,\n'}
+[1.841315] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:8\x1b[m\x1b[K:\n'}
+[1.841357] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:163:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kpublic\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.841402] (motor_ctrl) StderrLine: {'line': b'  163 | \x1b[01;31m\x1b[Ksignals\x1b[m\x1b[K:\n'}
+[1.841445] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.841490] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:166:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected declaration before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.841530] (motor_ctrl) StderrLine: {'line': b'  166 | \x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[1.841565] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.896981] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:5\x1b[m\x1b[K,\n'}
+[1.897141] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/src/main.cpp:1\x1b[m\x1b[K:\n'}
+[1.897209] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:129:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 after class definition\n'}
+[1.897265] (motor_ctrl) StderrLine: {'line': b'  129 |   }\n'}
+[1.897311] (motor_ctrl) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.897354] (motor_ctrl) StderrLine: {'line': b'      |    \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[1.901302] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMotorCTRL::MotorCTRL(const std::string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.901441] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:27:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.901511] (motor_ctrl) StderrLine: {'line': b'   27 |     \x1b[01;31m\x1b[Knode\x1b[m\x1b[K = std::make_shared<rclcpp::Node>(node_name);\n'}
+[1.901558] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.903645] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:5\x1b[m\x1b[K,\n'}
+[1.903764] (-) TimerEvent: {}
+[1.903869] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[1.903944] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:129:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 after class definition\n'}
+[1.904004] (motor_ctrl) StderrLine: {'line': b'  129 |   }\n'}
+[1.904049] (motor_ctrl) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.904095] (motor_ctrl) StderrLine: {'line': b'      |    \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[1.906739] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:29:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.906859] (motor_ctrl) StderrLine: {'line': b'   29 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K =\n'}
+[1.906922] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.906972] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.907020] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:30:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.907069] (motor_ctrl) StderrLine: {'line': b'   30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwMotorCtrl", 2);\n'}
+[1.907115] (motor_ctrl) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.907158] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:30:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.907218] (motor_ctrl) StderrLine: {'line': b'   30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl>(\x1b[01;35m\x1b[K"rlfwMotorCtrl"\x1b[m\x1b[K, 2);\n'}
+[1.907264] (motor_ctrl) StderrLine: {'line': b'      |                                                           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.908084] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMotorCTRL::MotorCTRL(const std::string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.908182] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:27:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.908237] (motor_ctrl) StderrLine: {'line': b'   27 |     \x1b[01;31m\x1b[Knode\x1b[m\x1b[K = std::make_shared<rclcpp::Node>(node_name);\n'}
+[1.908285] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.911696] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcan_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.911869] (motor_ctrl) StderrLine: {'line': b'   31 |     \x1b[01;31m\x1b[Kcan_pub\x1b[m\x1b[K = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend", 2);\n'}
+[1.911942] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.911988] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.912032] (motor_ctrl) StderrLine: {'line': b'   31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwCANSend", 2);\n'}
+[1.912086] (motor_ctrl) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.912130] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:62:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.912179] (motor_ctrl) StderrLine: {'line': b'   31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>(\x1b[01;35m\x1b[K"rlfwCANSend"\x1b[m\x1b[K, 2);\n'}
+[1.912224] (motor_ctrl) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.914202] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:29:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.914333] (motor_ctrl) StderrLine: {'line': b'   29 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K =\n'}
+[1.914394] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.914444] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.914497] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:30:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.914546] (motor_ctrl) StderrLine: {'line': b'   30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwMotorCtrl", 2);\n'}
+[1.914591] (motor_ctrl) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.914645] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:30:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.914695] (motor_ctrl) StderrLine: {'line': b'   30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl>(\x1b[01;35m\x1b[K"rlfwMotorCtrl"\x1b[m\x1b[K, 2);\n'}
+[1.914739] (motor_ctrl) StderrLine: {'line': b'      |                                                           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.917538] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:32:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.917672] (motor_ctrl) StderrLine: {'line': b'   32 |     \x1b[01;31m\x1b[Kserial_pub\x1b[m\x1b[K =\n'}
+[1.917731] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.917777] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:33:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.917823] (motor_ctrl) StderrLine: {'line': b'   33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwSerialSend", 2);\n'}
+[1.917870] (motor_ctrl) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.917915] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:33:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.917973] (motor_ctrl) StderrLine: {'line': b'   33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg>(\x1b[01;35m\x1b[K"rlfwSerialSend"\x1b[m\x1b[K, 2);\n'}
+[1.918016] (motor_ctrl) StderrLine: {'line': b'      |                                                           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.919427] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcan_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.919563] (motor_ctrl) StderrLine: {'line': b'   31 |     \x1b[01;31m\x1b[Kcan_pub\x1b[m\x1b[K = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend", 2);\n'}
+[1.919655] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.919710] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.919762] (motor_ctrl) StderrLine: {'line': b'   31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwCANSend", 2);\n'}
+[1.919805] (motor_ctrl) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.919847] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:62:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.919893] (motor_ctrl) StderrLine: {'line': b'   31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>(\x1b[01;35m\x1b[K"rlfwCANSend"\x1b[m\x1b[K, 2);\n'}
+[1.919937] (motor_ctrl) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.922659] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/mainwindow.h:5\x1b[m\x1b[K,\n'}
+[1.922766] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/moc_mainwindow.cpp:10\x1b[m\x1b[K:\n'}
+[1.922823] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:129:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 after class definition\n'}
+[1.922872] (motor_ctrl) StderrLine: {'line': b'  129 |   }\n'}
+[1.922917] (motor_ctrl) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.922961] (motor_ctrl) StderrLine: {'line': b'      |    \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[1.923051] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:34:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksub_motor_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.923136] (motor_ctrl) StderrLine: {'line': b'   34 |     \x1b[01;31m\x1b[Ksub_motor_\x1b[m\x1b[K = node->create_subscription<rlfw_msgs::msg::Motor>(\n'}
+[1.923184] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.923229] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:34:65:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.923278] (motor_ctrl) StderrLine: {'line': b'   34 |     sub_motor_ = node->create_subscription<rlfw_msgs::msg::Motor\x1b[01;31m\x1b[K>\x1b[m\x1b[K(\n'}
+[1.923319] (motor_ctrl) StderrLine: {'line': b'      |                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.923363] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:35:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.923409] (motor_ctrl) StderrLine: {'line': b'   35 |         \x1b[01;35m\x1b[K"rlfwMotorBack"\x1b[m\x1b[K, 10,\n'}
+[1.923452] (motor_ctrl) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.925166] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:32:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.925290] (motor_ctrl) StderrLine: {'line': b'   32 |     \x1b[01;31m\x1b[Kserial_pub\x1b[m\x1b[K =\n'}
+[1.925346] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.925391] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:33:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.925437] (motor_ctrl) StderrLine: {'line': b'   33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwSerialSend", 2);\n'}
+[1.925481] (motor_ctrl) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.925524] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:33:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.925570] (motor_ctrl) StderrLine: {'line': b'   33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg>(\x1b[01;35m\x1b[K"rlfwSerialSend"\x1b[m\x1b[K, 2);\n'}
+[1.925621] (motor_ctrl) StderrLine: {'line': b'      |                                                           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.927191] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMotorCTRL::MotorCTRL(const std::string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.927313] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:27:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.927374] (motor_ctrl) StderrLine: {'line': b'   27 |     \x1b[01;31m\x1b[Knode\x1b[m\x1b[K = std::make_shared<rclcpp::Node>(node_name);\n'}
+[1.927425] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.927805] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:36:69:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.927906] (motor_ctrl) StderrLine: {'line': b'   36 |         std::bind(&MotorCTRL::printData, this, std::placeholders::_1\x1b[01;35m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.927967] (motor_ctrl) StderrLine: {'line': b'      |                                                                     \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.931078] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:34:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksub_motor_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.931232] (motor_ctrl) StderrLine: {'line': b'   34 |     \x1b[01;31m\x1b[Ksub_motor_\x1b[m\x1b[K = node->create_subscription<rlfw_msgs::msg::Motor>(\n'}
+[1.931294] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.931343] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:34:65:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.931392] (motor_ctrl) StderrLine: {'line': b'   34 |     sub_motor_ = node->create_subscription<rlfw_msgs::msg::Motor\x1b[01;31m\x1b[K>\x1b[m\x1b[K(\n'}
+[1.931438] (motor_ctrl) StderrLine: {'line': b'      |                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.931482] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:35:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.931536] (motor_ctrl) StderrLine: {'line': b'   35 |         \x1b[01;35m\x1b[K"rlfwMotorBack"\x1b[m\x1b[K, 10,\n'}
+[1.931579] (motor_ctrl) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.932448] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:37:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.932563] (motor_ctrl) StderrLine: {'line': b'   37 |     \x1b[01;31m\x1b[Kclient\x1b[m\x1b[K = node->create_client<rlfw_msgs::srv::ComParameter>(\n'}
+[1.932628] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.932678] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:37:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.932724] (motor_ctrl) StderrLine: {'line': b'   37 |     client = node->create_client<rlfw_msgs::srv::ComParameter\x1b[01;31m\x1b[K>\x1b[m\x1b[K(\n'}
+[1.932769] (motor_ctrl) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.932986] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:29:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.933071] (motor_ctrl) StderrLine: {'line': b'   29 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K =\n'}
+[1.933126] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.933174] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.933264] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:30:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.933323] (motor_ctrl) StderrLine: {'line': b'   30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwMotorCtrl", 2);\n'}
+[1.933369] (motor_ctrl) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.933414] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:30:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.933463] (motor_ctrl) StderrLine: {'line': b'   30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl>(\x1b[01;35m\x1b[K"rlfwMotorCtrl"\x1b[m\x1b[K, 2);\n'}
+[1.933505] (motor_ctrl) StderrLine: {'line': b'      |                                                           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.935734] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:36:69:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.935853] (motor_ctrl) StderrLine: {'line': b'   36 |         std::bind(&MotorCTRL::printData, this, std::placeholders::_1\x1b[01;35m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.935911] (motor_ctrl) StderrLine: {'line': b'      |                                                                     \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.938116] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcan_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.938243] (motor_ctrl) StderrLine: {'line': b'   31 |     \x1b[01;31m\x1b[Kcan_pub\x1b[m\x1b[K = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend", 2);\n'}
+[1.938303] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.938352] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.938398] (motor_ctrl) StderrLine: {'line': b'   31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwCANSend", 2);\n'}
+[1.938442] (motor_ctrl) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.938484] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:62:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.938530] (motor_ctrl) StderrLine: {'line': b'   31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>(\x1b[01;35m\x1b[K"rlfwCANSend"\x1b[m\x1b[K, 2);\n'}
+[1.938573] (motor_ctrl) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.939267] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::printData(rlfw_msgs::msg::Motor_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.939370] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:44:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitTopicData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.939435] (motor_ctrl) StderrLine: {'line': b'   44 |     \x1b[01;31m\x1b[KemitTopicData\x1b[m\x1b[K(QString("ang_vel:") + QString::number(msg->ang_vel));\n'}
+[1.939487] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.940298] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:37:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.940401] (motor_ctrl) StderrLine: {'line': b'   37 |     \x1b[01;31m\x1b[Kclient\x1b[m\x1b[K = node->create_client<rlfw_msgs::srv::ComParameter>(\n'}
+[1.940453] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.940498] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:37:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.940544] (motor_ctrl) StderrLine: {'line': b'   37 |     client = node->create_client<rlfw_msgs::srv::ComParameter\x1b[01;31m\x1b[K>\x1b[m\x1b[K(\n'}
+[1.940588] (motor_ctrl) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.943247] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::pub()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.943349] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:48:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.943409] (motor_ctrl) StderrLine: {'line': b'   48 |     auto stamp = \x1b[01;31m\x1b[Knode\x1b[m\x1b[K->now();\n'}
+[1.943455] (motor_ctrl) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.943721] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:32:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.943836] (motor_ctrl) StderrLine: {'line': b'   32 |     \x1b[01;31m\x1b[Kserial_pub\x1b[m\x1b[K =\n'}
+[1.943886] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.943934] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:33:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.943981] (motor_ctrl) StderrLine: {'line': b'   33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg\x1b[01;31m\x1b[K>\x1b[m\x1b[K("rlfwSerialSend", 2);\n'}
+[1.944025] (motor_ctrl) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.944066] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:33:59:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.944120] (motor_ctrl) StderrLine: {'line': b'   33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg>(\x1b[01;35m\x1b[K"rlfwSerialSend"\x1b[m\x1b[K, 2);\n'}
+[1.944163] (motor_ctrl) StderrLine: {'line': b'      |                                                           \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.946922] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::printData(rlfw_msgs::msg::Motor_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.947034] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:44:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitTopicData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.947094] (motor_ctrl) StderrLine: {'line': b'   44 |     \x1b[01;31m\x1b[KemitTopicData\x1b[m\x1b[K(QString("ang_vel:") + QString::number(msg->ang_vel));\n'}
+[1.947144] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.948713] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:56:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.948814] (motor_ctrl) StderrLine: {'line': b'   56 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(msg);\n'}
+[1.948869] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.948916] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.949360] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:34:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksub_motor_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.949470] (motor_ctrl) StderrLine: {'line': b'   34 |     \x1b[01;31m\x1b[Ksub_motor_\x1b[m\x1b[K = node->create_subscription<rlfw_msgs::msg::Motor>(\n'}
+[1.949523] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.949568] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:34:65:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.949623] (motor_ctrl) StderrLine: {'line': b'   34 |     sub_motor_ = node->create_subscription<rlfw_msgs::msg::Motor\x1b[01;31m\x1b[K>\x1b[m\x1b[K(\n'}
+[1.949673] (motor_ctrl) StderrLine: {'line': b'      |                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.949719] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:35:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.949767] (motor_ctrl) StderrLine: {'line': b'   35 |         \x1b[01;35m\x1b[K"rlfwMotorBack"\x1b[m\x1b[K, 10,\n'}
+[1.949810] (motor_ctrl) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.950829] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::pub()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.950917] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:48:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.950973] (motor_ctrl) StderrLine: {'line': b'   48 |     auto stamp = \x1b[01;31m\x1b[Knode\x1b[m\x1b[K->now();\n'}
+[1.951028] (motor_ctrl) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.953591] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:69:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcan_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.953697] (motor_ctrl) StderrLine: {'line': b'   69 |     \x1b[01;31m\x1b[Kcan_pub\x1b[m\x1b[K->publish(can_msg);\n'}
+[1.953754] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.954176] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:36:69:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.954257] (motor_ctrl) StderrLine: {'line': b'   36 |         std::bind(&MotorCTRL::printData, this, std::placeholders::_1\x1b[01;35m\x1b[K)\x1b[m\x1b[K);\n'}
+[1.954308] (motor_ctrl) StderrLine: {'line': b'      |                                                                     \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.956234] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:56:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.956325] (motor_ctrl) StderrLine: {'line': b'   56 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(msg);\n'}
+[1.956378] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.956425] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.958687] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:37:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.958824] (motor_ctrl) StderrLine: {'line': b'   37 |     \x1b[01;31m\x1b[Kclient\x1b[m\x1b[K = node->create_client<rlfw_msgs::srv::ComParameter>(\n'}
+[1.958889] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.958937] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:37:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.958982] (motor_ctrl) StderrLine: {'line': b'   37 |     client = node->create_client<rlfw_msgs::srv::ComParameter\x1b[01;31m\x1b[K>\x1b[m\x1b[K(\n'}
+[1.959025] (motor_ctrl) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.959066] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:76:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kserial_msg\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.959115] (motor_ctrl) StderrLine: {'line': b'   76 |     \x1b[01;31m\x1b[Kserial_pub\x1b[m\x1b[K->publish(serial_msg);\n'}
+[1.959158] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.959202] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kserial_msg\x1b[m\x1b[K\n'}
+[1.961070] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:69:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcan_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.961180] (motor_ctrl) StderrLine: {'line': b'   69 |     \x1b[01;31m\x1b[Kcan_pub\x1b[m\x1b[K->publish(can_msg);\n'}
+[1.961236] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.962746] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::stop()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.962848] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:80:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.962911] (motor_ctrl) StderrLine: {'line': b'   80 |     auto stamp = \x1b[01;31m\x1b[Knode\x1b[m\x1b[K->now();\n'}
+[1.962960] (motor_ctrl) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.965458] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::printData(rlfw_msgs::msg::Motor_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.965568] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:44:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitTopicData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.965633] (motor_ctrl) StderrLine: {'line': b'   44 |     \x1b[01;31m\x1b[KemitTopicData\x1b[m\x1b[K(QString("ang_vel:") + QString::number(msg->ang_vel));\n'}
+[1.965685] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.966252] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:76:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kserial_msg\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.966342] (motor_ctrl) StderrLine: {'line': b'   76 |     \x1b[01;31m\x1b[Kserial_pub\x1b[m\x1b[K->publish(serial_msg);\n'}
+[1.966396] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.966442] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kserial_msg\x1b[m\x1b[K\n'}
+[1.968058] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:88:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.968159] (motor_ctrl) StderrLine: {'line': b'   88 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(msg);\n'}
+[1.968215] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.968266] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.969454] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::pub()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.969554] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:48:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.969616] (motor_ctrl) StderrLine: {'line': b'   48 |     auto stamp = \x1b[01;31m\x1b[Knode\x1b[m\x1b[K->now();\n'}
+[1.969669] (motor_ctrl) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.970213] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::stop()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.970304] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:80:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.970356] (motor_ctrl) StderrLine: {'line': b'   80 |     auto stamp = \x1b[01;31m\x1b[Knode\x1b[m\x1b[K->now();\n'}
+[1.970402] (motor_ctrl) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.973260] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::request()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.973361] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:102:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.973413] (motor_ctrl) StderrLine: {'line': b'  102 |     while (!\x1b[01;31m\x1b[Kclient\x1b[m\x1b[K->wait_for_service(std::chrono::seconds(1))) {\n'}
+[1.973467] (motor_ctrl) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.974966] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:56:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.975074] (motor_ctrl) StderrLine: {'line': b'   56 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(msg);\n'}
+[1.975131] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.975184] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.975638] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:88:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.975733] (motor_ctrl) StderrLine: {'line': b'   88 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(msg);\n'}
+[1.975782] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.975826] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.980351] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:69:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcan_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.980511] (motor_ctrl) StderrLine: {'line': b'   69 |     \x1b[01;31m\x1b[Kcan_pub\x1b[m\x1b[K->publish(can_msg);\n'}
+[1.980578] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.980637] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:112:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.980686] (motor_ctrl) StderrLine: {'line': b'  112 |     auto future = \x1b[01;31m\x1b[Kclient\x1b[m\x1b[K->async_send_request(\n'}
+[1.980731] (motor_ctrl) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.981108] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::request()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.981217] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:102:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.981277] (motor_ctrl) StderrLine: {'line': b'  102 |     while (!\x1b[01;31m\x1b[Kclient\x1b[m\x1b[K->wait_for_service(std::chrono::seconds(1))) {\n'}
+[1.981326] (motor_ctrl) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.985821] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:76:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kserial_msg\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.985962] (motor_ctrl) StderrLine: {'line': b'   76 |     \x1b[01;31m\x1b[Kserial_pub\x1b[m\x1b[K->publish(serial_msg);\n'}
+[1.986023] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.986069] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kserial_msg\x1b[m\x1b[K\n'}
+[1.987800] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:112:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.987928] (motor_ctrl) StderrLine: {'line': b'  112 |     auto future = \x1b[01;31m\x1b[Kclient\x1b[m\x1b[K->async_send_request(\n'}
+[1.987987] (motor_ctrl) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.989864] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::stop()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.989983] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:80:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.990046] (motor_ctrl) StderrLine: {'line': b'   80 |     auto stamp = \x1b[01;31m\x1b[Knode\x1b[m\x1b[K->now();\n'}
+[1.990095] (motor_ctrl) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.995358] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:88:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.995505] (motor_ctrl) StderrLine: {'line': b'   88 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(msg);\n'}
+[1.995566] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.995622] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[1.996871] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In lambda function:\n'}
+[1.996991] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:126:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitSrvData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.997058] (motor_ctrl) StderrLine: {'line': b'  126 |           \x1b[01;31m\x1b[KemitSrvData\x1b[m\x1b[K(emit_str);\n'}
+[1.997113] (motor_ctrl) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.997210] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K At global scope:\n'}
+[1.997258] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:131:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kprivate\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.997304] (motor_ctrl) StderrLine: {'line': b'  131 | \x1b[01;31m\x1b[Kprivate\x1b[m\x1b[K:\n'}
+[1.997351] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.000472] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorCTRL::request()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.000594] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:102:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.000671] (motor_ctrl) StderrLine: {'line': b'  102 |     while (!\x1b[01;31m\x1b[Kclient\x1b[m\x1b[K->wait_for_service(std::chrono::seconds(1))) {\n'}
+[2.000726] (motor_ctrl) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.003855] (-) TimerEvent: {}
+[2.004016] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In lambda function:\n'}
+[2.004155] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:126:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitSrvData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.004216] (motor_ctrl) StderrLine: {'line': b'  126 |           \x1b[01;31m\x1b[KemitSrvData\x1b[m\x1b[K(emit_str);\n'}
+[2.004263] (motor_ctrl) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.004308] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K At global scope:\n'}
+[2.004354] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:131:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kprivate\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.004397] (motor_ctrl) StderrLine: {'line': b'  131 | \x1b[01;31m\x1b[Kprivate\x1b[m\x1b[K:\n'}
+[2.004437] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.007197] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:112:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclient\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.007319] (motor_ctrl) StderrLine: {'line': b'  112 |     auto future = \x1b[01;31m\x1b[Kclient\x1b[m\x1b[K->async_send_request(\n'}
+[2.007374] (motor_ctrl) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.025043] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In lambda function:\n'}
+[2.025227] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:126:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitSrvData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.025300] (motor_ctrl) StderrLine: {'line': b'  126 |           \x1b[01;31m\x1b[KemitSrvData\x1b[m\x1b[K(emit_str);\n'}
+[2.025352] (motor_ctrl) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.025409] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K At global scope:\n'}
+[2.025457] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:131:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kprivate\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.025504] (motor_ctrl) StderrLine: {'line': b'  131 | \x1b[01;31m\x1b[Kprivate\x1b[m\x1b[K:\n'}
+[2.025548] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.035014] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid poorer_callback(rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedFuture)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.035235] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:149:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitSrvData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.035307] (motor_ctrl) StderrLine: {'line': b'  149 |     \x1b[01;31m\x1b[KemitSrvData\x1b[m\x1b[K(emit_str);\n'}
+[2.035358] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.035403] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K At global scope:\n'}
+[2.035448] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:152:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kprotected\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.035492] (motor_ctrl) StderrLine: {'line': b'  152 | \x1b[01;31m\x1b[Kprotected\x1b[m\x1b[K:\n'}
+[2.035535] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.035577] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:44\x1b[m\x1b[K,\n'}
+[2.035629] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:44\x1b[m\x1b[K,\n'}
+[2.035673] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:44\x1b[m\x1b[K,\n'}
+[2.035715] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:1\x1b[m\x1b[K,\n'}
+[2.035759] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:4\x1b[m\x1b[K:\n'}
+[2.035802] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:163:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kpublic\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.035845] (motor_ctrl) StderrLine: {'line': b'  163 | \x1b[01;31m\x1b[Ksignals\x1b[m\x1b[K:\n'}
+[2.035890] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.035934] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:166:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected declaration before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[2.035988] (motor_ctrl) StderrLine: {'line': b'  166 | \x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[2.036032] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.041872] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid poorer_callback(rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedFuture)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.042044] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:149:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitSrvData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.042123] (motor_ctrl) StderrLine: {'line': b'  149 |     \x1b[01;31m\x1b[KemitSrvData\x1b[m\x1b[K(emit_str);\n'}
+[2.042175] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.042224] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K At global scope:\n'}
+[2.042269] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:152:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kprotected\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.042314] (motor_ctrl) StderrLine: {'line': b'  152 | \x1b[01;31m\x1b[Kprotected\x1b[m\x1b[K:\n'}
+[2.042357] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.042398] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:44\x1b[m\x1b[K,\n'}
+[2.042441] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:44\x1b[m\x1b[K,\n'}
+[2.042482] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:44\x1b[m\x1b[K,\n'}
+[2.042521] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:1\x1b[m\x1b[K,\n'}
+[2.042562] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:4\x1b[m\x1b[K:\n'}
+[2.042613] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:163:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kpublic\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.042666] (motor_ctrl) StderrLine: {'line': b'  163 | \x1b[01;31m\x1b[Ksignals\x1b[m\x1b[K:\n'}
+[2.042709] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.042752] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:166:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected declaration before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[2.042796] (motor_ctrl) StderrLine: {'line': b'  166 | \x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[2.042837] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.062490] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid poorer_callback(rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedFuture)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.062708] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:149:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KemitSrvData\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.062780] (motor_ctrl) StderrLine: {'line': b'  149 |     \x1b[01;31m\x1b[KemitSrvData\x1b[m\x1b[K(emit_str);\n'}
+[2.062834] (motor_ctrl) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.062880] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:\x1b[m\x1b[K At global scope:\n'}
+[2.062928] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:152:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kprotected\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.062983] (motor_ctrl) StderrLine: {'line': b'  152 | \x1b[01;31m\x1b[Kprotected\x1b[m\x1b[K:\n'}
+[2.063030] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.063078] (motor_ctrl) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:44\x1b[m\x1b[K,\n'}
+[2.063125] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:44\x1b[m\x1b[K,\n'}
+[2.063169] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:44\x1b[m\x1b[K,\n'}
+[2.063212] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:1\x1b[m\x1b[K,\n'}
+[2.063254] (motor_ctrl) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/mainwindow.h:4\x1b[m\x1b[K:\n'}
+[2.063297] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:163:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kpublic\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.063342] (motor_ctrl) StderrLine: {'line': b'  163 | \x1b[01;31m\x1b[Ksignals\x1b[m\x1b[K:\n'}
+[2.063384] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.063428] (motor_ctrl) StderrLine: {'line': b'\x1b[01m\x1b[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:166:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected declaration before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[2.063477] (motor_ctrl) StderrLine: {'line': b'  166 | \x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[2.063520] (motor_ctrl) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.103955] (-) TimerEvent: {}
+[2.204207] (-) TimerEvent: {}
+[2.207431] (motor_ctrl) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:155\xef\xbc\x9aCMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[2.207548] (motor_ctrl) StderrLine: {'line': b'gmake[2]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[2.304291] (-) TimerEvent: {}
+[2.404524] (-) TimerEvent: {}
+[2.415632] (motor_ctrl) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:99\xef\xbc\x9aCMakeFiles/motor_ctrl.dir/src/main.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[2.435420] (motor_ctrl) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:113\xef\xbc\x9aCMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[2.439011] (motor_ctrl) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:169\xef\xbc\x9aCMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[2.439193] (motor_ctrl) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137\xef\xbc\x9aCMakeFiles/motor_ctrl.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[2.439372] (motor_ctrl) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[2.440744] (motor_ctrl) CommandEnded: {'returncode': 2}
+[2.446856] (motor_ctrl) JobEnded: {'identifier': 'motor_ctrl', 'rc': 2}
+[2.457189] (-) EventReactorShutdown: {}

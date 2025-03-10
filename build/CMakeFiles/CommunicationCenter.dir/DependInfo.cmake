@@ -11,10 +11,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.cpp" "CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.cpp" "CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/RMMotor.cpp" "CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o.d"
+  "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver/gamepad.cpp" "CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp" "CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp" "CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp" "CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o.d"
-  "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/gamepad.cpp" "CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/gamepad.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/main.cpp" "CMakeFiles/CommunicationCenter.dir/src/main.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/main.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp" "CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o.d"
   )

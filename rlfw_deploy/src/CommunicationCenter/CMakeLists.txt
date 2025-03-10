@@ -19,8 +19,10 @@ find_package(sensor_msgs REQUIRED)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/motor_driver)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/remote_driver)
 file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 file(GLOB MOTOR ${CMAKE_CURRENT_SOURCE_DIR}/motor_driver/*.cpp)
+file(GLOB REMOTE ${CMAKE_CURRENT_SOURCE_DIR}/remote_driver/*.cpp)
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/magic_enum)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tinyxml2)
@@ -30,6 +32,7 @@ file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/motor_cfg.xml" DESTINATION "${CMAKE_BINAR
 add_executable(CommunicationCenter
 ${SRC}
 ${MOTOR}
+${REMOTE}
 )
 # 定义宏 PROJECT_NAME，值为当前 CMake 项目名
 target_compile_definitions(CommunicationCenter 

@@ -1,0 +1,483 @@
+[0.007s] Invoking command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl -- -j12 -l12
+[0.033s] [  8%] [34m[1mGenerating include/moc_MotorCTRL.cpp[0m
+[0.043s] [35m[1mConsolidate compiler generated dependencies of target motor_ctrl[0m
+[0.057s] [ 16%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/main.cpp.o[0m
+[0.057s] [ 25%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o[0m
+[0.057s] [ 33%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o[0m
+[0.057s] [ 41%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o[0m
+[1.708s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/moc_MotorCTRL.cpp:10[m[K:
+[1.708s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:129:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+[1.709s]   129 |   }
+[1.709s]       |    [01;31m[K^[m[K
+[1.709s]       |    [32m[K;[m[K
+[1.713s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In constructor ‘[01m[KMotorCTRL::MotorCTRL(const std::string&)[m[K’:
+[1.713s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:27:5:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.713s]    27 |     [01;31m[Knode[m[K = std::make_shared<rclcpp::Node>(node_name);
+[1.713s]       |     [01;31m[K^~~~[m[K
+[1.718s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:29:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.718s]    29 |     [01;31m[Kpublisher_[m[K =
+[1.718s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.718s]       |     [32m[Krmw_publisher_t[m[K
+[1.718s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:30:57:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.718s]    30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl[01;31m[K>[m[K("rlfwMotorCtrl", 2);
+[1.719s]       |                                                         [01;31m[K^[m[K
+[1.719s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:30:59:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.719s]    30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl>([01;35m[K"rlfwMotorCtrl"[m[K, 2);
+[1.719s]       |                                                           [01;35m[K^~~~~~~~~~~~~~~[m[K
+[1.723s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcan_pub[m[K’ was not declared in this scope
+[1.723s]    31 |     [01;31m[Kcan_pub[m[K = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend", 2);
+[1.723s]       |     [01;31m[K^~~~~~~[m[K
+[1.723s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:60:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.723s]    31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg[01;31m[K>[m[K("rlfwCANSend", 2);
+[1.723s]       |                                                            [01;31m[K^[m[K
+[1.723s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:62:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.723s]    31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>([01;35m[K"rlfwCANSend"[m[K, 2);
+[1.723s]       |                                                              [01;35m[K^~~~~~~~~~~~~[m[K
+[1.728s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:32:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_pub[m[K’ was not declared in this scope
+[1.729s]    32 |     [01;31m[Kserial_pub[m[K =
+[1.729s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.729s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:33:57:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.729s]    33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg[01;31m[K>[m[K("rlfwSerialSend", 2);
+[1.729s]       |                                                         [01;31m[K^[m[K
+[1.729s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:33:59:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.729s]    33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg>([01;35m[K"rlfwSerialSend"[m[K, 2);
+[1.729s]       |                                                           [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.734s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:34:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_motor_[m[K’ was not declared in this scope
+[1.734s]    34 |     [01;31m[Ksub_motor_[m[K = node->create_subscription<rlfw_msgs::msg::Motor>(
+[1.734s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.734s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:34:65:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.734s]    34 |     sub_motor_ = node->create_subscription<rlfw_msgs::msg::Motor[01;31m[K>[m[K(
+[1.734s]       |                                                                 [01;31m[K^[m[K
+[1.734s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:35:9:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.734s]    35 |         [01;35m[K"rlfwMotorBack"[m[K, 10,
+[1.734s]       |         [01;35m[K^~~~~~~~~~~~~~~[m[K
+[1.739s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:36:69:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.739s]    36 |         std::bind(&MotorCTRL::printData, this, std::placeholders::_1[01;35m[K)[m[K);
+[1.739s]       |                                                                     [01;35m[K^[m[K
+[1.743s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.743s]    37 |     [01;31m[Kclient[m[K = node->create_client<rlfw_msgs::srv::ComParameter>(
+[1.743s]       |     [01;31m[K^~~~~~[m[K
+[1.743s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:37:62:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.743s]    37 |     client = node->create_client<rlfw_msgs::srv::ComParameter[01;31m[K>[m[K(
+[1.743s]       |                                                              [01;31m[K^[m[K
+[1.750s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::printData(rlfw_msgs::msg::Motor_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.750s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:44:5:[m[K [01;31m[Kerror: [m[K‘[01m[KemitTopicData[m[K’ was not declared in this scope
+[1.750s]    44 |     [01;31m[KemitTopicData[m[K(QString("ang_vel:") + QString::number(msg->ang_vel));
+[1.750s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[1.754s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::pub()[m[K’:
+[1.754s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:48:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.754s]    48 |     auto stamp = [01;31m[Knode[m[K->now();
+[1.754s]       |                  [01;31m[K^~~~[m[K
+[1.759s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:56:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.759s]    56 |     [01;31m[Kpublisher_[m[K->publish(msg);
+[1.759s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.759s]       |     [32m[Krmw_publisher_t[m[K
+[1.764s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:69:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcan_pub[m[K’ was not declared in this scope
+[1.764s]    69 |     [01;31m[Kcan_pub[m[K->publish(can_msg);
+[1.764s]       |     [01;31m[K^~~~~~~[m[K
+[1.769s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:76:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_pub[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial_msg[m[K’?
+[1.769s]    76 |     [01;31m[Kserial_pub[m[K->publish(serial_msg);
+[1.769s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.769s]       |     [32m[Kserial_msg[m[K
+[1.773s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::stop()[m[K’:
+[1.773s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:80:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.773s]    80 |     auto stamp = [01;31m[Knode[m[K->now();
+[1.773s]       |                  [01;31m[K^~~~[m[K
+[1.778s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:88:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.778s]    88 |     [01;31m[Kpublisher_[m[K->publish(msg);
+[1.778s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.778s]       |     [32m[Krmw_publisher_t[m[K
+[1.783s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::request()[m[K’:
+[1.783s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:102:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.783s]   102 |     while (![01;31m[Kclient[m[K->wait_for_service(std::chrono::seconds(1))) {
+[1.783s]       |             [01;31m[K^~~~~~[m[K
+[1.790s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:112:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.790s]   112 |     auto future = [01;31m[Kclient[m[K->async_send_request(
+[1.790s]       |                   [01;31m[K^~~~~~[m[K
+[1.805s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In lambda function:
+[1.805s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:126:11:[m[K [01;31m[Kerror: [m[K‘[01m[KemitSrvData[m[K’ was not declared in this scope
+[1.805s]   126 |           [01;31m[KemitSrvData[m[K(emit_str);
+[1.805s]       |           [01;31m[K^~~~~~~~~~~[m[K
+[1.805s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K At global scope:
+[1.805s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:131:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+[1.805s]   131 | [01;31m[Kprivate[m[K:
+[1.805s]       | [01;31m[K^~~~~~~[m[K
+[1.840s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In function ‘[01m[Kvoid poorer_callback(rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedFuture)[m[K’:
+[1.840s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:149:5:[m[K [01;31m[Kerror: [m[K‘[01m[KemitSrvData[m[K’ was not declared in this scope
+[1.840s]   149 |     [01;31m[KemitSrvData[m[K(emit_str);
+[1.840s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.840s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K At global scope:
+[1.840s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:152:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprotected[m[K’
+[1.841s]   152 | [01;31m[Kprotected[m[K:
+[1.841s]       | [01;31m[K^~~~~~~~~[m[K
+[1.841s] In file included from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:46[m[K,
+[1.841s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h:45[m[K,
+[1.841s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h:43[m[K,
+[1.841s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h:49[m[K,
+[1.841s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug:1[m[K,
+[1.841s]                  from [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:8[m[K:
+[1.841s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:163:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kpublic[m[K’
+[1.841s]   163 | [01;31m[Ksignals[m[K:
+[1.841s]       | [01;31m[K^~~~~~~[m[K
+[1.841s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:166:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[1.841s]   166 | [01;31m[K}[m[K;
+[1.841s]       | [01;31m[K^[m[K
+[1.897s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:5[m[K,
+[1.897s]                  from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/src/main.cpp:1[m[K:
+[1.897s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:129:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+[1.897s]   129 |   }
+[1.897s]       |    [01;31m[K^[m[K
+[1.897s]       |    [32m[K;[m[K
+[1.901s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In constructor ‘[01m[KMotorCTRL::MotorCTRL(const std::string&)[m[K’:
+[1.901s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:27:5:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.901s]    27 |     [01;31m[Knode[m[K = std::make_shared<rclcpp::Node>(node_name);
+[1.901s]       |     [01;31m[K^~~~[m[K
+[1.903s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:5[m[K,
+[1.903s]                  from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/src/mainwindow.cpp:1[m[K:
+[1.903s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:129:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+[1.904s]   129 |   }
+[1.904s]       |    [01;31m[K^[m[K
+[1.904s]       |    [32m[K;[m[K
+[1.906s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:29:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.906s]    29 |     [01;31m[Kpublisher_[m[K =
+[1.906s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.906s]       |     [32m[Krmw_publisher_t[m[K
+[1.907s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:30:57:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.907s]    30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl[01;31m[K>[m[K("rlfwMotorCtrl", 2);
+[1.907s]       |                                                         [01;31m[K^[m[K
+[1.907s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:30:59:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.907s]    30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl>([01;35m[K"rlfwMotorCtrl"[m[K, 2);
+[1.907s]       |                                                           [01;35m[K^~~~~~~~~~~~~~~[m[K
+[1.908s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In constructor ‘[01m[KMotorCTRL::MotorCTRL(const std::string&)[m[K’:
+[1.908s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:27:5:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.908s]    27 |     [01;31m[Knode[m[K = std::make_shared<rclcpp::Node>(node_name);
+[1.908s]       |     [01;31m[K^~~~[m[K
+[1.911s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcan_pub[m[K’ was not declared in this scope
+[1.911s]    31 |     [01;31m[Kcan_pub[m[K = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend", 2);
+[1.911s]       |     [01;31m[K^~~~~~~[m[K
+[1.911s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:60:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.912s]    31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg[01;31m[K>[m[K("rlfwCANSend", 2);
+[1.912s]       |                                                            [01;31m[K^[m[K
+[1.912s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:62:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.912s]    31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>([01;35m[K"rlfwCANSend"[m[K, 2);
+[1.912s]       |                                                              [01;35m[K^~~~~~~~~~~~~[m[K
+[1.914s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:29:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.914s]    29 |     [01;31m[Kpublisher_[m[K =
+[1.914s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.914s]       |     [32m[Krmw_publisher_t[m[K
+[1.914s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:30:57:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.914s]    30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl[01;31m[K>[m[K("rlfwMotorCtrl", 2);
+[1.914s]       |                                                         [01;31m[K^[m[K
+[1.914s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:30:59:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.914s]    30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl>([01;35m[K"rlfwMotorCtrl"[m[K, 2);
+[1.914s]       |                                                           [01;35m[K^~~~~~~~~~~~~~~[m[K
+[1.917s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:32:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_pub[m[K’ was not declared in this scope
+[1.917s]    32 |     [01;31m[Kserial_pub[m[K =
+[1.917s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.917s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:33:57:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.917s]    33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg[01;31m[K>[m[K("rlfwSerialSend", 2);
+[1.917s]       |                                                         [01;31m[K^[m[K
+[1.917s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:33:59:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.917s]    33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg>([01;35m[K"rlfwSerialSend"[m[K, 2);
+[1.918s]       |                                                           [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.919s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcan_pub[m[K’ was not declared in this scope
+[1.919s]    31 |     [01;31m[Kcan_pub[m[K = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend", 2);
+[1.919s]       |     [01;31m[K^~~~~~~[m[K
+[1.919s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:60:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.919s]    31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg[01;31m[K>[m[K("rlfwCANSend", 2);
+[1.919s]       |                                                            [01;31m[K^[m[K
+[1.919s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:31:62:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.919s]    31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>([01;35m[K"rlfwCANSend"[m[K, 2);
+[1.919s]       |                                                              [01;35m[K^~~~~~~~~~~~~[m[K
+[1.922s] In file included from [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/mainwindow.h:5[m[K,
+[1.922s]                  from [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/moc_mainwindow.cpp:10[m[K:
+[1.922s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:129:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+[1.922s]   129 |   }
+[1.922s]       |    [01;31m[K^[m[K
+[1.922s]       |    [32m[K;[m[K
+[1.923s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:34:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_motor_[m[K’ was not declared in this scope
+[1.923s]    34 |     [01;31m[Ksub_motor_[m[K = node->create_subscription<rlfw_msgs::msg::Motor>(
+[1.923s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.923s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:34:65:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.923s]    34 |     sub_motor_ = node->create_subscription<rlfw_msgs::msg::Motor[01;31m[K>[m[K(
+[1.923s]       |                                                                 [01;31m[K^[m[K
+[1.923s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:35:9:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.923s]    35 |         [01;35m[K"rlfwMotorBack"[m[K, 10,
+[1.923s]       |         [01;35m[K^~~~~~~~~~~~~~~[m[K
+[1.925s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:32:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_pub[m[K’ was not declared in this scope
+[1.925s]    32 |     [01;31m[Kserial_pub[m[K =
+[1.925s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.925s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:33:57:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.925s]    33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg[01;31m[K>[m[K("rlfwSerialSend", 2);
+[1.925s]       |                                                         [01;31m[K^[m[K
+[1.925s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:33:59:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.925s]    33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg>([01;35m[K"rlfwSerialSend"[m[K, 2);
+[1.925s]       |                                                           [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.927s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In constructor ‘[01m[KMotorCTRL::MotorCTRL(const std::string&)[m[K’:
+[1.927s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:27:5:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.927s]    27 |     [01;31m[Knode[m[K = std::make_shared<rclcpp::Node>(node_name);
+[1.927s]       |     [01;31m[K^~~~[m[K
+[1.927s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:36:69:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.927s]    36 |         std::bind(&MotorCTRL::printData, this, std::placeholders::_1[01;35m[K)[m[K);
+[1.927s]       |                                                                     [01;35m[K^[m[K
+[1.931s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:34:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_motor_[m[K’ was not declared in this scope
+[1.931s]    34 |     [01;31m[Ksub_motor_[m[K = node->create_subscription<rlfw_msgs::msg::Motor>(
+[1.931s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.931s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:34:65:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.931s]    34 |     sub_motor_ = node->create_subscription<rlfw_msgs::msg::Motor[01;31m[K>[m[K(
+[1.931s]       |                                                                 [01;31m[K^[m[K
+[1.931s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:35:9:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.931s]    35 |         [01;35m[K"rlfwMotorBack"[m[K, 10,
+[1.931s]       |         [01;35m[K^~~~~~~~~~~~~~~[m[K
+[1.932s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.932s]    37 |     [01;31m[Kclient[m[K = node->create_client<rlfw_msgs::srv::ComParameter>(
+[1.932s]       |     [01;31m[K^~~~~~[m[K
+[1.932s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:37:62:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.932s]    37 |     client = node->create_client<rlfw_msgs::srv::ComParameter[01;31m[K>[m[K(
+[1.932s]       |                                                              [01;31m[K^[m[K
+[1.933s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:29:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.933s]    29 |     [01;31m[Kpublisher_[m[K =
+[1.933s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.933s]       |     [32m[Krmw_publisher_t[m[K
+[1.933s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:30:57:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.933s]    30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl[01;31m[K>[m[K("rlfwMotorCtrl", 2);
+[1.933s]       |                                                         [01;31m[K^[m[K
+[1.933s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:30:59:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.933s]    30 |         node->create_publisher<rlfw_msgs::msg::MotorCtrl>([01;35m[K"rlfwMotorCtrl"[m[K, 2);
+[1.933s]       |                                                           [01;35m[K^~~~~~~~~~~~~~~[m[K
+[1.935s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:36:69:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.935s]    36 |         std::bind(&MotorCTRL::printData, this, std::placeholders::_1[01;35m[K)[m[K);
+[1.935s]       |                                                                     [01;35m[K^[m[K
+[1.938s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcan_pub[m[K’ was not declared in this scope
+[1.938s]    31 |     [01;31m[Kcan_pub[m[K = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend", 2);
+[1.938s]       |     [01;31m[K^~~~~~~[m[K
+[1.938s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:60:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.938s]    31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg[01;31m[K>[m[K("rlfwCANSend", 2);
+[1.938s]       |                                                            [01;31m[K^[m[K
+[1.938s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:31:62:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.938s]    31 |     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>([01;35m[K"rlfwCANSend"[m[K, 2);
+[1.938s]       |                                                              [01;35m[K^~~~~~~~~~~~~[m[K
+[1.939s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::printData(rlfw_msgs::msg::Motor_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.939s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:44:5:[m[K [01;31m[Kerror: [m[K‘[01m[KemitTopicData[m[K’ was not declared in this scope
+[1.939s]    44 |     [01;31m[KemitTopicData[m[K(QString("ang_vel:") + QString::number(msg->ang_vel));
+[1.939s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[1.940s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.940s]    37 |     [01;31m[Kclient[m[K = node->create_client<rlfw_msgs::srv::ComParameter>(
+[1.940s]       |     [01;31m[K^~~~~~[m[K
+[1.940s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:37:62:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.940s]    37 |     client = node->create_client<rlfw_msgs::srv::ComParameter[01;31m[K>[m[K(
+[1.940s]       |                                                              [01;31m[K^[m[K
+[1.943s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::pub()[m[K’:
+[1.943s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:48:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.943s]    48 |     auto stamp = [01;31m[Knode[m[K->now();
+[1.943s]       |                  [01;31m[K^~~~[m[K
+[1.943s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:32:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_pub[m[K’ was not declared in this scope
+[1.943s]    32 |     [01;31m[Kserial_pub[m[K =
+[1.943s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.943s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:33:57:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.943s]    33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg[01;31m[K>[m[K("rlfwSerialSend", 2);
+[1.944s]       |                                                         [01;31m[K^[m[K
+[1.944s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:33:59:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.944s]    33 |         node->create_publisher<rlfw_msgs::msg::SerialMsg>([01;35m[K"rlfwSerialSend"[m[K, 2);
+[1.944s]       |                                                           [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.946s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::printData(rlfw_msgs::msg::Motor_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.947s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:44:5:[m[K [01;31m[Kerror: [m[K‘[01m[KemitTopicData[m[K’ was not declared in this scope
+[1.947s]    44 |     [01;31m[KemitTopicData[m[K(QString("ang_vel:") + QString::number(msg->ang_vel));
+[1.947s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[1.948s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:56:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.948s]    56 |     [01;31m[Kpublisher_[m[K->publish(msg);
+[1.948s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.948s]       |     [32m[Krmw_publisher_t[m[K
+[1.949s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:34:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_motor_[m[K’ was not declared in this scope
+[1.949s]    34 |     [01;31m[Ksub_motor_[m[K = node->create_subscription<rlfw_msgs::msg::Motor>(
+[1.949s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.949s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:34:65:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.949s]    34 |     sub_motor_ = node->create_subscription<rlfw_msgs::msg::Motor[01;31m[K>[m[K(
+[1.949s]       |                                                                 [01;31m[K^[m[K
+[1.949s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:35:9:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.949s]    35 |         [01;35m[K"rlfwMotorBack"[m[K, 10,
+[1.949s]       |         [01;35m[K^~~~~~~~~~~~~~~[m[K
+[1.950s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::pub()[m[K’:
+[1.950s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:48:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.950s]    48 |     auto stamp = [01;31m[Knode[m[K->now();
+[1.951s]       |                  [01;31m[K^~~~[m[K
+[1.953s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:69:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcan_pub[m[K’ was not declared in this scope
+[1.953s]    69 |     [01;31m[Kcan_pub[m[K->publish(can_msg);
+[1.953s]       |     [01;31m[K^~~~~~~[m[K
+[1.954s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:36:69:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.954s]    36 |         std::bind(&MotorCTRL::printData, this, std::placeholders::_1[01;35m[K)[m[K);
+[1.954s]       |                                                                     [01;35m[K^[m[K
+[1.956s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:56:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.956s]    56 |     [01;31m[Kpublisher_[m[K->publish(msg);
+[1.956s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.956s]       |     [32m[Krmw_publisher_t[m[K
+[1.958s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.958s]    37 |     [01;31m[Kclient[m[K = node->create_client<rlfw_msgs::srv::ComParameter>(
+[1.958s]       |     [01;31m[K^~~~~~[m[K
+[1.958s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:37:62:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.958s]    37 |     client = node->create_client<rlfw_msgs::srv::ComParameter[01;31m[K>[m[K(
+[1.959s]       |                                                              [01;31m[K^[m[K
+[1.959s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:76:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_pub[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial_msg[m[K’?
+[1.959s]    76 |     [01;31m[Kserial_pub[m[K->publish(serial_msg);
+[1.959s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.959s]       |     [32m[Kserial_msg[m[K
+[1.961s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:69:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcan_pub[m[K’ was not declared in this scope
+[1.961s]    69 |     [01;31m[Kcan_pub[m[K->publish(can_msg);
+[1.961s]       |     [01;31m[K^~~~~~~[m[K
+[1.962s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::stop()[m[K’:
+[1.962s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:80:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.962s]    80 |     auto stamp = [01;31m[Knode[m[K->now();
+[1.962s]       |                  [01;31m[K^~~~[m[K
+[1.965s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::printData(rlfw_msgs::msg::Motor_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.965s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:44:5:[m[K [01;31m[Kerror: [m[K‘[01m[KemitTopicData[m[K’ was not declared in this scope
+[1.965s]    44 |     [01;31m[KemitTopicData[m[K(QString("ang_vel:") + QString::number(msg->ang_vel));
+[1.965s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[1.966s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:76:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_pub[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial_msg[m[K’?
+[1.966s]    76 |     [01;31m[Kserial_pub[m[K->publish(serial_msg);
+[1.966s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.966s]       |     [32m[Kserial_msg[m[K
+[1.968s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:88:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.968s]    88 |     [01;31m[Kpublisher_[m[K->publish(msg);
+[1.968s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.968s]       |     [32m[Krmw_publisher_t[m[K
+[1.969s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::pub()[m[K’:
+[1.969s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:48:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.969s]    48 |     auto stamp = [01;31m[Knode[m[K->now();
+[1.969s]       |                  [01;31m[K^~~~[m[K
+[1.970s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::stop()[m[K’:
+[1.970s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:80:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.970s]    80 |     auto stamp = [01;31m[Knode[m[K->now();
+[1.970s]       |                  [01;31m[K^~~~[m[K
+[1.973s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::request()[m[K’:
+[1.973s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:102:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.973s]   102 |     while (![01;31m[Kclient[m[K->wait_for_service(std::chrono::seconds(1))) {
+[1.973s]       |             [01;31m[K^~~~~~[m[K
+[1.975s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:56:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.975s]    56 |     [01;31m[Kpublisher_[m[K->publish(msg);
+[1.975s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.975s]       |     [32m[Krmw_publisher_t[m[K
+[1.975s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:88:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.975s]    88 |     [01;31m[Kpublisher_[m[K->publish(msg);
+[1.975s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.975s]       |     [32m[Krmw_publisher_t[m[K
+[1.980s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:69:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcan_pub[m[K’ was not declared in this scope
+[1.980s]    69 |     [01;31m[Kcan_pub[m[K->publish(can_msg);
+[1.980s]       |     [01;31m[K^~~~~~~[m[K
+[1.980s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:112:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.980s]   112 |     auto future = [01;31m[Kclient[m[K->async_send_request(
+[1.980s]       |                   [01;31m[K^~~~~~[m[K
+[1.981s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::request()[m[K’:
+[1.981s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:102:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.981s]   102 |     while (![01;31m[Kclient[m[K->wait_for_service(std::chrono::seconds(1))) {
+[1.981s]       |             [01;31m[K^~~~~~[m[K
+[1.985s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:76:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_pub[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial_msg[m[K’?
+[1.985s]    76 |     [01;31m[Kserial_pub[m[K->publish(serial_msg);
+[1.986s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.986s]       |     [32m[Kserial_msg[m[K
+[1.987s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:112:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[1.987s]   112 |     auto future = [01;31m[Kclient[m[K->async_send_request(
+[1.987s]       |                   [01;31m[K^~~~~~[m[K
+[1.989s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::stop()[m[K’:
+[1.990s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:80:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.990s]    80 |     auto stamp = [01;31m[Knode[m[K->now();
+[1.990s]       |                  [01;31m[K^~~~[m[K
+[1.995s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:88:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.995s]    88 |     [01;31m[Kpublisher_[m[K->publish(msg);
+[1.995s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.995s]       |     [32m[Krmw_publisher_t[m[K
+[1.996s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In lambda function:
+[1.997s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:126:11:[m[K [01;31m[Kerror: [m[K‘[01m[KemitSrvData[m[K’ was not declared in this scope
+[1.997s]   126 |           [01;31m[KemitSrvData[m[K(emit_str);
+[1.997s]       |           [01;31m[K^~~~~~~~~~~[m[K
+[1.997s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K At global scope:
+[1.997s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:131:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+[1.997s]   131 | [01;31m[Kprivate[m[K:
+[1.997s]       | [01;31m[K^~~~~~~[m[K
+[2.000s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In member function ‘[01m[Kvoid MotorCTRL::request()[m[K’:
+[2.000s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:102:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[2.000s]   102 |     while (![01;31m[Kclient[m[K->wait_for_service(std::chrono::seconds(1))) {
+[2.000s]       |             [01;31m[K^~~~~~[m[K
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In lambda function:
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:126:11:[m[K [01;31m[Kerror: [m[K‘[01m[KemitSrvData[m[K’ was not declared in this scope
+[2.004s]   126 |           [01;31m[KemitSrvData[m[K(emit_str);
+[2.004s]       |           [01;31m[K^~~~~~~~~~~[m[K
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K At global scope:
+[2.004s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:131:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+[2.004s]   131 | [01;31m[Kprivate[m[K:
+[2.004s]       | [01;31m[K^~~~~~~[m[K
+[2.007s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:112:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient[m[K’ was not declared in this scope
+[2.007s]   112 |     auto future = [01;31m[Kclient[m[K->async_send_request(
+[2.007s]       |                   [01;31m[K^~~~~~[m[K
+[2.025s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In lambda function:
+[2.025s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:126:11:[m[K [01;31m[Kerror: [m[K‘[01m[KemitSrvData[m[K’ was not declared in this scope
+[2.025s]   126 |           [01;31m[KemitSrvData[m[K(emit_str);
+[2.025s]       |           [01;31m[K^~~~~~~~~~~[m[K
+[2.025s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K At global scope:
+[2.025s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:131:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+[2.025s]   131 | [01;31m[Kprivate[m[K:
+[2.025s]       | [01;31m[K^~~~~~~[m[K
+[2.035s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In function ‘[01m[Kvoid poorer_callback(rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedFuture)[m[K’:
+[2.035s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:149:5:[m[K [01;31m[Kerror: [m[K‘[01m[KemitSrvData[m[K’ was not declared in this scope
+[2.035s]   149 |     [01;31m[KemitSrvData[m[K(emit_str);
+[2.035s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.035s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K At global scope:
+[2.035s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:152:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprotected[m[K’
+[2.035s]   152 | [01;31m[Kprotected[m[K:
+[2.035s]       | [01;31m[K^~~~~~~~~[m[K
+[2.035s] In file included from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:44[m[K,
+[2.035s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:44[m[K,
+[2.035s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:44[m[K,
+[2.035s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:1[m[K,
+[2.035s]                  from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:4[m[K:
+[2.035s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:163:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kpublic[m[K’
+[2.035s]   163 | [01;31m[Ksignals[m[K:
+[2.035s]       | [01;31m[K^~~~~~~[m[K
+[2.035s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:166:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[2.035s]   166 | [01;31m[K}[m[K;
+[2.036s]       | [01;31m[K^[m[K
+[2.041s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K In function ‘[01m[Kvoid poorer_callback(rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedFuture)[m[K’:
+[2.042s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:149:5:[m[K [01;31m[Kerror: [m[K‘[01m[KemitSrvData[m[K’ was not declared in this scope
+[2.042s]   149 |     [01;31m[KemitSrvData[m[K(emit_str);
+[2.042s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.042s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:[m[K At global scope:
+[2.042s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:152:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprotected[m[K’
+[2.042s]   152 | [01;31m[Kprotected[m[K:
+[2.042s]       | [01;31m[K^~~~~~~~~[m[K
+[2.042s] In file included from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:44[m[K,
+[2.042s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:44[m[K,
+[2.042s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:44[m[K,
+[2.042s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:1[m[K,
+[2.042s]                  from [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/mainwindow.h:4[m[K:
+[2.042s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:163:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kpublic[m[K’
+[2.042s]   163 | [01;31m[Ksignals[m[K:
+[2.042s]       | [01;31m[K^~~~~~~[m[K
+[2.042s] [01m[K/home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/include/MotorCTRL.h:166:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[2.042s]   166 | [01;31m[K}[m[K;
+[2.042s]       | [01;31m[K^[m[K
+[2.062s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K In function ‘[01m[Kvoid poorer_callback(rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedFuture)[m[K’:
+[2.062s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:149:5:[m[K [01;31m[Kerror: [m[K‘[01m[KemitSrvData[m[K’ was not declared in this scope
+[2.062s]   149 |     [01;31m[KemitSrvData[m[K(emit_str);
+[2.062s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.062s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:[m[K At global scope:
+[2.062s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:152:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprotected[m[K’
+[2.062s]   152 | [01;31m[Kprotected[m[K:
+[2.063s]       | [01;31m[K^~~~~~~~~[m[K
+[2.063s] In file included from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:44[m[K,
+[2.063s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:44[m[K,
+[2.063s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:44[m[K,
+[2.063s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:1[m[K,
+[2.063s]                  from [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/mainwindow.h:4[m[K:
+[2.063s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:163:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kpublic[m[K’
+[2.063s]   163 | [01;31m[Ksignals[m[K:
+[2.063s]       | [01;31m[K^~~~~~~[m[K
+[2.063s] [01m[K/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl/include/../../../src/motor_ctrl/include/MotorCTRL.h:166:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[2.063s]   166 | [01;31m[K}[m[K;
+[2.063s]       | [01;31m[K^[m[K
+[2.207s] gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:155：CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o] 错误 1
+[2.207s] gmake[2]: *** 正在等待未完成的任务....
+[2.415s] gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:99：CMakeFiles/motor_ctrl.dir/src/main.cpp.o] 错误 1
+[2.435s] gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:113：CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o] 错误 1
+[2.439s] gmake[2]: *** [CMakeFiles/motor_ctrl.dir/build.make:169：CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o] 错误 1
+[2.439s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/motor_ctrl.dir/all] 错误 2
+[2.439s] gmake: *** [Makefile:146：all] 错误 2
+[2.440s] Invoked command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl -- -j12 -l12

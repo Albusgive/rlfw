@@ -5,16 +5,18 @@
 #include "MiMotor.h"
 #include "Motor.hpp"
 #include "PCAN.hpp"
+#include "gamepad.h"
+#include "magic_enum/magic_enum.hpp"
 #include "serial.hpp"
-#include <chrono>
 #include <functional>
 #include <iostream>
 #include <memory>
 #include <mutex>
-#include <ratio>
 #include <rclcpp/logging.hpp>
 #include <rlfw_msgs/msg/detail/can_msg__struct.hpp>
+#include <rlfw_msgs/msg/detail/remote__struct.hpp>
 #include <rlfw_msgs/msg/detail/serial_msg__struct.hpp>
+#include <rlfw_msgs/srv/detail/rl_srv__struct.hpp>
 #include <utility>
 #include <vector>
 
@@ -29,18 +31,25 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   // topic接收发送给电机
   sub_motor = this->create_subscription<rlfw_msgs::msg::MotorCtrl>(
       "rlfwMotorCtrl", rclcpp::QoS(2),
-      std::bind(&CommunicationCenter::sendMotor, this, std::placeholders::_1));
+      std::bind(&CommunicationCenter::sendMotor, this, _1));
   // topic接收发送给设备
   can_sub = this->create_subscription<rlfw_msgs::msg::CanMsg>(
       "rlfwCANSend", rclcpp::QoS(2),
-      std::bind(&CommunicationCenter::sendCAN, this, std::placeholders::_1));
+      std::bind(&CommunicationCenter::sendCAN, this, _1));
   // topic发送基础serial接收到的数据
   serial_publisher = this->create_publisher<rlfw_msgs::msg::SerialMsg>(
       "rlfwSerialBack", rclcpp::QoS(2));
   // serial接收发送给设备
   serial_sub = this->create_subscription<rlfw_msgs::msg::SerialMsg>(
       "rlfwSerialSend", rclcpp::QoS(2),
-      std::bind(&CommunicationCenter::sendSerial, this, std::placeholders::_1));
+      std::bind(&CommunicationCenter::sendSerial, this, _1));
+  // topic发送基础remote接收到的数据
+  remote_publisher = this->create_publisher<rlfw_msgs::msg::Remote>(
+      "rlfwRemoteBack", rclcpp::QoS(2));
+  // 服务器
+  request = this->create_service<rlfw_msgs::srv::ComParameter>(
+      "CommunicationCenterSrv",
+      std::bind(&CommunicationCenter::handle_request, this, _1, _2));
 
   xml_decoder.load(motor_cfg_path);
   if (xml_decoder.check())
@@ -129,6 +138,15 @@ void CommunicationCenter::fromSerial(std::vector<uint8_t> &msg,
   serial_publisher->publish(pub_serial_msg);
 }
 
+void CommunicationCenter::fromRemote(std::vector<std::string> &key,
+                                     std::vector<float> value) {
+  std::lock_guard<std::mutex> lock(com_mutex);
+  rlfw_msgs::msg::Remote msg;
+  msg.set__key(key);
+  msg.set__value(value);
+  remote_publisher->publish(msg);
+}
+
 void CommunicationCenter::RunRecv() {
   int cnt = 0;
   for (auto it : cans) {
@@ -163,7 +181,7 @@ void CommunicationCenter::sendMotor(
     auto it = can_motor_map.find(name);
     lock.unlock();
     if (it == can_motor_map.end()) {
-      RCLCPP_WARN(this->get_logger(), "CANMotor not found: %s", name.c_str());
+      RCLCPP_WARN(this->get_logger(), "no mount CAN motor: %s", name.c_str());
       return nullptr;
     }
     return it->second;
@@ -194,9 +212,17 @@ void CommunicationCenter::sendMotor(
     motor->ctrl_pos_vel(msg->angle, msg->ang_vel);
     break;
   }
+  case MotorCtrlType::ENABLE: {
+    if (msg->kd == 0)
+      motor->enableMotor(false);
+    else
+      motor->enableMotor(true);
+    break;
+  }
   case MotorCtrlType::ERR: {
     std::cout << "MotorCtrlType is ERR:\n"
-              << "please use: MIT, POS, VEL, TORQUE, POS_VEL" << std::endl;
+              << "please use: MIT, POS, VEL, TORQUE, POS_VEL, ENABLE"
+              << std::endl;
     break;
   }
   }
@@ -208,7 +234,7 @@ void CommunicationCenter::sendCAN(std::shared_ptr<rlfw_msgs::msg::CanMsg> msg) {
     auto it = cans_map.find(name);
     lock.unlock();
     if (it == cans_map.end()) {
-      RCLCPP_WARN(this->get_logger(), "no mount can device: %s", name.c_str());
+      RCLCPP_WARN(this->get_logger(), "no mount CAN device: %s", name.c_str());
       return -1;
     }
     return it->second;
@@ -221,7 +247,7 @@ void CommunicationCenter::sendCAN(std::shared_ptr<rlfw_msgs::msg::CanMsg> msg) {
     send_msg.ID = msg->id;
     send_msg.LEN = msg->len;
     send_msg.MSGTYPE = msg->msgtype;
-    for (int i = 0; i < msg->data.size(); i++) {
+    for (int i = 0; i < (int)msg->data.size(); i++) {
       send_msg.DATA[i] = msg->data[i];
     }
     cans[idx]->send(&send_msg);
@@ -235,7 +261,7 @@ void CommunicationCenter::sendSerial(
     auto it = serials_map.find(name);
     lock.unlock();
     if (it == serials_map.end()) {
-      RCLCPP_WARN(this->get_logger(), "no mount serial device: %s",
+      RCLCPP_WARN(this->get_logger(), "no mount Serial device: %s",
                   name.c_str());
       return -1;
     }
@@ -251,6 +277,45 @@ void CommunicationCenter::sendSerial(
                   serials[idx]->name.c_str());
   }
   return;
+}
+
+void CommunicationCenter::handle_request(
+    const std::shared_ptr<rlfw_msgs::srv::ComParameter::Request> request,
+    std::shared_ptr<rlfw_msgs::srv::ComParameter::Response> response) {
+  // std::cout << request->request_communication_center_parameter << std::endl;
+  auto type = xml_decoder.string2enum<ComeCenterParamType>(
+      request->request_communication_center_parameter);
+  switch (type) {
+  case ComeCenterParamType::MountCom: {
+    for (auto com : xml_decoder.coms) {
+      response->device_name.push_back(com.name);
+      response->device_type.push_back(
+          std::string(magic_enum::enum_name(com.type)));
+    }
+    break;
+  }
+  case ComeCenterParamType::MountMotor: {
+    for (auto m : can_motor_map)
+      response->device_name.push_back(m.first);
+    // serial motor
+    break;
+  }
+  case ComeCenterParamType::MountRmote: {
+    // gamepad
+    for (auto remote : xml_decoder.remotes) {
+      response->device_name.push_back(remote.name);
+      response->device_type.push_back(
+          std::string(magic_enum::enum_name(remote.type)));
+    }
+    // other
+    break;
+  }
+  case ComeCenterParamType::ERR: {
+    response->device_name.push_back("What are you looking for?");
+    response->device_type.push_back("ERR");
+    break;
+  }
+  }
 }
 
 void CommunicationCenter::registeredCANMotorDecoder(Motortype motor_type) {
@@ -313,9 +378,8 @@ void CommunicationCenter::buildMap() {
           }
         }
         if (com.only_thred) {
-          pcan->connectDecode(std::bind(
-              &CommunicationCenter::fromCan, this, std::placeholders::_1,
-              std::placeholders::_2, std::placeholders::_3));
+          pcan->connectDecode(
+              std::bind(&CommunicationCenter::fromCan, this, _1, _2, _3));
           pcan->RunRecv();
         }
         cans_map[com.name] = cans.size();
@@ -332,11 +396,10 @@ void CommunicationCenter::buildMap() {
       bool is = serial->OpenSerial(com.port, com.bps, com.datasize, com.parity,
                                    com.stopbit);
       if (!is)
-        RCLCPP_ERROR(this->get_logger(), "serials open err %s",
-                     com.name.c_str());
-      serial->connectDecode(std::bind(&CommunicationCenter::fromSerial, this,
-                                      std::placeholders::_1,
-                                      std::placeholders::_2));
+        RCLCPP_ERROR(this->get_logger(), "serials open err %s ,port%s",
+                     com.name.c_str(), com.port.c_str());
+      serial->connectDecode(
+          std::bind(&CommunicationCenter::fromSerial, this, _1, _2));
       serial->RunRecv();
       serials_map[com.name] = serials.size();
       serials.push_back(serial);
@@ -352,6 +415,36 @@ void CommunicationCenter::buildMap() {
     }
     }
   }
+  for (auto remote : xml_decoder.remotes) {
+    switch (remote.type) {
+    case RemoteType::gamepad: {
+      auto gamepad = std::make_shared<GamePad>();
+      gamepad->channel = remote.channel;
+      gamepad->name = remote.name;
+      gamepad->showGamePads();
+      if (gamepad->GamePadpads.empty()) {
+        RCLCPP_ERROR(this->get_logger(), "no gamepad ,name:%s ,channel:%d",
+                     gamepad->name.c_str(), gamepad->channel);
+      } else if (gamepad->channel <
+                 static_cast<int>(gamepad->GamePadpads.size())) {
+        gamepad->bindKeyValue(
+            std::bind(&CommunicationCenter::fromRemote, this, _1, _2));
+        gamepad->openRemote();
+        remotes.push_back(gamepad);
+      }
+      break;
+    }
+    case RemoteType::keyboard: {
+      break;
+    }
+    case RemoteType::custom: {
+      break;
+    }
+    case RemoteType::ERR: {
+      break;
+    }
+    }
+  }
   std::cout << "succeed mount:" << std::endl;
   std::cout << "can device: ";
   for (auto com : cans) {
@@ -361,6 +454,11 @@ void CommunicationCenter::buildMap() {
   std::cout << "serial device: ";
   for (auto com : serials) {
     std::cout << com->name << " ";
+  }
+  std::cout << std::endl;
+  std::cout << "remote device: ";
+  for (auto remote : remotes) {
+    std::cout << remote->name << " ";
   }
   std::cout << std::endl;
 }

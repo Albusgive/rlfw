@@ -32,7 +32,7 @@ extern "C"
 typedef struct rlfw_msgs__msg__MotorCtrl
 {
   std_msgs__msg__Header jointname;
-  /// MIT, POS, VEL, TORQUE, POS_VEL
+  /// MIT, POS, VEL, TORQUE, POS_VEL,ENABLE(kd为0时失能，不为0使能)
   rosidl_runtime_c__String ctrl_type;
   /// 扭矩
   float torque;

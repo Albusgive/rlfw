@@ -86,6 +86,16 @@ CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg_
 CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__struct.hpp
 CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__traits.hpp
 CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/remote.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__builder.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__struct.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__traits.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__type_support.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/com_parameter.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__builder.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__struct.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__traits.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.hpp
 CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -107,6 +117,8 @@ rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/Motor
 rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/MotorCtrl.idl
 rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/CanMsg.idl
 rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/SerialMsg.idl
+rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/Remote.idl
+rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/srv/ComParameter.idl
 rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -199,6 +211,36 @@ rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__traits.hpp: rosidl_generat
 rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.hpp
 
+rosidl_generator_cpp/rlfw_msgs/msg/remote.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/remote.hpp
+
+rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__builder.hpp
+
+rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__struct.hpp
+
+rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__traits.hpp
+
+rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__type_support.hpp
+
+rosidl_generator_cpp/rlfw_msgs/srv/com_parameter.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/com_parameter.hpp
+
+rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__builder.hpp
+
+rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__struct.hpp
+
+rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__traits.hpp
+
+rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.hpp
+
 rlfw_msgs__cpp: CMakeFiles/rlfw_msgs__cpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/can_msg.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__builder.hpp
@@ -213,13 +255,23 @@ rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__builder.hp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__builder.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__struct.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__traits.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__type_support.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__builder.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__struct.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__traits.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/motor_ctrl.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/remote.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/serial_msg.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/com_parameter.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__builder.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__struct.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__traits.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.hpp
 rlfw_msgs__cpp: CMakeFiles/rlfw_msgs__cpp.dir/build.make
 .PHONY : rlfw_msgs__cpp
 

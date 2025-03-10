@@ -1,0 +1,2 @@
+#请求类型 （这么长的名字是故意还是不小心的）
+string request_communication_center_parameter

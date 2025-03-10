@@ -1,0 +1,73 @@
+[0.006s] Invoking command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl
+[0.042s] -- The C compiler identification is GNU 12.3.0
+[0.079s] -- The CXX compiler identification is GNU 12.3.0
+[0.083s] -- Detecting C compiler ABI info
+[0.128s] -- Detecting C compiler ABI info - done
+[0.133s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.133s] -- Detecting C compile features
+[0.133s] -- Detecting C compile features - done
+[0.135s] -- Detecting CXX compiler ABI info
+[0.186s] -- Detecting CXX compiler ABI info - done
+[0.191s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.191s] -- Detecting CXX compile features
+[0.192s] -- Detecting CXX compile features - done
+[0.193s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.289s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.342s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.365s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.368s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.373s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.379s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.388s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.413s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.414s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.464s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.480s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.504s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.510s] -- Looking for pthread.h
+[0.557s] -- Looking for pthread.h - found
+[0.557s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.604s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.605s] -- Found Threads: TRUE  
+[0.636s] -- Found rlfw_msgs: 0.0.0 (/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake)
+[0.661s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.71.0") found components: thread 
+[0.704s] -- Configuring done
+[0.711s] -- Generating done
+[0.713s] -- Build files have been written to: /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl
+[0.720s] Invoked command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl -DCMAKE_INSTALL_PREFIX=/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl
+[0.721s] Invoking command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl -- -j12 -l12
+[0.746s] [ 25%] [34m[1mGenerating include/moc_mainwindow.cpp[0m
+[0.746s] [ 25%] [34m[1mGenerating ui_mainwindow.h[0m
+[0.746s] [ 25%] [34m[1mGenerating include/moc_MotorCTRL.cpp[0m
+[0.746s] [ 33%] [34m[1mGenerating build/moc_ui_mainwindow.cpp[0m
+[0.746s] [ 41%] [34m[1mGenerating qrc_images.cpp[0m
+[0.748s] /home/albusgive2/rlfw/rlfw_tool/src/motor_ctrl/build/ui_mainwindow.h:0: Note: No relevant classes found. No output generated.
+[0.783s] [ 58%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o[0m
+[0.783s] [ 66%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/build/moc_ui_mainwindow.cpp.o[0m
+[0.784s] [ 66%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/qrc_images.cpp.o[0m
+[0.784s] [ 75%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/src/main.cpp.o[0m
+[0.784s] [ 83%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_mainwindow.cpp.o[0m
+[0.785s] [ 91%] [32mBuilding CXX object CMakeFiles/motor_ctrl.dir/include/moc_MotorCTRL.cpp.o[0m
+[8.935s] [100%] [32m[1mLinking CXX executable motor_ctrl[0m
+[9.496s] [100%] Built target motor_ctrl
+[9.503s] Invoked command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl -- -j12 -l12
+[9.510s] Invoking command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl
+[9.515s] -- Install configuration: ""
+[9.515s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/lib/motor_ctrl/motor_ctrl
+[9.517s] -- Set runtime path of "/home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/lib/motor_ctrl/motor_ctrl" to ""
+[9.517s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/package_run_dependencies/motor_ctrl
+[9.517s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/parent_prefix_path/motor_ctrl
+[9.517s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/ament_prefix_path.sh
+[9.517s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/ament_prefix_path.dsv
+[9.517s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/path.sh
+[9.517s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/environment/path.dsv
+[9.517s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.bash
+[9.517s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.sh
+[9.518s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.zsh
+[9.518s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/local_setup.dsv
+[9.518s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/package.dsv
+[9.518s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/ament_index/resource_index/packages/motor_ctrl
+[9.518s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/cmake/motor_ctrlConfig.cmake
+[9.518s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/cmake/motor_ctrlConfig-version.cmake
+[9.518s] -- Installing: /home/albusgive2/rlfw/rlfw_tool/install/motor_ctrl/share/motor_ctrl/package.xml
+[9.519s] Invoked command in '/home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_tool/build/motor_ctrl

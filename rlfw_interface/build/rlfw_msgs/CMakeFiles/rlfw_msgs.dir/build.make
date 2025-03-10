@@ -70,6 +70,10 @@ CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Mot
 CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/MotorCtrl.msg
 CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/CanMsg.msg
 CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/SerialMsg.msg
+CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Remote.msg
+CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/srv/ComParameter.srv
+CMakeFiles/rlfw_msgs: rosidl_cmake/srv/ComParameter_Request.msg
+CMakeFiles/rlfw_msgs: rosidl_cmake/srv/ComParameter_Response.msg
 CMakeFiles/rlfw_msgs: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 CMakeFiles/rlfw_msgs: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 CMakeFiles/rlfw_msgs: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl

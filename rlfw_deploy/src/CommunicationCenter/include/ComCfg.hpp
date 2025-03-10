@@ -1,4 +1,5 @@
 #pragma once
+#include "gamepad.h"
 #include "magic_enum/magic_enum.hpp"
 #include <iostream>
 #include <string>
@@ -14,7 +15,9 @@ enum class ComType {
 enum class Motortype { Mi, DM, RM, UNITREE, ERR };
 
 // 控制模式
-enum class MotorCtrlType { MIT = 0, POS, VEL, TORQUE, POS_VEL, ERR };
+enum class MotorCtrlType { MIT = 0, POS, VEL, TORQUE, POS_VEL, ENABLE, ERR };
+
+enum class RemoteType { gamepad, keyboard, custom, ERR };
 
 class XMLMotor {
 public:
@@ -110,5 +113,25 @@ public:
     }
     }
     return flag;
+  }
+};
+
+class XMLRemote {
+public:
+  RemoteType type;
+  std::string name;
+  int channel = 0;
+  bool check()
+  {
+    if (name == "") {
+      std::cout << "remote no name" << std::endl;
+      return false;
+    }
+    if(type == RemoteType::ERR)
+    {
+      std::cout << "remote type err" << std::endl;
+      return false;
+    }
+    return true;
   }
 };

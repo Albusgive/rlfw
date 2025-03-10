@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rlfw_msgs/srv/RLSrv.srv
+// generated code does not contain a copyright notice
+
+
+module rlfw_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "请求类型 （这么长的名字是故意还是不小心的）")
+    struct RLSrv_Request {
+      string request_communication_center_parameter;
+    };
+    @verbatim (language="comment", text=
+      "通信接口名字")
+    struct RLSrv_Response {
+      sequence<string> com_name;
+
+      @verbatim (language="comment", text=
+        "通信类型")
+      sequence<string> com_type;
+
+      @verbatim (language="comment", text=
+        "关节名")
+      sequence<string> joint_name;
+    };
+  };
+};

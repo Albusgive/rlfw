@@ -81,6 +81,8 @@ rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_su
 rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/msg/MotorCtrl.idl
 rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/msg/CanMsg.idl
 rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/msg/SerialMsg.idl
+rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/msg/Remote.idl
+rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp: rosidl_adapter/rlfw_msgs/srv/ComParameter.idl
 rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -136,6 +138,18 @@ rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/serial_msg__ty
 
 rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/serial_msg__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/serial_msg__rosidl_typesupport_fastrtps_cpp.hpp
+
+rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp
+
+rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/remote__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/remote__rosidl_typesupport_fastrtps_cpp.hpp
+
+rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp
+
+rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/com_parameter__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/com_parameter__rosidl_typesupport_fastrtps_cpp.hpp
 
 CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/flags.make
 CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp
@@ -193,12 +207,42 @@ CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fas
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/serial_msg__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/serial_msg__type_support.cpp -o CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/serial_msg__type_support.cpp.s
 
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/flags.make
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o -MF CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o.d -o CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o -c /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp > CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.i
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp -o CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.s
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/flags.make
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o -MF CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o.d -o CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o -c /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp > CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.i
+
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp -o CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.s
+
 # Object files for target rlfw_msgs__rosidl_typesupport_fastrtps_cpp
 rlfw_msgs__rosidl_typesupport_fastrtps_cpp_OBJECTS = \
 "CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp.o" \
 "CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor_ctrl__type_support.cpp.o" \
 "CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/can_msg__type_support.cpp.o" \
-"CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/serial_msg__type_support.cpp.o"
+"CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/serial_msg__type_support.cpp.o" \
+"CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o" \
+"CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o"
 
 # External object files for target rlfw_msgs__rosidl_typesupport_fastrtps_cpp
 rlfw_msgs__rosidl_typesupport_fastrtps_cpp_EXTERNAL_OBJECTS =
@@ -207,6 +251,8 @@ librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/rlfw_msgs__rosidl_t
 librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor_ctrl__type_support.cpp.o
 librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/can_msg__type_support.cpp.o
 librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/serial_msg__type_support.cpp.o
+librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o
+librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o
 librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make
 librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
@@ -216,7 +262,7 @@ librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/librmw.so
 librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/humble/lib/librcutils.so
 librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -231,10 +277,14 @@ CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesup
 CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/can_msg__type_support.cpp
 CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor__type_support.cpp
 CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/motor_ctrl__type_support.cpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp
 CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/serial_msg__type_support.cpp
 CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/motor__rosidl_typesupport_fastrtps_cpp.hpp
 CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/motor_ctrl__rosidl_typesupport_fastrtps_cpp.hpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/remote__rosidl_typesupport_fastrtps_cpp.hpp
 CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/serial_msg__rosidl_typesupport_fastrtps_cpp.hpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/com_parameter__rosidl_typesupport_fastrtps_cpp.hpp
+CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp
 	cd /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/depend
 
