@@ -25,7 +25,7 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   // topic发送基础can接收到的数据
   can_publisher = this->create_publisher<rlfw_msgs::msg::CanMsg>(
       "rlfwCANBack", rclcpp::QoS(2));
-  // topic发送can电机接收到的数据
+  // topic发送电机接收到的数据
   motor_publisher = this->create_publisher<rlfw_msgs::msg::Motor>(
       "rlfwMotorBack", rclcpp::QoS(2));
   // topic接收发送给电机
@@ -57,17 +57,17 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   buildMap();
   RunRecv();
 
-  // can_motor_map["left_wheel_joint"]->enableMotor(true);
-  // can_motor_map["left_calf_joint"]->enableMotor(true);
-  // // can_motor_map["left_wheel_joint"]->ctrl_vel(1.0);
-  // can_motor_map["left_wheel_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
-  // can_motor_map["left_calf_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
+  // motor_map["left_wheel_joint"]->enableMotor(true);
+  // motor_map["left_calf_joint"]->enableMotor(true);
+  // // motor_map["left_wheel_joint"]->ctrl_vel(1.0);
+  // motor_map["left_wheel_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
+  // motor_map["left_calf_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
   // while (rclcpp::ok()) {
   //   std::this_thread::sleep_for(std::chrono::microseconds(500));
   // }
   // std::this_thread::sleep_for(std::chrono::seconds(5));
-  // can_motor_map["left_wheel_joint"]->enableMotor(false);
-  // can_motor_map["left_calf_joint"]->enableMotor(false);
+  // motor_map["left_wheel_joint"]->enableMotor(false);
+  // motor_map["left_calf_joint"]->enableMotor(false);
 
   // initGamePad();
 
@@ -79,7 +79,7 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
 
 CommunicationCenter::~CommunicationCenter() {
   // 电机全部失能
-  for (auto m : can_motor_map) {
+  for (auto m : motor_map) {
     m.second->enableMotor(false);
   }
   // 关闭全部串口
@@ -103,14 +103,15 @@ void CommunicationCenter::fromCan(CANMSG &msg, std::vector<int> &device_ids,
   can_publisher->publish(pub_can_msg);
   // 电机（设备）解码器
   MotorBack motor_back;
-  for (auto deceder : can_moter_decoders) {
+  for (auto deceder : moter_decoders) {
     motor_back = deceder->decode(msg);
     for (auto id : device_ids) {
       if (id == motor_back.id) {
         rlfw_msgs::msg::Motor pub_motor_msg;
         pub_motor_msg.set__motor_id(motor_back.id);
         rlfw_msgs::msg::Motor::_jointname_type jointname;
-        jointname.frame_id = id2string[motor_back.id];
+        jointname.frame_id = motorid2string[motor_back.id];
+        motor_map[jointname.frame_id]->motorback = motor_back;
         jointname.stamp = stamp;
         pub_motor_msg.set__jointname(jointname);
         pub_motor_msg.set__angle(motor_back.angle);
@@ -175,22 +176,17 @@ void CommunicationCenter::timer_callback() {}
 void CommunicationCenter::sendMotor(
     std::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg) {
   auto joint_name = msg->jointname.frame_id;
-  auto can_motor_safe_get =
-      [this](const std::string &name) -> std::shared_ptr<CANMotor> {
-    std::unique_lock<std::mutex> lock(com_mutex);
-    auto it = can_motor_map.find(name);
-    lock.unlock();
-    if (it == can_motor_map.end()) {
-      RCLCPP_WARN(this->get_logger(), "no mount CAN motor: %s", name.c_str());
-      return nullptr;
+  // 从物理电机中寻找
+  auto motor = motor_safe_get(joint_name);
+  if (motor == nullptr) {
+    motor = virtual_motor_safe_get(joint_name);
+    if (motor == nullptr) {
+      RCLCPP_WARN(this->get_logger(), "no mount motor: %s", joint_name.c_str());
+      return;
     }
-    return it->second;
-  };
+  }
   // 判断控制类型
-  auto motor = can_motor_safe_get(joint_name);
   auto ctrl_type = xml_decoder.string2enum<MotorCtrlType>(msg->ctrl_type);
-  if (motor == nullptr)
-    return;
   switch (ctrl_type) {
   case MotorCtrlType::MIT: {
     motor->locomotion(msg->torque, msg->angle, msg->ang_vel, msg->kp, msg->kd);
@@ -226,6 +222,28 @@ void CommunicationCenter::sendMotor(
     break;
   }
   }
+}
+
+std::shared_ptr<BaseMotor>
+CommunicationCenter::motor_safe_get(const std::string &name) {
+  std::unique_lock<std::mutex> lock(com_mutex);
+  auto it = motor_map.find(name);
+  lock.unlock();
+  if (it == motor_map.end()) {
+    return nullptr;
+  }
+  return it->second;
+}
+
+std::shared_ptr<BaseMotor>
+CommunicationCenter::virtual_motor_safe_get(const std::string &name) {
+  std::unique_lock<std::mutex> lock(com_mutex);
+  auto it = virtual_motor_map.find(name);
+  lock.unlock();
+  if (it == virtual_motor_map.end()) {
+    return nullptr;
+  }
+  return it->second;
 }
 
 void CommunicationCenter::sendCAN(std::shared_ptr<rlfw_msgs::msg::CanMsg> msg) {
@@ -295,7 +313,7 @@ void CommunicationCenter::handle_request(
     break;
   }
   case ComeCenterParamType::MountMotor: {
-    for (auto m : can_motor_map)
+    for (auto m : motor_map)
       response->device_name.push_back(m.first);
     // serial motor
     break;
@@ -318,25 +336,26 @@ void CommunicationCenter::handle_request(
   }
 }
 
-void CommunicationCenter::registeredCANMotorDecoder(Motortype motor_type) {
-  for (auto type : registered_can_types) {
+void CommunicationCenter::registeredMotorDecoder(Motortype motor_type) {
+  for (auto type : registered_motor_types) {
     if (motor_type == type)
       return;
   }
+  registered_motor_types.push_back(motor_type);
   switch (motor_type) {
   case Motortype::Mi: {
     auto mi = std::make_shared<MiMotor>();
-    can_moter_decoders.push_back(mi);
+    moter_decoders.push_back(mi);
     break;
   }
   case Motortype::DM: {
     auto dm = std::make_shared<DMMotor>();
-    can_moter_decoders.push_back(dm);
+    moter_decoders.push_back(dm);
     break;
   }
   case Motortype::RM: {
     // auto rm = std::make_shared<RMMotor>();
-    // can_moter_decoders.push_back(rm);
+    // moter_decoders.push_back(rm);
     break;
   }
   case Motortype::ERR: {
@@ -359,22 +378,22 @@ void CommunicationCenter::buildMap() {
       if (pcan->initPCAN(pcan->channel, BAUD_1MBPS)) {
         // 增加电机
         for (auto motor : com.xml_motors) {
-          registeredCANMotorDecoder(motor.type);
-          id2string[motor.id] = motor.joint_name;
+          registeredMotorDecoder(motor.type);
+          motorid2string[motor.id] = motor.joint_name;
           pcan->devive_ids.push_back(motor.id);
           if (motor.type == Motortype::Mi) {
             auto mi = std::make_shared<MiMotor>();
             mi->can = pcan;
             mi->id = motor.id;
-            initCanMotor(mi, motor);
+            initMotor(mi, motor);
             mi->ok_fix_parameter(motor.id);
-            can_motor_map[motor.joint_name] = mi;
+            motor_map[motor.joint_name] = mi;
           } else if (motor.type == Motortype::DM) {
             auto dm = std::make_shared<DMMotor>();
             dm->can = pcan;
             dm->id = motor.id;
-            initCanMotor(dm, motor);
-            can_motor_map[motor.joint_name] = dm;
+            initMotor(dm, motor);
+            motor_map[motor.joint_name] = dm;
           }
         }
         if (com.only_thred) {
@@ -445,6 +464,15 @@ void CommunicationCenter::buildMap() {
     }
     }
   }
+  // 虚拟电机
+  for (auto vm : xml_decoder.virtualmotors) {
+    std::shared_ptr<VirtualMotor> virtualmotor = std::make_shared<VirtualMotor>();
+    virtualmotor->motor1 = motor_safe_get(vm.motor1);
+    virtualmotor->motor2 = motor_safe_get(vm.motor2);
+    virtualmotor->type = vm.type;
+    virtual_motor_map[vm.joint_name] = virtualmotor;
+  }
+
   std::cout << "succeed mount:" << std::endl;
   std::cout << "can device: ";
   for (auto com : cans) {
@@ -463,18 +491,18 @@ void CommunicationCenter::buildMap() {
   std::cout << std::endl;
 }
 
-void CommunicationCenter::initCanMotor(std::shared_ptr<CANMotor> can_motor,
-                                       XMLMotor xml_motor) {
-  can_motor->enableMotor(true);
-  can_motor->setPosKP(xml_motor.PosKP);
-  can_motor->setPosKP(xml_motor.PosKD);
-  can_motor->setVelKP(xml_motor.VelKP);
-  can_motor->setVelKI(xml_motor.VelKI);
-  can_motor->setTorqueKP(xml_motor.TorqueKP);
-  can_motor->setTorqueKI(xml_motor.TorqueKI);
-  can_motor->setSafeTorque(xml_motor.SafeTorque);
-  can_motor->setSafePos(xml_motor.SafePos);
-  can_motor->setSafeVel(xml_motor.SafeVel);
+void CommunicationCenter::initMotor(std::shared_ptr<BaseMotor> _motor,
+                                    XMLMotor xml_motor) {
+  _motor->enableMotor(true);
+  _motor->setPosKP(xml_motor.PosKP);
+  _motor->setPosKP(xml_motor.PosKD);
+  _motor->setVelKP(xml_motor.VelKP);
+  _motor->setVelKI(xml_motor.VelKI);
+  _motor->setTorqueKP(xml_motor.TorqueKP);
+  _motor->setTorqueKI(xml_motor.TorqueKI);
+  _motor->setSafeTorque(xml_motor.SafeTorque);
+  _motor->setSafePos(xml_motor.SafePos);
+  _motor->setSafeVel(xml_motor.SafeVel);
 }
 
 void CommunicationCenter::initGamePad() {

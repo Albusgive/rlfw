@@ -78,6 +78,24 @@ bool XMLDecoder::load(std::string path) {
       remotes.push_back(xml_remote);
     }
   }
+  XMLElement *virtualmotor = root->FirstChildElement("virtualmotor");
+  if (virtualmotor) {
+    for (; virtualmotor;
+         virtualmotor = virtualmotor->NextSiblingElement("virtualmotor")) {
+      XMLVirtualMotor xml_virtualmotor;
+      xml_virtualmotor.joint_name =
+          Attribute2String(virtualmotor->Attribute("joint_name"));
+      xml_virtualmotor.type = string2enum<VirtualMotortype>(
+          Attribute2String(virtualmotor->Attribute("type")));
+      xml_virtualmotor.motor1 =
+          Attribute2String(virtualmotor->Attribute("motor1"));
+      xml_virtualmotor.motor2 =
+          Attribute2String(virtualmotor->Attribute("motor2"));
+      xml_virtualmotor.default_theta =
+          virtualmotor->FloatAttribute("default_theta", 1.57);
+      virtualmotors.push_back(xml_virtualmotor);
+    }
+  }
   return true;
 }
 
@@ -89,10 +107,11 @@ bool XMLDecoder::check() {
       flag = flag && motor.check();
     }
   }
-  
-  for(auto remote:remotes)
-  {
+  for (auto remote : remotes) {
     flag = flag && remote.check();
+  }
+  for (auto virtualmotor : virtualmotors) {
+    flag = flag && virtualmotor.check();
   }
   return flag;
 }

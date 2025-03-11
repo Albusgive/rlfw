@@ -54,6 +54,8 @@ private:
   // 在主线程的端口发送 pcan发送一次约0.14ms(12400f)
   rclcpp::Subscription<rlfw_msgs::msg::MotorCtrl>::SharedPtr sub_motor;
   void sendMotor(std::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg);
+  std::shared_ptr<BaseMotor> motor_safe_get(const std::string &name);
+  std::shared_ptr<BaseMotor> virtual_motor_safe_get(const std::string &name);
 
   // 基础can通讯
   rclcpp::Publisher<rlfw_msgs::msg::CanMsg>::SharedPtr can_publisher;
@@ -79,12 +81,13 @@ private:
   // 加载配置
   XMLDecoder xml_decoder;
   // 注册电机解码器
-  std::vector<std::shared_ptr<CANMotor>> can_moter_decoders;
-  std::vector<Motortype> registered_can_types;
-  std::unordered_map<int, std::string> id2string;
-  void registeredCANMotorDecoder(Motortype motor_type);
+  std::vector<std::shared_ptr<BaseMotor>> moter_decoders;
+  std::vector<Motortype> registered_motor_types;//已经注册的电机类型
+  std::unordered_map<int, std::string> motorid2string;
+  void registeredMotorDecoder(Motortype motor_type);
   // 字符串映射
-  std::unordered_map<std::string, std::shared_ptr<CANMotor>> can_motor_map;
+  std::unordered_map<std::string, std::shared_ptr<BaseMotor>> motor_map;
+  std::unordered_map<std::string, std::shared_ptr<BaseMotor>> virtual_motor_map;
   std::vector<std::shared_ptr<BaseCAN>> cans;
   std::unordered_map<std::string, int> cans_map;
   std::vector<std::shared_ptr<Serial>> serials;
@@ -92,7 +95,7 @@ private:
   std::vector<std::shared_ptr<BaseRemote>> remotes;
   void buildMap();
   // 电机使能和参数写入
-  void initCanMotor(std::shared_ptr<CANMotor> can_motor, XMLMotor xml_motor);
+  void initMotor(std::shared_ptr<BaseMotor> _motor, XMLMotor xml_motor);
   // 对不同通讯子线程处理CommunicationCenter的函数使用
   // 接受电机消息，接受串口消息
   std::mutex com_mutex;

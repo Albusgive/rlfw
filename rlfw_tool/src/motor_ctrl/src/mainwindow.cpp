@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
   ui->setupUi(this);
   motorCTRLnode = new MotorCTRL("motor_ctrl");
   connect(ui->pushButton, &QPushButton::clicked, this,
-          [this]() { motorCTRLnode->pub(); });
+          [this]() { motorCTRLnode->pub2(); });
   connect(ui->pushButton_2, &QPushButton::clicked, this,
           [this]() { motorCTRLnode->stop(); });
   connect(ui->pushButton_3, &QPushButton::clicked, this,

@@ -744,6 +744,30 @@ src/PCAN.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.s
 .PHONY : src/PCAN.cpp.s
 
+src/ParallelMechanism..o: src/ParallelMechanism..cpp.o
+.PHONY : src/ParallelMechanism..o
+
+# target to build an object file
+src/ParallelMechanism..cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ParallelMechanism..cpp.o
+.PHONY : src/ParallelMechanism..cpp.o
+
+src/ParallelMechanism..i: src/ParallelMechanism..cpp.i
+.PHONY : src/ParallelMechanism..i
+
+# target to preprocess a source file
+src/ParallelMechanism..cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ParallelMechanism..cpp.i
+.PHONY : src/ParallelMechanism..cpp.i
+
+src/ParallelMechanism..s: src/ParallelMechanism..cpp.s
+.PHONY : src/ParallelMechanism..s
+
+# target to generate assembly for a file
+src/ParallelMechanism..cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ParallelMechanism..cpp.s
+.PHONY : src/ParallelMechanism..cpp.s
+
 src/XMLDecoder.o: src/XMLDecoder.cpp.o
 .PHONY : src/XMLDecoder.o
 
@@ -880,6 +904,9 @@ help:
 	@echo "... src/PCAN.o"
 	@echo "... src/PCAN.i"
 	@echo "... src/PCAN.s"
+	@echo "... src/ParallelMechanism..o"
+	@echo "... src/ParallelMechanism..i"
+	@echo "... src/ParallelMechanism..s"
 	@echo "... src/XMLDecoder.o"
 	@echo "... src/XMLDecoder.i"
 	@echo "... src/XMLDecoder.s"

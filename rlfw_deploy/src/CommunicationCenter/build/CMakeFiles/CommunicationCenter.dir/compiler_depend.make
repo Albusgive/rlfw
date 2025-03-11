@@ -777,7 +777,8 @@ CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o: ../motor_driver/R
 
 CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o: ../remote_driver/gamepad.cpp \
   ../remote_driver/gamepad.h \
-  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/atomic \
+  /usr/include/c++/12/bits/atomic_base.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
   /usr/include/features.h \
@@ -792,48 +793,131 @@ CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o: ../remote_driver
   /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
   /usr/include/c++/12/pstl/pstl_config.h \
   /usr/include/tbb/tbb.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/bits/move.h \
+  /usr/include/c++/12/type_traits \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/stl_function.h \
+  /usr/include/c++/12/backward/binders.h \
+  /usr/include/c++/12/new \
+  /usr/include/c++/12/bits/exception.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/bits/utility.h \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/invoke.h \
+  /usr/include/c++/12/bits/functional_hash.h \
+  /usr/include/c++/12/bits/hash_bytes.h \
+  /usr/include/c++/12/bits/refwrap.h \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/bits/functexcept.h \
+  /usr/include/c++/12/bits/exception_defines.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/initializer_list \
+  /usr/include/c++/12/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
+  /usr/include/c++/12/bits/new_allocator.h \
+  /usr/include/c++/12/bits/memoryfwd.h \
+  /usr/include/c++/12/ext/alloc_traits.h \
+  /usr/include/c++/12/bits/alloc_traits.h \
+  /usr/include/c++/12/bits/stl_construct.h \
+  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12/bits/concept_check.h \
+  /usr/include/c++/12/debug/assertions.h \
+  /usr/include/c++/12/bits/ptr_traits.h \
+  /usr/include/c++/12/ext/numeric_traits.h \
+  /usr/include/c++/12/bits/cpp_type_traits.h \
+  /usr/include/c++/12/ext/type_traits.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/stl_algobase.h \
+  /usr/include/c++/12/bits/stl_iterator.h \
+  /usr/include/c++/12/debug/debug.h \
+  /usr/include/c++/12/bits/predefined_ops.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/range_access.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/12/bits/std_abs.h \
+  /usr/include/c++/12/iostream \
   /usr/include/c++/12/ostream \
   /usr/include/c++/12/ios \
   /usr/include/c++/12/iosfwd \
   /usr/include/c++/12/bits/stringfwd.h \
-  /usr/include/c++/12/bits/memoryfwd.h \
   /usr/include/c++/12/bits/postypes.h \
   /usr/include/c++/12/cwchar \
   /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/c++/12/exception \
-  /usr/include/c++/12/bits/exception.h \
   /usr/include/c++/12/bits/exception_ptr.h \
-  /usr/include/c++/12/bits/exception_defines.h \
   /usr/include/c++/12/bits/cxxabi_init_exception.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/c++/12/typeinfo \
-  /usr/include/c++/12/bits/hash_bytes.h \
-  /usr/include/c++/12/new \
-  /usr/include/c++/12/bits/move.h \
-  /usr/include/c++/12/type_traits \
   /usr/include/c++/12/bits/nested_exception.h \
   /usr/include/c++/12/bits/char_traits.h \
   /usr/include/c++/12/cstdint \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/c++/12/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
   /usr/include/c++/12/clocale \
@@ -841,90 +925,33 @@ CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o: ../remote_driver
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/c++/12/cctype \
   /usr/include/ctype.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
   /usr/include/c++/12/bits/ios_base.h \
   /usr/include/c++/12/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/c++/12/bits/locale_classes.h \
   /usr/include/c++/12/string \
-  /usr/include/c++/12/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
-  /usr/include/c++/12/bits/new_allocator.h \
-  /usr/include/c++/12/bits/functexcept.h \
-  /usr/include/c++/12/bits/cpp_type_traits.h \
   /usr/include/c++/12/bits/ostream_insert.h \
   /usr/include/c++/12/bits/cxxabi_forced.h \
-  /usr/include/c++/12/bits/stl_iterator_base_types.h \
-  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/12/bits/concept_check.h \
-  /usr/include/c++/12/debug/assertions.h \
-  /usr/include/c++/12/bits/stl_iterator.h \
-  /usr/include/c++/12/ext/type_traits.h \
-  /usr/include/c++/12/bits/ptr_traits.h \
-  /usr/include/c++/12/bits/stl_function.h \
-  /usr/include/c++/12/backward/binders.h \
-  /usr/include/c++/12/ext/numeric_traits.h \
-  /usr/include/c++/12/bits/stl_algobase.h \
-  /usr/include/c++/12/bits/stl_pair.h \
-  /usr/include/c++/12/bits/utility.h \
-  /usr/include/c++/12/debug/debug.h \
-  /usr/include/c++/12/bits/predefined_ops.h \
-  /usr/include/c++/12/bits/refwrap.h \
-  /usr/include/c++/12/bits/invoke.h \
-  /usr/include/c++/12/bits/range_access.h \
-  /usr/include/c++/12/initializer_list \
   /usr/include/c++/12/bits/basic_string.h \
-  /usr/include/c++/12/ext/alloc_traits.h \
-  /usr/include/c++/12/bits/alloc_traits.h \
-  /usr/include/c++/12/bits/stl_construct.h \
   /usr/include/c++/12/string_view \
-  /usr/include/c++/12/bits/functional_hash.h \
   /usr/include/c++/12/bits/string_view.tcc \
   /usr/include/c++/12/ext/string_conversions.h \
-  /usr/include/c++/12/cstdlib \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -961,30 +988,12 @@ CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o: ../remote_driver
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/ext/aligned_buffer.h \
-  /usr/include/c++/12/bits/node_handle.h \
   /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/tuple \
-  /usr/include/c++/12/bits/uses_allocator.h \
   /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/bits/erase_if.h \
-  /usr/include/c++/12/vector \
-  /usr/include/c++/12/bits/stl_uninitialized.h \
-  /usr/include/c++/12/bits/stl_vector.h \
-  /usr/include/c++/12/bits/stl_bvector.h \
-  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/c++/12/thread \
   /usr/include/c++/12/bits/std_thread.h \
   /usr/include/c++/12/bits/unique_ptr.h \
@@ -994,50 +1003,26 @@ CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o: ../remote_driver
   /usr/include/c++/12/limits \
   /usr/include/c++/12/ctime \
   /usr/include/c++/12/bits/parse_numbers.h \
-  /usr/include/c++/12/mutex \
-  /usr/include/c++/12/bits/std_mutex.h \
-  /usr/include/c++/12/bits/unique_lock.h \
-  /usr/include/c++/12/atomic \
-  /usr/include/c++/12/bits/atomic_base.h \
-  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/12/functional \
-  /usr/include/c++/12/bits/std_function.h \
-  /usr/include/c++/12/unordered_map \
-  /usr/include/c++/12/bits/hashtable.h \
-  /usr/include/c++/12/bits/hashtable_policy.h \
-  /usr/include/c++/12/bits/enable_special_members.h \
-  /usr/include/c++/12/bits/unordered_map.h \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/bits/stl_algo.h \
-  /usr/include/c++/12/bits/algorithmfwd.h \
-  /usr/include/c++/12/bits/stl_heap.h \
-  /usr/include/c++/12/bits/stl_tempbuf.h \
-  /usr/include/c++/12/bits/uniform_int_dist.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx.h \
-  /usr/include/linux/stat.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  ../remote_driver/BaseRemote.h \
+  ../remote_driver/gamepadkey.h \
   /usr/include/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
   /usr/include/linux/falloc.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/libudev.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/linux/input.h \
   /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/x86_64-linux-gnu/sys/ioctl.h \
@@ -1049,12 +1034,25 @@ CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o: ../remote_driver
   /usr/include/asm-generic/ioctl.h \
   /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
   /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
   /usr/include/linux/input-event-codes.h \
   /usr/include/linux/joystick.h \
-  /usr/include/libudev.h \
-  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
-  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
-  ../remote_driver/gamepadkey.h
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
 
 CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: ../src/CommunicationCenter.cpp \
   ../include/CommunicationCenter.hpp \
@@ -1250,11 +1248,7 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: ../src/Communi
   /usr/include/c++/12/bits/stl_vector.h \
   /usr/include/c++/12/bits/stl_bvector.h \
   /usr/include/c++/12/bits/vector.tcc \
-  ../motor_driver/Motor.hpp \
-  ../magic_enum/include/magic_enum/magic_enum.hpp \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/cstddef \
+  ../remote_driver/BaseRemote.h \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
   /usr/include/c++/12/unordered_map \
@@ -1265,11 +1259,16 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: ../src/Communi
   /usr/include/c++/12/bits/node_handle.h \
   /usr/include/c++/12/bits/unordered_map.h \
   /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
   /usr/include/c++/12/bits/stl_algo.h \
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/stl_tempbuf.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../motor_driver/Motor.hpp \
+  ../magic_enum/include/magic_enum/magic_enum.hpp \
+  /usr/include/c++/12/cstddef \
   /usr/include/c++/12/limits \
   /usr/include/c++/12/utility \
   /usr/include/c++/12/bits/stl_relops.h \
@@ -1335,6 +1334,43 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: ../src/Communi
   /usr/include/linux/close_range.h \
   ../include/XMLDecoder.hpp \
   ../include/ComCfg.hpp \
+  ../remote_driver/gamepad.h \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/12/thread \
+  /usr/include/c++/12/bits/std_thread.h \
+  /usr/include/c++/12/bits/this_thread_sleep.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  ../remote_driver/gamepadkey.h \
+  /usr/include/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/linux/falloc.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/linux/input.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
+  /usr/include/asm-generic/ioctls.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+  /usr/include/linux/input-event-codes.h \
+  /usr/include/linux/joystick.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
   ../tinyxml2/tinyxml2.h \
   /usr/include/c++/12/climits \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
@@ -1346,46 +1382,6 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: ../src/Communi
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/c++/12/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  ../remote_driver/gamepad.h \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/thread \
-  /usr/include/c++/12/bits/std_thread.h \
-  /usr/include/c++/12/bits/this_thread_sleep.h \
-  /usr/include/c++/12/bits/chrono.h \
-  /usr/include/c++/12/ratio \
-  /usr/include/c++/12/ctime \
-  /usr/include/c++/12/bits/parse_numbers.h \
-  /usr/include/c++/12/mutex \
-  /usr/include/c++/12/bits/std_mutex.h \
-  /usr/include/c++/12/bits/unique_lock.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx.h \
-  /usr/include/linux/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/linux/input.h \
-  /usr/include/x86_64-linux-gnu/sys/time.h \
-  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
-  /usr/include/asm-generic/ioctls.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
-  /usr/include/linux/input-event-codes.h \
-  /usr/include/linux/joystick.h \
-  ../remote_driver/gamepadkey.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
   /usr/include/c++/12/algorithm \
@@ -1443,6 +1439,9 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: ../src/Communi
   /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp \
   /usr/include/c++/12/future \
+  /usr/include/c++/12/mutex \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/bits/unique_lock.h \
   /usr/include/c++/12/condition_variable \
   /usr/include/c++/12/bits/atomic_futex.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
@@ -1847,6 +1846,11 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: ../src/Communi
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/remote.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/com_parameter.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__struct.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__builder.hpp \
@@ -2135,10 +2139,9 @@ CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o: ../src/PCAN.cpp \
 CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   ../include/XMLDecoder.hpp \
   ../include/ComCfg.hpp \
-  ../magic_enum/include/magic_enum/magic_enum.hpp \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/initializer_list \
+  ../remote_driver/gamepad.h \
+  /usr/include/c++/12/atomic \
+  /usr/include/c++/12/bits/atomic_base.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
   /usr/include/features.h \
@@ -2153,29 +2156,6 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
   /usr/include/c++/12/pstl/pstl_config.h \
   /usr/include/tbb/tbb.h \
-  /usr/include/c++/12/type_traits \
-  /usr/include/c++/12/bits/functexcept.h \
-  /usr/include/c++/12/bits/exception_defines.h \
-  /usr/include/c++/12/bits/stl_algobase.h \
-  /usr/include/c++/12/bits/cpp_type_traits.h \
-  /usr/include/c++/12/ext/type_traits.h \
-  /usr/include/c++/12/ext/numeric_traits.h \
-  /usr/include/c++/12/bits/stl_pair.h \
-  /usr/include/c++/12/bits/move.h \
-  /usr/include/c++/12/bits/utility.h \
-  /usr/include/c++/12/bits/stl_iterator_base_types.h \
-  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/12/bits/concept_check.h \
-  /usr/include/c++/12/debug/assertions.h \
-  /usr/include/c++/12/bits/stl_iterator.h \
-  /usr/include/c++/12/bits/ptr_traits.h \
-  /usr/include/c++/12/debug/debug.h \
-  /usr/include/c++/12/bits/predefined_ops.h \
-  /usr/include/c++/12/bits/range_access.h \
-  /usr/include/c++/12/cstddef \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/include/c++/12/cstdint \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -2185,12 +2165,17 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/bits/move.h \
+  /usr/include/c++/12/type_traits \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/stl_function.h \
   /usr/include/c++/12/backward/binders.h \
   /usr/include/c++/12/new \
   /usr/include/c++/12/bits/exception.h \
   /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/bits/utility.h \
   /usr/include/c++/12/bits/uses_allocator.h \
   /usr/include/c++/12/bits/invoke.h \
   /usr/include/c++/12/bits/functional_hash.h \
@@ -2198,7 +2183,10 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/c++/12/bits/refwrap.h \
   /usr/include/c++/12/bits/std_function.h \
   /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/bits/functexcept.h \
+  /usr/include/c++/12/bits/exception_defines.h \
   /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/initializer_list \
   /usr/include/c++/12/bits/allocator.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
   /usr/include/c++/12/bits/new_allocator.h \
@@ -2206,18 +2194,33 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/c++/12/ext/alloc_traits.h \
   /usr/include/c++/12/bits/alloc_traits.h \
   /usr/include/c++/12/bits/stl_construct.h \
+  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12/bits/concept_check.h \
+  /usr/include/c++/12/debug/assertions.h \
+  /usr/include/c++/12/bits/ptr_traits.h \
+  /usr/include/c++/12/ext/numeric_traits.h \
+  /usr/include/c++/12/bits/cpp_type_traits.h \
+  /usr/include/c++/12/ext/type_traits.h \
   /usr/include/c++/12/ext/aligned_buffer.h \
   /usr/include/c++/12/bits/hashtable.h \
   /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/stl_algobase.h \
+  /usr/include/c++/12/bits/stl_iterator.h \
+  /usr/include/c++/12/debug/debug.h \
+  /usr/include/c++/12/bits/predefined_ops.h \
   /usr/include/c++/12/bits/enable_special_members.h \
   /usr/include/c++/12/bits/node_handle.h \
   /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/range_access.h \
   /usr/include/c++/12/bits/erase_if.h \
   /usr/include/c++/12/vector \
   /usr/include/c++/12/bits/stl_uninitialized.h \
   /usr/include/c++/12/bits/stl_vector.h \
   /usr/include/c++/12/bits/stl_bvector.h \
   /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
   /usr/include/c++/12/bits/stl_algo.h \
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
@@ -2225,6 +2228,7 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/c++/12/bits/uniform_int_dist.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/stdlib.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -2256,17 +2260,11 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
-  /usr/include/c++/12/limits \
-  /usr/include/c++/12/utility \
-  /usr/include/c++/12/bits/stl_relops.h \
-  /usr/include/c++/12/optional \
-  /usr/include/c++/12/exception \
-  /usr/include/c++/12/bits/exception_ptr.h \
-  /usr/include/c++/12/bits/cxxabi_init_exception.h \
-  /usr/include/c++/12/bits/nested_exception.h \
-  /usr/include/c++/12/string \
+  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/ostream \
+  /usr/include/c++/12/ios \
+  /usr/include/c++/12/iosfwd \
   /usr/include/c++/12/bits/stringfwd.h \
-  /usr/include/c++/12/bits/char_traits.h \
   /usr/include/c++/12/bits/postypes.h \
   /usr/include/c++/12/cwchar \
   /usr/include/wchar.h \
@@ -2276,14 +2274,41 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/c++/12/exception \
+  /usr/include/c++/12/bits/exception_ptr.h \
+  /usr/include/c++/12/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
+  /usr/include/c++/12/bits/nested_exception.h \
+  /usr/include/c++/12/bits/char_traits.h \
+  /usr/include/c++/12/cstdint \
   /usr/include/c++/12/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
   /usr/include/c++/12/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/c++/12/iosfwd \
   /usr/include/c++/12/cctype \
   /usr/include/ctype.h \
+  /usr/include/c++/12/bits/ios_base.h \
+  /usr/include/c++/12/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/12/bits/locale_classes.h \
+  /usr/include/c++/12/string \
   /usr/include/c++/12/bits/ostream_insert.h \
   /usr/include/c++/12/bits/cxxabi_forced.h \
   /usr/include/c++/12/bits/basic_string.h \
@@ -2307,31 +2332,6 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/12/bits/charconv.h \
   /usr/include/c++/12/bits/basic_string.tcc \
-  /usr/include/c++/12/cassert \
-  /usr/include/assert.h \
-  /usr/include/c++/12/iostream \
-  /usr/include/c++/12/ostream \
-  /usr/include/c++/12/ios \
-  /usr/include/c++/12/bits/ios_base.h \
-  /usr/include/c++/12/ext/atomicity.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
-  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/12/bits/locale_classes.h \
   /usr/include/c++/12/bits/locale_classes.tcc \
   /usr/include/c++/12/system_error \
   /usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h \
@@ -2351,6 +2351,78 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/12/thread \
+  /usr/include/c++/12/bits/std_thread.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/bits/this_thread_sleep.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/limits \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  ../remote_driver/BaseRemote.h \
+  ../remote_driver/gamepadkey.h \
+  /usr/include/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/linux/falloc.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/libudev.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+  /usr/include/linux/input.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
+  /usr/include/asm-generic/ioctls.h \
+  /usr/include/linux/ioctl.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+  /usr/include/asm-generic/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/linux/input-event-codes.h \
+  /usr/include/linux/joystick.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+  ../magic_enum/include/magic_enum/magic_enum.hpp \
+  /usr/include/c++/12/cstddef \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/optional \
+  /usr/include/c++/12/cassert \
+  /usr/include/assert.h \
   ../tinyxml2/tinyxml2.h \
   /usr/include/c++/12/climits \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
@@ -2361,9 +2433,7 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: ../src/XMLDecoder.cpp \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/c++/12/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/c++/12/cstring
 
 CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: ../src/main.cpp \
   ../include/CommunicationCenter.hpp \
@@ -2559,11 +2629,7 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/12/bits/stl_vector.h \
   /usr/include/c++/12/bits/stl_bvector.h \
   /usr/include/c++/12/bits/vector.tcc \
-  ../motor_driver/Motor.hpp \
-  ../magic_enum/include/magic_enum/magic_enum.hpp \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/cstddef \
+  ../remote_driver/BaseRemote.h \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
   /usr/include/c++/12/unordered_map \
@@ -2574,11 +2640,16 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/12/bits/node_handle.h \
   /usr/include/c++/12/bits/unordered_map.h \
   /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
   /usr/include/c++/12/bits/stl_algo.h \
   /usr/include/c++/12/bits/algorithmfwd.h \
   /usr/include/c++/12/bits/stl_heap.h \
   /usr/include/c++/12/bits/stl_tempbuf.h \
   /usr/include/c++/12/bits/uniform_int_dist.h \
+  ../motor_driver/Motor.hpp \
+  ../magic_enum/include/magic_enum/magic_enum.hpp \
+  /usr/include/c++/12/cstddef \
   /usr/include/c++/12/limits \
   /usr/include/c++/12/utility \
   /usr/include/c++/12/bits/stl_relops.h \
@@ -2644,6 +2715,43 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/linux/close_range.h \
   ../include/XMLDecoder.hpp \
   ../include/ComCfg.hpp \
+  ../remote_driver/gamepad.h \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/12/thread \
+  /usr/include/c++/12/bits/std_thread.h \
+  /usr/include/c++/12/bits/this_thread_sleep.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  ../remote_driver/gamepadkey.h \
+  /usr/include/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/linux/falloc.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/linux/input.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
+  /usr/include/asm-generic/ioctls.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+  /usr/include/linux/input-event-codes.h \
+  /usr/include/linux/joystick.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
   ../tinyxml2/tinyxml2.h \
   /usr/include/c++/12/climits \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
@@ -2655,46 +2763,6 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/c++/12/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  ../remote_driver/gamepad.h \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/thread \
-  /usr/include/c++/12/bits/std_thread.h \
-  /usr/include/c++/12/bits/this_thread_sleep.h \
-  /usr/include/c++/12/bits/chrono.h \
-  /usr/include/c++/12/ratio \
-  /usr/include/c++/12/ctime \
-  /usr/include/c++/12/bits/parse_numbers.h \
-  /usr/include/c++/12/mutex \
-  /usr/include/c++/12/bits/std_mutex.h \
-  /usr/include/c++/12/bits/unique_lock.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx.h \
-  /usr/include/linux/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/linux/input.h \
-  /usr/include/x86_64-linux-gnu/sys/time.h \
-  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
-  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
-  /usr/include/asm-generic/ioctls.h \
-  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
-  /usr/include/linux/input-event-codes.h \
-  /usr/include/linux/joystick.h \
-  ../remote_driver/gamepadkey.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
   /usr/include/c++/12/algorithm \
@@ -2752,6 +2820,9 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp \
   /usr/include/c++/12/future \
+  /usr/include/c++/12/mutex \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/bits/unique_lock.h \
   /usr/include/c++/12/condition_variable \
   /usr/include/c++/12/bits/atomic_futex.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
@@ -3156,6 +3227,11 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: ../src/main.cpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/remote.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/com_parameter.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__struct.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__builder.hpp \
@@ -3530,6 +3606,10 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/com_parameter.hpp:
 
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.hpp:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__builder.hpp:
+
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__type_support.hpp:
 
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp:
@@ -3693,6 +3773,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__struct.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/list_parameters_result.hpp:
 
@@ -3867,6 +3949,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_value.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/event.hpp:
 
 /usr/include/c++/12/tr1/modified_bessel_func.tcc:
 
@@ -4562,6 +4646,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 
 /usr/include/c++/12/iomanip:
 
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/remote.hpp:
+
 /usr/include/c++/12/bits/std_function.h:
 
 /usr/include/c++/12/bits/stl_function.h:
@@ -4648,6 +4734,30 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 
 /usr/include/asm-generic/ioctl.h:
 
+/usr/include/c++/12/atomic:
+
+/usr/include/c++/12/bits/stl_tree.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp:
+
+/usr/include/c++/12/bits/stl_map.h:
+
+/usr/include/c++/12/bits/stl_multimap.h:
+
+../remote_driver/BaseRemote.h:
+
+/usr/include/c++/12/condition_variable:
+
+/usr/include/c++/12/bits/this_thread_sleep.h:
+
+/usr/include/c++/12/ratio:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+../tinyxml2/tinyxml2.h:
+
+/usr/include/c++/12/bits/parse_numbers.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__struct.hpp:
 
 /usr/include/unistd.h:
@@ -4663,8 +4773,6 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/event.hpp:
 
 /usr/include/c++/12/bits/stringfwd.h:
 
@@ -4682,41 +4790,9 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 
 /opt/ros/humble/include/rcpputils/rcpputils/join.hpp:
 
-/usr/include/c++/12/bits/stl_tree.h:
+/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:
 
-/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp:
-
-/usr/include/c++/12/bits/stl_map.h:
-
-/usr/include/c++/12/bits/stl_multimap.h:
-
-/usr/include/c++/12/condition_variable:
-
-/usr/include/c++/12/bits/this_thread_sleep.h:
-
-/usr/include/c++/12/ratio:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-../tinyxml2/tinyxml2.h:
-
-/usr/include/c++/12/bits/parse_numbers.h:
-
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp:
-
-/usr/include/c++/12/mutex:
-
-/opt/ros/humble/include/rmw/rmw/incompatible_qos_events_statuses.h:
-
-/usr/include/x86_64-linux-gnu/asm/ioctl.h:
-
-/usr/include/c++/12/bits/std_mutex.h:
-
-/usr/include/c++/12/atomic:
-
-/opt/ros/humble/include/rclcpp/rclcpp/rate.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/stat.h:
+/usr/include/fcntl.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
 
@@ -4734,6 +4810,44 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/struct_stat.h:
 
+/usr/include/libudev.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/ioctls.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+
+/usr/include/c++/12/bits/cpp_type_traits.h:
+
+/opt/ros/humble/include/rmw/rmw/message_sequence.h:
+
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+../motor_driver/RMMotor.h:
+
+/usr/include/x86_64-linux-gnu/sys/ioctl.h:
+
+/opt/ros/humble/include/rcutils/rcutils/visibility_control.h:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__type_support.hpp:
+
+/usr/include/x86_64-linux-gnu/asm/ioctls.h:
+
+/usr/include/asm-generic/ioctls.h:
+
+/usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
+
+/usr/include/linux/joystick.h:
+
+/usr/include/c++/12/bits/unordered_set.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/rate.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/wchar.h:
@@ -4748,44 +4862,6 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 
 ../include/ComCfg.hpp:
 
-/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:
-
-/usr/include/fcntl.h:
-
-/usr/include/x86_64-linux-gnu/sys/time.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-../motor_driver/RMMotor.h:
-
-/usr/include/x86_64-linux-gnu/sys/ioctl.h:
-
-/opt/ros/humble/include/rcutils/rcutils/visibility_control.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/usr/include/x86_64-linux-gnu/bits/ioctls.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
-
-/usr/include/c++/12/bits/cpp_type_traits.h:
-
-/opt/ros/humble/include/rmw/rmw/message_sequence.h:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__type_support.hpp:
-
-/usr/include/x86_64-linux-gnu/asm/ioctls.h:
-
-/usr/include/asm-generic/ioctls.h:
-
-/usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
-
-/usr/include/linux/joystick.h:
-
-/usr/include/c++/12/bits/unordered_set.h:
-
-/usr/include/libudev.h:
-
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:
 
 ../src/CommunicationCenter.cpp:
@@ -4795,6 +4871,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 ../include/CommunicationCenter.hpp:
 
 /usr/include/termios.h:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__traits.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/typesupport_helpers.hpp:
 
@@ -4933,6 +5011,16 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: ../src/serial.cpp \
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/signal_ext.h:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp:
+
+/usr/include/c++/12/mutex:
+
+/opt/ros/humble/include/rmw/rmw/incompatible_qos_events_statuses.h:
+
+/usr/include/x86_64-linux-gnu/asm/ioctl.h:
+
+/usr/include/c++/12/bits/std_mutex.h:
 
 /usr/include/c++/12/bits/atomic_futex.h:
 

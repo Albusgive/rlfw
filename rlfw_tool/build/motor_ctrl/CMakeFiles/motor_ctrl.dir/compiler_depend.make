@@ -3312,6 +3312,10 @@ CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o: /home/albusgive2/rlfw/rlfw_tool/
   ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
@@ -3323,11 +3327,11 @@ CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o: /home/albusgive2/rlfw/rlfw_tool/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenu \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
@@ -3347,6 +3351,8 @@ CMakeFiles/motor_ctrl.dir/src/mainwindow.cpp.o: /home/albusgive2/rlfw/rlfw_tool/
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenu:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h:
 
@@ -3537,6 +3543,8 @@ include/moc_mainwindow.cpp:
 /opt/ros/humble/include/rclcpp/rclcpp/wait_result_kind.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_service.hpp:
 

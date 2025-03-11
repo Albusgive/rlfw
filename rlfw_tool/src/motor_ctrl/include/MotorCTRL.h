@@ -86,6 +86,17 @@ public:
     serial_pub->publish(serial_msg);
   }
 
+  void pub2() {
+    auto stamp = node->now();
+    auto msg = rlfw_msgs::msg::MotorCtrl();
+    msg.jointname.frame_id =
+        "left_calf_joint"; // left_calf_joint left_wheel_joint left_calf_joint
+    msg.jointname.stamp = stamp;
+    msg.ctrl_type = "POS";
+    msg.angle = 1.0;
+    publisher_->publish(msg);
+  }
+
   void stop() {
     auto stamp = node->now();
     auto msg = rlfw_msgs::msg::MotorCtrl();

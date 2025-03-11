@@ -1,5 +1,4 @@
 #pragma once
-#include "gamepad.h"
 #include "magic_enum/magic_enum.hpp"
 #include <iostream>
 #include <string>
@@ -13,6 +12,10 @@ enum class ComType {
 };
 
 enum class Motortype { Mi, DM, RM, UNITREE, ERR };
+
+// CFourBL ：CoaxialFourBarLinkage(双电机同轴) FourBL :FourBarLinkage(单电机)
+// FiveBL :FiveBarLinkage(双电机)
+enum class VirtualMotortype { CFourBL, FourBL, FiveBL, ERR };
 
 // 控制模式
 enum class MotorCtrlType { MIT = 0, POS, VEL, TORQUE, POS_VEL, ENABLE, ERR };
@@ -38,23 +41,71 @@ public:
   float SafePos = -1.0;
   float SafeVel = -1.0;
   bool check() {
+    bool flag = true;
     if (id == -1) {
       std::cout << "no id" << std::endl;
-      return false;
+      flag = flag && false;
     }
     if (joint_name == "") {
-      std::cout << "no joint_name" << std::endl;
-      return false;
+      std::cout << "motor no joint_name" << std::endl;
+      flag = flag && false;
     }
-    bool flag = true;
-    flag = flag && (type != Motortype::ERR);
-    if (!flag)
-      std::cout << joint_name + " type:" << magic_enum::enum_name(type)
+    if (type != Motortype::ERR) {
+      std::cout << joint_name + " type: ERR" << magic_enum::enum_name(type)
                 << std::endl;
-    flag = flag && (ctrl_type != MotorCtrlType::ERR);
-    if (!flag)
+      flag = flag && false;
+    }
+    if (ctrl_type != MotorCtrlType::ERR) {
       std::cout << joint_name + " ctrl_type:"
                 << magic_enum::enum_name(ctrl_type) << std::endl;
+      flag = flag && false;
+    }
+    return flag;
+  }
+};
+
+class XMLVirtualMotor {
+public:
+  VirtualMotortype type;
+  std::string joint_name;
+  std::string motor1 = "";
+  std::string motor2 = "";
+  float default_theta;
+  bool check() {
+    bool flag = true;
+    if (joint_name == "") {
+      std::cout << "virtualmotor no joint_name" << std::endl;
+      flag = flag && false;
+    }
+    switch (type) {
+    case VirtualMotortype::CFourBL: {
+      if (motor1 == "" && motor2 == "") {
+        std::cout << "virtualmotor no virtualmotor no enough motor"
+                  << std::endl;
+        flag = flag && false;
+      }
+      break;
+    }
+    case VirtualMotortype::FourBL: {
+      if (motor1 == "") {
+        std::cout << "virtualmotor no virtualmotor no motor1" << std::endl;
+        flag = flag && false;
+      }
+      break;
+    }
+    case VirtualMotortype::FiveBL: {
+      if (motor1 == "" && motor2 == "") {
+        std::cout << "virtualmotor no virtualmotor no enough motor"
+                  << std::endl;
+        flag = flag && false;
+      }
+      break;
+    }
+    case VirtualMotortype::ERR: {
+      std::cout << joint_name + " type: ERR" << std::endl;
+      flag = flag && false;
+    }
+    }
     return flag;
   }
 };
@@ -76,39 +127,40 @@ public:
   int stopbit;            // 1/2
 
   bool check() {
+    bool flag = true;
     if (name == "") {
       std::cout << "com no name" << std::endl;
-      return false;
+      flag = flag && false;
     }
-    bool flag = true;
-    flag = flag && (type != ComType::ERR);
-    if (!flag)
+    if (type != ComType::ERR) {
       std::cout << name + " type:" << magic_enum::enum_name(type) << std::endl;
+      flag = flag && false;
+    }
     switch (type) {
     case ComType::pcan: {
-      if (channel == 0) {
-        std::cout << name + " pcan no channel" << std::endl;
-        flag = false;
+      if (channel <= 0) {
+        std::cout << name + " pcan channel err" << std::endl;
+        flag = flag && false;
       }
       break;
     }
     case ComType::serial: {
-      if (port == "" && attrs == "") {
+      if (port == "" || attrs == "") {
         std::cout << name + " serial parameters on enough" << std::endl;
-        flag = false;
+        flag = flag && false;
       }
       break;
     }
     case ComType::canable: {
-      if (channel == 0) {
-        std::cout << name + " canable no channel" << std::endl;
-        flag = false;
+      if (channel <= 0) {
+        std::cout << name + " canable channel err" << std::endl;
+        flag = flag && false;
       }
       break;
     }
     case ComType::ERR: {
-      std::cout << name + " Invalid ComCfg type" << std::endl;
-      flag = false;
+      std::cout << name + "no Invalid ComCfg type" << std::endl;
+      flag = flag && false;
       break;
     }
     }
@@ -121,17 +173,16 @@ public:
   RemoteType type;
   std::string name;
   int channel = 0;
-  bool check()
-  {
+  bool check() {
+    bool flag = true;
     if (name == "") {
       std::cout << "remote no name" << std::endl;
-      return false;
+      flag = flag && false;
     }
-    if(type == RemoteType::ERR)
-    {
+    if (type == RemoteType::ERR) {
       std::cout << "remote type err" << std::endl;
-      return false;
+      flag = flag && false;
     }
-    return true;
+    return flag;
   }
 };

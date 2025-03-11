@@ -45,7 +45,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(20, 140, 291, 51));
+        label_2->setGeometry(QRect(30, 160, 291, 141));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(380, 40, 161, 131));
@@ -83,7 +83,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label_2->setText(QString());
+        label_2->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\347\224\265\346\234\272\345\220\257\345\212\250", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "\347\224\265\346\234\272\345\201\234\346\255\242", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "\346\237\245\350\257\242\350\256\276\345\244\207", nullptr));

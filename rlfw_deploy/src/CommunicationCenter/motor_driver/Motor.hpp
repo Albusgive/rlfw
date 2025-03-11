@@ -1,5 +1,7 @@
 #pragma once
 #include "BaseCAN.h"
+#include "ComCfg.hpp"
+#include "ParallelMechanism.hpp"
 #include "magic_enum/magic_enum.hpp"
 #include <iostream>
 #include <memory>
@@ -64,10 +66,38 @@ public:
   }
 };
 
-class CANMotor {
+class UnitreeMsg {};
+
+// 是电机解码器也是电机
+class BaseMotor {
 public:
   int id = -1;
-  // MIT motor_id , torque, pos, ang_vel, kp, kd
+  MotorBack motorback;
+  virtual void locomotion(float torque, float pos, float ang_vel, float kp,
+                          float kd) = 0;
+  virtual void ctrl_pos(float pos) = 0;
+  virtual void ctrl_vel(float vel) = 0;
+  virtual void ctrl_pos_vel(float pos, float vel) = 0;
+  virtual void ctrl_torque(float torque) = 0;
+  virtual void enableMotor(bool enable, bool clear_fault = false) = 0;
+  virtual void setPosKP(float kp) = 0;
+  virtual void setPosKD(float kd) = 0;
+  virtual void setVelKP(float kp) = 0;
+  virtual void setVelKI(float ki) = 0;
+  virtual void setTorqueKP(float kp) = 0;
+  virtual void setTorqueKI(float ki) = 0;
+  virtual void setSafeTorque(float torque) = 0;
+  virtual void setSafePos(float pos) = 0;
+  virtual void setSafeVel(float vel) = 0;
+  virtual MotorBack decode() = 0;
+  virtual MotorBack decode(CANMSG /*msg*/) = 0;
+  virtual MotorBack decode(UnitreeMsg /*msg*/) = 0;
+};
+
+class CANMotor : public BaseMotor {
+public:
+  /*--------can电机专有虚函数--------*/
+  //  MIT motor_id , torque, pos, ang_vel, kp, kd
   virtual CANMSG *locomotion(uint8_t /*motor_id*/, float /*torque*/,
                              float /*pos*/, float /*ang_vel*/, float /*kp*/,
                              float /*kd*/) = 0;
@@ -98,70 +128,185 @@ public:
   virtual CANMSG *setSafePos(uint8_t /*motor_id*/, float /*pos*/) = 0;
   virtual CANMSG *setSafeVel(uint8_t /*motor_id*/, float /*vel*/) = 0;
 
-  /*--------电机返回解码--------*/
-  virtual MotorBack decode(CANMSG /*msg*/) = 0;
+  /*--------电机控制--------*/
   std::shared_ptr<BaseCAN> can;
-  void locomotion(float torque, float pos, float ang_vel, float kp, float kd) {
+  void locomotion(float torque, float pos, float ang_vel, float kp,
+                  float kd) override {
     can->send(can->channel, locomotion(id, torque, pos, ang_vel, kp, kd));
   }
-  void ctrl_pos(float pos) { can->send(can->channel, ctrl_pos(id, pos)); }
-  void ctrl_vel(float vel) { can->send(can->channel, ctrl_vel(id, vel)); }
-  void ctrl_pos_vel(float pos, float vel) {
+  void ctrl_pos(float pos) override {
+    can->send(can->channel, ctrl_pos(id, pos));
+  }
+  void ctrl_vel(float vel) override {
+    can->send(can->channel, ctrl_vel(id, vel));
+  }
+  void ctrl_pos_vel(float pos, float vel) override {
     can->send(can->channel, ctrl_pos_vel(id, pos, vel));
   }
-  void ctrl_torque(float torque) {
+  void ctrl_torque(float torque) override {
     can->send(can->channel, ctrl_torque(id, torque));
   }
-  void enableMotor(bool enable, bool clear_fault = false) {
+  void enableMotor(bool enable, bool clear_fault = false) override {
     can->send(can->channel, enableMotor(id, enable, clear_fault));
   }
   /*----------设置电机参数----------*/
-  void setPosKP(float kp) {
+  void setPosKP(float kp) override {
     if (kp == -1)
       return;
     can->send(can->channel, setPosKP(id, kp));
   }
-  void setPosKD(float kd) {
+  void setPosKD(float kd) override {
     if (kd == -1)
       return;
     can->send(can->channel, setPosKD(id, kd));
   }
-  void setVelKP(float kp) {
+  void setVelKP(float kp) override {
     if (kp == -1)
       return;
     can->send(can->channel, setVelKP(id, kp));
   }
-  void setVelKI(float ki) {
+  void setVelKI(float ki) override {
     if (ki == -1)
       return;
     can->send(can->channel, setVelKI(id, ki));
   }
-  void setTorqueKP(float kp) {
+  void setTorqueKP(float kp) override {
     if (kp == -1)
       return;
     can->send(can->channel, setTorqueKP(id, kp));
   }
-  void setTorqueKI(float ki) {
+  void setTorqueKI(float ki) override {
     if (ki == -1)
       return;
     can->send(can->channel, setTorqueKI(id, ki));
   }
-  void setSafeTorque(float torque) {
+  void setSafeTorque(float torque) override {
     if (torque == -1)
       return;
     can->send(can->channel, setSafeTorque(id, torque));
   }
-  void setSafePos(float pos) {
+  void setSafePos(float pos) override {
     if (pos == -1)
       return;
     can->send(can->channel, setSafePos(id, pos));
   }
-  void setSafeVel(float vel) {
+  void setSafeVel(float vel) override {
     if (vel == -1)
       return;
     can->send(can->channel, setSafeVel(id, vel));
   }
+  // 没有用的虚函数
+  MotorBack decode(UnitreeMsg /*msg*/) override { return MotorBack(); };
+  MotorBack decode() override { return MotorBack(); };
 };
 
-class XXMotor {
+// 虚拟电机
+class VirtualMotor : public BaseMotor {
+public:
+  VirtualMotortype type = VirtualMotortype::ERR;
+  /*--------电机控制--------*/
+  float default_theta = M_PI_2;
+  std::shared_ptr<BaseMotor> motor1;
+  std::shared_ptr<BaseMotor> motor2;
+  float l[5];
+  void locomotion(float, float, float, float, float) override {}
+  void ctrl_pos(float pos) override {
+    switch (type) {
+    // 传进来的是虚拟关节期望角度
+    case VirtualMotortype::CFourBL: {
+      // 共轴四连杆motor1是主关节，motor2是连杆关节 要获取两关节差 theta1 +
+      // motor1 - default_theta 作用到motor2上
+      auto [theta1, w1] = PM::setFourBL(pos, 0.0, l[0], l[1], l[2], l[3]);
+      motor2->ctrl_pos(theta1 + motor1->motorback.angle - default_theta);
+      break;
+    }
+    case VirtualMotortype::FourBL: {
+      // 非共轴四连杆由一个电机驱动为moto1
+      auto [theta1, w1] = PM::setFourBL(pos, 0.0, l[0], l[1], l[2], l[3]);
+      motor1->ctrl_pos(theta1);
+      break;
+    }
+    case VirtualMotortype::FiveBL: {
+      // TODO
+      break;
+    }
+    case VirtualMotortype::ERR: {
+      break;
+    }
+    }
+  }
+  void ctrl_vel(float vel) override {
+    switch (type) {
+    // 传进来的是虚拟关节期望角速度
+    case VirtualMotortype::CFourBL: {
+      // 共轴四连杆motor1是主关节，motor2是连杆关节 要获取两关节差motor2 -
+      // motor1 作用到motor2上
+      auto [theta1, w1] = PM::setFourBL(0.0, vel, l[0], l[1], l[2], l[3]);
+      motor2->ctrl_vel(w1 + motor2->motorback.ang_vel -
+                       motor1->motorback.ang_vel);
+      break;
+    }
+    case VirtualMotortype::FourBL: {
+      // 非共轴四连杆由一个电机驱动为moto1
+      auto [theta1, w1] = PM::setFourBL(0.0, vel, l[0], l[1], l[2], l[3]);
+      motor1->ctrl_vel(w1);
+      break;
+    }
+    case VirtualMotortype::FiveBL: {
+      // TODO
+      break;
+    }
+    case VirtualMotortype::ERR: {
+      break;
+    }
+    }
+  }
+  void ctrl_pos_vel(float pos, float vel) override {
+    switch (type) {
+    // 传进来的是虚拟关节期望角速度
+    case VirtualMotortype::CFourBL: {
+      // 共轴四连杆motor1是主关节，motor2是连杆关节 要获取两关节差motor2 -
+      // motor1 作用到motor2上
+      auto [theta1, w1] = PM::setFourBL(pos, vel, l[0], l[1], l[2], l[3]);
+      motor2->ctrl_pos_vel(theta1 + motor1->motorback.angle - default_theta,
+                           w1 + motor2->motorback.ang_vel -
+                               motor1->motorback.ang_vel);
+      break;
+    }
+    case VirtualMotortype::FourBL: {
+      // 非共轴四连杆由一个电机驱动为moto1
+      auto [theta1, w1] = PM::setFourBL(pos, vel, l[0], l[1], l[2], l[3]);
+      motor1->ctrl_pos_vel(theta1, w1);
+      break;
+    }
+    case VirtualMotortype::FiveBL: {
+      // TODO
+      break;
+    }
+    case VirtualMotortype::ERR: {
+      break;
+    }
+    }
+  }
+  void ctrl_torque(float) override {}
+  void enableMotor(bool enable, bool clear_fault = false) override {
+    motor1->enableMotor(enable, clear_fault);
+    motor2->enableMotor(enable, clear_fault);
+  }
+  /*----------设置电机参数----------*/
+  void setPosKP(float) override {}
+  void setPosKD(float) override {}
+  void setVelKP(float) override {}
+  void setVelKI(float) override {}
+  void setTorqueKP(float) override {}
+  void setTorqueKI(float) override {}
+  void setSafeTorque(float) override {}
+  void setSafePos(float) override {}
+  void setSafeVel(float) override {}
+  // 没有用的虚函数
+  MotorBack decode(CANMSG /*msg*/) override { return MotorBack(); };
+  MotorBack decode(UnitreeMsg /*msg*/) override { return MotorBack(); };
+  MotorBack decode() { return MotorBack(); };
 };
+
+class XXMotor {};

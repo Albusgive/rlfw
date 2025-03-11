@@ -15,6 +15,7 @@ public:
 
   std::vector<ComCfg> coms;
   std::vector<XMLRemote> remotes;
+  std::vector<XMLVirtualMotor> virtualmotors;
   bool check();
 
   template <typename Enum> Enum string2enum(const std::string &name) {
