@@ -182,4 +182,5 @@ CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/12/cstring \
- /usr/include/string.h /usr/include/strings.h
+ /usr/include/string.h /usr/include/strings.h /usr/include/c++/12/sstream \
+ /usr/include/c++/12/bits/sstream.tcc

@@ -356,11 +356,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/Motor.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/Joint.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/MotorCtrl.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_adapter/rlfw_msgs/msg/JointCtrl.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -380,11 +380,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Motor.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Joint.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/MotorCtrl.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rlfw_msgs/msg" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/JointCtrl.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

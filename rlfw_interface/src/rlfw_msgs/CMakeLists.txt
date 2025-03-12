@@ -14,8 +14,8 @@ find_package(rosidl_default_generators REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 set(msg_files
-"msg/Motor.msg"
-"msg/MotorCtrl.msg"
+"msg/Joint.msg"
+"msg/JointCtrl.msg"
 "msg/CanMsg.msg"
 "msg/SerialMsg.msg"
 "msg/Remote.msg"

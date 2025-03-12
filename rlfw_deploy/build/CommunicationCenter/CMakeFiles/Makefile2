@@ -977,7 +977,7 @@ tinyxml2/CMakeFiles/tinyxml2.dir/clean:
 # Target rules for target tinyxml2/CMakeFiles/xmltest.dir
 
 # All Build rule for target.
-tinyxml2/CMakeFiles/xmltest.dir/all: tinyxml2/CMakeFiles/tinyxml2.dir/all
+tinyxml2/CMakeFiles/xmltest.dir/all:
 	$(MAKE) $(MAKESILENT) -f tinyxml2/CMakeFiles/xmltest.dir/build.make tinyxml2/CMakeFiles/xmltest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tinyxml2/CMakeFiles/xmltest.dir/build.make tinyxml2/CMakeFiles/xmltest.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter/CMakeFiles --progress-num=14,15 "Built target xmltest"
@@ -985,7 +985,7 @@ tinyxml2/CMakeFiles/xmltest.dir/all: tinyxml2/CMakeFiles/tinyxml2.dir/all
 
 # Build rule for subdir invocation for target.
 tinyxml2/CMakeFiles/xmltest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tinyxml2/CMakeFiles/xmltest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter/CMakeFiles 0
 .PHONY : tinyxml2/CMakeFiles/xmltest.dir/rule

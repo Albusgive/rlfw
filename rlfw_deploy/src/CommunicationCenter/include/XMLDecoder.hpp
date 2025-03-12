@@ -4,6 +4,8 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include "magic_enum/magic_enum.hpp"
+
 using namespace tinyxml2;
 
 class XMLDecoder {

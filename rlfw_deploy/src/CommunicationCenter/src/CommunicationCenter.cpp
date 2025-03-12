@@ -14,9 +14,10 @@
 #include <mutex>
 #include <rclcpp/logging.hpp>
 #include <rlfw_msgs/msg/detail/can_msg__struct.hpp>
+#include <rlfw_msgs/msg/detail/joint__struct.hpp>
+#include <rlfw_msgs/msg/detail/joint_ctrl__struct.hpp>
 #include <rlfw_msgs/msg/detail/remote__struct.hpp>
 #include <rlfw_msgs/msg/detail/serial_msg__struct.hpp>
-#include <rlfw_msgs/srv/detail/rl_srv__struct.hpp>
 #include <utility>
 #include <vector>
 
@@ -26,11 +27,11 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   can_publisher = this->create_publisher<rlfw_msgs::msg::CanMsg>(
       "rlfwCANBack", rclcpp::QoS(2));
   // topic发送电机接收到的数据
-  motor_publisher = this->create_publisher<rlfw_msgs::msg::Motor>(
-      "rlfwMotorBack", rclcpp::QoS(2));
+  motor_publisher = this->create_publisher<rlfw_msgs::msg::Joint>(
+      "rlfwJointBack", rclcpp::QoS(2));
   // topic接收发送给电机
-  sub_motor = this->create_subscription<rlfw_msgs::msg::MotorCtrl>(
-      "rlfwMotorCtrl", rclcpp::QoS(2),
+  sub_motor = this->create_subscription<rlfw_msgs::msg::JointCtrl>(
+      "rlfwJointCtrl", rclcpp::QoS(2),
       std::bind(&CommunicationCenter::sendMotor, this, _1));
   // topic接收发送给设备
   can_sub = this->create_subscription<rlfw_msgs::msg::CanMsg>(
@@ -50,12 +51,14 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   request = this->create_service<rlfw_msgs::srv::ComParameter>(
       "CommunicationCenterSrv",
       std::bind(&CommunicationCenter::handle_request, this, _1, _2));
+  // 状态观测器
 
   xml_decoder.load(motor_cfg_path);
-  if (xml_decoder.check())
+  if (xml_decoder.check()) {
     std::cout << "xml load check succeed" << std::endl;
-  buildMap();
-  RunRecv();
+    buildMap();
+    RunRecv();
+  }
 
   // motor_map["left_wheel_joint"]->enableMotor(true);
   // motor_map["left_calf_joint"]->enableMotor(true);
@@ -107,15 +110,20 @@ void CommunicationCenter::fromCan(CANMSG &msg, std::vector<int> &device_ids,
     motor_back = deceder->decode(msg);
     for (auto id : device_ids) {
       if (id == motor_back.id) {
-        rlfw_msgs::msg::Motor pub_motor_msg;
-        pub_motor_msg.set__motor_id(motor_back.id);
-        rlfw_msgs::msg::Motor::_jointname_type jointname;
+        rlfw_msgs::msg::Joint pub_motor_msg;
+        pub_motor_msg.set__joint_id(motor_back.id);
+        rlfw_msgs::msg::Joint::_jointname_type jointname;
+        // 找到电机
         jointname.frame_id = motorid2string[motor_back.id];
-        motor_map[jointname.frame_id]->motorback = motor_back;
+        auto motor = motor_map[jointname.frame_id];
+        // 电机是否取反
+        if (motor->invert)
+          motor_back.invertMotor(); // 取反
+        motor->motorback = motor_back;
         jointname.stamp = stamp;
         pub_motor_msg.set__jointname(jointname);
-        pub_motor_msg.set__angle(motor_back.angle);
-        pub_motor_msg.set__ang_vel(motor_back.ang_vel);
+        pub_motor_msg.set__pos(motor_back.angle);
+        pub_motor_msg.set__vel(motor_back.ang_vel);
         pub_motor_msg.set__current(motor_back.current);
         pub_motor_msg.set__number_laps(motor_back.number_laps);
         pub_motor_msg.set__temperature(motor_back.temperature);
@@ -171,10 +179,8 @@ void CommunicationCenter::RunRecv() {
   ThRecv.detach();
 }
 
-void CommunicationCenter::timer_callback() {}
-
 void CommunicationCenter::sendMotor(
-    std::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg) {
+    std::shared_ptr<rlfw_msgs::msg::JointCtrl> msg) {
   auto joint_name = msg->jointname.frame_id;
   // 从物理电机中寻找
   auto motor = motor_safe_get(joint_name);
@@ -183,21 +189,33 @@ void CommunicationCenter::sendMotor(
     if (motor == nullptr) {
       RCLCPP_WARN(this->get_logger(), "no mount motor: %s", joint_name.c_str());
       return;
+    } else {
+      //原来是虚拟电机啊
+      rlfw_msgs::msg::Joint motor_msg;
+      motor_msg.jointname.set__frame_id(joint_name);
+      motor_msg.jointname.set__stamp(this->now());
+      motor_msg.set__pos(motor->motorback.angle);
+      motor_msg.set__vel(motor->motorback.ang_vel);
+      motor_msg.set__current(0);
+      motor_msg.set__torque(0);
+      motor_msg.set__temperature(0);
+      motor_msg.other = motor->other();
+      motor_publisher->publish(motor_msg);
     }
   }
   // 判断控制类型
   auto ctrl_type = xml_decoder.string2enum<MotorCtrlType>(msg->ctrl_type);
   switch (ctrl_type) {
   case MotorCtrlType::MIT: {
-    motor->locomotion(msg->torque, msg->angle, msg->ang_vel, msg->kp, msg->kd);
+    motor->locomotion(msg->torque, msg->pos, msg->vel, msg->kp, msg->kd);
     break;
   }
   case MotorCtrlType::POS: {
-    motor->ctrl_pos(msg->angle);
+    motor->ctrl_pos(msg->pos);
     break;
   }
   case MotorCtrlType::VEL: {
-    motor->ctrl_vel(msg->ang_vel);
+    motor->ctrl_vel(msg->vel);
     break;
   }
   case MotorCtrlType::TORQUE: {
@@ -205,7 +223,7 @@ void CommunicationCenter::sendMotor(
     break;
   }
   case MotorCtrlType::POS_VEL: {
-    motor->ctrl_pos_vel(msg->angle, msg->ang_vel);
+    motor->ctrl_pos_vel(msg->pos, msg->vel);
     break;
   }
   case MotorCtrlType::ENABLE: {
@@ -385,6 +403,7 @@ void CommunicationCenter::buildMap() {
             auto mi = std::make_shared<MiMotor>();
             mi->can = pcan;
             mi->id = motor.id;
+            mi->invert = motor.invert;
             initMotor(mi, motor);
             mi->ok_fix_parameter(motor.id);
             motor_map[motor.joint_name] = mi;
@@ -392,6 +411,7 @@ void CommunicationCenter::buildMap() {
             auto dm = std::make_shared<DMMotor>();
             dm->can = pcan;
             dm->id = motor.id;
+            dm->invert = motor.invert;
             initMotor(dm, motor);
             motor_map[motor.joint_name] = dm;
           }
@@ -465,26 +485,35 @@ void CommunicationCenter::buildMap() {
     }
   }
   // 虚拟电机
+  std::cout << "add virtualmotor: ";
   for (auto vm : xml_decoder.virtualmotors) {
-    std::shared_ptr<VirtualMotor> virtualmotor = std::make_shared<VirtualMotor>();
+    std::shared_ptr<VirtualMotor> virtualmotor =
+        std::make_shared<VirtualMotor>();
     virtualmotor->motor1 = motor_safe_get(vm.motor1);
     virtualmotor->motor2 = motor_safe_get(vm.motor2);
+    virtualmotor->terminal = vm.terminal;
     virtualmotor->type = vm.type;
+    int n = vm.ln.size() >= 5 ? 5 : vm.ln.size();
+    for (int i = 0; i < n; i++) {
+      virtualmotor->l[i] = vm.ln[i];
+    }
     virtual_motor_map[vm.joint_name] = virtualmotor;
+    std::cout << vm.joint_name << " ";
   }
+  std::cout << std::endl;
 
   std::cout << "succeed mount:" << std::endl;
-  std::cout << "can device: ";
+  std::cout << "  can device: ";
   for (auto com : cans) {
     std::cout << com->name << " ";
   }
   std::cout << std::endl;
-  std::cout << "serial device: ";
+  std::cout << "  serial device: ";
   for (auto com : serials) {
     std::cout << com->name << " ";
   }
   std::cout << std::endl;
-  std::cout << "remote device: ";
+  std::cout << "  remote device: ";
   for (auto remote : remotes) {
     std::cout << remote->name << " ";
   }
@@ -503,83 +532,4 @@ void CommunicationCenter::initMotor(std::shared_ptr<BaseMotor> _motor,
   _motor->setSafeTorque(xml_motor.SafeTorque);
   _motor->setSafePos(xml_motor.SafePos);
   _motor->setSafeVel(xml_motor.SafeVel);
-}
-
-void CommunicationCenter::initGamePad() {
-  //     gamepad = new GamePad();
-  //     gamepad->showGamePads();
-  //     if (gamepad->GamePadpads.empty())
-  //         return;
-  //     publisher_twist =
-  //     this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
-  //     gimbal_remote_publisher =
-  //     this->create_publisher<hongying_ctrl_msg::msg::GimbalRemote>("gimble_cmdv",
-  //     2);
-  //     // 键位切换云台，操作按键绑定
-  //     gamepad->bindGamePadValues([=](GamePadValues map)
-  //                                {
-  //         geometry_msgs::msg::Twist msg;
-  //         msg.linear.x=(double)-map.ly/32767*10;
-  //         msg.linear.y=(double)-map.lx/32767*10;
-  //         msg.angular.z=(double)(map.rt-map.lt)/65534*8;
-  //         std::cout<<"tr:"<<map.rt<<std::endl;
-  //         std::cout<<"z:"<<msg.angular.z<<std::endl;
-
-  //         hongying_ctrl_msg::msg::GimbalRemote gimbal_remote_msg;
-  //         gimbal_remote_msg.header.frame_id = "left_gimbal_cmd";
-
-  //         if(map.a)
-  //         {
-  //             std::cout<<"a"<<std::endl;
-  //             //gimbal_remote_msg.fire_rate=1.0;
-  //             //msg.angular.z=3;
-  //         }
-  //         if(map.x)
-  //         {
-  //             std::cout<<"x"<<std::endl;
-  //             gimbal_remote_msg.fire_rate=-1;
-  //             //msg.angular.z=0;
-  //         }
-  //         //         if(map.rt>0)
-  //         // {
-  //         //     gimbal_remote_msg.fire_rate=1.0;
-  //         //     std::cout<<"fire"<<std::endl;
-  //         // }
-  //         gimbal_remote_msg.yaw_speed=-(double)map.rx/32767*50;
-  //         gimbal_remote_msg.pitch_speed=-(double)map.ry/32767*50;
-  //         gimbal_remote_publisher->publish(gimbal_remote_msg);
-  //         publisher_twist->publish(msg);
-
-  //         if(map.b)
-  //         {
-  //             pcan->~PCAN();
-  //         }
-  //         });
-  //     int is;
-  //     std::string opid = gamepad->GamePadpads.begin()->first;
-  //     std::cout << "first gamepad id is " << opid << std::endl;
-  //     if (gamepad->GamePadpads.size() > 1)
-  //     {
-  //         std::cout << "more than one gamepad" << std::endl;
-  //         while (rclcpp::ok())
-  //         {
-  //             std::cout << "please input the gamepad id" << std::endl;
-  //             std::cin >> opid;
-  //             is = gamepad->openGamePad(opid);
-  //             if (is >= 0)
-  //             {
-  //                 break;
-  //             }
-  //         }
-  //     }
-  //     else
-  //     {
-  //         is = gamepad->openGamePad(opid);
-  //         if (is < 0)
-  //         {
-  //             std::cout << "open gamepad fail" << std::endl;
-  //             return;
-  //         }
-  //     }
-  //     gamepad->readGamePad();
 }

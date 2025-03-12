@@ -1,4 +1,5 @@
 #include "ParallelMechanism.hpp"
+#include <cmath>
 namespace PM {
 // motor1直接控制l4角度(主关节) motor2控制小连杆l1(小关节) theta = motor2角度 +
 // 两电机零点偏置角度 - motor1角度 w1 = motor2_w - motor1_w theta1 w1
@@ -53,5 +54,14 @@ std::pair<float, float> setFourBL(float theta3, float w3, float l1, float l2,
               (std::sin(theta2) * std::cos(theta1) -
                std::cos(theta2) * std::sin(theta1)));
   return {theta1, w1};
+}
+// 长度,角度,角速度,末端线速度  一切坐标系皆以motor1原点
+std::vector<float> getFourBLT(float motor1_theta, float motor1_w, float theta3,
+                              float w3, float l4, float l5) {
+  std::vector<float> terminal_pos;
+  float rho = std::sqrt(l4 * l4 + l5 * l5 - 2 * l4 * l5 * std::cos(theta3));
+  float theta_t = std::asin((l5 / rho) * std::sin(theta3));
+  //角速度解算
+  return {rho, motor1_theta - theta_t};
 }
 } // namespace PM

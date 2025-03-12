@@ -83,6 +83,15 @@ MiCANMsg *MiMotor::ctrl_vel(uint8_t motor_id, float vel)
   return set_parameter(motor_id, motor_indexs::spd_ref, vel);
 }
 
+MiCANMsg *MiMotor::ctrl_pos(uint8_t motor_id, float pos)
+{
+  return set_parameter(motor_id, motor_indexs::loc_ref, pos);
+}
+
+MiCANMsg *MiMotor::ctrl_torque(uint8_t motor_id, float torque) {
+  return set_parameter(motor_id, motor_indexs::iq_ref, torque);
+};
+
 MiCANMsg *MiMotor::setPosKP(uint8_t motor_id, float kp){
 return set_fix_parameter(motor_id, fix_parameter_indexs::loc_kp, kp);
 }

@@ -50,14 +50,12 @@ public:
       std::cout << "motor no joint_name" << std::endl;
       flag = flag && false;
     }
-    if (type != Motortype::ERR) {
-      std::cout << joint_name + " type: ERR" << magic_enum::enum_name(type)
-                << std::endl;
+    if (type == Motortype::ERR) {
+      std::cout << joint_name + " type err" << std::endl;
       flag = flag && false;
     }
-    if (ctrl_type != MotorCtrlType::ERR) {
-      std::cout << joint_name + " ctrl_type:"
-                << magic_enum::enum_name(ctrl_type) << std::endl;
+    if (ctrl_type == MotorCtrlType::ERR) {
+      std::cout << joint_name + " ctrl_type err"<< std::endl;
       flag = flag && false;
     }
     return flag;
@@ -70,7 +68,9 @@ public:
   std::string joint_name;
   std::string motor1 = "";
   std::string motor2 = "";
+  std::vector<float> ln;
   float default_theta;
+  bool terminal=false;
   bool check() {
     bool flag = true;
     if (joint_name == "") {
@@ -132,8 +132,8 @@ public:
       std::cout << "com no name" << std::endl;
       flag = flag && false;
     }
-    if (type != ComType::ERR) {
-      std::cout << name + " type:" << magic_enum::enum_name(type) << std::endl;
+    if (type == ComType::ERR) {
+      std::cout << name + " type err"<< std::endl;
       flag = flag && false;
     }
     switch (type) {
@@ -145,7 +145,7 @@ public:
       break;
     }
     case ComType::serial: {
-      if (port == "" || attrs == "") {
+      if (port == "" && attrs == "") {
         std::cout << name + " serial parameters on enough" << std::endl;
         flag = flag && false;
       }

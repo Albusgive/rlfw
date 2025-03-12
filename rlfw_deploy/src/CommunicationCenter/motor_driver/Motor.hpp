@@ -3,9 +3,11 @@
 #include "ComCfg.hpp"
 #include "ParallelMechanism.hpp"
 #include "magic_enum/magic_enum.hpp"
+#include <cmath>
 #include <iostream>
 #include <memory>
 #include <string>
+#include <vector>
 
 #define RESET "\033[0m"
 #define RED "\033[31m"
@@ -73,6 +75,7 @@ class BaseMotor {
 public:
   int id = -1;
   MotorBack motorback;
+  bool invert = false;
   virtual void locomotion(float torque, float pos, float ang_vel, float kp,
                           float kd) = 0;
   virtual void ctrl_pos(float pos) = 0;
@@ -92,6 +95,7 @@ public:
   virtual MotorBack decode() = 0;
   virtual MotorBack decode(CANMSG /*msg*/) = 0;
   virtual MotorBack decode(UnitreeMsg /*msg*/) = 0;
+  virtual std::vector<float> other() = 0;
 };
 
 class CANMotor : public BaseMotor {
@@ -132,19 +136,34 @@ public:
   std::shared_ptr<BaseCAN> can;
   void locomotion(float torque, float pos, float ang_vel, float kp,
                   float kd) override {
-    can->send(can->channel, locomotion(id, torque, pos, ang_vel, kp, kd));
+    if (invert)
+      can->send(can->channel, locomotion(id, -torque, -pos, -ang_vel, kp, kd));
+    else
+      can->send(can->channel, locomotion(id, torque, pos, ang_vel, kp, kd));
   }
   void ctrl_pos(float pos) override {
-    can->send(can->channel, ctrl_pos(id, pos));
+    if (invert)
+      can->send(can->channel, ctrl_pos(id, -pos));
+    else
+      can->send(can->channel, ctrl_pos(id, pos));
   }
   void ctrl_vel(float vel) override {
-    can->send(can->channel, ctrl_vel(id, vel));
+    if (invert)
+      can->send(can->channel, ctrl_vel(id, -vel));
+    else
+      can->send(can->channel, ctrl_vel(id, vel));
   }
   void ctrl_pos_vel(float pos, float vel) override {
-    can->send(can->channel, ctrl_pos_vel(id, pos, vel));
+    if (invert)
+      can->send(can->channel, ctrl_pos_vel(id, -pos, -vel));
+    else
+      can->send(can->channel, ctrl_pos_vel(id, pos, vel));
   }
   void ctrl_torque(float torque) override {
-    can->send(can->channel, ctrl_torque(id, torque));
+    if (invert)
+      can->send(can->channel, ctrl_torque(id, -torque));
+    else
+      can->send(can->channel, ctrl_torque(id, torque));
   }
   void enableMotor(bool enable, bool clear_fault = false) override {
     can->send(can->channel, enableMotor(id, enable, clear_fault));
@@ -198,6 +217,7 @@ public:
   // 没有用的虚函数
   MotorBack decode(UnitreeMsg /*msg*/) override { return MotorBack(); };
   MotorBack decode() override { return MotorBack(); };
+  std::vector<float> other() override { return std::vector<float>(); };
 };
 
 // 虚拟电机
@@ -205,11 +225,39 @@ class VirtualMotor : public BaseMotor {
 public:
   VirtualMotortype type = VirtualMotortype::ERR;
   /*--------电机控制--------*/
-  float default_theta = M_PI_2;
+  bool terminal = false;        // 虚拟末端解算 角度,角速度,末端距离
+  float default_theta = M_PI_4; // 默认45度
   std::shared_ptr<BaseMotor> motor1;
   std::shared_ptr<BaseMotor> motor2;
-  float l[5];
-  void locomotion(float, float, float, float, float) override {}
+  float l[5] = {1.0, 1.0, 1.0, 1.0, 1.0};
+  void locomotion(float, float pos, float ang_vel, float kp,
+                  float kd) override {
+    switch (type) {
+    // 传进来的是虚拟关节期望角速度
+    case VirtualMotortype::CFourBL: {
+      // 共轴四连杆motor1是主关节，motor2是连杆关节 要获取两关节差motor2 -
+      // motor1 作用到motor2上
+      auto [theta1, w1] = PM::setFourBL(pos, ang_vel, l[0], l[1], l[2], l[3]);
+      motor2->locomotion(0.0, theta1 + motor1->motorback.angle - default_theta,
+                         w1 + motor1->motorback.ang_vel, kp, kd);
+      break;
+    }
+    case VirtualMotortype::FourBL: {
+      // 非共轴四连杆由一个电机驱动为moto1
+      auto [theta1, w1] = PM::setFourBL(pos, ang_vel, l[0], l[1], l[2], l[3]);
+      motor1->locomotion(0.0, theta1, w1, kp, kd);
+      break;
+    }
+    case VirtualMotortype::FiveBL: {
+      // TODO
+      break;
+    }
+    case VirtualMotortype::ERR: {
+      break;
+    }
+    }
+    update();
+  }
   void ctrl_pos(float pos) override {
     switch (type) {
     // 传进来的是虚拟关节期望角度
@@ -234,6 +282,7 @@ public:
       break;
     }
     }
+    update();
   }
   void ctrl_vel(float vel) override {
     switch (type) {
@@ -242,8 +291,7 @@ public:
       // 共轴四连杆motor1是主关节，motor2是连杆关节 要获取两关节差motor2 -
       // motor1 作用到motor2上
       auto [theta1, w1] = PM::setFourBL(0.0, vel, l[0], l[1], l[2], l[3]);
-      motor2->ctrl_vel(w1 + motor2->motorback.ang_vel -
-                       motor1->motorback.ang_vel);
+      motor2->ctrl_vel(w1 + motor1->motorback.ang_vel);
       break;
     }
     case VirtualMotortype::FourBL: {
@@ -260,6 +308,7 @@ public:
       break;
     }
     }
+    update();
   }
   void ctrl_pos_vel(float pos, float vel) override {
     switch (type) {
@@ -269,8 +318,7 @@ public:
       // motor1 作用到motor2上
       auto [theta1, w1] = PM::setFourBL(pos, vel, l[0], l[1], l[2], l[3]);
       motor2->ctrl_pos_vel(theta1 + motor1->motorback.angle - default_theta,
-                           w1 + motor2->motorback.ang_vel -
-                               motor1->motorback.ang_vel);
+                           w1 + motor1->motorback.ang_vel);
       break;
     }
     case VirtualMotortype::FourBL: {
@@ -287,11 +335,50 @@ public:
       break;
     }
     }
+    update();
   }
   void ctrl_torque(float) override {}
   void enableMotor(bool enable, bool clear_fault = false) override {
     motor1->enableMotor(enable, clear_fault);
     motor2->enableMotor(enable, clear_fault);
+  }
+  /*----------更新电机参数----------*/
+  void update() {
+    switch (type) {
+    case VirtualMotortype::CFourBL: {
+      float angle =
+          motor2->motorback.angle + default_theta - motor1->motorback.angle;
+      float w = motor2->motorback.ang_vel - motor1->motorback.ang_vel;
+      auto [theta3, w3] = PM::getFourBL(angle, w, l[0], l[1], l[2], l[3]);
+      motorback.angle = theta3;
+      motorback.ang_vel = w3;
+      break;
+    }
+    case VirtualMotortype::FourBL: {
+      // 非共轴四连杆由一个电机驱动为moto1
+      auto [theta3, w3] =
+          PM::getFourBL(motor1->motorback.angle, motor1->motorback.ang_vel,
+                        l[0], l[1], l[2], l[3]);
+      motorback.angle = theta3;
+      motorback.ang_vel = w3;
+      break;
+    }
+    case VirtualMotortype::FiveBL: {
+      // TODO
+      break;
+    }
+    case VirtualMotortype::ERR: {
+      break;
+    }
+    }
+  }
+  // 计算终端
+  std::vector<float> other() override {
+    if (terminal)
+      return PM::getFourBLT(motor1->motorback.angle, motor1->motorback.ang_vel,
+                            motorback.angle, motorback.ang_vel, l[3], l[4]);
+    else
+      return std::vector<float>();
   }
   /*----------设置电机参数----------*/
   void setPosKP(float) override {}
@@ -306,7 +393,7 @@ public:
   // 没有用的虚函数
   MotorBack decode(CANMSG /*msg*/) override { return MotorBack(); };
   MotorBack decode(UnitreeMsg /*msg*/) override { return MotorBack(); };
-  MotorBack decode() { return MotorBack(); };
+  MotorBack decode() override { return MotorBack(); };
 };
 
 class XXMotor {};

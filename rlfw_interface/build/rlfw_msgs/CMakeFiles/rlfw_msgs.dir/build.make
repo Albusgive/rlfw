@@ -66,8 +66,8 @@ include CMakeFiles/rlfw_msgs.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/rlfw_msgs.dir/progress.make
 
-CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Motor.msg
-CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/MotorCtrl.msg
+CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Joint.msg
+CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/JointCtrl.msg
 CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/CanMsg.msg
 CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/SerialMsg.msg
 CMakeFiles/rlfw_msgs: /home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs/msg/Remote.msg

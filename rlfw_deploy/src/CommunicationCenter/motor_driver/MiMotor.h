@@ -146,6 +146,12 @@ public:
                        float kp, float kd) override;
   // 速度控制
   MiCANMsg *ctrl_vel(uint8_t motor_id, float vel) override;
+  // 位置
+  MiCANMsg *ctrl_pos(uint8_t motor_id, float pos) override;
+  // 速度位置
+  MiCANMsg *ctrl_pos_vel(uint8_t, float, float) override { return nullptr; };
+  // 扭矩/电流
+  MiCANMsg *ctrl_torque(uint8_t motor_id, float torque) override;
 
   // 位置PD
   MiCANMsg *setPosKP(uint8_t motor_id, float kp) override;
@@ -173,19 +179,8 @@ public:
   // 设置id
   MiCANMsg *set_can_id(uint8_t motor_id, uint8_t id);
   MiCANMsg *set_zero_point(uint8_t motor_id);
-
-  // 位置
-  CANMSG *ctrl_pos(uint8_t motor_id, float pos) { return nullptr; };
-  // 速度位置
-  CANMSG *ctrl_pos_vel(uint8_t motor_id, float pos, float vel) {
-    return nullptr;
-  };
-  // 扭矩/电流
-  CANMSG *ctrl_torque(uint8_t motor_id, float torque) {
-    return nullptr;
-  };
   /*--------电机参数设置----*/
-  MiCANMsg *setSafePos(uint8_t motor_id, float pos) { return nullptr; };
+  MiCANMsg *setSafePos(uint8_t, float) override { return nullptr; };
 
 private:
   int float_to_uint(float x, float x_min, float x_max, int bits);

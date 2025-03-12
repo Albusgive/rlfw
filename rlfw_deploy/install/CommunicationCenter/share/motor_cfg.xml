@@ -1,6 +1,7 @@
 <rlfw>
     <com type="pcan" name="com_can_1" channel="1" thread="false">
-        <motor type="Mi" id="10" jointname="left_wheel_joint" invert="false" ctrltype="VEL" VelKP="1.0" VelKI="0.0021"/>
+        <motor type="Mi" id="10" jointname="left_wheel_joint" invert="true" ctrltype="VEL"
+            velkp="1.0" velki="0.0021" />
     </com>
     <com type="pcan" name="com_can_2" channel="2">
         <motor type="DM" id="0x05" jointname="left_calf_joint" invert="true" ctrltype="MIT" />
@@ -10,10 +11,13 @@
     </com> -->
     <!-- 仅通讯 -->
     <!-- <com type="pcan" name="other2" channel="2" /> -->
-    <!-- <com type="serial" name="s1" port="/dev/ttyUSB0" bps="921600" datasize="8" parity="0" stopbit="1"/>
-    <com type="serial" name="s2" port="/dev/ttyCH341USB0" bps="921600" datasize="8" parity="0" stopbit="1"/> -->
-    <com type="serial" name="s3" port="/dev/ttyACM0" bps="115200" datasize="8" parity="0" stopbit="1"/>
+    <!-- <com type="serial" name="s1" port="/dev/ttyUSB0" bps="921600" datasize="8" parity="0"
+    stopbit="1"/>
+    <com type="serial" name="s2" port="/dev/ttyCH341USB0" bps="921600" datasize="8" parity="0"
+    stopbit="1"/> -->
+    <com type="serial" name="s3" port="/dev/ttyACM0" bps="115200" datasize="8" parity="0"
+        stopbit="1" />
     <!-- <remote type="gamepad" name="joy" channel="0"/> -->
-    <virtualmotor jointname="right_calf_joint" type="CFourBL" default_theta="1.57"
-    motor1="left_wheel_joint" motor2="left_calf_joint" />
+    <virtualmotor jointname="virtualmotorjoint" type="CFourBL" default_theta="1.57"
+        motor1="left_wheel_joint" motor2="left_calf_joint" ln="120.1 100.5 100 100 100" terminal="true"/>
 </rlfw>

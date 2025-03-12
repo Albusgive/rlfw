@@ -1,8 +1,8 @@
 #pragma once
 #include "rclcpp/rclcpp.hpp"
 #include "rlfw_msgs/msg/can_msg.hpp"
-#include "rlfw_msgs/msg/motor.hpp"
-#include "rlfw_msgs/msg/motor_ctrl.hpp"
+#include "rlfw_msgs/msg/joint_ctrl.hpp"
+#include "rlfw_msgs/msg/joint.hpp"
 #include "rlfw_msgs/msg/remote.hpp"
 #include "rlfw_msgs/msg/serial_msg.hpp"
 #include "rlfw_msgs/srv/com_parameter.hpp"
@@ -16,8 +16,11 @@
 #include <rclcpp/client.hpp>
 #include <rclcpp/logging.hpp>
 #include <rclcpp/node.hpp>
+#include <rlfw_msgs/msg/detail/joint__struct.hpp>
+#include <rlfw_msgs/msg/detail/joint_ctrl__struct.hpp>
 #include <rlfw_msgs/msg/detail/remote__struct.hpp>
 #include <rlfw_msgs/srv/detail/com_parameter__struct.hpp>
+#include <string>
 using namespace std::chrono_literals;
 
 class MotorCTRL : public QThread {
@@ -30,12 +33,12 @@ public:
     node = std::make_shared<rclcpp::Node>(node_name);
 
     publisher_ =
-        node->create_publisher<rlfw_msgs::msg::MotorCtrl>("rlfwMotorCtrl", 2);
+        node->create_publisher<rlfw_msgs::msg::JointCtrl>("rlfwJointCtrl", 2);
     can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend", 2);
     serial_pub =
         node->create_publisher<rlfw_msgs::msg::SerialMsg>("rlfwSerialSend", 2);
-    sub_motor_ = node->create_subscription<rlfw_msgs::msg::Motor>(
-        "rlfwMotorBack", 10,
+    sub_motor_ = node->create_subscription<rlfw_msgs::msg::Joint>(
+        "rlfwJointBack", 10,
         std::bind(&MotorCTRL::printData, this, std::placeholders::_1));
     sub_remote_ = node->create_subscription<rlfw_msgs::msg::Remote>(
         "rlfwRemoteBack", 10,
@@ -46,32 +49,33 @@ public:
     // this->start();
   }
 
-  void printData(const rlfw_msgs::msg::Motor::SharedPtr msg) {
-    emitTopicData(QString("ang_vel:") + QString::number(msg->ang_vel));
+  void printData(const rlfw_msgs::msg::Joint::SharedPtr msg) {
+    if (msg->jointname.frame_id == "virtualmotorjoint")
+      emitTopicData(QString("angle:") + QString::number(msg->pos));
   }
 
   void printRemoteData(const rlfw_msgs::msg::Remote::SharedPtr msg) {
-    std::cout<<"RemoteData"<<std::endl;
+    std::cout << "RemoteData" << std::endl;
   }
 
   void pub() {
     auto stamp = node->now();
-    auto msg = rlfw_msgs::msg::MotorCtrl();
+    rlfw_msgs::msg::JointCtrl msg;
     msg.jointname.frame_id =
         "left_calf_joint"; // left_calf_joint left_wheel_joint
     msg.jointname.stamp = stamp;
     msg.ctrl_type = "MIT";
-    msg.ang_vel = 1.0;
+    msg.pos = 1.0;
     msg.kd = 0.7;
-    publisher_->publish(msg);
+    // publisher_->publish(msg);
 
     msg.jointname.frame_id =
         "left_wheel_joint"; // left_calf_joint left_wheel_joint
     msg.jointname.stamp = stamp;
     msg.ctrl_type = "MIT";
-    msg.ang_vel = 1.0;
-    msg.kd = 0.7;
-    publisher_->publish(msg);
+    msg.vel = 1.0;
+    msg.kd = 0.5;
+    // publisher_->publish(msg);
 
     auto can_msg = rlfw_msgs::msg::CanMsg();
     can_msg.comname.frame_id = "com_can_1";
@@ -88,23 +92,37 @@ public:
 
   void pub2() {
     auto stamp = node->now();
-    auto msg = rlfw_msgs::msg::MotorCtrl();
+    rlfw_msgs::msg::JointCtrl msg;
     msg.jointname.frame_id =
-        "left_calf_joint"; // left_calf_joint left_wheel_joint left_calf_joint
+        "virtualmotorjoint"; // left_calf_joint left_wheel_joint
+                             // virtualmotorjoint
     msg.jointname.stamp = stamp;
-    msg.ctrl_type = "POS";
-    msg.angle = 1.0;
+    msg.ctrl_type = "MIT";
+    msg.pos = 1.0;
+    msg.vel = 0.0;
+    msg.kp = 10;
+    msg.kd = 2.0;
+    publisher_->publish(msg);
+
+    msg.jointname.frame_id =
+        "left_wheel_joint"; // left_calf_joint left_wheel_joint
+    msg.jointname.stamp = stamp;
+    msg.ctrl_type = "MIT";
+    msg.pos = 0.0;
+    msg.vel = 0;
+    msg.kp = 0.0;
+    msg.kd = 0.0;
     publisher_->publish(msg);
   }
 
   void stop() {
     auto stamp = node->now();
-    auto msg = rlfw_msgs::msg::MotorCtrl();
+    rlfw_msgs::msg::JointCtrl msg;
     msg.jointname.frame_id =
         "left_calf_joint"; // left_calf_joint left_wheel_joint
     msg.jointname.stamp = stamp;
     msg.ctrl_type = "MIT";
-    msg.ang_vel = 0.0;
+    msg.vel = 0.0;
     msg.kd = 0.0;
     publisher_->publish(msg);
 
@@ -112,7 +130,7 @@ public:
         "left_wheel_joint"; // left_calf_joint left_wheel_joint
     msg.jointname.stamp = stamp;
     msg.ctrl_type = "MIT";
-    msg.ang_vel = 0.0;
+    msg.vel = 0.0;
     msg.kd = 0.0;
     publisher_->publish(msg);
   }
@@ -120,17 +138,16 @@ public:
 
     std::cout << "request" << std::endl;
     // 等待服务端上线
-    int cnt=0;
+    int cnt = 0;
     while (!client->wait_for_service(200ms)) {
-      RCLCPP_INFO(node->get_logger(),"wait serice");
+      RCLCPP_INFO(node->get_logger(), "wait serice");
       if (!rclcpp::ok()) {
         rclcpp::shutdown();
         return;
       }
       cnt++;
-      if(cnt>5)
-      {
-        RCLCPP_WARN(node->get_logger(),"serice long");
+      if (cnt > 5) {
+        RCLCPP_WARN(node->get_logger(), "serice long");
         return;
       }
     }
@@ -153,7 +170,7 @@ public:
   }
   void enable(int flag) {
     auto stamp = node->now();
-    auto msg = rlfw_msgs::msg::MotorCtrl();
+    rlfw_msgs::msg::JointCtrl msg;
     msg.jointname.frame_id =
         "left_calf_joint"; // left_calf_joint left_wheel_joint
     msg.jointname.stamp = stamp;
@@ -166,8 +183,8 @@ public:
   }
 
 private:
-  rclcpp::Publisher<rlfw_msgs::msg::MotorCtrl>::SharedPtr publisher_;
-  rclcpp::Subscription<rlfw_msgs::msg::Motor>::SharedPtr sub_motor_;
+  rclcpp::Publisher<rlfw_msgs::msg::JointCtrl>::SharedPtr publisher_;
+  rclcpp::Subscription<rlfw_msgs::msg::Joint>::SharedPtr sub_motor_;
   rclcpp::Publisher<rlfw_msgs::msg::CanMsg>::SharedPtr can_pub;
   rclcpp::Publisher<rlfw_msgs::msg::SerialMsg>::SharedPtr serial_pub;
   rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedPtr client;
@@ -189,9 +206,9 @@ private:
 
 protected:
   void run() {
-    rclcpp::WallRate loop_rate(1);
+    rclcpp::WallRate loop_rate(100);
     while (rclcpp::ok()) {
-      pub();
+      pub2();
       rclcpp::spin_some(node);
       loop_rate.sleep();
     }

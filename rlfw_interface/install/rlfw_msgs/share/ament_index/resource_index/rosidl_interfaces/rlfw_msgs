@@ -1,9 +1,9 @@
 msg/CanMsg.idl
 msg/CanMsg.msg
-msg/Motor.idl
-msg/Motor.msg
-msg/MotorCtrl.idl
-msg/MotorCtrl.msg
+msg/Joint.idl
+msg/Joint.msg
+msg/JointCtrl.idl
+msg/JointCtrl.msg
 msg/Remote.idl
 msg/Remote.msg
 msg/SerialMsg.idl

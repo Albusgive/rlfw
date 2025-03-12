@@ -66,16 +66,16 @@ include CMakeFiles/rlfw_msgs__cpp.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/rlfw_msgs__cpp.dir/progress.make
 
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__builder.hpp
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__struct.hpp
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__traits.hpp
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__type_support.hpp
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/motor_ctrl.hpp
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp
-CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__builder.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__struct.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__traits.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__type_support.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/joint_ctrl.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__builder.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__struct.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__traits.hpp
+CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__type_support.hpp
 CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/can_msg.hpp
 CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__builder.hpp
 CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__struct.hpp
@@ -98,147 +98,147 @@ CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_paramet
 CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.hpp
 CMakeFiles/rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__builder.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__struct.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__traits.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/Motor.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/MotorCtrl.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/CanMsg.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/SerialMsg.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/msg/Remote.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: rosidl_adapter/rlfw_msgs/srv/ComParameter.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Char.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Empty.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Float32.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Float64.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Header.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Int16.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Int32.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Int64.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Int8.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/String.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
-rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__builder.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__struct.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__traits.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: rosidl_adapter/rlfw_msgs/msg/Joint.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: rosidl_adapter/rlfw_msgs/msg/JointCtrl.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: rosidl_adapter/rlfw_msgs/msg/CanMsg.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: rosidl_adapter/rlfw_msgs/msg/SerialMsg.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: rosidl_adapter/rlfw_msgs/msg/Remote.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: rosidl_adapter/rlfw_msgs/srv/ComParameter.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Char.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Empty.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Float32.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Float64.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Header.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Int16.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Int32.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Int64.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Int8.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/String.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_cpp__arguments.json
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__builder.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__builder.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__struct.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__struct.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__traits.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__traits.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__type_support.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__type_support.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/motor_ctrl.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/motor_ctrl.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/joint_ctrl.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/joint_ctrl.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__builder.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__struct.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__traits.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__type_support.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/can_msg.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/can_msg.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/can_msg.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__builder.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__struct.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__traits.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__type_support.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/serial_msg.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/serial_msg.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/serial_msg.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__builder.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__struct.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__traits.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/remote.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/remote.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/remote.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__builder.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__struct.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__traits.hpp
 
-rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__type_support.hpp
 
-rosidl_generator_cpp/rlfw_msgs/srv/com_parameter.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/srv/com_parameter.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/com_parameter.hpp
 
-rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__builder.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__builder.hpp
 
-rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__struct.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__struct.hpp
 
-rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__traits.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__traits.hpp
 
-rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
+rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.hpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.hpp
 
 rlfw_msgs__cpp: CMakeFiles/rlfw_msgs__cpp
@@ -247,14 +247,14 @@ rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__builder.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__struct.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__traits.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/can_msg__type_support.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__builder.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__struct.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__traits.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor__type_support.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__builder.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__struct.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__traits.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint__type_support.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__builder.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__struct.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__traits.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/joint_ctrl__type_support.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__builder.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__struct.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/remote__traits.hpp
@@ -263,8 +263,8 @@ rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__builder.hp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__struct.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__traits.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/motor.hpp
-rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/motor_ctrl.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/joint.hpp
+rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/joint_ctrl.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/remote.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/msg/serial_msg.hpp
 rlfw_msgs__cpp: rosidl_generator_cpp/rlfw_msgs/srv/com_parameter.hpp

@@ -8,24 +8,24 @@
 #include "geometry_msgs/msg/twist.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rlfw_msgs/msg/can_msg.hpp"
-#include "rlfw_msgs/msg/motor.hpp"
-#include "rlfw_msgs/msg/motor_ctrl.hpp"
-#include "rlfw_msgs/msg/serial_msg.hpp"
+#include "rlfw_msgs/msg/joint.hpp"
+#include "rlfw_msgs/msg/joint_ctrl.hpp"
 #include "rlfw_msgs/msg/remote.hpp"
+#include "rlfw_msgs/msg/serial_msg.hpp"
 #include "rlfw_msgs/srv/com_parameter.hpp"
 #include "serial.hpp"
 #include <cstdint>
 #include <memory>
 #include <mutex>
 #include <rclcpp/service.hpp>
+#include <rlfw_msgs/msg/detail/joint__struct.hpp>
 #include <rlfw_msgs/msg/detail/remote__struct.hpp>
 #include <rlfw_msgs/msg/detail/serial_msg__struct.hpp>
 #include <rlfw_msgs/srv/detail/com_parameter__struct.hpp>
-#include <rlfw_msgs/srv/detail/rl_srv__struct.hpp>
 #include <string>
 #include <unordered_map>
 #include <vector>
-using namespace std::placeholders; 
+using namespace std::placeholders;
 
 enum class ComeCenterParamType {
   MountCom,   // 通讯接口
@@ -40,7 +40,7 @@ public:
   ~CommunicationCenter();
 
   // 接收com信息 无论什么类型全在子线程进行
-  rclcpp::Publisher<rlfw_msgs::msg::Motor>::SharedPtr motor_publisher;
+  rclcpp::Publisher<rlfw_msgs::msg::Joint>::SharedPtr motor_publisher;
   // 任何设备都使用这些读取
   void fromCan(CANMSG &msg, std::vector<int> &device_ids,
                std::string &com_name);
@@ -52,8 +52,8 @@ public:
 
 private:
   // 在主线程的端口发送 pcan发送一次约0.14ms(12400f)
-  rclcpp::Subscription<rlfw_msgs::msg::MotorCtrl>::SharedPtr sub_motor;
-  void sendMotor(std::shared_ptr<rlfw_msgs::msg::MotorCtrl> msg);
+  rclcpp::Subscription<rlfw_msgs::msg::JointCtrl>::SharedPtr sub_motor;
+  void sendMotor(std::shared_ptr<rlfw_msgs::msg::JointCtrl> msg);
   std::shared_ptr<BaseMotor> motor_safe_get(const std::string &name);
   std::shared_ptr<BaseMotor> virtual_motor_safe_get(const std::string &name);
 
@@ -82,7 +82,7 @@ private:
   XMLDecoder xml_decoder;
   // 注册电机解码器
   std::vector<std::shared_ptr<BaseMotor>> moter_decoders;
-  std::vector<Motortype> registered_motor_types;//已经注册的电机类型
+  std::vector<Motortype> registered_motor_types; // 已经注册的电机类型
   std::unordered_map<int, std::string> motorid2string;
   void registeredMotorDecoder(Motortype motor_type);
   // 字符串映射
@@ -99,9 +99,4 @@ private:
   // 对不同通讯子线程处理CommunicationCenter的函数使用
   // 接受电机消息，接受串口消息
   std::mutex com_mutex;
-
-  // GamePad *gamepad;
-  void initGamePad();
-  void timer_callback();
-  rclcpp::TimerBase::SharedPtr timer;
 };

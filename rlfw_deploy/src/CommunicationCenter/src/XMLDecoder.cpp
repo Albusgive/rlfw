@@ -1,6 +1,6 @@
 #include "XMLDecoder.hpp"
 #include "ComCfg.hpp"
-#include "magic_enum/magic_enum.hpp"
+#include <sstream>
 #include <iostream>
 
 XMLDecoder::XMLDecoder(std::string path) { load(path); }
@@ -52,15 +52,15 @@ bool XMLDecoder::load(std::string path) {
           xml_motor.ctrl_type = string2enum<MotorCtrlType>(
               Attribute2String(motor->Attribute("ctrltype")));
           xml_motor.invert = motor->BoolAttribute("invert", false);
-          xml_motor.PosKD = motor->FloatAttribute("PosKD", -1.0);
-          xml_motor.PosKP = motor->FloatAttribute("PosKP", -1.0);
-          xml_motor.VelKI = motor->FloatAttribute("VelKI", -1.0);
-          xml_motor.VelKP = motor->FloatAttribute("VelKP", -1.0);
-          xml_motor.TorqueKI = motor->FloatAttribute("TorqueKI", -1.0);
-          xml_motor.TorqueKP = motor->FloatAttribute("TorqueKP", -1.0);
-          xml_motor.SafePos = motor->FloatAttribute("SafePos", -1.0);
-          xml_motor.SafeVel = motor->FloatAttribute("SafeVel", -1.0);
-          xml_motor.SafeTorque = motor->FloatAttribute("SafeTorque", -1.0);
+          xml_motor.PosKD = motor->FloatAttribute("poskd", -1.0);
+          xml_motor.PosKP = motor->FloatAttribute("poskp", -1.0);
+          xml_motor.VelKI = motor->FloatAttribute("velki", -1.0);
+          xml_motor.VelKP = motor->FloatAttribute("velkp", -1.0);
+          xml_motor.TorqueKI = motor->FloatAttribute("torqueki", -1.0);
+          xml_motor.TorqueKP = motor->FloatAttribute("torquekp", -1.0);
+          xml_motor.SafePos = motor->FloatAttribute("safepos", -1.0);
+          xml_motor.SafeVel = motor->FloatAttribute("safevel", -1.0);
+          xml_motor.SafeTorque = motor->FloatAttribute("safetorque", -1.0);
           ComCfg.xml_motors.push_back(xml_motor);
         }
       }
@@ -84,15 +84,23 @@ bool XMLDecoder::load(std::string path) {
          virtualmotor = virtualmotor->NextSiblingElement("virtualmotor")) {
       XMLVirtualMotor xml_virtualmotor;
       xml_virtualmotor.joint_name =
-          Attribute2String(virtualmotor->Attribute("joint_name"));
+          Attribute2String(virtualmotor->Attribute("jointname"));
       xml_virtualmotor.type = string2enum<VirtualMotortype>(
           Attribute2String(virtualmotor->Attribute("type")));
       xml_virtualmotor.motor1 =
           Attribute2String(virtualmotor->Attribute("motor1"));
       xml_virtualmotor.motor2 =
           Attribute2String(virtualmotor->Attribute("motor2"));
+      xml_virtualmotor.terminal =
+          virtualmotor->BoolAttribute("terminal", false);
       xml_virtualmotor.default_theta =
           virtualmotor->FloatAttribute("default_theta", 1.57);
+      std::string str = Attribute2String(virtualmotor->Attribute("ln"));
+      std::stringstream ss(str); // 使用字符串流解析
+      float value;
+      while (ss >> value) {
+        xml_virtualmotor.ln.push_back(value);
+      }
       virtualmotors.push_back(xml_virtualmotor);
     }
   }

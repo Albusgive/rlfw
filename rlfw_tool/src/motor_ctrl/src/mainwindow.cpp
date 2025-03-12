@@ -12,20 +12,21 @@ MainWindow::MainWindow(QWidget *parent)
           [this]() { motorCTRLnode->stop(); });
   connect(ui->pushButton_3, &QPushButton::clicked, this,
           [this]() { motorCTRLnode->request(); });
-  connect(ui->pushButton_4, &QPushButton::clicked, this,
-          [this]() { 
-            if(ui->pushButton_4->isCheckable())
-            {
-                ui->pushButton_4->setCheckable(false);
-                motorCTRLnode->enable(1);
-                ui->pushButton_4->setText("电机失能");
-            }
-            else {
-                ui->pushButton_4->setCheckable(true);
-                motorCTRLnode->enable(0);
-                ui->pushButton_4->setText("电机使能");
-            }
-          });
+  connect(ui->pushButton_4, &QPushButton::clicked, this, [this]() {
+    if (ui->pushButton_4->isCheckable()) {
+      ui->pushButton_4->setCheckable(false);
+      motorCTRLnode->enable(1);
+      ui->pushButton_4->setText("电机失能");
+      motorCTRLnode->start();
+    } else {
+      ui->pushButton_4->setCheckable(true);
+      motorCTRLnode->enable(0);
+      ui->pushButton_4->setText("电机使能");
+      motorCTRLnode->exit();
+    }
+  });
+  connect(ui->pushButton_5, &QPushButton::clicked, this,
+          [this]() { motorCTRLnode->pub(); });
   connect(motorCTRLnode, SIGNAL(emitTopicData(QString)), this,
           SLOT(updateTopicInfo(QString)));
   connect(motorCTRLnode, SIGNAL(emitSrvData(QString)), this,

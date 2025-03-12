@@ -1,0 +1,47 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rlfw_msgs/msg/Joint.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rlfw_msgs {
+  module msg {
+    struct Joint {
+      std_msgs::msg::Header jointname;
+
+      int8 joint_id;
+
+      @verbatim (language="comment", text=
+        "angle")
+      float pos;
+
+      @verbatim (language="comment", text=
+        "圈数")
+      float number_laps;
+
+      @verbatim (language="comment", text=
+        "speed")
+      float vel;
+
+      @verbatim (language="comment", text=
+        "电机扭矩或者力")
+      float torque;
+
+      @verbatim (language="comment", text=
+        "电流")
+      float current;
+
+      @verbatim (language="comment", text=
+        "温度")
+      float temperature;
+
+      @verbatim (language="comment", text=
+        "关节状态")
+      int8 state;
+
+      @verbatim (language="comment", text=
+        "额外信息 虚拟关节的终端位置（ρ，θ）")
+      sequence<float> other;
+    };
+  };
+};

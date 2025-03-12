@@ -52,28 +52,40 @@ public:
                        float kp, float kd) override;
 
   // 位置
-  DMCANMsg *ctrl_pos(uint8_t motor_id, float pos) { return nullptr; };
+  DMCANMsg *ctrl_pos(uint8_t motor_id, float pos) override { return nullptr; };
   // 速度
-  DMCANMsg *ctrl_vel(uint8_t motor_id, float vel) { return nullptr; };
+  DMCANMsg *ctrl_vel(uint8_t motor_id, float vel) override { return nullptr; };
   // 速度位置
-  DMCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, float vel) {
+  DMCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, float vel) override {
     return nullptr;
   };
   // 扭矩
-  DMCANMsg *ctrl_torque(uint8_t motor_id, float torque) { return nullptr; };
+  DMCANMsg *ctrl_torque(uint8_t motor_id, float torque) override {
+    return nullptr;
+  };
   /*--------电机参数设置----*/
-  DMCANMsg *setPosKP(uint8_t motor_id, float kp) { return nullptr; };
-  DMCANMsg *setPosKD(uint8_t motor_id, float kd) { return nullptr; };
+  DMCANMsg *setPosKP(uint8_t motor_id, float kp) override { return nullptr; };
+  DMCANMsg *setPosKD(uint8_t motor_id, float kd) override { return nullptr; };
   // 速度PI
-  DMCANMsg *setVelKP(uint8_t motor_id, float kp) { return nullptr; };
-  DMCANMsg *setVelKI(uint8_t motor_id, float ki) { return nullptr; };
+  DMCANMsg *setVelKP(uint8_t motor_id, float kp) override { return nullptr; };
+  DMCANMsg *setVelKI(uint8_t motor_id, float ki) override { return nullptr; };
   // 扭矩/电流PI
-  DMCANMsg *setTorqueKP(uint8_t motor_id, float kp) { return nullptr; };
-  DMCANMsg *setTorqueKI(uint8_t motor_id, float ki) { return nullptr; };
+  DMCANMsg *setTorqueKP(uint8_t motor_id, float kp) override {
+    return nullptr;
+  };
+  DMCANMsg *setTorqueKI(uint8_t motor_id, float ki) override {
+    return nullptr;
+  };
   // 设置安全扭矩/电流
-  DMCANMsg *setSafeTorque(uint8_t motor_id, float torque) { return nullptr; };
-  DMCANMsg *setSafePos(uint8_t motor_id, float pos) { return nullptr; };
-  DMCANMsg *setSafeVel(uint8_t motor_id, float vel) { return nullptr; };
+  DMCANMsg *setSafeTorque(uint8_t motor_id, float torque) override {
+    return nullptr;
+  };
+  DMCANMsg *setSafePos(uint8_t motor_id, float pos) override {
+    return nullptr;
+  };
+  DMCANMsg *setSafeVel(uint8_t motor_id, float vel) override {
+    return nullptr;
+  };
 
 private:
   uint16_t float_to_uint(float x, float x_min, float x_max, int bits);

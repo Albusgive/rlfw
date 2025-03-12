@@ -69,33 +69,33 @@ include CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/flags.make
 
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.o: rosidl_generator_py/rlfw_msgs/msg/_motor_s.c
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.o -MF CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.o.d -o CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.o -c /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o: rosidl_generator_py/rlfw_msgs/msg/_joint_s.c
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o -MF CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o.d -o CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o -c /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c
 
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c > CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.i
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c > CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.i
 
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c -o CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.s
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c -o CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.s
 
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/flags.make
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.o: rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.o -MF CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.o.d -o CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.o -c /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o: rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o -MF CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o.d -o CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o -c /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c
 
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c > CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.i
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c > CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.i
 
-CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c -o CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.s
+CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c -o CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.s
 
 CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_can_msg_s.c.o: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/flags.make
 CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_can_msg_s.c.o: rosidl_generator_py/rlfw_msgs/msg/_can_msg_s.c
@@ -155,8 +155,8 @@ CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/srv/
 
 # Object files for target rlfw_msgs__rosidl_generator_py
 rlfw_msgs__rosidl_generator_py_OBJECTS = \
-"CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.o" \
-"CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.o" \
+"CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o" \
+"CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o" \
 "CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_can_msg_s.c.o" \
 "CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_serial_msg_s.c.o" \
 "CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_remote_s.c.o" \
@@ -165,8 +165,8 @@ rlfw_msgs__rosidl_generator_py_OBJECTS = \
 # External object files for target rlfw_msgs__rosidl_generator_py
 rlfw_msgs__rosidl_generator_py_EXTERNAL_OBJECTS =
 
-rosidl_generator_py/rlfw_msgs/librlfw_msgs__rosidl_generator_py.so: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_s.c.o
-rosidl_generator_py/rlfw_msgs/librlfw_msgs__rosidl_generator_py.so: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_motor_ctrl_s.c.o
+rosidl_generator_py/rlfw_msgs/librlfw_msgs__rosidl_generator_py.so: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o
+rosidl_generator_py/rlfw_msgs/librlfw_msgs__rosidl_generator_py.so: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o
 rosidl_generator_py/rlfw_msgs/librlfw_msgs__rosidl_generator_py.so: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_can_msg_s.c.o
 rosidl_generator_py/rlfw_msgs/librlfw_msgs__rosidl_generator_py.so: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_serial_msg_s.c.o
 rosidl_generator_py/rlfw_msgs/librlfw_msgs__rosidl_generator_py.so: CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_remote_s.c.o
