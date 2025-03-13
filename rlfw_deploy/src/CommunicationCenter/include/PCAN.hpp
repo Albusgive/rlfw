@@ -79,7 +79,7 @@ public:
   // 寻找所有能用的PCAN并初始化 返回可用CAN通道
   std::vector<TPCANHandle> initAvailableCAN();
 
-  void send(uint16_t CANx, CANMSG *msg) override;
+  bool send(uint16_t CANx, CANMSG *msg) override;
   std::tuple<bool, CANMSG> read(uint16_t CANx) override;
 
   void connectDecode(std::function<void(CANMSG&,std::vector<int>& motor_ids,std::string& name)> lambda);

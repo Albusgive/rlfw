@@ -1364,8 +1364,6 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: /home/albusgiv
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/bits/sstream.tcc \
   /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver/gamepad.h \
   /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
@@ -1411,6 +1409,8 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: /home/albusgiv
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/codecvt.h \
@@ -1826,26 +1826,26 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: /home/albusgiv
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/motor.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__struct.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__builder.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__traits.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__type_support.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/motor_ctrl.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint_ctrl.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/remote.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__struct.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__builder.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__traits.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/com_parameter.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__struct.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__builder.hpp \
@@ -1863,7 +1863,6 @@ CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o: /home/albusgiv
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
   /usr/include/c++/12/bits/stl_queue.h \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/rl_srv__struct.hpp \
   /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h \
   /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h \
   /usr/include/c++/12/math.h
@@ -2227,7 +2226,28 @@ CMakeFiles/CommunicationCenter.dir/src/ParallelMechanism..cpp.o: /home/albusgive
   /usr/include/c++/12/tr1/riemann_zeta.tcc \
   /usr/include/c++/12/utility \
   /usr/include/c++/12/bits/stl_relops.h \
-  /usr/include/c++/12/initializer_list
+  /usr/include/c++/12/initializer_list \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
+  /usr/include/c++/12/bits/new_allocator.h \
+  /usr/include/c++/12/new \
+  /usr/include/c++/12/bits/exception.h \
+  /usr/include/c++/12/bits/memoryfwd.h \
+  /usr/include/c++/12/bits/stl_construct.h \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/ext/alloc_traits.h \
+  /usr/include/c++/12/bits/alloc_traits.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/functional_hash.h \
+  /usr/include/c++/12/bits/hash_bytes.h \
+  /usr/include/c++/12/bits/refwrap.h \
+  /usr/include/c++/12/bits/invoke.h \
+  /usr/include/c++/12/bits/stl_function.h \
+  /usr/include/c++/12/backward/binders.h \
+  /usr/include/c++/12/bits/range_access.h \
+  /usr/include/c++/12/bits/vector.tcc
 
 CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp \
   /usr/include/stdc-predef.h \
@@ -2779,8 +2799,6 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: /home/albusgive2/rlfw/rlfw_de
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/bits/sstream.tcc \
   /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver/gamepad.h \
   /usr/include/c++/12/map \
   /usr/include/c++/12/bits/stl_tree.h \
@@ -2826,6 +2844,8 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: /home/albusgive2/rlfw/rlfw_de
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/codecvt.h \
@@ -3241,26 +3261,26 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: /home/albusgive2/rlfw/rlfw_de
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/motor.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__struct.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__builder.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__traits.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__type_support.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/motor_ctrl.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint_ctrl.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/remote.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__struct.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__builder.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__traits.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp \
+  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/com_parameter.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__struct.hpp \
   /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__builder.hpp \
@@ -3277,8 +3297,7 @@ CMakeFiles/CommunicationCenter.dir/src/main.cpp.o: /home/albusgive2/rlfw/rlfw_de
   /usr/include/c++/12/deque \
   /usr/include/c++/12/bits/stl_deque.h \
   /usr/include/c++/12/bits/deque.tcc \
-  /usr/include/c++/12/bits/stl_queue.h \
-  /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/rl_srv__struct.hpp
+  /usr/include/c++/12/bits/stl_queue.h
 
 CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp \
   /usr/include/stdc-predef.h \
@@ -3630,10 +3649,6 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/com_parameter.hpp:
 
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.hpp:
-
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__builder.hpp:
-
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__type_support.hpp:
 
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp:
@@ -3642,23 +3657,17 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp:
 
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__type_support.hpp:
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.hpp:
 
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__traits.hpp:
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__builder.hpp:
 
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__builder.hpp:
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__builder.hpp:
 
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor_ctrl__struct.hpp:
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__struct.hpp:
 
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__type_support.hpp:
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__traits.hpp:
 
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__traits.hpp:
-
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__builder.hpp:
-
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/motor__struct.hpp:
-
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/motor.hpp:
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__builder.hpp:
 
 /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -3878,6 +3887,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /usr/include/dirent.h:
 
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__type_support.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/generic_publisher.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/message_memory_strategy.hpp:
@@ -3919,8 +3930,6 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process_buffer.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/buffers/intra_process_buffer.hpp:
-
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/motor_ctrl.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process_base.hpp:
 
@@ -3994,6 +4003,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /usr/include/c++/12/bit:
 
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__type_support.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /opt/ros/humble/include/rmw/rmw/subscription_content_filter_options.h:
@@ -4046,6 +4057,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver/gamepadkey.h:
 
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process.hpp:
@@ -4067,6 +4080,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver/gamepad.cpp:
 
 /usr/include/c++/12/bits/enable_special_members.h:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__struct.hpp:
 
 /opt/ros/humble/include/rmw/rmw/init.h:
 
@@ -4369,6 +4384,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 /usr/include/c++/12/iosfwd:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint_ctrl.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -4842,6 +4859,8 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 
 /usr/include/x86_64-linux-gnu/asm/ioctls.h:
 
+/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__traits.hpp:
+
 /usr/include/asm-generic/ioctls.h:
 
 /usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
@@ -4869,8 +4888,6 @@ CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o: /home/albusgive2/rlfw/rlfw_
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/buffers/buffer_implementation_base.hpp:
 
 /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:
-
-/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/rl_srv__struct.hpp:
 
 /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.hpp:
 

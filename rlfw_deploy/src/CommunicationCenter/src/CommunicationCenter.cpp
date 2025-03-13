@@ -23,30 +23,36 @@
 
 CommunicationCenter::CommunicationCenter(const std::string &node_name)
     : rclcpp::Node(node_name) {
+
+  rclcpp::QoS control_qos(1);
+  control_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE)
+      .durability_volatile();
+  rclcpp::QoS remote_qos(10);
+  remote_qos.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
   // topic发送基础can接收到的数据
-  can_publisher = this->create_publisher<rlfw_msgs::msg::CanMsg>(
-      "rlfwCANBack", rclcpp::QoS(2));
+  can_publisher = this->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANBack",
+                                                                 control_qos);
   // topic发送电机接收到的数据
   motor_publisher = this->create_publisher<rlfw_msgs::msg::Joint>(
-      "rlfwJointBack", rclcpp::QoS(2));
+      "rlfwJointBack", control_qos);
   // topic接收发送给电机
   sub_motor = this->create_subscription<rlfw_msgs::msg::JointCtrl>(
-      "rlfwJointCtrl", rclcpp::QoS(2),
+      "rlfwJointCtrl", control_qos,
       std::bind(&CommunicationCenter::sendMotor, this, _1));
   // topic接收发送给设备
   can_sub = this->create_subscription<rlfw_msgs::msg::CanMsg>(
-      "rlfwCANSend", rclcpp::QoS(2),
+      "rlfwCANSend", control_qos,
       std::bind(&CommunicationCenter::sendCAN, this, _1));
   // topic发送基础serial接收到的数据
   serial_publisher = this->create_publisher<rlfw_msgs::msg::SerialMsg>(
-      "rlfwSerialBack", rclcpp::QoS(2));
+      "rlfwSerialBack", control_qos);
   // serial接收发送给设备
   serial_sub = this->create_subscription<rlfw_msgs::msg::SerialMsg>(
-      "rlfwSerialSend", rclcpp::QoS(2),
+      "rlfwSerialSend", control_qos,
       std::bind(&CommunicationCenter::sendSerial, this, _1));
   // topic发送基础remote接收到的数据
   remote_publisher = this->create_publisher<rlfw_msgs::msg::Remote>(
-      "rlfwRemoteBack", rclcpp::QoS(2));
+      "rlfwRemoteBack", remote_qos);
   // 服务器
   request = this->create_service<rlfw_msgs::srv::ComParameter>(
       "CommunicationCenterSrv",
@@ -114,8 +120,7 @@ void CommunicationCenter::fromCan(CANMSG &msg, std::vector<int> &device_ids,
         pub_motor_msg.set__joint_id(motor_back.id);
         rlfw_msgs::msg::Joint::_jointname_type jointname;
         // 找到电机
-        jointname.frame_id = motorid2string[motor_back.id];
-        auto motor = motor_map[jointname.frame_id];
+        auto motor = motorID_map[motor_back.id];
         // 电机是否取反
         if (motor->invert)
           motor_back.invertMotor(); // 取反
@@ -190,7 +195,7 @@ void CommunicationCenter::sendMotor(
       RCLCPP_WARN(this->get_logger(), "no mount motor: %s", joint_name.c_str());
       return;
     } else {
-      //原来是虚拟电机啊
+      // 原来是虚拟电机啊
       rlfw_msgs::msg::Joint motor_msg;
       motor_msg.jointname.set__frame_id(joint_name);
       motor_msg.jointname.set__stamp(this->now());
@@ -286,7 +291,13 @@ void CommunicationCenter::sendCAN(std::shared_ptr<rlfw_msgs::msg::CanMsg> msg) {
     for (int i = 0; i < (int)msg->data.size(); i++) {
       send_msg.DATA[i] = msg->data[i];
     }
-    cans[idx]->send(&send_msg);
+    if (!cans[idx]->send(&send_msg)) {
+      RCLCPP_WARN(this->get_logger(), "can send err:%s",
+                  serials[idx]->name.c_str());
+      rlfw_msgs::msg::CanMsg back;
+      back.comname.set__frame_id(msg->comname.frame_id + "  err");
+      can_publisher->publish(back);
+    }
   }
 }
 
@@ -308,9 +319,12 @@ void CommunicationCenter::sendSerial(
     return;
   } else {
     int is = serials[idx]->Send(msg->data);
-    if (is == -1)
+    if (is == -1) {
       RCLCPP_WARN(this->get_logger(), "serials send err:%s",
                   serials[idx]->name.c_str());
+      rlfw_msgs::msg::SerialMsg back;
+      back.comname.set__frame_id(msg->comname.frame_id + "  err");
+    }
   }
   return;
 }
@@ -332,7 +346,10 @@ void CommunicationCenter::handle_request(
   }
   case ComeCenterParamType::MountMotor: {
     for (auto m : motor_map)
+    {
       response->device_name.push_back(m.first);
+      response->device_type.push_back(m.second->motor_type);
+    }
     // serial motor
     break;
   }
@@ -397,23 +414,26 @@ void CommunicationCenter::buildMap() {
         // 增加电机
         for (auto motor : com.xml_motors) {
           registeredMotorDecoder(motor.type);
-          motorid2string[motor.id] = motor.joint_name;
           pcan->devive_ids.push_back(motor.id);
           if (motor.type == Motortype::Mi) {
             auto mi = std::make_shared<MiMotor>();
             mi->can = pcan;
             mi->id = motor.id;
             mi->invert = motor.invert;
+            mi->motor_type = "Mi";
             initMotor(mi, motor);
             mi->ok_fix_parameter(motor.id);
             motor_map[motor.joint_name] = mi;
+            motorID_map[motor.id] = mi;
           } else if (motor.type == Motortype::DM) {
             auto dm = std::make_shared<DMMotor>();
             dm->can = pcan;
             dm->id = motor.id;
             dm->invert = motor.invert;
+            dm->motor_type = "DM";
             initMotor(dm, motor);
             motor_map[motor.joint_name] = dm;
+            motorID_map[motor.id] = dm;
           }
         }
         if (com.only_thred) {

@@ -136,6 +136,7 @@ class MiMotor : public CANMotor {
 public:
   MiMotor();
   ~MiMotor();
+  using CANMotor::decode;
 
   MiCANMsg *enableMotor(uint8_t motor_id, bool enable,
                         bool clear_fault = false) override;

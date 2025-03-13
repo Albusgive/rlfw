@@ -83,7 +83,7 @@ private:
   // 注册电机解码器
   std::vector<std::shared_ptr<BaseMotor>> moter_decoders;
   std::vector<Motortype> registered_motor_types; // 已经注册的电机类型
-  std::unordered_map<int, std::string> motorid2string;
+  std::unordered_map<int, std::shared_ptr<BaseMotor>> motorID_map;
   void registeredMotorDecoder(Motortype motor_type);
   // 字符串映射
   std::unordered_map<std::string, std::shared_ptr<BaseMotor>> motor_map;

@@ -1,0 +1,4 @@
+source;share/rlfw_vz/local_setup.bash
+source;share/rlfw_vz/local_setup.dsv
+source;share/rlfw_vz/local_setup.sh
+source;share/rlfw_vz/local_setup.zsh

@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-1c71a12b1db445531a40.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rlfw_vz",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_vz::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_vz-Debug-770ad3f63638fd5e5a6e.json",
+					"name" : "rlfw_vz",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_vz_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_vz_autogen-Debug-b036ac3cf0671fda3e04.json",
+					"name" : "rlfw_vz_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_vz_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_vz_uninstall-Debug-133c2cb78c4802f31e72.json",
+					"name" : "rlfw_vz_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-3a6556e5786d452956de.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build",
+		"source" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

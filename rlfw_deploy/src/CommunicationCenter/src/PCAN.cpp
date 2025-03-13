@@ -216,17 +216,18 @@ std::vector<TPCANHandle> PCAN::initAvailableCAN() {
   return available;
 }
 
-void PCAN::send(uint16_t CANx, CANMSG *msg) {
+bool PCAN::send(uint16_t CANx, CANMSG *msg) {
   if (msg == nullptr) {
     std::cout << "send msg is nullptr" << std::endl;
-    return;
+    return false;
   }
   TPCANStatus status = CAN_Write(CANx, (TPCANMsg *)msg);
   if (status != PCAN_ERROR_OK) {
     std::cout << "Failed to write CAN message. Error: " << std::hex << status
               << std::endl;
+              return false;
   } else {
-    // std::cout << "Send Success" << std::endl;
+    return true;
   }
 }
 

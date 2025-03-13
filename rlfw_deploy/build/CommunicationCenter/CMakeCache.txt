@@ -392,7 +392,7 @@ Python3_EXECUTABLE:FILEPATH=/usr/bin/python3
 SITE:STRING=albusgive2
 
 //The directory containing a CMake configuration file for TinyXML2.
-TinyXML2_DIR:PATH=/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2
+TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
 //Path to a library.
 _lib:FILEPATH=/opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so

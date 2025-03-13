@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>images/gamepad_enable.png</file>
+        <file>images/gamepad_unable.png</file>
+    </qresource>
+</RCC>

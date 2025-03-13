@@ -55,13 +55,22 @@ std::pair<float, float> setFourBL(float theta3, float w3, float l1, float l2,
                std::cos(theta2) * std::sin(theta1)));
   return {theta1, w1};
 }
-// 长度,角度,角速度,末端线速度  一切坐标系皆以motor1原点
+// 虚拟杆长度,角度,角速度,虚拟杆长变化率  一切坐标系皆以motor1原点
 std::vector<float> getFourBLT(float motor1_theta, float motor1_w, float theta3,
                               float w3, float l4, float l5) {
-  std::vector<float> terminal_pos;
   float rho = std::sqrt(l4 * l4 + l5 * l5 - 2 * l4 * l5 * std::cos(theta3));
-  float theta_t = std::asin((l5 / rho) * std::sin(theta3));
-  //角速度解算
-  return {rho, motor1_theta - theta_t};
+  float sin_theta3 = std::sin(theta3);
+  float cos_theta3 = std::cos(theta3);
+  float u = (l5 * sin_theta3) / rho;
+  //  d(rho)/dt
+  float drho_dt = (l4 * l5 * sin_theta3 * w3) / rho;
+  //  du/dt
+  float du_dt =
+      (l5 * (cos_theta3 * w3 * rho - sin_theta3 * drho_dt)) / (rho * rho);
+  //  d(theta_t)/dt
+  float dtheta_t_dt = du_dt / std::sqrt(1 - u * u);
+  // 最终角速度 = motor1_w - d(theta_t)/dt
+  float angular_velocity = motor1_w - dtheta_t_dt;
+  return {rho, motor1_theta - std::asin(u), angular_velocity, drho_dt};
 }
 } // namespace PM
