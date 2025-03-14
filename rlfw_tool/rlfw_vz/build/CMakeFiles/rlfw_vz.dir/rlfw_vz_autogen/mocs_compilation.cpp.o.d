@@ -831,6 +831,7 @@ CMakeFiles/rlfw_vz.dir/rlfw_vz_autogen/mocs_compilation.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qthread.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qdeadlinetimer.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qelapsedtimer.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QList \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qtmochelpers.h \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen/6YEA5652QU/moc_DynamicChartWidget.cpp \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen/6YEA5652QU/../../../include/DynamicChartWidget.h \
@@ -903,7 +904,6 @@ CMakeFiles/rlfw_vz.dir/rlfw_vz_autogen/mocs_compilation.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpointingdevice.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qinputdevice.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qscreen.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QList \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QRect \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QSize \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QSizeF \
@@ -944,8 +944,9 @@ CMakeFiles/rlfw_vz.dir/rlfw_vz_autogen/mocs_compilation.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen/6YEA5652QU/moc_mainwindow.cpp \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen/6YEA5652QU/../../../include/mainwindow.h \
+  /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/include/ComcenterDebug.h \
+  /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/include/DynamicChartWidget.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QMainWindow \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h \
-  /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/include/ComcenterDebug.h \
-  /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/include/DynamicChartWidget.h
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QPolygon

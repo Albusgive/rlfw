@@ -15,9 +15,9 @@
     stopbit="1"/>
     <com type="serial" name="s2" port="/dev/ttyCH341USB0" bps="921600" datasize="8" parity="0"
     stopbit="1"/> -->
-    <com type="serial" name="s3" port="/dev/ttyACM0" bps="115200" datasize="8" parity="0"
-        stopbit="1" />
-    <!-- <remote type="gamepad" name="joy" channel="0"/> -->
+    <!-- <com type="serial" name="s3" port="/dev/ttyACM0" bps="115200" datasize="8" parity="0"
+        stopbit="1" /> -->
+    <remote type="gamepad" name="joy" channel="0" key=""/>
     <virtualmotor jointname="virtualmotorjoint" type="CFourBL" default_theta="1.57"
         motor1="left_wheel_joint" motor2="left_calf_joint" ln="120.1 100.5 100 100 100" terminal="true"/>
 </rlfw>

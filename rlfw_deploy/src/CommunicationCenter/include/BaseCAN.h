@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include <iostream>
 #include <tuple>
 #include <vector>
@@ -37,4 +38,11 @@ public:
   };
   //该总线上设备的id
   std::vector<int> devive_ids;
+  static int getCANtype(uint8_t type){
+    switch (type) {
+      case 0:return CAN_STANDARD;
+      case 1:return CAN_EXTENDED;
+      default:return CAN_STANDARD;
+    }
+  };
 };

@@ -6,22 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1015</width>
-    <height>603</height>
+    <width>970</width>
+    <height>561</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>rlfw_vz</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(183, 242, 226);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_4">
-    <item row="0" column="0">
+    <item row="0" column="1">
      <widget class="QTabWidget" name="tabWidget">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(143, 240, 164);</string>
+       <string notr="true">background-color: rgb(183, 242, 226);</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="config">
        <attribute name="title">
@@ -39,7 +42,11 @@
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QTextEdit" name="coms_text_edit"/>
+            <widget class="QTextEdit" name="coms_text_edit">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 255, 244);</string>
+             </property>
+            </widget>
            </item>
            <item row="1" column="0">
             <widget class="QLabel" name="label_2">
@@ -49,7 +56,11 @@
             </widget>
            </item>
            <item row="1" column="1">
-            <widget class="QTextEdit" name="joints_text_edit"/>
+            <widget class="QTextEdit" name="joints_text_edit">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 255, 244);</string>
+             </property>
+            </widget>
            </item>
            <item row="3" column="0">
             <widget class="QLabel" name="label_3">
@@ -59,7 +70,11 @@
             </widget>
            </item>
            <item row="3" column="1">
-            <widget class="QTextEdit" name="remotes_text_edit"/>
+            <widget class="QTextEdit" name="remotes_text_edit">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 255, 244);</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -74,6 +89,9 @@
                <width>200</width>
                <height>200</height>
               </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
              </property>
              <property name="text">
               <string>获取配置</string>
@@ -103,6 +121,18 @@
         <string>joint</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item row="0" column="1">
          <widget class="QWidget" name="widget_2" native="true">
           <property name="minimumSize">
@@ -121,6 +151,13 @@
            <string notr="true">background-color: rgb(153, 193, 241);</string>
           </property>
           <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;add Joint:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
            <item row="2" column="0">
             <widget class="QLabel" name="label_7">
              <property name="text">
@@ -128,20 +165,20 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="QComboBox" name="add_joint_combox">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;del Joint:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="del_joint_box">
              <item>
               <property name="text">
                <string>None</string>
               </property>
              </item>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_5">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;add Joint:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
             </widget>
            </item>
            <item row="2" column="1">
@@ -188,8 +225,8 @@
              </item>
             </widget>
            </item>
-           <item row="1" column="1">
-            <widget class="QComboBox" name="del_joint_box">
+           <item row="0" column="1">
+            <widget class="QComboBox" name="add_joint_combox">
              <item>
               <property name="text">
                <string>None</string>
@@ -197,17 +234,10 @@
              </item>
             </widget>
            </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_6">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;del Joint:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
           </layout>
          </widget>
         </item>
-        <item row="2" column="1">
+        <item row="1" column="1">
          <widget class="QWidget" name="widget_4" native="true">
           <property name="minimumSize">
            <size>
@@ -222,12 +252,104 @@
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(181, 131, 90);</string>
+           <string notr="true">background-color: rgb(68, 112, 199);</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_6">
            <property name="topMargin">
             <number>0</number>
            </property>
+           <item row="2" column="3">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;time(ms)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QCheckBox" name="is_timer">
+             <property name="text">
+              <string>定时发送</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QComboBox" name="ctrl_joint">
+             <item>
+              <property name="text">
+               <string>None</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_13">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;type:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QPushButton" name="joint_enable">
+             <property name="text">
+              <string>电机使能</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="send_joint">
+             <property name="text">
+              <string>send</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Joint:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QComboBox" name="ctrl_joint_type">
+             <item>
+              <property name="text">
+               <string>None</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MIT</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>POS</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>VEL</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>POS_VEL</string>
+              </property>
+             </item>
+            </widget>
+           </item>
            <item row="1" column="0" colspan="5">
             <widget class="QWidget" name="widget_5" native="true">
              <property name="minimumSize">
@@ -252,72 +374,8 @@
               <property name="verticalSpacing">
                <number>2</number>
               </property>
-              <item row="0" column="7">
-               <widget class="QTextEdit" name="vel">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="3">
-               <widget class="QTextEdit" name="pos">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QTextEdit" name="kp">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QTextEdit" name="torque">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QLabel" name="label_9">
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_11">
                 <property name="minimumSize">
                  <size>
                   <width>50</width>
@@ -331,7 +389,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>pos:</string>
+                 <string>kp:</string>
                 </property>
                </widget>
               </item>
@@ -351,41 +409,6 @@
                 </property>
                 <property name="text">
                  <string>torque:</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="3">
-               <widget class="QTextEdit" name="kd">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_11">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>50</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>kp:</string>
                 </property>
                </widget>
               </item>
@@ -427,141 +450,176 @@
                 </property>
                </widget>
               </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_9">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>pos:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLineEdit" name="pos">
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>0.0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="torque">
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>0.0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QLineEdit" name="vel">
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>0.0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="kp">
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>0.0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QLineEdit" name="kd">
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>0.0</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </widget>
            </item>
-           <item row="0" column="4">
-            <widget class="QComboBox" name="ctrl_joint_type">
-             <item>
-              <property name="text">
-               <string>None</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>MIT</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>POS</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>VEL</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>POS_VEL</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QPushButton" name="all_joint_stop">
+           <item row="3" column="2">
+            <widget class="QPushButton" name="joint_disable">
              <property name="text">
-              <string>所有电机停止</string>
+              <string>电机失能</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="4">
-            <widget class="QPushButton" name="send_joint">
+           <item row="3" column="3">
+            <widget class="QPushButton" name="all_joint_enable">
              <property name="text">
-              <string>send</string>
+              <string>所有电机使能</string>
              </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_8">
-             <property name="maximumSize">
-              <size>
-               <width>70</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Joint:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QLabel" name="label_14">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;time(ms)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" colspan="2">
-            <widget class="QComboBox" name="ctrl_joint">
-             <item>
-              <property name="text">
-               <string>None</string>
-              </property>
-             </item>
             </widget>
            </item>
            <item row="3" column="4">
-            <widget class="QPushButton" name="all_joint_enable">
+            <widget class="QPushButton" name="all_joint_disable">
              <property name="text">
               <string>所有电机失能</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="0" colspan="2">
-            <widget class="QCheckBox" name="is_timer">
-             <property name="text">
-              <string>定时发送</string>
+           <item row="2" column="2">
+            <widget class="QLineEdit" name="timer">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
              </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QLabel" name="label_13">
              <property name="maximumSize">
               <size>
-               <width>70</width>
+               <width>60</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;type:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="QTextEdit" name="timer">
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="html">
-              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;50&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>50.0</string>
              </property>
             </widget>
            </item>
           </layout>
          </widget>
         </item>
-        <item row="0" column="0" rowspan="3">
+        <item row="0" column="0" rowspan="2">
          <widget class="QWidget" name="joint_plot" native="true">
           <property name="minimumSize">
            <size>
-            <width>600</width>
+            <width>400</width>
             <height>0</height>
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(220, 138, 221);</string>
+           <string notr="true">background-color: rgb(187, 212, 86);</string>
           </property>
          </widget>
         </item>
@@ -571,11 +629,403 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <attribute name="title">
         <string>com</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0" rowspan="2">
+         <widget class="QWidget" name="widget_6" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(251, 151, 184);</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_15">
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;send history id:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_24">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;send history data:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QTextEdit" name="com_send_history_id">
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 219, 219);</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;CAN ID:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;DATA:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLineEdit" name="com_send_canid">
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 219, 219);</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QLineEdit" name="com_send_data">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 219, 219);</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;receive id:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QLabel" name="label_23">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;receive data:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QTextEdit" name="com_receive_id">
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 219, 219);</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1" colspan="2">
+            <widget class="QTextEdit" name="com_receive_data">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 219, 219);</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QTextEdit" name="com_send_history_data">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 219, 219);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QWidget" name="widget_7" native="true">
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(154, 153, 150);</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="3" column="0">
+            <widget class="QPushButton" name="com_send_btn">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(192, 191, 188);</string>
+             </property>
+             <property name="text">
+              <string>发送</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Com type:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="label_20">
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;time(ms)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QLineEdit" name="com_type">
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(192, 191, 188);</string>
+             </property>
+             <property name="text">
+              <string>None</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QComboBox" name="com_select">
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(192, 191, 188);</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>None</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Com:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="com_timer">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(222, 221, 218);</string>
+             </property>
+             <property name="text">
+              <string>100.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QPushButton" name="com_clear_btn">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(192, 191, 188);</string>
+             </property>
+             <property name="text">
+              <string>清理数据</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QCheckBox" name="com_is_timer">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(192, 191, 188);</string>
+             </property>
+             <property name="text">
+              <string>定时发送</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QComboBox" name="canid_type">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(192, 191, 188);</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>STD</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>EXT</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;CAN TYPE：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>268</width>
+            <height>380</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="remote">
        <attribute name="title">
         <string>remote</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <widget class="QLabel" name="remote_img">
+          <property name="minimumSize">
+           <size>
+            <width>598</width>
+            <height>422</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(143, 240, 164);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QWidget" name="widget_8" native="true">
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Remote:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QComboBox" name="remote_select">
+             <item>
+              <property name="text">
+               <string>None</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_26">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Remote type:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLineEdit" name="remote_type">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QPushButton" name="remote_mapping_btn">
+             <property name="text">
+              <string>重映射</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;mapping:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="3">
+            <widget class="QTextEdit" name="remote_mapping_keys">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(248, 228, 92);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -586,7 +1036,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1015</width>
+     <width>970</width>
      <height>27</height>
     </rect>
    </property>

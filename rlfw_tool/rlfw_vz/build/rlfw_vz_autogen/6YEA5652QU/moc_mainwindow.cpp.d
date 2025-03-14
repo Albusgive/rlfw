@@ -168,6 +168,7 @@
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QFont \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QImage \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QPen \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QPolygon \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QTransform \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qaction.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qbitmap.h \
@@ -916,7 +917,6 @@
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stdalign.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h \

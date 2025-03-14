@@ -31,7 +31,7 @@ include_directories(
 )
 add_executable(${PROJECT_NAME}
         ${PRO_SOURCES_DIR}
-        ${QT_RESOURCES_CPP}
+        ${PRO_RESOURCES_DIR}
         ${PRO_INCLUDE_DIR}
         ${QT_MOC_HPP}
         ${PRO_FORM_DIR}

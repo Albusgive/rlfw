@@ -117,6 +117,9 @@ public:
   停止读取GamePad手柄数据
   */
   void unreadGamePad();
+  std::vector<std::string> key = {
+      "a",  "b",  "x",  "y",  "lb", "rb", "start", "menu", "home", "screenhot",
+      "lo", "ro", "lx", "ly", "rx", "ry", "lt",    "rt",   "xx",   "yy"};
 
 private:
   std::vector<InputDevice> dev_js;
@@ -136,10 +139,6 @@ private:
   void decodeBEITONG(struct js_event js);
   void decodeSony(struct js_event js);
 
-  std::vector<std::string> key = {"a",  "b",     "x",    "y",    "lb",
-    "rb", "start", "menu", "home", "screenhot",
-    "lo", "ro",    "lx",   "ly",   "rx",
-    "ry", "lt",    "rt",   "xx",   "yy"};
-std::vector<float> value;
+  std::vector<float> value;
 };
 #endif

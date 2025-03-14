@@ -4,7 +4,7 @@
   <name>rlfw_vz</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="chengyangkj@todo.todo">chengyangkj</maintainer>
+  <maintainer email="albusgive@todo.todo">chengyangkj</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

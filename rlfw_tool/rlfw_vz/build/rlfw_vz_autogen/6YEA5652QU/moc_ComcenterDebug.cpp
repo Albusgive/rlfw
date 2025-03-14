@@ -8,6 +8,7 @@
 
 #include "../../../include/ComcenterDebug.h"
 #include <QtCore/qmetatype.h>
+#include <QtCore/QList>
 
 #include <QtCore/qtmochelpers.h>
 
@@ -41,7 +42,9 @@ static constexpr auto qt_meta_stringdata_ZN14ComcenterDebugE = QtMocHelpers::str
     "emitComParameter",
     "",
     "emitJointData",
-    "emitSrvData"
+    "emitComData",
+    "emitRemote",
+    "QList<float>"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -53,22 +56,24 @@ Q_CONSTINIT static const uint qt_meta_data_ZN14ComcenterDebugE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       3,       // signalCount
+       4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    3,   32,    2, 0x06,    1 /* Public */,
-       3,    2,   39,    2, 0x06,    5 /* Public */,
-       4,    1,   44,    2, 0x06,    8 /* Public */,
+       1,    3,   38,    2, 0x06,    1 /* Public */,
+       3,    3,   45,    2, 0x06,    5 /* Public */,
+       4,    2,   52,    2, 0x06,    9 /* Public */,
+       5,    2,   57,    2, 0x06,   12 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QStringList, QMetaType::QStringList,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::Float,    2,    2,
-    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::QReal, QMetaType::QReal,    2,    2,    2,
+    QMetaType::Void, QMetaType::Int, QMetaType::QByteArray,    2,    2,
+    QMetaType::Void, QMetaType::QStringList, 0x80000000 | 6,    2,    2,
 
        0        // eod
 };
@@ -90,10 +95,16 @@ Q_CONSTINIT const QMetaObject ComcenterDebug::staticMetaObject = { {
         // method 'emitJointData'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        QtPrivate::TypeAndForceComplete<float, std::false_type>,
-        // method 'emitSrvData'
+        QtPrivate::TypeAndForceComplete<qreal, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qreal, std::false_type>,
+        // method 'emitComData'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<qint32, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QByteArray, std::false_type>,
+        // method 'emitRemote'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QStringList, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QVector<float>, std::false_type>
     >,
     nullptr
 } };
@@ -104,9 +115,22 @@ void ComcenterDebug::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->emitComParameter((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[3]))); break;
-        case 1: _t->emitJointData((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<float>>(_a[2]))); break;
-        case 2: _t->emitSrvData((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->emitJointData((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qreal>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<qreal>>(_a[3]))); break;
+        case 2: _t->emitComData((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QByteArray>>(_a[2]))); break;
+        case 3: _t->emitRemote((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QList<float>>>(_a[2]))); break;
         default: ;
+        }
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 3:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 1:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QList<float> >(); break;
+            }
+            break;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
@@ -119,16 +143,23 @@ void ComcenterDebug::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
             }
         }
         {
-            using _q_method_type = void (ComcenterDebug::*)(QString , float );
+            using _q_method_type = void (ComcenterDebug::*)(QString , qreal , qreal );
             if (_q_method_type _q_method = &ComcenterDebug::emitJointData; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
         }
         {
-            using _q_method_type = void (ComcenterDebug::*)(QString );
-            if (_q_method_type _q_method = &ComcenterDebug::emitSrvData; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+            using _q_method_type = void (ComcenterDebug::*)(qint32 , QByteArray );
+            if (_q_method_type _q_method = &ComcenterDebug::emitComData; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 2;
+                return;
+            }
+        }
+        {
+            using _q_method_type = void (ComcenterDebug::*)(QStringList , QVector<float> );
+            if (_q_method_type _q_method = &ComcenterDebug::emitRemote; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+                *result = 3;
                 return;
             }
         }
@@ -154,14 +185,14 @@ int ComcenterDebug::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        if (_id < 4)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 4;
     }
     return _id;
 }
@@ -174,16 +205,23 @@ void ComcenterDebug::emitComParameter(QString _t1, QStringList _t2, QStringList 
 }
 
 // SIGNAL 1
-void ComcenterDebug::emitJointData(QString _t1, float _t2)
+void ComcenterDebug::emitJointData(QString _t1, qreal _t2, qreal _t3)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 
 // SIGNAL 2
-void ComcenterDebug::emitSrvData(QString _t1)
+void ComcenterDebug::emitComData(qint32 _t1, QByteArray _t2)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
+}
+
+// SIGNAL 3
+void ComcenterDebug::emitRemote(QStringList _t1, QVector<float> _t2)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
+    QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 QT_WARNING_POP

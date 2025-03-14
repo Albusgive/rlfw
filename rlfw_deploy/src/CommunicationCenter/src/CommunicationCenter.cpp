@@ -24,11 +24,21 @@
 CommunicationCenter::CommunicationCenter(const std::string &node_name)
     : rclcpp::Node(node_name) {
 
-  rclcpp::QoS control_qos(1);
-  control_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE)
-      .durability_volatile();
   rclcpp::QoS remote_qos(10);
   remote_qos.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
+  // topic发送基础remote接收到的数据
+  remote_publisher = this->create_publisher<rlfw_msgs::msg::Remote>(
+      "rlfwRemoteBack", remote_qos);
+
+  xml_decoder.load(motor_cfg_path);
+  if (xml_decoder.check()) {
+    std::cout << "xml load check succeed" << std::endl;
+    buildMap();
+  }
+  rclcpp::QoS control_qos(motorID_map.size());
+  control_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE)
+      .durability_volatile();
+
   // topic发送基础can接收到的数据
   can_publisher = this->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANBack",
                                                                  control_qos);
@@ -50,40 +60,13 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   serial_sub = this->create_subscription<rlfw_msgs::msg::SerialMsg>(
       "rlfwSerialSend", control_qos,
       std::bind(&CommunicationCenter::sendSerial, this, _1));
-  // topic发送基础remote接收到的数据
-  remote_publisher = this->create_publisher<rlfw_msgs::msg::Remote>(
-      "rlfwRemoteBack", remote_qos);
   // 服务器
   request = this->create_service<rlfw_msgs::srv::ComParameter>(
       "CommunicationCenterSrv",
       std::bind(&CommunicationCenter::handle_request, this, _1, _2));
-  // 状态观测器
+  // 状态观测器 TODO
 
-  xml_decoder.load(motor_cfg_path);
-  if (xml_decoder.check()) {
-    std::cout << "xml load check succeed" << std::endl;
-    buildMap();
-    RunRecv();
-  }
-
-  // motor_map["left_wheel_joint"]->enableMotor(true);
-  // motor_map["left_calf_joint"]->enableMotor(true);
-  // // motor_map["left_wheel_joint"]->ctrl_vel(1.0);
-  // motor_map["left_wheel_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
-  // motor_map["left_calf_joint"]->locomotion(0.0, 0.0, 1.0, 0.0, 0.3);
-  // while (rclcpp::ok()) {
-  //   std::this_thread::sleep_for(std::chrono::microseconds(500));
-  // }
-  // std::this_thread::sleep_for(std::chrono::seconds(5));
-  // motor_map["left_wheel_joint"]->enableMotor(false);
-  // motor_map["left_calf_joint"]->enableMotor(false);
-
-  // initGamePad();
-
-  // // 寻找所有pcan 全部开启
-  // pcan = new PCAN();
-  // auto available = pcan->initAvailableCAN();
-  // std::cout << "available num:" << available.size() << std::endl;
+  RunRecv();
 }
 
 CommunicationCenter::~CommunicationCenter() {
@@ -126,6 +109,7 @@ void CommunicationCenter::fromCan(CANMSG &msg, std::vector<int> &device_ids,
           motor_back.invertMotor(); // 取反
         motor->motorback = motor_back;
         jointname.stamp = stamp;
+        jointname.frame_id = motor->motor_name;
         pub_motor_msg.set__jointname(jointname);
         pub_motor_msg.set__pos(motor_back.angle);
         pub_motor_msg.set__vel(motor_back.ang_vel);
@@ -153,7 +137,7 @@ void CommunicationCenter::fromSerial(std::vector<uint8_t> &msg,
 }
 
 void CommunicationCenter::fromRemote(std::vector<std::string> &key,
-                                     std::vector<float> value) {
+                                     std::vector<float> &value) {
   std::lock_guard<std::mutex> lock(com_mutex);
   rlfw_msgs::msg::Remote msg;
   msg.set__key(key);
@@ -197,7 +181,7 @@ void CommunicationCenter::sendMotor(
     } else {
       // 原来是虚拟电机啊
       rlfw_msgs::msg::Joint motor_msg;
-      motor_msg.jointname.set__frame_id(joint_name);
+      motor_msg.jointname.set__frame_id(motor->motor_name);
       motor_msg.jointname.set__stamp(this->now());
       motor_msg.set__pos(motor->motorback.angle);
       motor_msg.set__vel(motor->motorback.ang_vel);
@@ -287,7 +271,7 @@ void CommunicationCenter::sendCAN(std::shared_ptr<rlfw_msgs::msg::CanMsg> msg) {
     CANMSG send_msg;
     send_msg.ID = msg->id;
     send_msg.LEN = msg->len;
-    send_msg.MSGTYPE = msg->msgtype;
+    send_msg.MSGTYPE = BaseCAN::getCANtype(msg->msgtype);
     for (int i = 0; i < (int)msg->data.size(); i++) {
       send_msg.DATA[i] = msg->data[i];
     }
@@ -345,8 +329,7 @@ void CommunicationCenter::handle_request(
     break;
   }
   case ComeCenterParamType::MountMotor: {
-    for (auto m : motor_map)
-    {
+    for (auto m : motor_map) {
       response->device_name.push_back(m.first);
       response->device_type.push_back(m.second->motor_type);
     }
@@ -421,6 +404,7 @@ void CommunicationCenter::buildMap() {
             mi->id = motor.id;
             mi->invert = motor.invert;
             mi->motor_type = "Mi";
+            mi->motor_name = motor.joint_name;
             initMotor(mi, motor);
             mi->ok_fix_parameter(motor.id);
             motor_map[motor.joint_name] = mi;
@@ -431,6 +415,7 @@ void CommunicationCenter::buildMap() {
             dm->id = motor.id;
             dm->invert = motor.invert;
             dm->motor_type = "DM";
+            dm->motor_name = motor.joint_name;
             initMotor(dm, motor);
             motor_map[motor.joint_name] = dm;
             motorID_map[motor.id] = dm;
@@ -480,6 +465,8 @@ void CommunicationCenter::buildMap() {
       auto gamepad = std::make_shared<GamePad>();
       gamepad->channel = remote.channel;
       gamepad->name = remote.name;
+      // if (remote.key.size() == gamepad->key.size())
+      //   gamepad->key = remote.key;
       gamepad->showGamePads();
       if (gamepad->GamePadpads.empty()) {
         RCLCPP_ERROR(this->get_logger(), "no gamepad ,name:%s ,channel:%d",

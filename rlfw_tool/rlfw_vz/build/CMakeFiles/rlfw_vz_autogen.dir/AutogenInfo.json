@@ -1381,7 +1381,8 @@
 		"/opt/ros/humble/share/ament_cmake_core/cmake/core/templates/nameConfig.cmake.in",
 		"/opt/ros/humble/share/ament_cmake_core/cmake/core/templates/nameConfig.cmake.in",
 		"/opt/ros/humble/share/ament_cmake_core/cmake/core/templates/nameConfig-version.cmake.in",
-		"/opt/ros/humble/share/ament_cmake_core/cmake/core/templates/nameConfig-version.cmake.in"
+		"/opt/ros/humble/share/ament_cmake_core/cmake/core/templates/nameConfig-version.cmake.in",
+		"/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/resource/images.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz",
 	"DEP_FILE" : "",

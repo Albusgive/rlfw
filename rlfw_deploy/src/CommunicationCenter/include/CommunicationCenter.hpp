@@ -46,7 +46,7 @@ public:
                std::string &com_name);
   void fromSerial(std::vector<uint8_t> &msg, std::string com_name);
   void fromSerialMotor() {};
-  void fromRemote(std::vector<std::string> &key, std::vector<float> value);
+  void fromRemote(std::vector<std::string> &key, std::vector<float>& value);
   // 对于没有独立线程的com(主要是can)统一线程读取，serial独立线程接收
   void RunRecv();
 

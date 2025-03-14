@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "rlfw_vz")
 set(rlfw_vz_VERSION "0.0.0")
-set(rlfw_vz_MAINTAINER "chengyangkj <chengyangkj@todo.todo>")
+set(rlfw_vz_MAINTAINER "chengyangkj <albusgive@todo.todo>")
 set(rlfw_vz_BUILD_DEPENDS "rclcpp" "std_msgs")
 set(rlfw_vz_BUILDTOOL_DEPENDS "ament_cmake")
 set(rlfw_vz_BUILD_EXPORT_DEPENDS "rclcpp" "std_msgs")

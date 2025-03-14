@@ -105,22 +105,34 @@ void DynamicChartWidget::updateData(const QString &name, qreal x, qreal y) {
 
 // ================== Y轴动态范围 ==================
 void DynamicChartWidget::updateYAxisRange() {
-  if (seriesMap.isEmpty())
-    return;
+  qreal visibleMinY = std::numeric_limits<qreal>::max();
+  qreal visibleMaxY = std::numeric_limits<qreal>::lowest();
 
-  // 计算缓冲范围（10%的差值）
-  const qreal buffer = (globalMaxY - globalMinY) * 0.1;
-  const qreal min = globalMinY - buffer;
-  const qreal max = globalMaxY + buffer;
+  // 获取当前 X 轴可见范围
+  const qreal currentXMin = axisX->min();
+  const qreal currentXMax = axisX->max();
 
-  // 避免无效范围
-  if (qFuzzyCompare(min + 1, max + 1)) {
-    axisY->setRange(min - 1, min + 1);
-  } else {
-    axisY->setRange(min, max);
+  // 遍历所有曲线的点，仅统计可见范围内的 Y 值
+  for (QLineSeries* series : seriesMap.values()) {
+      const auto points = series->points();
+      for (const QPointF& point : points) {
+          if (point.x() >= currentXMin && point.x() <= currentXMax) {
+              visibleMinY = qMin(visibleMinY, point.y());
+              visibleMaxY = qMax(visibleMaxY, point.y());
+          }
+      }
   }
 
-  axisY->applyNiceNumbers(); // 优化刻度显示
+  // 若无可显示数据，保持默认范围
+  if (visibleMinY > visibleMaxY) return;
+
+  // 计算缓冲范围
+  const qreal buffer = (visibleMaxY - visibleMinY) * 0.1;
+  const qreal min = visibleMinY - buffer;
+  const qreal max = visibleMaxY + buffer;
+
+  axisY->setRange(min, max);
+  axisY->applyNiceNumbers();
 }
 
 // ================== 颜色生成 ==================

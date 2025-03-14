@@ -75,6 +75,8 @@ bool XMLDecoder::load(std::string path) {
       xml_remote.type =
           string2enum<RemoteType>(Attribute2String(remote->Attribute("type")));
       xml_remote.channel = remote->IntAttribute("channel", 0);
+      std::string key_ =  Attribute2String(remote->Attribute("key"));
+      xml_remote.key = splitByStream(key_);
       remotes.push_back(xml_remote);
     }
   }
@@ -129,4 +131,14 @@ std::string XMLDecoder::Attribute2String(const char *name) {
     return std::string("");
   }
   return std::string(name);
+}
+
+std::vector<std::string> XMLDecoder::splitByStream(const std::string& s) {
+  std::istringstream iss(s);
+  std::vector<std::string> tokens;
+  std::string token;
+  while (iss >> token) {  // 自动跳过连续空格
+      tokens.push_back(token);
+  }
+  return tokens;
 }

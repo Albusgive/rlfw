@@ -1,0 +1,23 @@
+{
+	"BUILD_DIR" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen",
+	"CMAKE_BINARY_DIR" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz",
+	"CMAKE_SOURCE_DIR" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz",
+	"INCLUDE_DIR" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/resource/images/gamepad_unable.png",
+		"/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/resource/images/gamepad_enable.png"
+	],
+	"LOCK_FILE" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/CMakeFiles/rlfw_vz_autogen.dir/AutoRcc_images_6WJNPILU4A_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "images" ],
+	"OUTPUT_CHECKSUM" : "6WJNPILU4A",
+	"OUTPUT_NAME" : "qrc_images.cpp",
+	"RCC_EXECUTABLE" : "/home/albusgive2/Qt/6.8.2/gcc_64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/CMakeFiles/rlfw_vz_autogen.dir/AutoRcc_images_6WJNPILU4A_Used.txt",
+	"SOURCE" : "/home/albusgive2/rlfw/rlfw_tool/rlfw_vz/resource/images.qrc",
+	"VERBOSITY" : 0
+}

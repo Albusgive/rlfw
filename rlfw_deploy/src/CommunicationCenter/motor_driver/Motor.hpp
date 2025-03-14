@@ -76,6 +76,7 @@ public:
   int id = -1;
   MotorBack motorback;
   bool invert = false;
+  std::string motor_name;
   std::string motor_type;
   virtual void locomotion(float torque, float pos, float ang_vel, float kp,
                           float kd) = 0;

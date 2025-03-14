@@ -3,7 +3,7 @@ CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.h \
  /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/include/BaseCAN.h \
- /usr/include/c++/12/iostream \
+ /usr/include/c++/12/cstdint \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -14,17 +14,24 @@ CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
- /usr/include/c++/12/pstl/pstl_config.h /usr/include/c++/12/ostream \
+ /usr/include/c++/12/pstl/pstl_config.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/time64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
  /usr/include/c++/12/ios /usr/include/c++/12/iosfwd \
  /usr/include/c++/12/bits/stringfwd.h \
  /usr/include/c++/12/bits/memoryfwd.h /usr/include/c++/12/bits/postypes.h \
  /usr/include/c++/12/cwchar /usr/include/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
@@ -40,13 +47,7 @@ CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o: \
  /usr/include/c++/12/new /usr/include/c++/12/bits/move.h \
  /usr/include/c++/12/type_traits \
  /usr/include/c++/12/bits/nested_exception.h \
- /usr/include/c++/12/bits/char_traits.h /usr/include/c++/12/cstdint \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/c++/12/bits/char_traits.h \
  /usr/include/c++/12/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
  /usr/include/c++/12/clocale /usr/include/locale.h \
