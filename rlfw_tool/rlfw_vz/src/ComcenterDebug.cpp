@@ -165,8 +165,8 @@ void ComcenterDebug::enable(int flag) {
 
 void ComcenterDebug::resetQos(int his) {
   rclcpp::QoS control_qos(his);
-  control_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE)
-      .durability_volatile();
+  control_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
+  control_qos.history(RMW_QOS_POLICY_HISTORY_KEEP_ALL);
   rclcpp::QoS remote_qos(10);
   remote_qos.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
 

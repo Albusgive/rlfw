@@ -25,7 +25,7 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
     : rclcpp::Node(node_name) {
 
   rclcpp::QoS remote_qos(10);
-  remote_qos.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
+  remote_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
   // topic发送基础remote接收到的数据
   remote_publisher = this->create_publisher<rlfw_msgs::msg::Remote>(
       "rlfwRemoteBack", remote_qos);
@@ -36,8 +36,8 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
     buildMap();
   }
   rclcpp::QoS control_qos(motorID_map.size());
-  control_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE)
-      .durability_volatile();
+  control_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
+  control_qos.history(RMW_QOS_POLICY_HISTORY_KEEP_ALL);
 
   // topic发送基础can接收到的数据
   can_publisher = this->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANBack",
@@ -112,7 +112,7 @@ void CommunicationCenter::fromCan(CANMSG &msg, std::vector<int> &device_ids,
         jointname.frame_id = motor->motor_name;
         pub_motor_msg.set__jointname(jointname);
         pub_motor_msg.set__pos(motor_back.angle);
-        pub_motor_msg.set__vel(motor_back.ang_vel);
+        pub_motor_msg.set__vel(motor_back.vel);
         pub_motor_msg.set__current(motor_back.current);
         pub_motor_msg.set__number_laps(motor_back.number_laps);
         pub_motor_msg.set__temperature(motor_back.temperature);
@@ -184,7 +184,7 @@ void CommunicationCenter::sendMotor(
       motor_msg.jointname.set__frame_id(motor->motor_name);
       motor_msg.jointname.set__stamp(this->now());
       motor_msg.set__pos(motor->motorback.angle);
-      motor_msg.set__vel(motor->motorback.ang_vel);
+      motor_msg.set__vel(motor->motorback.vel);
       motor_msg.set__current(0);
       motor_msg.set__torque(0);
       motor_msg.set__temperature(0);
@@ -331,9 +331,15 @@ void CommunicationCenter::handle_request(
   case ComeCenterParamType::MountMotor: {
     for (auto m : motor_map) {
       response->device_name.push_back(m.first);
-      response->device_type.push_back(m.second->motor_type);
+      response->device_type.push_back(
+          m.second->motor_type + "-----ctrl_type:" +
+          std::string(magic_enum::enum_name(m.second->ctrl_type)));
     }
-    // serial motor
+    // virtual motor
+    for (auto m : virtual_motor_map) {
+      response->device_name.push_back(m.first);
+      response->device_type.push_back("virtual_motor");
+    }
     break;
   }
   case ComeCenterParamType::MountRmote: {
@@ -401,10 +407,7 @@ void CommunicationCenter::buildMap() {
           if (motor.type == Motortype::Mi) {
             auto mi = std::make_shared<MiMotor>();
             mi->can = pcan;
-            mi->id = motor.id;
-            mi->invert = motor.invert;
             mi->motor_type = "Mi";
-            mi->motor_name = motor.joint_name;
             initMotor(mi, motor);
             mi->ok_fix_parameter(motor.id);
             motor_map[motor.joint_name] = mi;
@@ -412,10 +415,7 @@ void CommunicationCenter::buildMap() {
           } else if (motor.type == Motortype::DM) {
             auto dm = std::make_shared<DMMotor>();
             dm->can = pcan;
-            dm->id = motor.id;
-            dm->invert = motor.invert;
             dm->motor_type = "DM";
-            dm->motor_name = motor.joint_name;
             initMotor(dm, motor);
             motor_map[motor.joint_name] = dm;
             motorID_map[motor.id] = dm;
@@ -500,6 +500,11 @@ void CommunicationCenter::buildMap() {
     virtualmotor->motor2 = motor_safe_get(vm.motor2);
     virtualmotor->terminal = vm.terminal;
     virtualmotor->type = vm.type;
+    virtualmotor->motor_name = vm.joint_name;
+    virtualmotor->default_ = vm.default_;
+    virtualmotor->setTorqueRange(vm.torque_range[0], vm.torque_range[1]);
+    virtualmotor->setVelRange(vm.vel_range[0], vm.vel_range[1]);
+    virtualmotor->setPosRange(vm.pos_range[0], vm.pos_range[1]);
     int n = vm.ln.size() >= 5 ? 5 : vm.ln.size();
     for (int i = 0; i < n; i++) {
       virtualmotor->l[i] = vm.ln[i];
@@ -529,7 +534,10 @@ void CommunicationCenter::buildMap() {
 
 void CommunicationCenter::initMotor(std::shared_ptr<BaseMotor> _motor,
                                     XMLMotor xml_motor) {
+  _motor->id = xml_motor.id;
+  _motor->ctrl_type = xml_motor.ctrl_type;
   _motor->enableMotor(true);
+  _motor->setCtrlType();
   _motor->setPosKP(xml_motor.PosKP);
   _motor->setPosKP(xml_motor.PosKD);
   _motor->setVelKP(xml_motor.VelKP);
@@ -539,4 +547,11 @@ void CommunicationCenter::initMotor(std::shared_ptr<BaseMotor> _motor,
   _motor->setSafeTorque(xml_motor.SafeTorque);
   _motor->setSafePos(xml_motor.SafePos);
   _motor->setSafeVel(xml_motor.SafeVel);
+  _motor->invert = xml_motor.invert;
+  _motor->motor_name = xml_motor.joint_name;
+  _motor->default_ = xml_motor.default_;
+  _motor->setTorqueRange(xml_motor.torque_range[0], xml_motor.torque_range[1]);
+  _motor->setVelRange(xml_motor.vel_range[0], xml_motor.vel_range[1]);
+  _motor->setPosRange(xml_motor.pos_range[0], xml_motor.pos_range[1]);
+  _motor->enableMotor(true);
 }

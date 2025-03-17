@@ -1,0 +1,90 @@
+[0.012s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/agent -- -j12 -l12
+[0.045s] -- Found PythonInterp: /usr/bin/python3.10 (found version "3.10.12") 
+[0.046s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.135s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.153s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.155s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.158s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.164s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.172s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.191s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.192s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.258s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.289s] -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
+[0.311s] -- Found rlfw_msgs: 0.0.0 (/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake)
+[0.319s] -- Found tf2_geometry_msgs: 0.25.12 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.328s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.329s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.368s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.397s] -- PyTorch: CUDA detected: 12.4
+[0.397s] -- PyTorch: CUDA nvcc is: /usr/local/cuda/bin/nvcc
+[0.397s] -- PyTorch: CUDA toolkit directory: /usr/local/cuda
+[0.466s] -- PyTorch: Header version is: 12.4
+[0.524s] [33mCMake Warning at /home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Caffe2/public/cuda.cmake:140 (message):
+[0.524s]   Failed to compute shorthash for libnvrtc.so
+[0.524s] Call Stack (most recent call first):
+[0.524s]   /home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)
+[0.524s]   /home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)
+[0.524s]   CMakeLists.txt:23 (find_package)
+[0.524s] 
+[0.524s] [0m
+[0.524s] -- Could NOT find nvtx3 (missing: nvtx3_dir) 
+[0.524s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[0.524s]   The package name passed to `find_package_handle_standard_args` (nvtx3) does
+[0.524s]   not match the name of the calling package (Caffe2).  This can lead to
+[0.524s]   problems in calling code that expects `find_package` result variables
+[0.524s]   (e.g., `_FOUND`) to follow a certain pattern.
+[0.525s] Call Stack (most recent call first):
+[0.525s]   /home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Caffe2/public/cuda.cmake:178 (find_package_handle_standard_args)
+[0.525s]   /home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)
+[0.525s]   /home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)
+[0.525s]   CMakeLists.txt:23 (find_package)
+[0.525s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.525s] [0m
+[0.525s] [33mCMake Warning at /home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Caffe2/public/cuda.cmake:184 (message):
+[0.525s]   Cannot find NVTX3, find old NVTX instead
+[0.525s] Call Stack (most recent call first):
+[0.525s]   /home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)
+[0.525s]   /home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)
+[0.525s]   CMakeLists.txt:23 (find_package)
+[0.525s] 
+[0.525s] [0m
+[0.525s] -- USE_CUDNN is set to 0. Compiling without cuDNN support
+[0.525s] -- USE_CUSPARSELT is set to 0. Compiling without cuSPARSELt support
+[0.525s] -- USE_CUDSS is set to 0. Compiling without cuDSS support
+[0.525s] -- USE_CUFILE is set to 0. Compiling without cuFile support
+[1.329s] -- Autodetected CUDA architecture(s):  8.9
+[1.329s] -- Added CUDA NVCC flags for: -gencode;arch=compute_89,code=sm_89
+[1.347s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.395s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.396s] -- Configured cppcheck include dirs: /home/albusgive2/rlfw/rlfw_deploy/src/agent/include
+[1.396s] -- Configured cppcheck exclude dirs and/or files: 
+[1.397s] -- Added test 'lint_cmake' to check CMake code style
+[1.401s] -- Added test 'uncrustify' to check C / C++ code style
+[1.401s] -- Configured uncrustify additional arguments: 
+[1.402s] -- Added test 'xmllint' to check XML markup files
+[1.402s] -- Configuring done
+[1.412s] -- Generating done
+[1.415s] -- Build files have been written to: /home/albusgive2/rlfw/rlfw_deploy/build/agent
+[1.444s] [35m[1mConsolidate compiler generated dependencies of target agent[0m
+[1.489s] [100%] Built target agent
+[1.496s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/agent -- -j12 -l12
+[1.497s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/agent
+[1.501s] -- Install configuration: ""
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/lib/agent/agent
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/ament_index/resource_index/package_run_dependencies/agent
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/ament_index/resource_index/parent_prefix_path/agent
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/ament_prefix_path.sh
+[1.502s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/ament_prefix_path.dsv
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/path.sh
+[1.502s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/path.dsv
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.bash
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.sh
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.zsh
+[1.502s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.dsv
+[1.502s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/package.dsv
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/ament_index/resource_index/packages/agent
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/cmake/agentConfig.cmake
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/cmake/agentConfig-version.cmake
+[1.502s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/package.xml
+[1.504s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/agent

@@ -29,6 +29,16 @@ MainWindow::MainWindow(QWidget *parent)
   connect(ui->get_cfg_btn, &QPushButton::clicked, comcenter_debug,
           &ComcenterDebug::requestComParameter);
   connect(ui->able_cfg_btn, &QPushButton::clicked, this, [this]() {
+    ui->add_joint_combox->clear();
+    ui->add_joint_combox->addItem("None");
+    ui->del_joint_box->clear();
+    ui->del_joint_box->addItem("None");
+    ui->ctrl_joint->clear();
+    ui->ctrl_joint->addItem("None");
+    ui->com_select->clear();
+    ui->com_select->addItem("None");
+    ui->remote_select->clear();
+    ui->remote_select->addItem("None");
     ui->add_joint_combox->addItems(joints);
     ui->del_joint_box->addItems(joints);
     ui->ctrl_joint->addItems(joints);
@@ -132,7 +142,7 @@ void MainWindow::allJointEnable() {
 void MainWindow::connectCom() {
   connect(ui->com_select, &QComboBox::currentIndexChanged, this,
           [this](int idx) {
-            if (idx != 0) {
+            if (idx > 0) {
               ui->com_type->setText(com_types[idx - 1]);
               comcenter_debug->com_type = com_types[idx - 1];
               if (com_types[idx - 1].contains("can")) {
@@ -203,7 +213,7 @@ void MainWindow::connectRemote() {
   ui->remote_img->resize(img.size());
   connect(ui->remote_select, &QComboBox::currentIndexChanged, this,
           [this](int idx) {
-            if (idx != 0) {
+            if (idx > 0) {
               ui->remote_type->setText(remote_types[idx - 1]);
             }
           });

@@ -36,7 +36,7 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout_4;
-    QTabWidget *tabWidget;
+    QTabWidget *virtualmotor;
     QWidget *config;
     QGridLayout *gridLayout_3;
     QWidget *widget;
@@ -130,6 +130,7 @@ public:
     QPushButton *remote_mapping_btn;
     QLabel *label_27;
     QTextEdit *remote_mapping_keys;
+    QWidget *tab;
     QMenuBar *menubar;
     QMenu *menufile;
     QStatusBar *statusbar;
@@ -144,9 +145,9 @@ public:
         centralwidget->setObjectName("centralwidget");
         gridLayout_4 = new QGridLayout(centralwidget);
         gridLayout_4->setObjectName("gridLayout_4");
-        tabWidget = new QTabWidget(centralwidget);
-        tabWidget->setObjectName("tabWidget");
-        tabWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(183, 242, 226);"));
+        virtualmotor = new QTabWidget(centralwidget);
+        virtualmotor->setObjectName("virtualmotor");
+        virtualmotor->setStyleSheet(QString::fromUtf8("background-color: rgb(183, 242, 226);"));
         config = new QWidget();
         config->setObjectName("config");
         gridLayout_3 = new QGridLayout(config);
@@ -211,7 +212,7 @@ public:
 
         gridLayout_3->addWidget(widget_3, 0, 1, 1, 1);
 
-        tabWidget->addTab(config, QString());
+        virtualmotor->addTab(config, QString());
         joint = new QWidget();
         joint->setObjectName("joint");
         gridLayout_2 = new QGridLayout(joint);
@@ -437,7 +438,7 @@ public:
 
         gridLayout_2->addWidget(joint_plot, 0, 0, 2, 1);
 
-        tabWidget->addTab(joint, QString());
+        virtualmotor->addTab(joint, QString());
         com = new QWidget();
         com->setObjectName("com");
         gridLayout_9 = new QGridLayout(com);
@@ -609,7 +610,7 @@ public:
 
         gridLayout_9->addItem(verticalSpacer, 1, 1, 1, 1);
 
-        tabWidget->addTab(com, QString());
+        virtualmotor->addTab(com, QString());
         remote = new QWidget();
         remote->setObjectName("remote");
         gridLayout_11 = new QGridLayout(remote);
@@ -666,9 +667,12 @@ public:
 
         gridLayout_11->addWidget(widget_8, 0, 1, 1, 1);
 
-        tabWidget->addTab(remote, QString());
+        virtualmotor->addTab(remote, QString());
+        tab = new QWidget();
+        tab->setObjectName("tab");
+        virtualmotor->addTab(tab, QString());
 
-        gridLayout_4->addWidget(tabWidget, 0, 1, 1, 1);
+        gridLayout_4->addWidget(virtualmotor, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -685,7 +689,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        virtualmotor->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -699,7 +703,7 @@ public:
         label_3->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">remotes:</span></p></body></html>", nullptr));
         get_cfg_btn->setText(QCoreApplication::translate("MainWindow", "\350\216\267\345\217\226\351\205\215\347\275\256", nullptr));
         able_cfg_btn->setText(QCoreApplication::translate("MainWindow", "\345\272\224\347\224\250\351\205\215\347\275\256", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(config), QCoreApplication::translate("MainWindow", "config", nullptr));
+        virtualmotor->setTabText(virtualmotor->indexOf(config), QCoreApplication::translate("MainWindow", "config", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">add Joint:</span></p></body></html>", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">parameter:</span></p></body></html>", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">del Joint:</span></p></body></html>", nullptr));
@@ -744,7 +748,7 @@ public:
         all_joint_enable->setText(QCoreApplication::translate("MainWindow", "\346\211\200\346\234\211\347\224\265\346\234\272\344\275\277\350\203\275", nullptr));
         all_joint_disable->setText(QCoreApplication::translate("MainWindow", "\346\211\200\346\234\211\347\224\265\346\234\272\345\244\261\350\203\275", nullptr));
         timer->setText(QCoreApplication::translate("MainWindow", "50.0", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(joint), QCoreApplication::translate("MainWindow", "joint", nullptr));
+        virtualmotor->setTabText(virtualmotor->indexOf(joint), QCoreApplication::translate("MainWindow", "joint", nullptr));
         label_15->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">send history id:</span></p></body></html>", nullptr));
         label_24->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">send history data:</span></p></body></html>", nullptr));
         label_17->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">CAN ID:</span></p></body></html>", nullptr));
@@ -765,7 +769,7 @@ public:
         canid_type->setItemText(1, QCoreApplication::translate("MainWindow", "EXT", nullptr));
 
         label_21->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">CAN TYPE\357\274\232</span></p></body></html>", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(com), QCoreApplication::translate("MainWindow", "com", nullptr));
+        virtualmotor->setTabText(virtualmotor->indexOf(com), QCoreApplication::translate("MainWindow", "com", nullptr));
         remote_img->setText(QString());
         label_25->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">Remote:</span></p></body></html>", nullptr));
         remote_select->setItemText(0, QCoreApplication::translate("MainWindow", "None", nullptr));
@@ -773,7 +777,8 @@ public:
         label_26->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">Remote type:</span></p></body></html>", nullptr));
         remote_mapping_btn->setText(QCoreApplication::translate("MainWindow", "\351\207\215\346\230\240\345\260\204", nullptr));
         label_27->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">mapping:</span></p></body></html>", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(remote), QCoreApplication::translate("MainWindow", "remote", nullptr));
+        virtualmotor->setTabText(virtualmotor->indexOf(remote), QCoreApplication::translate("MainWindow", "remote", nullptr));
+        virtualmotor->setTabText(virtualmotor->indexOf(tab), QCoreApplication::translate("MainWindow", "virtualmotor", nullptr));
         menufile->setTitle(QCoreApplication::translate("MainWindow", "file", nullptr));
     } // retranslateUi
 

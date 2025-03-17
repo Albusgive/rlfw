@@ -2,7 +2,8 @@
 DMMotor::DMMotor() {}
 DMMotor::~DMMotor() {}
 
-DMCANMsg* DMMotor::enableMotor(uint8_t motor_id, bool enable, bool clear_fault) {
+DMCANMsg *DMMotor::enableMotor(uint8_t motor_id, bool enable,
+                               bool clear_fault) {
   DMCANMsg dm_msg;
   dm_msg.ID = motor_id;
   dm_msg.MSGTYPE = CAN_STANDARD;
@@ -26,7 +27,8 @@ DMCANMsg* DMMotor::enableMotor(uint8_t motor_id, bool enable, bool clear_fault) 
     dm_msg.DATA[6] = 0xFF;
     dm_msg.DATA[7] = 0xFD;
   }
-  if(clear_fault){}
+  if (clear_fault) {
+  }
   dm_can_msg = dm_msg;
   return &dm_can_msg;
 }
@@ -41,8 +43,8 @@ MotorBack DMMotor::decode(CANMSG msg) {
   float position = uint_to_float(p_int, DM_P_MIN, DM_P_MAX, 16); // (-12.5,12.5)
   float velocity = uint_to_float(v_int, DM_V_MIN, DM_V_MAX, 12); // (-45.0,45.0)
   float torque = uint_to_float(t_int, DM_T_MIN, DM_T_MAX, 12);   // (-18.0,18.0)
-  motor.angle = position;
-  motor.ang_vel = velocity;
+  motor.angle = position - default_;
+  motor.vel = velocity;
   motor.torque = torque;
   motor.id = (int)((dm_msg.DATA[0]) & 0x0F);
   motor.temperature = dm_msg.DATA[7]; // 线圈温度 DATA[6]：MOS管温度
@@ -68,15 +70,15 @@ MotorBack DMMotor::decode(CANMSG msg) {
   return motor;
 }
 
-DMCANMsg* DMMotor::locomotion(uint8_t motor_id, float torque, float pos,
-                             float ang_vel, float kp, float kd) {
+DMCANMsg *DMMotor::locomotion(uint8_t motor_id, float torque, float pos,
+                              float vel, float kp, float kd) {
   DMCANMsg dm_msg;
   dm_msg.ID = motor_id;
   dm_msg.MSGTYPE = CAN_STANDARD;
   dm_msg.LEN = 8;
   uint16_t pos_tmp, vel_tmp, kp_tmp, kd_tmp, tor_tmp;
   pos_tmp = float_to_uint(pos, DM_P_MIN, DM_P_MAX, 16);
-  vel_tmp = float_to_uint(ang_vel, DM_V_MIN, DM_V_MAX, 12);
+  vel_tmp = float_to_uint(vel, DM_V_MIN, DM_V_MAX, 12);
   kp_tmp = float_to_uint(kp, DM_KP_MIN, DM_KP_MAX, 12);
   kd_tmp = float_to_uint(kd, DM_KD_MIN, DM_KD_MAX, 12);
   tor_tmp = float_to_uint(torque, DM_T_MIN, DM_T_MAX, 12);
@@ -93,12 +95,11 @@ DMCANMsg* DMMotor::locomotion(uint8_t motor_id, float torque, float pos,
   return &dm_can_msg;
 }
 
-uint16_t DMMotor::float_to_uint(float x, float x_min, float x_max, int bits)
-{
-    /// Converts a float to an unsigned int, given range and number of bits
-    float span = x_max - x_min;
-    float offset = x_min;
-    return (uint16_t)((x - offset) * ((float)((1 << bits) - 1)) / span);
+uint16_t DMMotor::float_to_uint(float x, float x_min, float x_max, int bits) {
+  /// Converts a float to an unsigned int, given range and number of bits
+  float span = x_max - x_min;
+  float offset = x_min;
+  return (uint16_t)((x - offset) * ((float)((1 << bits) - 1)) / span);
 }
 
 float DMMotor::uint_to_float(int x_int, float x_min, float x_max, int bits) {

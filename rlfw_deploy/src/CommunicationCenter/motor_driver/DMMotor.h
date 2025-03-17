@@ -50,7 +50,8 @@ public:
   // 运动控制
   DMCANMsg *locomotion(uint8_t motor_id, float torque, float pos, float ang_vel,
                        float kp, float kd) override;
-
+  // 设置运行模式
+  DMCANMsg *setCtrlType(uint8_t motor_id) override { return nullptr; };
   // 位置
   DMCANMsg *ctrl_pos(uint8_t motor_id, float pos) override { return nullptr; };
   // 速度

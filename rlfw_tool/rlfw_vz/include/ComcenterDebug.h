@@ -70,11 +70,11 @@ public:
 private:
   // pub
   rclcpp::Publisher<rlfw_msgs::msg::JointCtrl>::SharedPtr publisher_;
-  rclcpp::Subscription<rlfw_msgs::msg::Joint>::SharedPtr sub_motor_;
   rclcpp::Publisher<rlfw_msgs::msg::CanMsg>::SharedPtr can_pub;
   rclcpp::Publisher<rlfw_msgs::msg::SerialMsg>::SharedPtr serial_pub;
   rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedPtr client;
   // sub
+  rclcpp::Subscription<rlfw_msgs::msg::Joint>::SharedPtr sub_motor_;
   rclcpp::Subscription<rlfw_msgs::msg::Remote>::SharedPtr sub_remote_;
   rclcpp::Subscription<rlfw_msgs::msg::CanMsg>::SharedPtr sub_can_;
   rclcpp::Subscription<rlfw_msgs::msg::SerialMsg>::SharedPtr sub_serial_;

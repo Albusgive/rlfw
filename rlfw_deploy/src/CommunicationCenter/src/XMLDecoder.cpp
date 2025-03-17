@@ -1,7 +1,7 @@
 #include "XMLDecoder.hpp"
 #include "ComCfg.hpp"
-#include <sstream>
 #include <iostream>
+#include <sstream>
 
 XMLDecoder::XMLDecoder(std::string path) { load(path); }
 XMLDecoder::~XMLDecoder() {}
@@ -61,6 +61,25 @@ bool XMLDecoder::load(std::string path) {
           xml_motor.SafePos = motor->FloatAttribute("safepos", -1.0);
           xml_motor.SafeVel = motor->FloatAttribute("safevel", -1.0);
           xml_motor.SafeTorque = motor->FloatAttribute("safetorque", -1.0);
+          xml_motor.default_ = motor->FloatAttribute("default", 0.0);
+          auto torque_range = splitFromString(
+              Attribute2String(motor->Attribute("torquerange")));
+          if (torque_range.size() == 2) {
+            xml_motor.torque_range[0] = torque_range[0];
+            xml_motor.torque_range[1] = torque_range[1];
+          }
+          auto pos_range =
+              splitFromString(Attribute2String(motor->Attribute("posrange")));
+          if (pos_range.size() == 2) {
+            xml_motor.pos_range[0] = pos_range[0];
+            xml_motor.pos_range[1] = pos_range[1];
+          }
+          auto vel_range =
+              splitFromString(Attribute2String(motor->Attribute("velrange")));
+          if (vel_range.size() == 2) {
+            xml_motor.vel_range[0] = vel_range[0];
+            xml_motor.vel_range[1] = vel_range[1];
+          }
           ComCfg.xml_motors.push_back(xml_motor);
         }
       }
@@ -75,7 +94,7 @@ bool XMLDecoder::load(std::string path) {
       xml_remote.type =
           string2enum<RemoteType>(Attribute2String(remote->Attribute("type")));
       xml_remote.channel = remote->IntAttribute("channel", 0);
-      std::string key_ =  Attribute2String(remote->Attribute("key"));
+      std::string key_ = Attribute2String(remote->Attribute("key"));
       xml_remote.key = splitByStream(key_);
       remotes.push_back(xml_remote);
     }
@@ -97,6 +116,25 @@ bool XMLDecoder::load(std::string path) {
           virtualmotor->BoolAttribute("terminal", false);
       xml_virtualmotor.default_theta =
           virtualmotor->FloatAttribute("default_theta", 1.57);
+      xml_virtualmotor.default_ = virtualmotor->FloatAttribute("default", 0.0);
+      auto torque_range = splitFromString(
+          Attribute2String(virtualmotor->Attribute("torquerange")));
+      if (torque_range.size() == 2) {
+        xml_virtualmotor.torque_range[0] = torque_range[0];
+        xml_virtualmotor.torque_range[1] = torque_range[1];
+      }
+      auto pos_range = splitFromString(
+          Attribute2String(virtualmotor->Attribute("posrange")));
+      if (pos_range.size() == 2) {
+        xml_virtualmotor.pos_range[0] = pos_range[0];
+        xml_virtualmotor.pos_range[1] = pos_range[1];
+      }
+      auto vel_range = splitFromString(
+          Attribute2String(virtualmotor->Attribute("velrange")));
+      if (vel_range.size() == 2) {
+        xml_virtualmotor.vel_range[0] = vel_range[0];
+        xml_virtualmotor.vel_range[1] = vel_range[1];
+      }
       std::string str = Attribute2String(virtualmotor->Attribute("ln"));
       std::stringstream ss(str); // 使用字符串流解析
       float value;
@@ -133,12 +171,27 @@ std::string XMLDecoder::Attribute2String(const char *name) {
   return std::string(name);
 }
 
-std::vector<std::string> XMLDecoder::splitByStream(const std::string& s) {
+std::vector<std::string> XMLDecoder::splitByStream(const std::string &s) {
   std::istringstream iss(s);
   std::vector<std::string> tokens;
   std::string token;
-  while (iss >> token) {  // 自动跳过连续空格
-      tokens.push_back(token);
+  while (iss >> token) { // 自动跳过连续空格
+    tokens.push_back(token);
+  }
+  return tokens;
+}
+
+std::vector<float> XMLDecoder::splitFromString(const std::string &s) {
+  // std::cout<<"range string:"<<s<<std::endl;
+  std::istringstream iss(s);
+  iss.imbue(std::locale::classic());
+  std::vector<float> tokens;
+  float token;
+  while (iss >> token) {
+    tokens.push_back(token);
+  }
+  if (!iss.eof()) {
+    throw std::invalid_argument("Invalid floating point value in: " + s);
   }
   return tokens;
 }

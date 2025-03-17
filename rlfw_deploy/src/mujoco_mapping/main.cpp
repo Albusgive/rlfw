@@ -172,7 +172,7 @@ int main(int argc, const char **argv)
 
     char error[1000] = "Could not load binary model";
     // load and compile model
-    m = mj_loadXML("/home/albusgive2/wheel_legged_genesis/assets/mjcf/nz/scene.xml", 0, error, 1000);
+    m = mj_loadXML("/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/mjcf/nz/scene.xml", 0, error, 1000);
 
     // make data
     d = mj_makeData(m);

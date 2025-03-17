@@ -29,7 +29,10 @@ public:
   MotorCtrlType ctrl_type;
   std::string joint_name;
   bool invert = false;
-
+  float default_;//角度补偿
+  float torque_range[2] = {-9999, 9999};
+  float vel_range[2] = {-9999, 9999};
+  float pos_range[2] = {-9999, 9999};
   // 电机参数 发给电机的 -1为未定义
   float PosKP = -1.0;
   float PosKD = -1.0;
@@ -68,8 +71,12 @@ public:
   std::string joint_name;
   std::string motor1 = "";
   std::string motor2 = "";
+  float torque_range[2] = {-9999, 9999};
+  float vel_range[2] = {-9999, 9999};
+  float pos_range[2] = {-9999, 9999};
   std::vector<float> ln;
   float default_theta;
+  float default_;//角度补偿
   bool terminal=false;
   bool check() {
     bool flag = true;

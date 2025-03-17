@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/rmer/AAAPancake/hongying_msg/install/hongying_ctrl_msg/include/**",
+                "/home/rmer/cartographer_ws/install/cartographer_rviz/include/**",
+                "/home/rmer/cartographer_ws/install/cartographer_ros/include/**",
+                "/home/rmer/cartographer_ws/install/cartographer_ros_msgs/include/**",
+                "/opt/ros/humble/include/**",
+                "/usr/include/**",
+                "${workspaceFolder}/include/CommunicationCenter",
+                "/opt/ros/humble/include/rclcpp",
+                "/opt/ros/humble/include/rcl",
+                "${workspaceFolder}/include/CommunicationCenter",
+                "${workspaceFolder}/include/CommunicationCenter"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

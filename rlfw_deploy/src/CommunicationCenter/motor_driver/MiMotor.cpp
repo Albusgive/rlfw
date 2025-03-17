@@ -1,4 +1,5 @@
 #include "MiMotor.h"
+#include <cstdint>
 MiMotor::MiMotor() {}
 MiMotor::~MiMotor() {}
 
@@ -30,9 +31,10 @@ MotorBack MiMotor::decode(CANMSG msg) {
   if (ext_id->com_type == static_cast<uint32_t>(com_type::MotorCallBack)) {
     motor.id = mi_back->motor_id;
     motor.angle = ((float)(mi_msg.DATA[0] << 8 | mi_msg.DATA[1]) - 32767.5) /
-                  32767.5 * 4 * M_PI;
-    motor.ang_vel = ((float)(mi_msg.DATA[2] << 8 | mi_msg.DATA[3]) - 32767.5) /
-                    32767.5 * 30.0;
+                      32767.5 * 4 * M_PI -
+                  default_;
+    motor.vel = ((float)(mi_msg.DATA[2] << 8 | mi_msg.DATA[3]) - 32767.5) /
+                32767.5 * 30.0;
     motor.torque = ((float)(mi_msg.DATA[4] << 8 | mi_msg.DATA[5]) - 32767.5) /
                    32767.5 * 12.0;
     motor.temperature = (float)(mi_msg.DATA[4] << 8 | mi_msg.DATA[5]) * 10;
@@ -56,7 +58,7 @@ MotorBack MiMotor::decode(CANMSG msg) {
 }
 
 MiCANMsg *MiMotor::locomotion(uint8_t motor_id, float torque, float pos,
-                              float ang_vel, float kp, float kd) {
+                              float vel, float kp, float kd) {
   MiCANMsg msg;
   MI_EXT_ID ext_id;
   ext_id.device_id = motor_id;
@@ -67,8 +69,8 @@ MiCANMsg *MiMotor::locomotion(uint8_t motor_id, float torque, float pos,
   msg.LEN = 8;
   msg.DATA[0] = float_to_uint(pos, P_MIN, P_MAX, 16) >> 8;
   msg.DATA[1] = float_to_uint(pos, P_MIN, P_MAX, 16);
-  msg.DATA[2] = float_to_uint(ang_vel, V_MIN, V_MAX, 16) >> 8;
-  msg.DATA[3] = float_to_uint(ang_vel, V_MIN, V_MAX, 16);
+  msg.DATA[2] = float_to_uint(vel, V_MIN, V_MAX, 16) >> 8;
+  msg.DATA[3] = float_to_uint(vel, V_MIN, V_MAX, 16);
   msg.DATA[4] = float_to_uint(kp, KP_MIN, KP_MAX, 16) >> 8;
   msg.DATA[5] = float_to_uint(kp, KP_MIN, KP_MAX, 16);
   msg.DATA[6] = float_to_uint(kd, KD_MIN, KD_MAX, 16) >> 8;
@@ -78,13 +80,11 @@ MiCANMsg *MiMotor::locomotion(uint8_t motor_id, float torque, float pos,
   return &mi_can_msg;
 }
 
-MiCANMsg *MiMotor::ctrl_vel(uint8_t motor_id, float vel)
-{
+MiCANMsg *MiMotor::ctrl_vel(uint8_t motor_id, float vel) {
   return set_parameter(motor_id, motor_indexs::spd_ref, vel);
 }
 
-MiCANMsg *MiMotor::ctrl_pos(uint8_t motor_id, float pos)
-{
+MiCANMsg *MiMotor::ctrl_pos(uint8_t motor_id, float pos) {
   return set_parameter(motor_id, motor_indexs::loc_ref, pos);
 }
 
@@ -92,36 +92,36 @@ MiCANMsg *MiMotor::ctrl_torque(uint8_t motor_id, float torque) {
   return set_parameter(motor_id, motor_indexs::iq_ref, torque);
 };
 
-MiCANMsg *MiMotor::setPosKP(uint8_t motor_id, float kp){
-return set_fix_parameter(motor_id, fix_parameter_indexs::loc_kp, kp);
+MiCANMsg *MiMotor::setPosKP(uint8_t motor_id, float kp) {
+  return set_fix_parameter(motor_id, fix_parameter_indexs::loc_kp, kp);
 }
 
-MiCANMsg *MiMotor::setPosKD(uint8_t motor_id, float kd){
-return set_fix_parameter(motor_id, fix_parameter_indexs::loc_kp, kd);
+MiCANMsg *MiMotor::setPosKD(uint8_t motor_id, float kd) {
+  return set_fix_parameter(motor_id, fix_parameter_indexs::loc_kp, kd);
 }
 
-MiCANMsg *MiMotor::setVelKP(uint8_t motor_id, float kp){
-return set_fix_parameter(motor_id, fix_parameter_indexs::spd_kp, kp);
+MiCANMsg *MiMotor::setVelKP(uint8_t motor_id, float kp) {
+  return set_fix_parameter(motor_id, fix_parameter_indexs::spd_kp, kp);
 }
 
-MiCANMsg *MiMotor::setVelKI(uint8_t motor_id, float ki){
-return set_fix_parameter(motor_id, fix_parameter_indexs::spd_ki, ki);
+MiCANMsg *MiMotor::setVelKI(uint8_t motor_id, float ki) {
+  return set_fix_parameter(motor_id, fix_parameter_indexs::spd_ki, ki);
 }
 
-MiCANMsg *MiMotor::setTorqueKP(uint8_t motor_id, float kp){
-return set_fix_parameter(motor_id, fix_parameter_indexs::cur_kp, kp);
+MiCANMsg *MiMotor::setTorqueKP(uint8_t motor_id, float kp) {
+  return set_fix_parameter(motor_id, fix_parameter_indexs::cur_kp, kp);
 }
 
-MiCANMsg *MiMotor::setTorqueKI(uint8_t motor_id, float ki){
-return set_fix_parameter(motor_id, fix_parameter_indexs::cur_ki, ki);
+MiCANMsg *MiMotor::setTorqueKI(uint8_t motor_id, float ki) {
+  return set_fix_parameter(motor_id, fix_parameter_indexs::cur_ki, ki);
 }
 
-MiCANMsg *MiMotor::setSafeTorque(uint8_t motor_id, float torque){
-return set_parameter( motor_id, motor_indexs::limit_cur, torque);
+MiCANMsg *MiMotor::setSafeTorque(uint8_t motor_id, float torque) {
+  return set_parameter(motor_id, motor_indexs::limit_cur, torque);
 }
 
-MiCANMsg *MiMotor::setSafeVel(uint8_t motor_id, float vel){
-    return set_parameter( motor_id, motor_indexs::limit_spd, vel);
+MiCANMsg *MiMotor::setSafeVel(uint8_t motor_id, float vel) {
+  return set_parameter(motor_id, motor_indexs::limit_spd, vel);
 }
 
 MiCANMsg *MiMotor::set_parameter(uint8_t motor_id, motor_indexs index,
@@ -140,6 +140,52 @@ MiCANMsg *MiMotor::set_parameter(uint8_t motor_id, motor_indexs index,
   msg.DATA[3] = 0x00;
   memcpy(msg.DATA + 4, &parameter, sizeof(float));
 
+  mi_can_msg = msg;
+  return &mi_can_msg;
+}
+
+MiCANMsg *MiMotor::setCtrlType(uint8_t motor_id) {
+  MiCANMsg msg;
+  MI_EXT_ID ext_id;
+  ext_id.device_id = motor_id;
+  ext_id.data = 0;
+  ext_id.com_type = static_cast<uint32_t>(com_type::SetParameter);
+  msg.ID = ext_id.toEXTID();
+  msg.MSGTYPE = CAN_EXTENDED;
+  msg.LEN = 8;
+  uint16_t motor_index = static_cast<uint16_t>(motor_indexs::run_mode);
+  memcpy(msg.DATA, &motor_index, sizeof(uint16_t));
+  msg.DATA[2] = 0x00;
+  msg.DATA[3] = 0x00;
+  uint8_t runmode = 0;
+  switch (ctrl_type) {
+  case MotorCtrlType::MIT: {
+    runmode = 0;
+    break;
+  }
+  case MotorCtrlType::TORQUE: {
+    runmode = 3;
+    break;
+  }
+  case MotorCtrlType::POS: {
+    runmode = 1;
+    break;
+  }
+  case MotorCtrlType::VEL: {
+    runmode = 2;
+    break;
+  }
+  case MotorCtrlType::POS_VEL: {
+    break;
+  }
+  case MotorCtrlType::ENABLE: {
+    break;
+  }
+  case MotorCtrlType::ERR: {
+    break;
+  }
+  }
+  memcpy(&msg.DATA[4], &runmode, 1);
   mi_can_msg = msg;
   return &mi_can_msg;
 }

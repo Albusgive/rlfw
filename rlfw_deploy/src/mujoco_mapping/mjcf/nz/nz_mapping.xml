@@ -1,0 +1,347 @@
+<mujoco>
+  <compiler autolimits="true" angle="radian" />
+  <!-- integrator="RK4" -->
+  <option timestep="0.002" />
+  <asset>
+    <texture name="fiberglass" type="cube" builtin="checker" width="3" height="13"
+      rgb1="0.349 0.2823 0.2235" rgb2="0.93725 0.85882352 0.698039" />
+    <material name="fiberglass" texture="fiberglass" reflectance="0.1" rgba=".65 .65 .65 1"
+      emission="0" />
+    <texture name="metal" file="./png/metal.png" />
+    <material name="metal" texture="metal" rgba=".8 .8 .8 1" />
+    <material name="gomotor" reflectance=".1" rgba=".4 .4 .4 1" />
+    <material name="mimotor" reflectance=".2" rgba=".1 .1 .1 1" />
+    <material name="print" reflectance=".2" rgba="0.4627 0.4117 0.29019 .9" />
+    <material name="miniwheel" reflectance=".2" rgba=".2 .25 .2 1" />
+    <material name="wheel" reflectance=".2" rgba=".1 .1 .1 1" />
+    <material name="dmmotor" reflectance=".2" rgba=".1 .1 .1 1" />
+
+
+    <mesh name="Up" file="./meshes/Up.STL" />
+    <mesh file="./meshes/BaseFrontGlass.STL" />
+    <mesh file="./meshes/BaseFrontMotor.STL" />
+    <mesh file="./meshes/BaseFrontPrint.STL" />
+    <mesh file="./meshes/BaseFrontAl.STL" />
+    <mesh file="./meshes/BaseBackGlass.STL" />
+    <mesh file="./meshes/BaseBackPrint.STL" />
+    <mesh file="./meshes/BaseBackAl.STL" />
+    <mesh file="./meshes/LeftArmor.STL" />
+    <mesh file="./meshes/RightArmor.STL" />
+    <mesh file="./meshes/MiniWheel.STL" />
+    <mesh file="./meshes/DownGlass.STL" />
+    <mesh file="./meshes/Battery.STL" />
+    <mesh file="./meshes/24Vto19V.STL" />
+    <mesh file="./meshes/BaseFrontLimits.STL" />
+    <mesh file="./meshes/BaseBackLimits.STL" />
+    <!-- 左腿 -->
+    <mesh file="./meshes/LeftHipMotor.STL" />
+    <mesh file="./meshes/LeftHipBase.STL" />
+    <mesh file="./meshes/LeftHipBearing.STL" />
+    <mesh file="./meshes/LeftHipChain.STL" />
+    <!-- 大腿 -->
+    <mesh file="./meshes/LeftThighBase.STL" />
+    <mesh file="./meshes/LeftThighBearing.STL" />
+    <mesh file="./meshes/LeftThighPitman1.STL" />
+    <mesh file="./meshes/LeftThighPitman2.STL" />
+    <!-- 小腿 -->
+    <mesh file="./meshes/LeftCalfBase.STL" />
+    <mesh file="./meshes/LeftWheelMotor.STL" />
+    <mesh file="./meshes/LeftWheelLink.STL" />
+    <!-- 轮 -->
+    <mesh file="./meshes/LeftWheel.STL" />
+    <!-- 右腿 -->
+    <mesh file="./meshes/RightHipBase.STL" />
+    <mesh file="./meshes/RightHipMotor.STL" />
+    <mesh file="./meshes/RightHipBearing.STL" />
+    <mesh file="./meshes/RightHipChain.STL" />
+    <!-- 大腿 -->
+    <mesh file="./meshes/RightThighBase.STL" />
+    <mesh file="./meshes/RightThighBearing.STL" />
+    <mesh file="./meshes/RightThighPitman1.STL" />
+    <mesh file="./meshes/RightThighPitman2.STL" />
+    <!-- 小腿 -->
+    <mesh file="./meshes/RightCalfBase.STL" />
+    <mesh file="./meshes/RightWheelMotor.STL" />
+    <mesh file="./meshes/RightWheelLink.STL" />
+    <!-- 轮 -->
+    <mesh file="./meshes/RightWheel.STL" />
+    <!-- 其他 -->
+    <!-- <mesh  file="./meshes/Brrrrt.stl" scale=".008 .008 .008"/> -->
+  </asset>
+
+  <default>
+    <default class="visual">
+      <!-- <geom contype="0" conaffinity="0" group="2" /> -->
+      <geom />
+    </default>
+    <default class="collision">
+      <!-- <geom group="1" /> -->
+      <geom />
+    </default>
+  </default>
+
+  <worldbody>
+    <body name="B" mocap="true" pos="0 0 1.0">
+      <body name="nz" pos="0.04 0.005 0.145" >
+        <site name="imu" pos="-0.04 -0.005 -0.145" size="0.01" rgba="0 0 1 1" />
+        <!-- <geom type="mesh" mesh="Brrrrt" material="fiberglass" euler="0 1.57 0" pos="-0.3 0
+        0.20"
+      mass="0.001"/> -->
+        <geom type="mesh" mesh="Up" material="fiberglass" mass="0.57936 " />
+        <geom type="mesh" mesh="BaseFrontGlass" material="fiberglass" mass="0.48487"
+          class="collision" />
+        <geom type="mesh" mesh="BaseFrontMotor" material="gomotor" mass="1.2" class="visual" />
+        <geom type="mesh" mesh="BaseFrontPrint" material="print" mass="0.20510" class="collision" />
+        <geom type="mesh" mesh="BaseFrontAl" material="metal" mass="0.06765" class="collision" />
+        <geom type="mesh" mesh="BaseBackGlass" material="fiberglass" mass="0.26635"
+          class="collision" />
+        <geom type="mesh" mesh="BaseBackPrint" material="print" mass="0.06489" class="collision" />
+        <geom type="mesh" mesh="BaseBackAl" material="metal" mass="0.24065" class="collision" />
+        <geom type="mesh" mesh="LeftArmor" condim="1" material="fiberglass" mass="0.06651"
+          class="visual" />
+        <geom type="mesh" mesh="RightArmor" condim="1" material="fiberglass" mass="0.06651"
+          class="visual" />
+        <geom type="mesh" mesh="DownGlass" condim="1" material="fiberglass" mass=" 0.20294 "
+          class="visual" />
+        <geom type="mesh" mesh="Battery" condim="1" material="fiberglass"
+          mass="0.2" class="visual" />
+        <geom type="mesh" mesh="24Vto19V" condim="1" material="fiberglass"
+          mass="0.16493" class="visual" />
+        <geom type="mesh" mesh="BaseFrontLimits" condim="1" material="fiberglass" mass="0.020"
+          class="collision" />
+        <geom type="mesh" mesh="BaseBackLimits" condim="1" material="fiberglass" mass="0.020"
+          class="collision" />
+
+
+        <!-- 导轮 -->
+        <body name="lf_miniwheel" pos="0.18662 0.14385 -0.18956">
+          <joint type="hinge" axis="0 1 0" />
+          <geom type="mesh" mesh="MiniWheel" material="miniwheel" mass="0.016" class="collision" />
+        </body>
+        <body name="rf_miniwheel" pos="0.18662 -0.16015 -0.18956">
+          <joint type="hinge" axis="0 1 0" />
+          <geom type="mesh" mesh="MiniWheel" material="miniwheel" mass="0.016" class="collision" />
+        </body>
+        <body name="lb_miniwheel" pos="-0.21034 0.06908 -0.18958">
+          <joint type="hinge" axis="0 1 0" />
+          <geom type="mesh" mesh="MiniWheel" material="miniwheel" mass="0.016" class="collision" />
+        </body>
+        <body name="rb_miniwheel" pos="-0.21034 -0.05892 -0.18968">
+          <joint type="hinge" axis="0 1 0" />
+          <geom type="mesh" mesh="MiniWheel" material="miniwheel" mass="0.016" class="collision" />
+        </body>
+
+        <!-- 左腿 -->
+        <body name="left_hip" pos="0.10634 0.09839 -0.070">
+          <!-- <joint name="left_hip_joint" type="hinge" axis="1 0 0" /> -->
+          <geom type="mesh" mesh="LeftHipMotor" condim="1" material="dmmotor" mass="1.8"
+            class="visual" />
+          <geom type="mesh" mesh="LeftHipBase" condim="1" material="fiberglass" mass="0.72633"
+            class="visual" />
+          <geom type="mesh" mesh="LeftHipBearing" condim="1" material="metal" mass="0.635"
+            class="visual" />
+          <geom type="mesh" mesh="LeftHipChain" condim="1" material="metal" mass="0.21188"
+            class="visual" />
+
+          <!-- 大腿 -->
+          <body name="left_thigh" pos="-0.1737 0.0345 0" euler="0 0.436332313 0">
+            <joint name="left_thigh_joint" type="hinge" axis="0 1 0" damping="2" armature="0.0"
+              stiffness="1.5" />
+            <geom type="mesh" mesh="LeftThighBase" material="fiberglass" mass="0.111"
+              class="collision" />
+            <geom type="mesh" mesh="LeftThighBearing" material="metal" mass="0.13" class="collision" />
+
+            <!-- 连杆 -->
+            <body name="left_thigh_pitman1" pos="0 0.0165 0">
+              <joint type="hinge" axis="0 1 0" />
+              <geom type="mesh" mesh="LeftThighPitman1" material="fiberglass" mass="0.022"
+                class="collision" />
+              <body name="left_thigh_pitman2" pos="-0.03657 -0.008 0.03409">
+                <joint type="hinge" axis="0 1 0" />
+                <site name="left_pitman_site1" pos="0.0015 0 -0.17999" type="sphere" size="0.001"
+                  rgba="0 1 0 1" />
+                <geom type="mesh" mesh="LeftThighPitman2" material="metal"
+                  mass="0.15" class="collision" />
+              </body>
+            </body>
+
+            <!-- 小腿 -->
+            <body name="left_calf" pos="-0.0015 0.019 -0.17999"
+              euler="0 -1.483529864 0">
+              <joint name="left_calf_joint" type="hinge" axis="0 1 0" damping="2" armature="0.0"
+                stiffness="1.5" />
+              <geom type="mesh" mesh="LeftCalfBase" material="fiberglass" mass="0.183"
+                class="collision" />
+              <geom name="left_calf_limits" type="cylinder" pos="-0.03657 -0.019 0.03409"
+                size="0.01 0.004" euler="1.57 0 0" rgba=".1 .1 .1 1" class="collision" />
+              <geom type="mesh" mesh="LeftWheelMotor" material="mimotor" mass="0.315"
+                class="collision" />
+              <geom type="mesh" mesh="LeftWheelLink" material="metal" mass="0.16" class="collision" />
+              <site name="left_pitman_site2" pos="-0.03657 0 0.03409" type="sphere" size="0.001"
+                rgba="0 1 0 1" />
+
+              <!-- 车轮 -->
+              <body name="left_wheel" pos="0.158 0.0355 -0.14729">
+                <joint name="left_wheel_joint" type="hinge" axis="0 1 0" damping="0.01"
+                  armature="0.0"
+                  stiffness="0" />
+                <geom type="mesh" mesh="LeftWheel" material="wheel" mass="0.75" class="collision" />
+              </body>
+
+              <!-- 全向轮 -->
+              <body euler="1.57 0 0" pos="-0.03657 0.0178 0.03409">
+                <joint type="hinge" axis="0 0 1" frictionloss="0.005" />
+                <site type="cylinder" size="0.030 0.005" rgba=".2 .2 .2 .7" />
+                <geom type="cylinder" size="0.015 0.005" rgba=".2 .2 .2 .7" mass="0.008"
+                  class="collision" />
+                <replicate count="5" euler="0 0 1.256">
+                  <body pos="0 0 0.005">
+                    <joint type="hinge" pos="0.026 0 0" axis="0 1 0" frictionloss=".00002" />
+                    <geom type="ellipsoid" size="0.005 0.015 0.005" pos="0.026 0 0" mass="0.008"
+                      class="collision" />
+                  </body>
+                  <body pos="0 0 -0.005" euler="0 0 0.628">
+                    <joint type="hinge" pos="0.026 0 0" axis="0 1 0" frictionloss=".00002" />
+                    <geom type="ellipsoid" size="0.005 0.015 0.005" pos="0.026 0 0" mass="0.008"
+                      class="collision" />
+                  </body>
+                </replicate>
+              </body>
+
+            </body>
+          </body>
+        </body>
+
+        <!-- 右腿 -->
+        <body name="right_hip" pos="0.10834 -0.10161 -0.07">
+          <!-- <joint name="right_hip_joint" type="hinge" axis="1 0 0"  /> -->
+          <geom type="mesh" mesh="RightHipMotor" condim="1" material="dmmotor" mass="1.8"
+            class="visual" />
+          <geom type="mesh" mesh="RightHipBase" condim="1" material="fiberglass" mass="0.72633"
+            class="visual" />
+          <geom type="mesh" mesh="RightHipBearing" condim="1" material="metal" mass="0.635"
+            class="visual" />
+          <geom type="mesh" mesh="RightHipChain" condim="1" material="metal" mass="0.21188"
+            class="visual" />
+
+          <!-- 大腿 -->
+          <body name="right_thigh" pos="-0.1737 -0.0343 0" euler="0 0.436332313 0">
+            <joint name="right_thigh_joint" type="hinge" axis="0 1 0" damping="2" armature="0.0"
+              stiffness="1.5" />
+            <geom type="mesh" mesh="RightThighBase" material="fiberglass" mass="0.111"
+              class="collision" />
+            <geom type="mesh" mesh="RightThighBearing" material="metal" mass="0.13"
+              class="collision" />
+
+            <!-- 连杆 -->
+            <body name="right_thigh_pitman1" pos="0 -0.0165 0">
+              <joint type="hinge" axis="0 1 0" />
+              <geom type="mesh" mesh="RightThighPitman1" material="fiberglass" mass="0.022"
+                class="collision" />
+              <body name="right_thigh_pitman2" pos="-0.03576 0.007 0.03871">
+                <joint type="hinge" axis="0 1 0" />
+                <site name="right_pitman_site1" pos="-0.00253 0 -0.1838" type="sphere" size="0.001"
+                  rgba="0 1 0 1" />
+                <geom type="mesh" mesh="RightThighPitman2" material="metal" mass="0.15"
+                  class="collision" />
+              </body>
+            </body>
+
+            <!-- 小腿 -->
+            <body name="right_calf" pos="-0.00248 -0.019 -0.17998"
+              euler="0 -1.483529864 0">
+              <joint name="right_calf_joint" type="hinge" axis="0 1 0" damping="2" armature="0.0"
+                stiffness="1.5" />
+              <geom type="mesh" mesh="RightCalfBase" mass="0.183" material="fiberglass"
+                class="collision" />
+              <geom name="right_calf_limits" type="cylinder" pos="-0.03581 0.018 0.03489"
+                size="0.01 0.004" euler="1.57 0 0" rgba=".1 .1 .1 1" class="collision" />
+              <geom type="mesh" mesh="RightWheelMotor" material="mimotor" mass="0.315"
+                class="collision" />
+              <geom type="mesh" mesh="RightWheelLink" material="metal" mass="0.16" class="collision" />
+              <site name="right_pitman_site2" pos="-0.03581 0 0.03489" type="sphere" size="0.001"
+                rgba="0 1 0 1" />
+
+              <!-- 车轮 -->
+              <body name="right_wheel" pos="0.1547 -0.0355 -0.15074">
+                <joint name="right_wheel_joint" type="hinge" axis="0 1 0" damping="0.01"
+                  armature="0.0"
+                  stiffness="0" />
+                <geom type="mesh" mesh="RightWheel" material="wheel" mass="0.75" class="collision" />
+              </body>
+
+              <!-- 全向轮 -->
+              <body euler="1.57 0 0" pos="-0.03657 -0.0178 0.03409">
+                <joint type="hinge" axis="0 0 1" frictionloss="0.005" />
+                <site type="cylinder" size="0.030 0.005" rgba=".2 .2 .2 .7" />
+                <geom type="cylinder" size="0.015 0.005" rgba=".2 .2 .2 .7" mass="0.008"
+                  class="collision" />
+                <replicate count="5" euler="0 0 1.256">
+                  <body pos="0 0 0.005">
+                    <joint type="hinge" pos="0.026 0 0" axis="0 1 0" frictionloss=".00002" />
+                    <geom type="ellipsoid" size="0.005 0.015 0.005" pos="0.026 0 0" mass="0.008"
+                      class="collision" />
+                  </body>
+                  <body pos="0 0 -0.005" euler="0 0 0.628">
+                    <joint type="hinge" pos="0.026 0 0" axis="0 1 0" frictionloss=".00002" />
+                    <geom type="ellipsoid" size="0.005 0.015 0.005" pos="0.026 0 0" mass="0.008"
+                      class="collision" />
+                  </body>
+                </replicate>
+              </body>
+
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <equality>
+    <connect site1="left_pitman_site1" site2="left_pitman_site2" />
+    <connect site1="right_pitman_site1" site2="right_pitman_site2" />
+  </equality>
+
+  <actuator>
+    <!-- <position joint="left_hip_joint" name="left_hip_joint" kp="80" kv="2" ctrlrange="-0.31416
+    0.31416"/> -->
+    <position joint="left_thigh_joint" name="left_thigh_joint" kp="20" kv="1.5"
+      ctrlrange="-0.436332313 1.134464014" forcerange="-40 40" />
+    <position joint="left_calf_joint" name="left_calf_joint" kp="20" kv="1.5" ctrlrange="0 1.3"
+      forcerange="-40 40" />
+    <!-- <position joint="right_hip_joint" name="right_hip_joint" kp="30" kv="1.2"
+    ctrlrange="-0.31416 0.31416"/> -->
+    <position joint="right_thigh_joint" name="right_thigh_joint" kp="20" kv="1.5"
+      ctrlrange="-0.436332313 1.134464014" forcerange="-40 40" />
+    <position joint="right_calf_joint" name="right_calf_joint" kp="20" kv="1.5" ctrlrange="0 1.3"
+      forcerange="-40 40" />
+    <intvelocity joint="left_wheel_joint" name="left_wheel_joint" kp="15" kv="1.5"
+      forcerange="-12 12" actrange="-300 300" ctrlrange="-100 100" />
+    <intvelocity joint="right_wheel_joint" name="right_wheel_joint" kp="15" kv="1.5"
+      forcerange="-12 12" actrange="-300 300" ctrlrange="-100 100" />
+
+
+  </actuator>
+
+  <sensor>
+    <jointpos name='left_thigh_joint_p' joint='left_thigh_joint' />
+    <jointpos name='left_calf_joint_p' joint='left_calf_joint' />
+    <jointpos name='right_thigh_joint_p' joint='right_thigh_joint' />
+    <jointpos name='right_calf_joint_p' joint='right_calf_joint' />
+    <!-- <jointpos name='left_wheel_joint_p' joint='left_wheel_joint' />
+    <jointpos name='right_wheel_joint_p' joint='right_wheel_joint' /> -->
+
+    <jointvel name='left_thigh_joint_v' joint='left_thigh_joint' />
+    <jointvel name='left_calf_joint_v' joint='left_calf_joint' />
+    <jointvel name='right_thigh_joint_v' joint='right_thigh_joint' />
+    <jointvel name='right_calf_joint_v' joint='right_calf_joint' />
+    <jointvel name='left_wheel_joint_v' joint='left_wheel_joint' />
+    <jointvel name='right_wheel_joint_v' joint='right_wheel_joint' />
+
+    <framequat name='orientation' objtype='site' objname='imu' />
+    <subtreelinvel name="base_lin_vel" body="nz" />
+    <gyro name='base_ang_vel' site='imu' />
+    <framepos name='base_pos' objtype='body' objname='nz' />
+    <!-- <accelerometer name="projected_gravity" site="imu" /> -->
+  </sensor>
+</mujoco>

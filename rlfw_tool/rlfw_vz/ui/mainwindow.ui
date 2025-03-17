@@ -19,12 +19,12 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_4">
     <item row="0" column="1">
-     <widget class="QTabWidget" name="tabWidget">
+     <widget class="QTabWidget" name="virtualmotor">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(183, 242, 226);</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="config">
        <attribute name="title">
@@ -1026,6 +1026,11 @@
          </widget>
         </item>
        </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>virtualmotor</string>
+       </attribute>
       </widget>
      </widget>
     </item>
