@@ -1,5 +1,5 @@
 <rlfw>
-    <com type="pcan" name="com_can_1" channel="1" thread="false">
+    <com type="pcan" name="com_can_1" channel="1">
         <motor type="DM" id="0x01" jointname="left_thigh_joint" invert="false" ctrltype="MIT"
             posrange="-0.436332313 1.134464014" />
         <motor type="DM" id="0x03" jointname="left_calf_joint_" invert="false" ctrltype="MIT" />
@@ -7,11 +7,9 @@
             posrange="-0.436332313 1.134464014" />
         <motor type="DM" id="0x04" jointname="right_calf_joint_" invert="true" ctrltype="MIT" />
     </com>
-    <com type="pcan" name="com_can_2" channel="2">
-        <motor type="Mi" id="5" jointname="left_wheel_joint" invert="true" ctrltype="VEL"
-            velkp="6.0" velki="0.0021" />
-        <motor type="Mi" id="6" jointname="right_wheel_joint" ctrltype="VEL"
-            velkp="6.0" velki="0.0021" />
+    <com type="socketcan" name="com_can_2" channel="0">
+        <motor type="Mi" id="5" jointname="left_wheel_joint" invert="true" ctrltype="MIT" />
+        <motor type="Mi" id="6" jointname="right_wheel_joint" ctrltype="MIT" />
     </com>
     <!-- <com type="serial" name="commm" port="/dev/ttyUSB0">
         <motor type="UNITREE" ctrltype="POS" jointname="left_hip_joint" invert="true" />
@@ -25,10 +23,11 @@
     <!-- <com type="serial" name="s3" port="/dev/ttyACM0" bps="115200" datasize="8" parity="0"
         stopbit="1" /> -->
     <remote type="gamepad" name="joy" channel="0" key="" />
+    <!-- default_theta是motor2零点在motor1坐标系下的角度 default是角度补偿 -->
     <virtualmotor jointname="left_calf_joint" type="CFourBL" default_theta="0.872664626"
         motor1="left_thigh_joint" motor2="left_calf_joint_" ln="60 180 60 180 100"
-        terminal="true" default="0.872664626" posrange="0 1.3" />
+        terminal="true" default="0.9" posrange="0 1.3" />
     <virtualmotor jointname="right_calf_joint" type="CFourBL" default_theta="0.872664626"
         motor1="right_thigh_joint" motor2="right_calf_joint_" ln="60 180 60 180 100"
-        terminal="true" default="0.872664626" posrange="0 1.3" />
+        terminal="true" default="0.8" posrange="0 1.3" />
 </rlfw>

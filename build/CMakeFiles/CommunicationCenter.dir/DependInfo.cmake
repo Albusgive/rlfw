@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp" "CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/PCAN.cpp" "CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/ParallelMechanism..cpp" "CMakeFiles/CommunicationCenter.dir/src/ParallelMechanism..cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/ParallelMechanism..cpp.o.d"
+  "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/SocketCan.cpp" "CMakeFiles/CommunicationCenter.dir/src/SocketCan.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/SocketCan.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/XMLDecoder.cpp" "CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/main.cpp" "CMakeFiles/CommunicationCenter.dir/src/main.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/main.cpp.o.d"
   "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp" "CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o" "gcc" "CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o.d"
