@@ -8,6 +8,7 @@
 #include <qbrush.h>
 #include <qcontainerfwd.h>
 #include <qimage.h>
+#include <qlist.h>
 #include <qobject.h>
 #include <qpoint.h>
 #include <qtimer.h>
@@ -49,10 +50,12 @@ private:
   // gamepad子界面
   void connectRemote();
   QPoint lxy, rxy;
-  QBrush l_brush,r_brush;
+  QBrush l_brush, r_brush;
   QImage overlayImages(QImage baseImage, QImage topImage,
                        const QVector<QPolygon> &regions, QPoint l, QPoint r);
   QImage gamepad_base, gamepad_top;
+  float lt = 0.0, rt = 0.0;
+  QFont font;
   QHash<QString, QPolygon> gamepad_map = {
       {"a", QPolygon(QRect(QPoint(405, 138), QSize(48, 41)))},
       {"b", QPolygon(QRect(QPoint(440, 104), QSize(48, 41)))},
@@ -70,5 +73,18 @@ private:
       {"yy2", QPolygon(QRect(QPoint(220, 170), QSize(20, 25)))},
   };
   void updateGamepad(QStringList key, QVector<float> value);
+  QStringList gamepad_keys = {
+      "a",  "b",  "x",  "y",  "lb", "rb", "start", "menu", "home", "screenhot",
+      "lo", "ro", "lx", "ly", "rx", "ry", "lt",    "rt",   "xx",   "yy"};
+  QList<int> gamepad_key_idx;
+  bool remappping=false,is_axis=false;
+  int remapping_idx=0;
+  int temp_value=-1;
+  QString remapping_tip;
+  void setRemappingTip(QString key="");
+  void succeedRemapping();
+
+  // virtualmotor界面
+  void connectVM();
 };
 #endif // MAINWINDOW_H

@@ -1,7 +1,0 @@
-[0.011s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/agent -- -j12 -l12
-[0.066s] [35m[1mConsolidate compiler generated dependencies of target agent[0m
-[0.120s] [ 33%] [32mBuilding CXX object CMakeFiles/agent.dir/src/AgentNode.cpp.o[0m
-[15.749s] gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/AgentNode.cpp.o] 中断
-[15.750s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/agent.dir/all] 中断
-[15.750s] gmake: *** [Makefile:146: all] 中断
-[15.816s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/agent -- -j12 -l12

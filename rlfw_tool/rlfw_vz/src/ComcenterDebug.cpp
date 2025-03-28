@@ -13,6 +13,8 @@ ComcenterDebug::ComcenterDebug(const std::string &node_name) {
   node = std::make_shared<rclcpp::Node>(node_name);
   client = node->create_client<rlfw_msgs::srv::ComParameter>(
       "CommunicationCenterSrv");
+  mapping_client =
+      node->create_client<rlfw_msgs::srv::ComParameter>("MappingSrv");
 }
 ComcenterDebug::~ComcenterDebug() { rclcpp::shutdown(); }
 
@@ -101,8 +103,21 @@ void ComcenterDebug::enableJoint(std::string joint_name, bool enable) {
   rlfw_msgs::msg::JointCtrl msg;
   msg.jointname.frame_id = joint_name;
   msg.jointname.stamp = stamp;
-  msg.ctrl_type = "ENABLE";
-  msg.kd = enable;
+  if (enable)
+    msg.ctrl_type = "ENABLE";
+  else
+    msg.ctrl_type = "DISABLE";
+  ;
+  publisher_->publish(msg);
+}
+
+void ComcenterDebug::setJointZero(std::string joint_name) {
+  auto stamp = node->now();
+  rlfw_msgs::msg::JointCtrl msg;
+  msg.jointname.frame_id = joint_name;
+  msg.jointname.stamp = stamp;
+  msg.ctrl_type = "SETZERO";
+  ;
   publisher_->publish(msg);
 }
 
@@ -149,6 +164,39 @@ void ComcenterDebug::requestComParameter() {
   }
 }
 
+void ComcenterDebug::requestMappingParameter() {
+  // 等待服务端上线
+  int cnt = 0;
+  while (!mapping_client->wait_for_service(50ms)) {
+    // RCLCPP_INFO(node->get_logger(), "wait mapping serice");
+    if (!rclcpp::ok()) {
+      rclcpp::shutdown();
+      return;
+    }
+    cnt++;
+    if (cnt > 2) {
+      // RCLCPP_INFO(node->get_logger(), "serice long");
+      return;
+    }
+  }
+  auto request = std::make_shared<rlfw_msgs::srv::ComParameter::Request>();
+  // 请求类型
+  request->request_communication_center_parameter = "MountMotor";
+  auto result = mapping_client->async_send_request(request);
+  auto respond = result.get();
+  QStringList names, types;
+  int njnt = static_cast<int>(respond->device_name.size());
+  if (njnt > 0) {
+    for (int i = 0; i < njnt; i++) {
+      QString joint_name = QString::fromStdString(respond->device_name[i]);
+      QString type = QString::fromStdString(respond->device_type[i]);
+      names.append(joint_name);
+      types.append(type);
+    }
+    emitComParameter("MountMotor", names, types);
+  }
+}
+
 void ComcenterDebug::enable(int flag) {
   auto stamp = node->now();
   rlfw_msgs::msg::JointCtrl msg;
@@ -171,7 +219,7 @@ void ComcenterDebug::resetQos(int his) {
   remote_qos.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
 
   publisher_ = node->create_publisher<rlfw_msgs::msg::JointCtrl>(
-      "rlfwJointCtrl", rclcpp::QoS(2));
+      "rlfwJointCtrl", control_qos);
   can_pub = node->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANSend",
                                                            control_qos);
   serial_pub = node->create_publisher<rlfw_msgs::msg::SerialMsg>(

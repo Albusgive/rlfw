@@ -7,7 +7,7 @@
 enum class ComType {
   pcan,
   serial,
-  canable,
+  socketcan,
   ERR,
 };
 
@@ -18,7 +18,7 @@ enum class Motortype { Mi, DM, RM, UNITREE, ERR };
 enum class VirtualMotortype { CFourBL, FourBL, FiveBL, ERR };
 
 // 控制模式
-enum class MotorCtrlType { MIT = 0, POS, VEL, TORQUE, POS_VEL, ENABLE, ERR };
+enum class MotorCtrlType { MIT = 0, POS, VEL, TORQUE, POS_VEL, ENABLE, DISABLE, SETZERO, ERR };
 
 enum class RemoteType { gamepad, keyboard, custom, ERR };
 
@@ -29,7 +29,7 @@ public:
   MotorCtrlType ctrl_type;
   std::string joint_name;
   bool invert = false;
-  float default_;//角度补偿
+  float default_; // 角度补偿
   float torque_range[2] = {-9999, 9999};
   float vel_range[2] = {-9999, 9999};
   float pos_range[2] = {-9999, 9999};
@@ -58,7 +58,7 @@ public:
       flag = flag && false;
     }
     if (ctrl_type == MotorCtrlType::ERR) {
-      std::cout << joint_name + " ctrl_type err"<< std::endl;
+      std::cout << joint_name + " ctrl_type err" << std::endl;
       flag = flag && false;
     }
     return flag;
@@ -76,8 +76,8 @@ public:
   float pos_range[2] = {-9999, 9999};
   std::vector<float> ln;
   float default_theta;
-  float default_;//角度补偿
-  bool terminal=false;
+  float default_; // 角度补偿
+  bool terminal = false;
   bool check() {
     bool flag = true;
     if (joint_name == "") {
@@ -121,7 +121,6 @@ class ComCfg {
 public:
   std::string name = "";
   ComType type = ComType::ERR;
-  bool only_thred = false; // 独立线程
   std::vector<XMLMotor> xml_motors;
   /*--------can--------*/
   int channel = 0; // can通道
@@ -132,7 +131,6 @@ public:
   int datasize;           // 5/6/7/8
   int parity;             // 0/1/2 无/奇/偶
   int stopbit;            // 1/2
-
   bool check() {
     bool flag = true;
     if (name == "") {
@@ -140,7 +138,7 @@ public:
       flag = flag && false;
     }
     if (type == ComType::ERR) {
-      std::cout << name + " type err"<< std::endl;
+      std::cout << name + " type err" << std::endl;
       flag = flag && false;
     }
     switch (type) {
@@ -158,9 +156,9 @@ public:
       }
       break;
     }
-    case ComType::canable: {
-      if (channel <= 0) {
-        std::cout << name + " canable channel err" << std::endl;
+    case ComType::socketcan: {
+      if (channel < 0) {
+        std::cout << name + " socketcan channel err" << std::endl;
         flag = flag && false;
       }
       break;

@@ -231,7 +231,7 @@ bool PCAN::send(uint16_t CANx, CANMSG *msg) {
   }
 }
 
-std::tuple<bool, CANMSG> PCAN::read(uint16_t CANx) {
+std::pair<bool, CANMSG> PCAN::receive(uint16_t CANx) {
   TPCANMsg msg;
   TPCANTimestamp timestamp;
   TPCANStatus state = CAN_Read(CANx, &msg, &timestamp);
@@ -256,18 +256,18 @@ std::tuple<bool, CANMSG> PCAN::read(uint16_t CANx) {
   }
 }
 
-void PCAN::connectDecode(std::function<void(CANMSG&,std::vector<int>& motor_ids,std::string& name)> lambda) {
+void PCAN::connectDecode(std::function<void(CANMSG&,std::vector<int>& motor_ids,std::string& name,int decoder_idx)> lambda) {
   decode_lambda = lambda;
 }
 
 void PCAN::RunRecv() {
   is_only_thread.store(true);
-  std::thread ThRecv = std::thread{[&]() {
+  std::thread ThRecv = std::thread{[this]() {
     while (is_only_thread.load()) {
-      auto [is, msg] = read(channel);
+      auto [is, msg] = receive(channel);
       if (is)
       {
-        decode_lambda(msg,devive_ids,this->name);
+        decode_lambda(msg,devive_ids,this->name,decoder_idx);
       }
       // std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }

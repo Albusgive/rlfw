@@ -54,11 +54,12 @@ public:
 
 class ACTION_CFG {
 public:
-  float joint_action_scale = 0.1; // 0.5
-  float wheel_action_scale = 0.5;   // 10
+  float joint_action_scale = 0.5; // 0.5
+  float wheel_action_scale = 10;   // 10
   float clip_actions = 100;
-  float kp = 10;
-  float kd = 1.5;
+  float kp = 20;
+  float kd = 0.5;
+  float kv = 1.0;
 };
 
 class CircularBuffer {
@@ -114,7 +115,7 @@ public:
   std::vector<float> dof_pos;
   std::vector<float> dof_vel;
   std::vector<float> base_quat = {1.0, 0.0, 0.0, 0.0};
-  std::vector<float> projected_gravity = {0.0, 0.0, 0.0};
+  std::vector<float> projected_gravity = {0.0, 0.0, -1.0};
   std::vector<float> obs_actions;
   std::vector<float> commands;
   std::unordered_map<std::string, int> joint_map;

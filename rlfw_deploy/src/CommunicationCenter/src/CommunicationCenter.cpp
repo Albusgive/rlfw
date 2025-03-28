@@ -1,10 +1,8 @@
 #include "CommunicationCenter.hpp"
 #include "BaseCAN.h"
 #include "ComCfg.hpp"
-#include "DMMotor.h"
-#include "MiMotor.h"
-#include "Motor.hpp"
 #include "PCAN.hpp"
+#include "SocketCan.h"
 #include "gamepad.h"
 #include "magic_enum/magic_enum.hpp"
 #include "serial.hpp"
@@ -29,22 +27,24 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   // topic发送基础remote接收到的数据
   remote_publisher = this->create_publisher<rlfw_msgs::msg::Remote>(
       "rlfwRemoteBack", remote_qos);
-
   xml_decoder.load(motor_cfg_path);
-  if (xml_decoder.check()) {
-    std::cout << "xml load check succeed" << std::endl;
-    buildMap();
+  int his_size = 0;
+  for (auto com : xml_decoder.coms) {
+    for (auto m : com.xml_motors)
+      his_size++;
   }
-  rclcpp::QoS control_qos(motorID_map.size());
+  rclcpp::QoS control_qos(his_size);
   control_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
   control_qos.history(RMW_QOS_POLICY_HISTORY_KEEP_ALL);
-
   // topic发送基础can接收到的数据
   can_publisher = this->create_publisher<rlfw_msgs::msg::CanMsg>("rlfwCANBack",
                                                                  control_qos);
   // topic发送电机接收到的数据
   motor_publisher = this->create_publisher<rlfw_msgs::msg::Joint>(
       "rlfwJointBack", control_qos);
+  // topic发送基础serial接收到的数据
+  serial_publisher = this->create_publisher<rlfw_msgs::msg::SerialMsg>(
+      "rlfwSerialBack", control_qos);
   // topic接收发送给电机
   sub_motor = this->create_subscription<rlfw_msgs::msg::JointCtrl>(
       "rlfwJointCtrl", control_qos,
@@ -53,9 +53,7 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   can_sub = this->create_subscription<rlfw_msgs::msg::CanMsg>(
       "rlfwCANSend", control_qos,
       std::bind(&CommunicationCenter::sendCAN, this, _1));
-  // topic发送基础serial接收到的数据
-  serial_publisher = this->create_publisher<rlfw_msgs::msg::SerialMsg>(
-      "rlfwSerialBack", control_qos);
+
   // serial接收发送给设备
   serial_sub = this->create_subscription<rlfw_msgs::msg::SerialMsg>(
       "rlfwSerialSend", control_qos,
@@ -65,7 +63,10 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
       "CommunicationCenterSrv",
       std::bind(&CommunicationCenter::handle_request, this, _1, _2));
   // 状态观测器 TODO
-
+  if (xml_decoder.check()) {
+    std::cout << "xml load check succeed" << std::endl;
+    buildMap();
+  }
   RunRecv();
 }
 
@@ -81,7 +82,7 @@ CommunicationCenter::~CommunicationCenter() {
 }
 
 void CommunicationCenter::fromCan(CANMSG &msg, std::vector<int> &device_ids,
-                                  std::string &com_name) {
+                                  std::string &com_name, int decoder_idx) {
   std::lock_guard<std::mutex> lock(com_mutex);
   auto stamp = this->now();
   rlfw_msgs::msg::CanMsg pub_can_msg;
@@ -95,7 +96,7 @@ void CommunicationCenter::fromCan(CANMSG &msg, std::vector<int> &device_ids,
   can_publisher->publish(pub_can_msg);
   // 电机（设备）解码器
   MotorBack motor_back;
-  for (auto deceder : moter_decoders) {
+  for (auto deceder : com_moter_decoders[decoder_idx]) {
     motor_back = deceder->decode(msg);
     for (auto id : device_ids) {
       if (id == motor_back.id) {
@@ -146,26 +147,7 @@ void CommunicationCenter::fromRemote(std::vector<std::string> &key,
 }
 
 void CommunicationCenter::RunRecv() {
-  int cnt = 0;
-  for (auto it : cans) {
-    if (!it->only_thread) {
-      cnt += 1;
-    }
-  }
-  if (cnt == 0)
-    return;
-  std::thread ThRecv = std::thread{[&]() {
-    while (rclcpp::ok()) {
-      // can设备
-      for (auto it : cans) {
-        auto [is, can_msg] = it->read(it->channel);
-        if (is)
-          fromCan(can_msg, it->devive_ids, it->name);
-      }
-      // std::this_thread::sleep_for(std::chrono::milliseconds(1));
-    }
-  }};
-  ThRecv.detach();
+
 }
 
 void CommunicationCenter::sendMotor(
@@ -216,10 +198,14 @@ void CommunicationCenter::sendMotor(
     break;
   }
   case MotorCtrlType::ENABLE: {
-    if (msg->kd == 0)
-      motor->enableMotor(false);
-    else
-      motor->enableMotor(true);
+    motor->enableMotor(true);
+  }
+  case MotorCtrlType::DISABLE: {
+    motor->enableMotor(false);
+    break;
+  }
+  case MotorCtrlType::SETZERO: {
+      motor->setZeroPoint();
     break;
   }
   case MotorCtrlType::ERR: {
@@ -360,38 +346,6 @@ void CommunicationCenter::handle_request(
   }
 }
 
-void CommunicationCenter::registeredMotorDecoder(Motortype motor_type) {
-  for (auto type : registered_motor_types) {
-    if (motor_type == type)
-      return;
-  }
-  registered_motor_types.push_back(motor_type);
-  switch (motor_type) {
-  case Motortype::Mi: {
-    auto mi = std::make_shared<MiMotor>();
-    moter_decoders.push_back(mi);
-    break;
-  }
-  case Motortype::DM: {
-    auto dm = std::make_shared<DMMotor>();
-    moter_decoders.push_back(dm);
-    break;
-  }
-  case Motortype::RM: {
-    // auto rm = std::make_shared<RMMotor>();
-    // moter_decoders.push_back(rm);
-    break;
-  }
-  case Motortype::ERR: {
-    std::cout << "can't registered ERR" << std::endl;
-    break;
-  }
-  case Motortype::UNITREE: {
-    break;
-  }
-  }
-}
-
 void CommunicationCenter::buildMap() {
   for (auto com : xml_decoder.coms) {
     switch (com.type) {
@@ -401,33 +355,7 @@ void CommunicationCenter::buildMap() {
       pcan->name = com.name;
       if (pcan->initPCAN(pcan->channel, BAUD_1MBPS)) {
         // 增加电机
-        for (auto motor : com.xml_motors) {
-          registeredMotorDecoder(motor.type);
-          pcan->devive_ids.push_back(motor.id);
-          if (motor.type == Motortype::Mi) {
-            auto mi = std::make_shared<MiMotor>();
-            mi->can = pcan;
-            mi->motor_type = "Mi";
-            initMotor(mi, motor);
-            mi->ok_fix_parameter(motor.id);
-            motor_map[motor.joint_name] = mi;
-            motorID_map[motor.id] = mi;
-          } else if (motor.type == Motortype::DM) {
-            auto dm = std::make_shared<DMMotor>();
-            dm->can = pcan;
-            dm->motor_type = "DM";
-            initMotor(dm, motor);
-            motor_map[motor.joint_name] = dm;
-            motorID_map[motor.id] = dm;
-          }
-        }
-        if (com.only_thred) {
-          pcan->connectDecode(
-              std::bind(&CommunicationCenter::fromCan, this, _1, _2, _3));
-          pcan->RunRecv();
-        }
-        cans_map[com.name] = cans.size();
-        cans.push_back(pcan);
+        addCanMotor(pcan, com);
       } else {
         std::cout << "init pcan false" << std::endl;
       }
@@ -435,7 +363,6 @@ void CommunicationCenter::buildMap() {
     }
     case ComType::serial: {
       auto serial = std::make_shared<Serial>();
-      serial->only_thread = com.only_thred;
       serial->name = com.name;
       bool is = serial->OpenSerial(com.port, com.bps, com.datasize, com.parity,
                                    com.stopbit);
@@ -449,8 +376,15 @@ void CommunicationCenter::buildMap() {
       serials.push_back(serial);
       break;
     }
-    case ComType::canable: {
-      std::cout << "Canable type not implemented yet" << std::endl;
+    case ComType::socketcan: {
+      auto socketcan = std::make_shared<SocketCan>();
+      socketcan->name = com.name;
+      socketcan->channel = com.channel;
+      if (socketcan->connect()) {
+        addCanMotor(socketcan, com);
+      } else {
+        std::cout << "init socket false" << std::endl;
+      }
       break;
     }
     case ComType::ERR: {
@@ -531,6 +465,51 @@ void CommunicationCenter::buildMap() {
   }
   std::cout << std::endl;
 }
+
+void CommunicationCenter::addCanMotor(std::shared_ptr<BaseCAN> can,
+                                      ComCfg com_cfg) {
+  std::vector<std::shared_ptr<BaseMotor>> motor_decoders;
+  for (auto motor : com_cfg.xml_motors) {
+    can->devive_ids.push_back(motor.id);
+    if (motor.type == Motortype::Mi) {
+      auto mi = std::make_shared<MiMotor>();
+      mi->can = can;
+      initMotor(mi, motor);
+      mi->ok_fix_parameter(motor.id);
+      motor_map[motor.joint_name] = mi;
+      motorID_map[motor.id] = mi;
+      bool is = true;
+      for (auto decode : motor_decoders) {
+        if (decode->motor_type == mi->motor_type)
+          is = false;
+      }
+      if (is)
+        motor_decoders.push_back(mi);
+    } else if (motor.type == Motortype::DM) {
+      auto dm = std::make_shared<DMMotor>();
+      dm->can = can;
+      initMotor(dm, motor);
+      motor_map[motor.joint_name] = dm;
+      motorID_map[motor.id] = dm;
+      bool is = true;
+      for (auto decode : motor_decoders) {
+        if (decode->motor_type == dm->motor_type)
+          is = false;
+      }
+      if (is)
+        motor_decoders.push_back(dm);
+    }
+  }
+  can->connectDecode(
+      std::bind(&CommunicationCenter::fromCan, this, _1, _2, _3, _4));
+  can->RunRecv();
+
+  cans_map[com_cfg.name] = cans.size();
+  cans.push_back(can);
+  can->decoder_idx = com_moter_decoders.size();
+  com_moter_decoders.push_back(motor_decoders);
+  std::cout << "motor_decoders size:" << motor_decoders.size() << std::endl;
+};
 
 void CommunicationCenter::initMotor(std::shared_ptr<BaseMotor> _motor,
                                     XMLMotor xml_motor) {

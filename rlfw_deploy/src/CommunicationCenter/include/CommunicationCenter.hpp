@@ -1,8 +1,11 @@
 #pragma once
 #include "BaseCAN.h"
 #include "BaseRemote.h"
+#include "DMMotor.h"
+#include "MiMotor.h"
 #include "Motor.hpp"
 #include "PCAN.hpp"
+#include "SocketCan.h"
 #include "XMLDecoder.hpp"
 #include "gamepad.h"
 #include "geometry_msgs/msg/twist.hpp"
@@ -43,11 +46,11 @@ public:
   rclcpp::Publisher<rlfw_msgs::msg::Joint>::SharedPtr motor_publisher;
   // 任何设备都使用这些读取
   void fromCan(CANMSG &msg, std::vector<int> &device_ids,
-               std::string &com_name);
+               std::string &com_name,int decoder_idx);
   void fromSerial(std::vector<uint8_t> &msg, std::string com_name);
   void fromSerialMotor() {};
-  void fromRemote(std::vector<std::string> &key, std::vector<float>& value);
-  // 对于没有独立线程的com(主要是can)统一线程读取，serial独立线程接收
+  void fromRemote(std::vector<std::string> &key, std::vector<float> &value);
+  // 所有com的接收均在独立线程
   void RunRecv();
 
 private:
@@ -81,10 +84,9 @@ private:
   // 加载配置
   XMLDecoder xml_decoder;
   // 注册电机解码器
-  std::vector<std::shared_ptr<BaseMotor>> moter_decoders;
+  std::vector<std::vector<std::shared_ptr<BaseMotor>>> com_moter_decoders;
   std::vector<Motortype> registered_motor_types; // 已经注册的电机类型
   std::unordered_map<int, std::shared_ptr<BaseMotor>> motorID_map;
-  void registeredMotorDecoder(Motortype motor_type);
   // 字符串映射
   std::unordered_map<std::string, std::shared_ptr<BaseMotor>> motor_map;
   std::unordered_map<std::string, std::shared_ptr<BaseMotor>> virtual_motor_map;
@@ -94,6 +96,7 @@ private:
   std::unordered_map<std::string, int> serials_map;
   std::vector<std::shared_ptr<BaseRemote>> remotes;
   void buildMap();
+  void addCanMotor(std::shared_ptr<BaseCAN> com,ComCfg com_cfg);
   // 电机使能和参数写入
   void initMotor(std::shared_ptr<BaseMotor> _motor, XMLMotor xml_motor);
   // 对不同通讯子线程处理CommunicationCenter的函数使用

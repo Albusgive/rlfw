@@ -1,0 +1,4 @@
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/AgentNode.cpp.o] 中断
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:90: CMakeFiles/agent.dir/src/gs2mj.cpp.o] 中断
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/agent.dir/all] 中断
+gmake: *** [Makefile:146: all] 中断

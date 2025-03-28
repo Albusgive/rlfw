@@ -1,0 +1,10 @@
+[35m[1mConsolidate compiler generated dependencies of target tinyxml2[0m
+[ 12%] Built target tinyxml2
+[35m[1mConsolidate compiler generated dependencies of target xmltest[0m
+[35m[1mConsolidate compiler generated dependencies of target CommunicationCenter[0m
+[ 25%] Built target xmltest
+[ 31%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o[0m

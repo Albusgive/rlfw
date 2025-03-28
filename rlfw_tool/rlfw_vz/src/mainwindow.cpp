@@ -8,6 +8,7 @@
 #include <qcolor.h>
 #include <qcombobox.h>
 #include <qcontainerfwd.h>
+#include <qfont.h>
 #include <qlogging.h>
 #include <qmainwindow.h>
 #include <qnamespace.h>
@@ -18,6 +19,8 @@
 #include <qsize.h>
 #include <qtimer.h>
 #include <qwindowdefs.h>
+#include <ratio>
+#include <thread>
 #include <vector>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -26,8 +29,18 @@ MainWindow::MainWindow(QWidget *parent)
 
   comcenter_debug = new ComcenterDebug("rlfw_vz");
   // 请求服务器参数
-  connect(ui->get_cfg_btn, &QPushButton::clicked, comcenter_debug,
-          &ComcenterDebug::requestComParameter);
+  connect(ui->get_cfg_btn, &QPushButton::clicked, this, [this]() {
+    ui->coms_text_edit->clear();
+    ui->joints_text_edit->clear();
+    ui->remotes_text_edit->clear();
+    joints.clear();
+    coms.clear();
+    com_types.clear();
+    remotes.clear();
+    remote_types.clear();
+    comcenter_debug->requestComParameter();
+    comcenter_debug->requestMappingParameter();
+  });
   connect(ui->able_cfg_btn, &QPushButton::clicked, this, [this]() {
     ui->add_joint_combox->clear();
     ui->add_joint_combox->addItem("None");
@@ -57,16 +70,16 @@ MainWindow::MainWindow(QWidget *parent)
                      .arg(types[i]);
         }
         if (type == "MountCom") {
-          ui->coms_text_edit->setText(msg);
-          coms = names;
-          com_types = types;
+          ui->coms_text_edit->append(msg);
+          coms += names;
+          com_types += types;
         } else if (type == "MountMotor") {
-          ui->joints_text_edit->setText(msg);
-          joints = names;
+          ui->joints_text_edit->append(msg);
+          joints += names;
         } else if (type == "MountRmote") {
-          ui->remotes_text_edit->setText(msg);
-          remotes = names;
-          remote_types = types;
+          ui->remotes_text_edit->append(msg);
+          remotes += names;
+          remote_types += types;
         }
       });
   /*-----------------joint界面-----------------*/
@@ -113,6 +126,10 @@ void MainWindow::connectJoint() {
   connect(ui->joint_disable, &QPushButton::clicked, this, [this]() {
     std::string joint_name = ui->ctrl_joint->currentText().toStdString();
     comcenter_debug->enableJoint(joint_name, false);
+  });
+  connect(ui->setZerobtn, &QPushButton::clicked, this, [this]() {
+    std::string joint_name = ui->ctrl_joint->currentText().toStdString();
+    comcenter_debug->setJointZero(joint_name);
   });
 }
 
@@ -207,10 +224,12 @@ void MainWindow::connectRemote() {
   rxy = QPoint(363, 199);
   l_brush = QBrush(Qt::black, Qt::SolidPattern);
   r_brush = QBrush(Qt::black, Qt::SolidPattern);
+  font = QFont("", 18);
   auto img =
       overlayImages(gamepad_base, gamepad_top, QVector<QPolygon>(), lxy, rxy);
   ui->remote_img->setPixmap(QPixmap::fromImage(img));
   ui->remote_img->resize(img.size());
+  ui->remote_img->move(0, 0);
   connect(ui->remote_select, &QComboBox::currentIndexChanged, this,
           [this](int idx) {
             if (idx > 0) {
@@ -222,6 +241,17 @@ void MainWindow::connectRemote() {
             if (ui->remote_type->text() == "gamepad")
               updateGamepad(key, value);
           });
+  // 重映射
+  connect(ui->remote_mapping_btn, &QPushButton::clicked, this, [this]() {
+    remappping = true;
+    remapping_tip = "请按(please press):";
+    setRemappingTip("a");
+  });
+  connect(ui->remote_jump_btn, &QPushButton::clicked, this, [this]() {
+    gamepad_key_idx.push_back(-1);
+    remapping_idx++;
+    setRemappingTip(gamepad_keys[remapping_idx]);
+  });
 }
 
 QImage MainWindow::overlayImages(QImage baseImage, QImage topImage,
@@ -244,6 +274,13 @@ QImage MainWindow::overlayImages(QImage baseImage, QImage topImage,
   painter.drawEllipse(l, 20, 20);
   painter.setBrush(r_brush);
   painter.drawEllipse(r, 20, 20);
+  painter.setFont(font);
+  painter.drawText(
+      QPoint(baseImage.width() * 7 / 12, baseImage.height() * 6 / 7),
+      "rt:" + QString::number(rt));
+  painter.drawText(
+      QPoint(baseImage.width() * 3 / 12, baseImage.height() * 6 / 7),
+      "lt:" + QString::number(lt));
   return result;
 }
 
@@ -252,41 +289,126 @@ void MainWindow::updateGamepad(QStringList key, QVector<float> value) {
   QPoint lxy_, rxy_;
   l_brush.setColor(Qt::black);
   r_brush.setColor(Qt::black);
-  for (int i = 0; i < value.size(); i++) {
-    if (value[i] != 0) {
-      if (key[i] == "xx") {
-        if (value[i] > 0) {
-          regions.append(gamepad_map["xx1"]);
-        } else if (value[i] < 0) {
-          regions.append(gamepad_map["xx2"]);
+  if (!remappping) {
+    for (int i = 0; i < value.size(); i++) {
+      if (value[i] != 0) {
+        if (key[i] == "xx") {
+          if (value[i] > 0) {
+            regions.append(gamepad_map["xx1"]);
+          } else if (value[i] < 0) {
+            regions.append(gamepad_map["xx2"]);
+          }
+        } else if (key[i] == "yy") {
+          if (value[i] > 0) {
+            regions.append(gamepad_map["yy1"]);
+          } else if (value[i] < 0) {
+            regions.append(gamepad_map["yy2"]);
+          }
+        } else if (key[i] == "lo") {
+          l_brush.setColor(Qt::gray);
         }
-      } else if (key[i] == "yy") {
-        if (value[i] > 0) {
-          regions.append(gamepad_map["yy1"]);
-        } else if (value[i] < 0) {
-          regions.append(gamepad_map["yy2"]);
+        if (key[i] == "ro") {
+          r_brush.setColor(Qt::gray);
+        } else {
+          if (gamepad_map.contains(key[i])) {
+            regions.append(gamepad_map[key[i]]);
+          }
         }
-      } else if (key[i] == "lo") {
-        l_brush.setColor(Qt::gray);
       }
-      if (key[i] == "ro") {
-        r_brush.setColor(Qt::gray);
-      } else {
-        if (gamepad_map.contains(key[i])) {
-          regions.append(gamepad_map[key[i]]);
-        }
+      if (key[i] == "lx") {
+        lxy_.setX(lxy.x() + (value[i] * 20 / 32767));
+      } else if (key[i] == "ly") {
+        lxy_.setY(lxy.y() + (value[i] * 20 / 32767));
+      } else if (key[i] == "rx") {
+        rxy_.setX(rxy.x() + (value[i] * 20 / 32767));
+      } else if (key[i] == "ry") {
+        rxy_.setY(rxy.y() + (value[i] * 20 / 32767));
+      }
+      if (key[i] == "lt") {
+        lt = value[i];
+      } else if (key[i] == "rt") {
+        rt = value[i];
       }
     }
-    if (key[i] == "lx") {
-      lxy_.setX(lxy.x() + (value[i] * 20 / 32767));
-    } else if (key[i] == "ly") {
-      lxy_.setY(lxy.y() + (value[i] * 20 / 32767));
-    } else if (key[i] == "rx") {
-      rxy_.setX(rxy.x() + (value[i] * 20 / 32767));
-    } else if (key[i] == "ry") {
-      rxy_.setY(rxy.y() + (value[i] * 20 / 32767));
+  } else {
+    lxy_ = lxy;
+    rxy_ = rxy;
+    for (int i = 0; i < value.size(); i++) {
+      if (value[i] != 0) {
+        if (remapping_idx == gamepad_keys.size()) {
+          succeedRemapping();
+          return;
+        }
+        QString now_key = gamepad_keys[remapping_idx];
+        if (now_key == "lx" || now_key == "ly" || now_key == "rx" ||
+            now_key == "ry" || now_key == "xx" || now_key == "yy" ||
+            now_key == "lt" || now_key == "rt") {
+          if (value[i] > 32765) {
+            temp_value = i;
+            std::this_thread::sleep_for(std::chrono::milliseconds(200));
+          }
+
+          if (now_key == "lx") {
+            lxy_.setX(lxy.x() + (value[i] * 20 / 32767));
+          } else if (now_key == "ly") {
+            lxy_.setY(lxy.y() + (value[i] * 20 / 32767));
+          } else if (now_key == "rx") {
+            rxy_.setX(rxy.x() + (value[i] * 20 / 32767));
+          } else if (now_key == "ry") {
+            rxy_.setY(rxy.y() + (value[i] * 20 / 32767));
+          }
+          if (now_key == "lt") {
+            lt = value[i];
+          } else if (now_key == "rt") {
+            rt = value[i];
+          }
+        } else {
+          if (value[i] > 0)
+            temp_value = i;
+        }
+        // 检查有没有重复
+        bool is_succeed = false;
+        for (auto val : gamepad_key_idx) {
+          if (val == i)
+            is_succeed = true;
+        }
+        if (!is_succeed && temp_value != -1) {
+          qDebug() << gamepad_keys[remapping_idx] << remapping_idx;
+          gamepad_key_idx.push_back(temp_value);
+          regions.append(gamepad_map[gamepad_keys[remapping_idx]]);
+          remapping_idx++;
+          temp_value = -1;
+          setRemappingTip(gamepad_keys[remapping_idx]);
+        }
+      }
     }
   }
   QImage result = overlayImages(gamepad_base, gamepad_top, regions, lxy_, rxy_);
   ui->remote_img->setPixmap(QPixmap::fromImage(result));
 }
+
+void MainWindow::setRemappingTip(QString key) {
+  ui->remote_mappint_tip->clear();
+  ui->remote_mappint_tip->setFont(font);
+  ui->remote_mappint_tip->setText(remapping_tip + key);
+}
+
+void MainWindow::succeedRemapping() {
+  remappping = false;
+  remapping_idx = 0;
+  ui->remote_mappint_tip->setFont(font);
+  ui->remote_mappint_tip->setText("已完成重映射(succeed)!");
+  QString new_gamepad_keys = "key = \"";
+  for (auto idx : gamepad_key_idx) {
+    if (idx == -1) {
+      new_gamepad_keys.append("none");
+    } else {
+      new_gamepad_keys.append(gamepad_keys[idx]);
+    }
+    new_gamepad_keys.append(" ");
+  }
+  new_gamepad_keys.push_back("\"");
+  ui->remote_mapping_keys->setText(new_gamepad_keys);
+}
+
+void MainWindow::connectVM() {}

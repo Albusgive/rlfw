@@ -1,6 +1,0 @@
-[ 13%] Built target tinyxml2
-[ 26%] Built target xmltest
-[ 40%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o[0m
-[ 40%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o[0m
-[ 46%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o[0m
-[ 53%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o[0m

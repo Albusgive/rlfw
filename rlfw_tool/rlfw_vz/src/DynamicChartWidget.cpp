@@ -43,7 +43,7 @@ void DynamicChartWidget::addSeries(const QString &name) {
     qWarning() << "Series" << name << "already exists!";
     return;
   }
-  QLineSeries *series = new QLineSeries;
+  FixedSizeLineSeries *series = new FixedSizeLineSeries(1000);
   series->setName(name);
   series->setColor(generateColor(name));
   chart->addSeries(series);
@@ -96,7 +96,7 @@ void DynamicChartWidget::updateData(const QString &name, qreal x, qreal y) {
 
   // 动态调整X轴
   if (x > axisX->max()) {
-    axisX->setRange(x - 10, x);
+    axisX->setRange(x - 5, x);
   }
 
   // 更新Y轴范围

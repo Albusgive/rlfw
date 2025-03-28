@@ -54,7 +54,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mujoco_mapping/mujoco_mapping")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mujoco_mapping/mujoco_mapping"
-         OLD_RPATH "/opt/ros/humble/lib:/opt/mujoco/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mujoco_mapping/mujoco_mapping")

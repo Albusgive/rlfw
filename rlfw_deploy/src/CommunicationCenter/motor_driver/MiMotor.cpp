@@ -1,6 +1,6 @@
 #include "MiMotor.h"
 #include <cstdint>
-MiMotor::MiMotor() {}
+MiMotor::MiMotor() { motor_type = "Mi"; }
 MiMotor::~MiMotor() {}
 
 MiCANMsg *MiMotor::enableMotor(uint8_t motor_id, bool enable,
@@ -90,6 +90,19 @@ MiCANMsg *MiMotor::ctrl_pos(uint8_t motor_id, float pos) {
 
 MiCANMsg *MiMotor::ctrl_torque(uint8_t motor_id, float torque) {
   return set_parameter(motor_id, motor_indexs::iq_ref, torque);
+};
+
+MiCANMsg *MiMotor::setZeroPoint(uint8_t motor_id) {
+  MiCANMsg msg;
+  MI_EXT_ID ext_id;
+  ext_id.device_id = motor_id;
+  ext_id.com_type = static_cast<uint32_t>(com_type::SetZero);
+  msg.ID = ext_id.toEXTID();
+  msg.MSGTYPE = CAN_EXTENDED;
+  msg.LEN = 8;
+  msg.DATA[0] = 1;
+  mi_can_msg = msg;
+  return &mi_can_msg;
 };
 
 MiCANMsg *MiMotor::setPosKP(uint8_t motor_id, float kp) {

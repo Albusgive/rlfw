@@ -2,6 +2,7 @@
 #include "ComCfg.hpp"
 #include <iostream>
 #include <sstream>
+#include <string>
 
 XMLDecoder::XMLDecoder(std::string path) { load(path); }
 XMLDecoder::~XMLDecoder() {}
@@ -31,7 +32,6 @@ bool XMLDecoder::load(std::string path) {
       ComCfg.name = Attribute2String(com->Attribute("name"));
       ComCfg.port = Attribute2String(com->Attribute("port"));
       // std::cout<<"com port:"<<ComCfg.port<<std::endl;
-      ComCfg.only_thred = com->BoolAttribute("thread", false);
       ComCfg.bps = com->IntAttribute("bps", 115200);
       ComCfg.datasize = com->IntAttribute("datasize", 8);
       ComCfg.parity = com->IntAttribute("parity", 0);
@@ -50,7 +50,7 @@ bool XMLDecoder::load(std::string path) {
               Attribute2String(motor->Attribute("jointname"));
           xml_motor.id = motor->IntAttribute("id", -1);
           xml_motor.ctrl_type = string2enum<MotorCtrlType>(
-              Attribute2String(motor->Attribute("ctrltype")));
+              Attribute2String(motor->Attribute("ctrltype"),"MIT"));
           xml_motor.invert = motor->BoolAttribute("invert", false);
           xml_motor.PosKD = motor->FloatAttribute("poskd", -1.0);
           xml_motor.PosKP = motor->FloatAttribute("poskp", -1.0);
@@ -164,9 +164,9 @@ bool XMLDecoder::check() {
   return flag;
 }
 
-std::string XMLDecoder::Attribute2String(const char *name) {
+std::string XMLDecoder::Attribute2String(const char *name,std::string default_value) {
   if (name == 0) {
-    return std::string("");
+    return default_value;
   }
   return std::string(name);
 }

@@ -1,0 +1,27 @@
+[0.014s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/agent -- -j12 -l12
+[0.083s] [35m[1mConsolidate compiler generated dependencies of target agent[0m
+[0.141s] [ 33%] [32mBuilding CXX object CMakeFiles/agent.dir/src/AgentNode.cpp.o[0m
+[0.145s] [ 66%] [32mBuilding CXX object CMakeFiles/agent.dir/src/gs2mj.cpp.o[0m
+[21.662s] [100%] [32m[1mLinking CXX executable agent[0m
+[23.894s] [100%] Built target agent
+[23.903s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/agent -- -j12 -l12
+[23.904s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/agent
+[23.910s] -- Install configuration: ""
+[23.910s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/agent/lib/agent/agent
+[23.915s] -- Set runtime path of "/home/albusgive2/rlfw/rlfw_deploy/install/agent/lib/agent/agent" to ""
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/ament_index/resource_index/package_run_dependencies/agent
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/ament_index/resource_index/parent_prefix_path/agent
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/ament_prefix_path.sh
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/ament_prefix_path.dsv
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/path.sh
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/path.dsv
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.bash
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.sh
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.zsh
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.dsv
+[23.915s] -- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/package.dsv
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/ament_index/resource_index/packages/agent
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/cmake/agentConfig.cmake
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/cmake/agentConfig-version.cmake
+[23.915s] -- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/package.xml
+[23.917s] Invoked command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/albusgive2/rlfw/rlfw_deploy/build/agent

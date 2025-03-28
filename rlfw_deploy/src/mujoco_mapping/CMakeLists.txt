@@ -9,14 +9,18 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(rlfw_msgs REQUIRED)
 set(MUJOCO_FOLDER /opt/mujoco/lib/cmake)
 find_package(mujoco REQUIRED PATHS ${MUJOCO_FOLDER} NO_DEFAULT_PATH)
 if (mujoco_FOUND)
     message(STATUS "Find mujoco:  ${mujoco_INCLUDE_DIRS}, ${mujoco_LIBRARIES}")
 endif()
 
-add_executable(mujoco_mapping main.cpp)
-ament_target_dependencies(mujoco_mapping rclcpp sensor_msgs)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+
+add_executable(mujoco_mapping ${SRC})
+ament_target_dependencies(mujoco_mapping rclcpp sensor_msgs rlfw_msgs)
 target_link_libraries(mujoco_mapping mujoco::mujoco glut GL GLU glfw)  # 添加其他依赖库，如 glfw, OpenGL
 
 target_compile_features(mujoco_mapping PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17

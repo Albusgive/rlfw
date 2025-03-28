@@ -1,0 +1,5 @@
+[0.012s] Invoking command in '/home/albusgive2/rlfw/rlfw_deploy/build/agent': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive2/rlfw/rlfw_deploy/build/agent -- -j12 -l12
+[0.104s] [ 33%] [32mBuilding CXX object CMakeFiles/agent.dir/src/AgentNode.cpp.o[0m
+[0.107s] [ 66%] [32mBuilding CXX object CMakeFiles/agent.dir/src/gs2mj.cpp.o[0m
+[20.664s] [100%] [32m[1mLinking CXX executable agent[0m
+[22.639s] [100%] Built target agent

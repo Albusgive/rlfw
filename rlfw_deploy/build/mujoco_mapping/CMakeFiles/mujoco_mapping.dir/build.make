@@ -69,28 +69,60 @@ include CMakeFiles/mujoco_mapping.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mujoco_mapping.dir/flags.make
 
-CMakeFiles/mujoco_mapping.dir/main.cpp.o: CMakeFiles/mujoco_mapping.dir/flags.make
-CMakeFiles/mujoco_mapping.dir/main.cpp.o: /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp
-CMakeFiles/mujoco_mapping.dir/main.cpp.o: CMakeFiles/mujoco_mapping.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mujoco_mapping.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mujoco_mapping.dir/main.cpp.o -MF CMakeFiles/mujoco_mapping.dir/main.cpp.o.d -o CMakeFiles/mujoco_mapping.dir/main.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp
+CMakeFiles/mujoco_mapping.dir/src/main.cpp.o: CMakeFiles/mujoco_mapping.dir/flags.make
+CMakeFiles/mujoco_mapping.dir/src/main.cpp.o: /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/main.cpp
+CMakeFiles/mujoco_mapping.dir/src/main.cpp.o: CMakeFiles/mujoco_mapping.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mujoco_mapping.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mujoco_mapping.dir/src/main.cpp.o -MF CMakeFiles/mujoco_mapping.dir/src/main.cpp.o.d -o CMakeFiles/mujoco_mapping.dir/src/main.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/main.cpp
 
-CMakeFiles/mujoco_mapping.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mujoco_mapping.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp > CMakeFiles/mujoco_mapping.dir/main.cpp.i
+CMakeFiles/mujoco_mapping.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mujoco_mapping.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/main.cpp > CMakeFiles/mujoco_mapping.dir/src/main.cpp.i
 
-CMakeFiles/mujoco_mapping.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mujoco_mapping.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/main.cpp -o CMakeFiles/mujoco_mapping.dir/main.cpp.s
+CMakeFiles/mujoco_mapping.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mujoco_mapping.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/main.cpp -o CMakeFiles/mujoco_mapping.dir/src/main.cpp.s
+
+CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o: CMakeFiles/mujoco_mapping.dir/flags.make
+CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o: /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mappingnode.cpp
+CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o: CMakeFiles/mujoco_mapping.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o -MF CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o.d -o CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mappingnode.cpp
+
+CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mappingnode.cpp > CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.i
+
+CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mappingnode.cpp -o CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.s
+
+CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o: CMakeFiles/mujoco_mapping.dir/flags.make
+CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o: /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp
+CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o: CMakeFiles/mujoco_mapping.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o -MF CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o.d -o CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o -c /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp
+
+CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp > CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.i
+
+CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp -o CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.s
 
 # Object files for target mujoco_mapping
 mujoco_mapping_OBJECTS = \
-"CMakeFiles/mujoco_mapping.dir/main.cpp.o"
+"CMakeFiles/mujoco_mapping.dir/src/main.cpp.o" \
+"CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o" \
+"CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o"
 
 # External object files for target mujoco_mapping
 mujoco_mapping_EXTERNAL_OBJECTS =
 
-mujoco_mapping: CMakeFiles/mujoco_mapping.dir/main.cpp.o
+mujoco_mapping: CMakeFiles/mujoco_mapping.dir/src/main.cpp.o
+mujoco_mapping: CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o
+mujoco_mapping: CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o
 mujoco_mapping: CMakeFiles/mujoco_mapping.dir/build.make
 mujoco_mapping: /opt/ros/humble/lib/librclcpp.so
 mujoco_mapping: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
@@ -98,6 +130,12 @@ mujoco_mapping: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_
 mujoco_mapping: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 mujoco_mapping: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 mujoco_mapping: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
+mujoco_mapping: /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_fastrtps_c.so
+mujoco_mapping: /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so
+mujoco_mapping: /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_introspection_c.so
+mujoco_mapping: /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_introspection_cpp.so
+mujoco_mapping: /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_cpp.so
+mujoco_mapping: /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_generator_py.so
 mujoco_mapping: /opt/mujoco/lib/libmujoco.so.3.2.8
 mujoco_mapping: /opt/ros/humble/lib/liblibstatistics_collector.so
 mujoco_mapping: /opt/ros/humble/lib/librcl.so
@@ -133,46 +171,48 @@ mujoco_mapping: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so
 mujoco_mapping: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
 mujoco_mapping: /opt/ros/humble/lib/libtracetools.so
 mujoco_mapping: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
-mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
-mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
-mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 mujoco_mapping: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/libfastcdr.so.1.0.24
-mujoco_mapping: /opt/ros/humble/lib/librmw.so
 mujoco_mapping: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
-mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 mujoco_mapping: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 mujoco_mapping: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
 mujoco_mapping: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
 mujoco_mapping: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 mujoco_mapping: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
 mujoco_mapping: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
+mujoco_mapping: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
+mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
+mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
+mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+mujoco_mapping: /opt/ros/humble/lib/librmw.so
+mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
+mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
+mujoco_mapping: /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_c.so
+mujoco_mapping: /home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_generator_c.so
 mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
 mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
 mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
 mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
-mujoco_mapping: /usr/lib/x86_64-linux-gnu/libpython3.10.so
-mujoco_mapping: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
-mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 mujoco_mapping: /opt/ros/humble/lib/librosidl_typesupport_c.so
 mujoco_mapping: /opt/ros/humble/lib/librcpputils.so
 mujoco_mapping: /opt/ros/humble/lib/librosidl_runtime_c.so
 mujoco_mapping: /opt/ros/humble/lib/librcutils.so
+mujoco_mapping: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 mujoco_mapping: CMakeFiles/mujoco_mapping.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mujoco_mapping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable mujoco_mapping"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mujoco_mapping.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

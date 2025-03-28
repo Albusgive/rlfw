@@ -56,7 +56,9 @@ public:
   void ctrlJoint(std::string joint_name, std::string ctrl_type, float torque,
                  float pos, float vel, float kp, float kd);
   void enableJoint(std::string joint_name, bool enable);
+  void setJointZero(std::string joint_name);
   void requestComParameter();
+  void requestMappingParameter();
   void enable(int flag);
 
   void resetQos(int his);
@@ -73,6 +75,7 @@ private:
   rclcpp::Publisher<rlfw_msgs::msg::CanMsg>::SharedPtr can_pub;
   rclcpp::Publisher<rlfw_msgs::msg::SerialMsg>::SharedPtr serial_pub;
   rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedPtr client;
+  rclcpp::Client<rlfw_msgs::srv::ComParameter>::SharedPtr mapping_client;
   // sub
   rclcpp::Subscription<rlfw_msgs::msg::Joint>::SharedPtr sub_motor_;
   rclcpp::Subscription<rlfw_msgs::msg::Remote>::SharedPtr sub_remote_;
@@ -92,13 +95,13 @@ private:
   std::string com_name;
   int can_type;
 
-  //remote
+  // remote
 
 protected:
   void run();
 signals:
   void emitComParameter(QString, QStringList, QStringList); // type coms types
   void emitJointData(QString, qreal, qreal);                // name time data
-  void emitComData(qint32, QByteArray);            // id data
-  void emitRemote(QStringList,QVector<float>); //key value
+  void emitComData(qint32, QByteArray);                     // id data
+  void emitRemote(QStringList, QVector<float>);             // key value
 };

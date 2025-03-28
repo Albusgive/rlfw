@@ -9,7 +9,6 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include "ComCfg.hpp"
 
 #define RESET "\033[0m"
 #define RED "\033[31m"
@@ -37,12 +36,12 @@ class MotorBack {
 public:
   int id;
   std::string joint_name;
-  float angle;
-  float number_laps; // 圈数
-  float vel;
-  float torque;
-  float current;
-  float temperature; // 摄氏度
+  float angle = 0;
+  float number_laps = 0; // 圈数
+  float vel = 0;
+  float torque = 0;
+  float current = 0;
+  float temperature = 0; // 摄氏度
 
   MotorWarning warning = MotorWarning::Normal;
   void print() {
@@ -78,24 +77,24 @@ public:
   int id = -1;
   MotorBack motorback;
   bool invert = false;
-  float default_=0; // 角度补偿
+  float default_ = 0; // 角度补偿
   std::string motor_name;
   std::string motor_type;
   MotorCtrlType ctrl_type;
   float torque_range[2] = {-9999, 9999};
   float vel_range[2] = {-9999, 9999};
   float pos_range[2] = {-9999, 9999};
-  void setTorqueRange(float min_torque,float max_torque){
-    torque_range[0]=min_torque;
-    torque_range[1]=max_torque;
+  void setTorqueRange(float min_torque, float max_torque) {
+    torque_range[0] = min_torque;
+    torque_range[1] = max_torque;
   };
-  void setPosRange(float min_pos,float max_pos){
-    pos_range[0]=min_pos;
-    pos_range[1]=max_pos;
+  void setPosRange(float min_pos, float max_pos) {
+    pos_range[0] = min_pos;
+    pos_range[1] = max_pos;
   };
-  void setVelRange(float min_vel,float max_vel){
-    vel_range[0]=min_vel;
-    vel_range[1]=max_vel;
+  void setVelRange(float min_vel, float max_vel) {
+    vel_range[0] = min_vel;
+    vel_range[1] = max_vel;
   };
   virtual void locomotion(float torque, float pos, float vel, float kp,
                           float kd) = 0;
@@ -104,6 +103,7 @@ public:
   virtual void ctrl_pos_vel(float pos, float vel) = 0;
   virtual void ctrl_torque(float torque) = 0;
   virtual void enableMotor(bool enable, bool clear_fault = false) = 0;
+  virtual void setZeroPoint() = 0;
   virtual void setPosKP(float kp) = 0;
   virtual void setPosKD(float kd) = 0;
   virtual void setVelKP(float kp) = 0;
@@ -148,6 +148,7 @@ public:
   virtual CANMSG *enableMotor(uint8_t /*motor_id*/, bool /*enable*/,
                               bool /*clear_fault*/ = false) = 0;
   /*--------电机参数设置--------*/
+  virtual CANMSG *setZeroPoint(uint8_t /*motor_id*/) = 0;
   virtual CANMSG *setCtrlType(uint8_t /*motor_id*/) = 0;
   // 位置PD
   virtual CANMSG *setPosKP(uint8_t /*motor_id*/, float /*kp*/) = 0;
@@ -211,9 +212,8 @@ public:
     can->send(can->channel, enableMotor(id, enable, clear_fault));
   }
   /*----------设置电机参数----------*/
-  void setCtrlType() override {
-    can->send(can->channel, setCtrlType(id));
-  }
+  void setZeroPoint() override { can->send(can->channel, setZeroPoint(id)); }
+  void setCtrlType() override { can->send(can->channel, setCtrlType(id)); }
   void setPosKP(float kp) override {
     if (kp == -1)
       return;
@@ -434,6 +434,7 @@ public:
       return std::vector<float>();
   }
   /*----------设置电机参数----------*/
+  void setZeroPoint() override {}
   void setPosKP(float) override {}
   void setPosKD(float) override {}
   void setVelKP(float) override {}
@@ -449,5 +450,3 @@ public:
   MotorBack decode() override { return MotorBack(); };
   void setCtrlType() override {};
 };
-
-class XXMotor {};

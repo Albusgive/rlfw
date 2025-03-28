@@ -65,6 +65,7 @@ public:
     return nullptr;
   };
   /*--------电机参数设置----*/
+  DMCANMsg *setZeroPoint(uint8_t motor_id) override;
   DMCANMsg *setPosKP(uint8_t motor_id, float kp) override { return nullptr; };
   DMCANMsg *setPosKD(uint8_t motor_id, float kd) override { return nullptr; };
   // 速度PI

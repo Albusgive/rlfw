@@ -1,0 +1,20 @@
+Tue Mar 18 18:46:59 2025
+ERROR: Load model error: ParseXML: Error opening file '/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/mjcf/nz/scene.xml': No such file or directory
+
+Tue Mar 18 20:15:54 2025
+ERROR: Load model error: Error: mocap body 'nz' is not a fixed child of world
+Element name 'nz', id 2, line 0
+
+Tue Mar 18 20:28:45 2025
+ERROR: Load model error: Error: both pos and fromto defined in geom
+Element name '', id 0, line 0
+
+Tue Mar 18 20:28:51 2025
+ERROR: Load model error: Error: both pos and fromto defined in geom
+Element name '', id 0, line 0
+
+Thu Mar 27 23:09:33 2025
+ERROR: Load model error: XML Error: Schema violation: unique element 'geom' found 2 times
+Element 'default', line 0
+
+

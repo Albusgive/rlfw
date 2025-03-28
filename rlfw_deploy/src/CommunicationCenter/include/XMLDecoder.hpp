@@ -36,7 +36,7 @@ public:
 
 private:
   XMLDocument doc;
-  std::string Attribute2String(const char *name);
+  std::string Attribute2String(const char *name,std::string default_value="");
   std::vector<std::string> splitByStream(const std::string& s);
   std::vector<float> splitFromString(const std::string& s);
 };

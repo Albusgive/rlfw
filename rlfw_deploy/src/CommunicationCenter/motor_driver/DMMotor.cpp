@@ -1,5 +1,5 @@
 #include "DMMotor.h"
-DMMotor::DMMotor() {}
+DMMotor::DMMotor() { motor_type = "DM"; }
 DMMotor::~DMMotor() {}
 
 DMCANMsg *DMMotor::enableMotor(uint8_t motor_id, bool enable,
@@ -107,3 +107,20 @@ float DMMotor::uint_to_float(int x_int, float x_min, float x_max, int bits) {
   float offset = x_min;
   return ((float)x_int) * span / ((float)((1 << bits) - 1)) + offset;
 }
+
+DMCANMsg *DMMotor::setZeroPoint(uint8_t motor_id) {
+  DMCANMsg dm_msg;
+  dm_msg.ID = motor_id;
+  dm_msg.MSGTYPE = CAN_STANDARD;
+  dm_msg.LEN = 8;
+  dm_msg.DATA[0] = 0xFF;
+  dm_msg.DATA[1] = 0xFF;
+  dm_msg.DATA[2] = 0xFF;
+  dm_msg.DATA[3] = 0xFF;
+  dm_msg.DATA[4] = 0xFF;
+  dm_msg.DATA[5] = 0xFF;
+  dm_msg.DATA[6] = 0xFF;
+  dm_msg.DATA[7] = 0xFE;
+  dm_can_msg = dm_msg;
+  return &dm_can_msg;
+};

@@ -28,6 +28,10 @@ AgentNode::AgentNode(std::string node_name) : rclcpp::Node(node_name) {
     joint_idx_map[i] = env_cfg.dof_names[i];
     joint_map[env_cfg.dof_names[i]] = i;
   }
+  for (auto i : joint_map) {
+    std::cout << i.first << " " << i.second << std::endl;
+    ;
+  }
 
   history_and_now_obs_buf = new CircularBuffer(env_cfg.history_length + 1);
   std::string model_path =
@@ -73,9 +77,12 @@ void AgentNode::imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg) {
 }
 
 void AgentNode::JointBack(const rlfw_msgs::msg::Joint::SharedPtr msg) {
-  int idx = joint_map[msg->jointname.frame_id];
-  dof_pos[idx] = msg->pos;
-  dof_vel[idx] = msg->vel;
+  auto it = joint_map.find(msg->jointname.frame_id);
+  if (it == joint_map.end()) {
+    return;
+  }
+  dof_pos[it->second] = msg->pos;
+  dof_vel[it->second] = msg->vel;
 }
 
 void AgentNode::RevRemote(const rlfw_msgs::msg::Remote::SharedPtr msg) {
@@ -124,16 +131,14 @@ std::vector<float> AgentNode::compute_ctrl(std::vector<float> act) {
   action[4] = act[4] * action_cfg.wheel_action_scale;
   action[5] = act[5] * action_cfg.wheel_action_scale;
   // 裁减 在电机端已经做好了
-  //   for (int i = 0; i < static_cast<int>(env_cfg.min_joint_angles.size());
-  //   i++) {
-  //     if (action[i] < env_cfg.min_joint_angles[i])
-  //       action[i] = env_cfg.min_joint_angles[i];
-  //   }
-  //   for (int i = 0; i < static_cast<int>(env_cfg.max_joint_angles.size());
-  //   i++) {
-  //     if (action[i] > env_cfg.max_joint_angles[i])
-  //       action[i] = env_cfg.max_joint_angles[i];
-  //   }
+  for (int i = 0; i < static_cast<int>(env_cfg.min_joint_angles.size()); i++) {
+    if (action[i] < env_cfg.min_joint_angles[i])
+      action[i] = env_cfg.min_joint_angles[i];
+  }
+  for (int i = 0; i < static_cast<int>(env_cfg.max_joint_angles.size()); i++) {
+    if (action[i] > env_cfg.max_joint_angles[i])
+      action[i] = env_cfg.max_joint_angles[i];
+  }
   return action;
 }
 
@@ -153,9 +158,9 @@ std::vector<float> AgentNode::compute_observations() {
   // if (commands[3] > 0.32) {
   //   commands[3] = 0.32;
   // } else if (commands[3] < 0.2) {
-  //   commands[3] = 0.2;
+  //   commands[3] = 0.22;
   // }
-  commands[3] = 0.2;
+  commands[3] = 0.22;
   for (int i = 0; i < (int)obs_sacle.command_scale.size(); i++) {
     obs.push_back(commands[i] * obs_sacle.command_scale[i]);
   }
@@ -175,7 +180,7 @@ std::vector<float> AgentNode::compute_observations() {
 }
 
 void AgentNode::runMode() {
-  for (int i = 0; i < env_cfg.history_length; i++) {
+  for (int i = 0; i <= env_cfg.history_length; i++) {
     history_and_now_obs_buf->push_back(compute_observations());
   }
   auto mode_thread = std::thread([this]() {
@@ -183,6 +188,9 @@ void AgentNode::runMode() {
       auto slice_obs_buf = compute_observations();
       history_and_now_obs_buf->push_back(slice_obs_buf);
       auto obs_buf = history_and_now_obs_buf->get_all();
+      // for (int i = 0; i < 156; i++) {
+      //   obs_buf[i] = 0;
+      // }
       torch::Tensor obs =
           torch::from_blob(obs_buf.data(), {static_cast<long>(obs_buf.size())},
                            torch::kFloat32)
@@ -203,11 +211,13 @@ void AgentNode::runMode() {
       obs_actions = vec;
       auto action_ = compute_ctrl(vec);
       sendJoint(action_);
-      std::this_thread::sleep_for(std::chrono::milliseconds(100));
+      std::this_thread::sleep_for(std::chrono::milliseconds(10));
       cout_vector(ang_vel, "ang_vel", Color::Green);
       cout_vector(projected_gravity, "projected_gravity", Color::Green);
-      cout_vector(action_, "action_", Color::Green);
       cout_vector(commands, "commands", Color::Blue);
+      cout_vector(dof_pos, "dof_pos", Color::Green);
+      cout_vector(dof_vel, "dof_vel", Color::Green);
+      cout_vector(action_, "action_", Color::Green);
     }
   });
   mode_thread.detach();
@@ -229,8 +239,9 @@ void AgentNode::sendJoint(std::vector<float> actions) {
     rlfw_msgs::msg::JointCtrl msg;
     msg.jointname.stamp = this->now();
     msg.jointname.frame_id = joint_idx_map[i];
-    msg.ctrl_type = "VEL";
+    msg.ctrl_type = "MIT";
     msg.vel = actions[i];
+    msg.kd = action_cfg.kv;
     pub_joint_->publish(msg);
   }
 }

@@ -578,7 +578,7 @@ SITE:STRING=albusgive2
 TORCH_LIBRARY:FILEPATH=/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/lib/libtorch.so
 
 //The directory containing a CMake configuration file for TinyXML2.
-TinyXML2_DIR:PATH=/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2
+TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for Torch.
 Torch_DIR:PATH=/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/share/cmake/Torch

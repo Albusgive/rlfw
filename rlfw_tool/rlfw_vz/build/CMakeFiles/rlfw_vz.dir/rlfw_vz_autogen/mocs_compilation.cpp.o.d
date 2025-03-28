@@ -835,29 +835,31 @@ CMakeFiles/rlfw_vz.dir/rlfw_vz_autogen/mocs_compilation.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qtmochelpers.h \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen/6YEA5652QU/moc_DynamicChartWidget.cpp \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen/6YEA5652QU/../../../include/DynamicChartWidget.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qwidget.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChartView \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchartview.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QAbstractAxis \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qabstractaxis.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChartGlobal \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchartglobal.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qtcharts-config.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qtchartsexports.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QPen \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtguiglobal.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtgui-config.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtguiexports.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qwindowdefs.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qmargins.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/q23utility.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qaction.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qkeysequence.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qicon.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qsize.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpixmap.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpaintdevice.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qrect.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qpoint.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qcolor.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qrgb.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qrgba64.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qbrush.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qpoint.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/q23utility.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qimage.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qrect.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qmargins.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qsize.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpixelformat.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtransform.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpolygon.h \
@@ -865,35 +867,28 @@ CMakeFiles/rlfw_vz.dir/rlfw_vz_autogen/mocs_compilation.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qspan.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/q20iterator.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qline.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qvariant.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpalette.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qbrush.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpixmap.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QFont \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfont.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qendian.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfontmetrics.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfontinfo.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qsizepolicy.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qcursor.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qbitmap.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChart \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchart.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QVariant \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qvariant.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QAbstractSeries \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qabstractseries.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChartGlobal \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchartglobal.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qtcharts-config.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qtchartsexports.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QAbstractAxis \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qabstractaxis.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QPen \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QFont \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QVariant \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChart \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchart.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QLegend \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qlegend.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsWidget \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicswidget.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qaction.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qkeysequence.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qicon.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicslayoutitem.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qevent.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qcoreevent.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qiodevice.h \
@@ -919,8 +914,27 @@ CMakeFiles/rlfw_vz.dir/rlfw_vz_autogen/mocs_compilation.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpainterpath.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpalette.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QBrush \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QMargins \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsView \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsview.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpainter.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfontinfo.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfontmetrics.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qscrollarea.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qwidget.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qcursor.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qbitmap.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QHash \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QTimer \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qtimer.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qbasictimer.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QLineSeries \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qlineseries.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QXYSeries \
@@ -928,20 +942,6 @@ CMakeFiles/rlfw_vz.dir/rlfw_vz_autogen/mocs_compilation.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QImage \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QValueAxis \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qvalueaxis.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QHash \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QTimer \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qtimer.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qbasictimer.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChartView \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchartview.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsView \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsview.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpainter.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qscrollarea.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen/6YEA5652QU/moc_mainwindow.cpp \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/rlfw_vz_autogen/6YEA5652QU/../../../include/mainwindow.h \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/include/ComcenterDebug.h \

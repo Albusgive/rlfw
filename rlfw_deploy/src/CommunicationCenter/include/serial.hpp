@@ -39,8 +39,6 @@ class Serial {
 public:
   Serial();
   ~Serial();
-  // 是否独立线程
-  bool only_thread = false;
   std::string name;
   bool OpenSerial(std::string SerialPort, int Bps, int DataSize, int Parity,
                   int StopBit);

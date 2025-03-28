@@ -1,10 +1,12 @@
 CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/src/DynamicChartWidget.cpp \
   /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/include/DynamicChartWidget.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qwidget.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtguiglobal.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChartView \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchartview.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QAbstractAxis \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qabstractaxis.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChartGlobal \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchartglobal.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qglobal.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/type_traits \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -174,13 +176,14 @@ CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qtresource.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qttranslation.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qversiontagging.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtgui-config.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtguiexports.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qwindowdefs.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qobjectdefs.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qnamespace.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qtcharts-config.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qtchartsexports.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QPen \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qshareddata.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qhashfunctions.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstring.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qchar.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qcompare.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qcomparehelpers.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/q20type_traits.h \
@@ -215,15 +218,20 @@ CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tempbuf.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/uniform_int_dist.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstdlib \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstringview.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qbytearray.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qrefcount.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qnamespace.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qtmetamacros.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qobjectdefs_impl.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qfunctionaltools_impl.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/memory \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_raw_storage_iter.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/align.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bit \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unique_ptr.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/shared_ptr.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qarraydata.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qpair.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qarraydatapointer.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qarraydataops.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qcontainertools_impl.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qxptype_traits.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstring \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iosfwd \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stringfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/postypes.h \
@@ -235,8 +243,16 @@ CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/shared_ptr_base.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/allocated_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/streambuf_iterator.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/streambuf \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/localefwd.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/clocale \
+  /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cctype \
+  /usr/include/ctype.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ios_base.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/ext/atomicity.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/gthr.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/gthr-default.h \
@@ -253,37 +269,6 @@ CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/ext/concurrence.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/shared_ptr_atomic.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/sanitizer/tsan_interface.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward/auto_ptr.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/glue_memory_defs.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/execution_defs.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qobject.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstring.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qchar.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstringview.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qbytearray.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qrefcount.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qarraydata.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qpair.h \
-  /usr/include/string.h /usr/include/strings.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qarraydatapointer.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qarraydataops.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qcontainertools_impl.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qxptype_traits.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cstring \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/iterator \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stream_iterator.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/streambuf_iterator.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/streambuf \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/localefwd.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/clocale \
-  /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cctype \
-  /usr/include/ctype.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/ios_base.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/locale_classes.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/string \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/char_traits.h \
@@ -312,6 +297,20 @@ CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12/bits/error_constants.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/stdexcept \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/streambuf.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/memory \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/align.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bit \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/unique_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/shared_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/shared_ptr_base.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/allocated_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/ext/concurrence.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/shared_ptr_atomic.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/sanitizer/tsan_interface.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward/auto_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/glue_memory_defs.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/execution_defs.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/algorithm \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/glue_algorithm_defs.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/q20functional.h \
@@ -329,22 +328,60 @@ CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstringbuilder.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstringconverter.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstringconverter_base.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qlist.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qhashfunctions.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/numeric \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_numeric.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/pstl/glue_numeric_defs.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtguiglobal.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtgui-config.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtguiexports.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qcolor.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qrgb.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstringlist.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qlist.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qiterator.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qbytearraylist.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstringlist.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qalgorithms.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qstringmatcher.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qrgba64.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
+  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qbrush.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qpoint.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/q23utility.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qscopedpointer.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qmetatype.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qimage.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qobjectdefs.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qobjectdefs_impl.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qfunctionaltools_impl.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qrect.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qmargins.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qsize.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpixelformat.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtransform.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpolygon.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qregion.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qdatastream.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qiodevicebase.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qspan.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cassert \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/q20iterator.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qline.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpixmap.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QFont \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfont.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qendian.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qfloat16.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qmath.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QVariant \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qvariant.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qmetatype.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qiterable.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qmetacontainer.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qcontainerinfo.h \
@@ -357,83 +394,41 @@ CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_tree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_map.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/stl_multimap.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qobject_impl.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qbindingstorage.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/chrono \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/chrono.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/ratio \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/ctime \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qmargins.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/q23utility.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qaction.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qkeysequence.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qicon.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qsize.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpixmap.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpaintdevice.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qrect.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qpoint.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qcolor.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qrgb.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qrgba64.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/limits.h \
-  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qshareddata.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qimage.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpixelformat.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtransform.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpolygon.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qregion.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qspan.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/cassert \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/q20iterator.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qline.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qvariant.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qdebug.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qtextstream.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qcontiguouscache.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/climits \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qsharedpointer.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qsharedpointer_impl.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/chrono \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/bits/chrono.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/ratio \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/ctime \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qmap.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qshareddata_impl.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qset.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qhash.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qvarlengtharray.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpalette.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qbrush.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfont.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qendian.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfontmetrics.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfontinfo.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qsizepolicy.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qcursor.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qbitmap.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChart \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchart.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qobject.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qobject_impl.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qbindingstorage.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QObject \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QAbstractSeries \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qabstractseries.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChartGlobal \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchartglobal.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qtcharts-config.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qtchartsexports.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QAbstractAxis \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qabstractaxis.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QPen \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QFont \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QObject \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChart \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchart.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QLegend \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qlegend.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsWidget \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicswidget.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qaction.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qkeysequence.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qicon.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicslayoutitem.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qevent.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qcoreevent.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qiodevice.h \
@@ -462,8 +457,27 @@ CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpainterpath.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpalette.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QBrush \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QMargins \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsView \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsview.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpainter.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfontinfo.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qfontmetrics.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qscrollarea.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qwidget.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qcursor.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qbitmap.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QHash \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QTimer \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qtimer.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qbasictimer.h \
+  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QLineSeries \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qlineseries.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QXYSeries \
@@ -471,20 +485,6 @@ CMakeFiles/rlfw_vz.dir/src/DynamicChartWidget.cpp.o: \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/QImage \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QValueAxis \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qvalueaxis.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QHash \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QTimer \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qtimer.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qbasictimer.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/QChartView \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCharts/qchartview.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/QGraphicsView \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsview.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qpainter.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qscrollarea.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-  /home/albusgive2/Qt/6.8.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QDebug \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/QRandomGenerator \
   /home/albusgive2/Qt/6.8.2/gcc_64/include/QtCore/qrandom.h \

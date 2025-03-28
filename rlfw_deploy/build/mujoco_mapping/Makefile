@@ -210,29 +210,77 @@ mujoco_mapping/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/build
 .PHONY : mujoco_mapping/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/mappingnode.o: src/mappingnode.cpp.o
+.PHONY : src/mappingnode.o
+
+# target to build an object file
+src/mappingnode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.o
+.PHONY : src/mappingnode.cpp.o
+
+src/mappingnode.i: src/mappingnode.cpp.i
+.PHONY : src/mappingnode.i
+
+# target to preprocess a source file
+src/mappingnode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.i
+.PHONY : src/mappingnode.cpp.i
+
+src/mappingnode.s: src/mappingnode.cpp.s
+.PHONY : src/mappingnode.s
+
+# target to generate assembly for a file
+src/mappingnode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/src/mappingnode.cpp.s
+.PHONY : src/mappingnode.cpp.s
+
+src/mujoco_base.o: src/mujoco_base.cpp.o
+.PHONY : src/mujoco_base.o
+
+# target to build an object file
+src/mujoco_base.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.o
+.PHONY : src/mujoco_base.cpp.o
+
+src/mujoco_base.i: src/mujoco_base.cpp.i
+.PHONY : src/mujoco_base.i
+
+# target to preprocess a source file
+src/mujoco_base.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.i
+.PHONY : src/mujoco_base.cpp.i
+
+src/mujoco_base.s: src/mujoco_base.cpp.s
+.PHONY : src/mujoco_base.s
+
+# target to generate assembly for a file
+src/mujoco_base.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mujoco_mapping.dir/build.make CMakeFiles/mujoco_mapping.dir/src/mujoco_base.cpp.s
+.PHONY : src/mujoco_base.cpp.s
 
 # Help Target
 help:
@@ -250,9 +298,15 @@ help:
 	@echo "... mujoco_mapping_uninstall"
 	@echo "... uninstall"
 	@echo "... mujoco_mapping"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mappingnode.o"
+	@echo "... src/mappingnode.i"
+	@echo "... src/mappingnode.s"
+	@echo "... src/mujoco_base.o"
+	@echo "... src/mujoco_base.i"
+	@echo "... src/mujoco_base.s"
 .PHONY : help
 
 

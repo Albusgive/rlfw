@@ -1,7 +1,8 @@
 #pragma once
+#include <atomic>
 #include <cstdint>
+#include <functional>
 #include <iostream>
-#include <tuple>
 #include <vector>
 
 #define CAN_STANDARD 0x00U
@@ -23,26 +24,31 @@ struct CANMSG {
 
 class BaseCAN {
 public:
-  BaseCAN(){};
+  BaseCAN() {};
   int channel = -1;
   std::string name;
-  bool only_thread=false;
-  virtual bool send(uint16_t /*CANx*/, CANMSG* /*msg*/)=0;
-  virtual std::tuple<bool, CANMSG> read(uint16_t /*CANx*/)=0;
+  int decoder_idx=0;
+  std::atomic_bool is_only_thread{false};
+  virtual bool send(uint16_t /*CANx*/, CANMSG * /*msg*/) = 0;
+  virtual std::pair<bool, CANMSG> receive(uint16_t /*CANx*/) = 0;
 
-  bool send(CANMSG* msg){
-    return send(channel,msg);
-  };
-  std::tuple<bool, CANMSG> read(){
-    return read(channel);
-  };
-  //该总线上设备的id
+  bool send(CANMSG *msg) { return send(channel, msg); };
+  std::pair<bool, CANMSG> receive() { return receive(channel); };
+  virtual void
+  connectDecode(std::function<void(CANMSG &, std::vector<int> &motor_ids,
+                                   std::string &name,int decoder_idx)>
+                    lambda) = 0;
+  virtual void RunRecv() = 0;
+  // 该总线上设备的id
   std::vector<int> devive_ids;
-  static int getCANtype(uint8_t type){
+  static int getCANtype(uint8_t type) {
     switch (type) {
-      case 0:return CAN_STANDARD;
-      case 1:return CAN_EXTENDED;
-      default:return CAN_STANDARD;
+    case 0:
+      return CAN_STANDARD;
+    case 1:
+      return CAN_EXTENDED;
+    default:
+      return CAN_STANDARD;
     }
   };
 };

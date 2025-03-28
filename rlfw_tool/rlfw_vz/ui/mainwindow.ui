@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>970</width>
-    <height>561</height>
+    <width>1057</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -143,7 +143,7 @@
           </property>
           <property name="maximumSize">
            <size>
-            <width>400</width>
+            <width>500</width>
             <height>16777215</height>
            </size>
           </property>
@@ -247,7 +247,7 @@
           </property>
           <property name="maximumSize">
            <size>
-            <width>400</width>
+            <width>500</width>
             <height>16777215</height>
            </size>
           </property>
@@ -255,59 +255,18 @@
            <string notr="true">background-color: rgb(68, 112, 199);</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_6">
-           <property name="topMargin">
-            <number>0</number>
+           <property name="leftMargin">
+            <number>3</number>
            </property>
-           <item row="2" column="3">
-            <widget class="QLabel" name="label_14">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;time(ms)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0" colspan="2">
-            <widget class="QCheckBox" name="is_timer">
-             <property name="text">
-              <string>定时发送</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" colspan="2">
-            <widget class="QComboBox" name="ctrl_joint">
-             <item>
-              <property name="text">
-               <string>None</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QLabel" name="label_13">
-             <property name="maximumSize">
-              <size>
-               <width>70</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;type:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QPushButton" name="joint_enable">
-             <property name="text">
-              <string>电机使能</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="4">
-            <widget class="QPushButton" name="send_joint">
-             <property name="text">
-              <string>send</string>
-             </property>
-            </widget>
-           </item>
+           <property name="topMargin">
+            <number>3</number>
+           </property>
+           <property name="rightMargin">
+            <number>3</number>
+           </property>
+           <property name="bottomMargin">
+            <number>3</number>
+           </property>
            <item row="0" column="0">
             <widget class="QLabel" name="label_8">
              <property name="maximumSize">
@@ -321,7 +280,29 @@
              </property>
             </widget>
            </item>
+           <item row="0" column="2" colspan="2">
+            <widget class="QComboBox" name="ctrl_joint">
+             <item>
+              <property name="text">
+               <string>None</string>
+              </property>
+             </item>
+            </widget>
+           </item>
            <item row="0" column="4">
+            <widget class="QLabel" name="label_13">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;type:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
             <widget class="QComboBox" name="ctrl_joint_type">
              <item>
               <property name="text">
@@ -350,7 +331,7 @@
              </item>
             </widget>
            </item>
-           <item row="1" column="0" colspan="5">
+           <item row="1" column="0" colspan="6">
             <widget class="QWidget" name="widget_5" native="true">
              <property name="minimumSize">
               <size>
@@ -567,28 +548,14 @@
              </layout>
             </widget>
            </item>
-           <item row="3" column="2">
-            <widget class="QPushButton" name="joint_disable">
+           <item row="2" column="0" colspan="2">
+            <widget class="QCheckBox" name="is_timer">
              <property name="text">
-              <string>电机失能</string>
+              <string>定时发送</string>
              </property>
             </widget>
            </item>
-           <item row="3" column="3">
-            <widget class="QPushButton" name="all_joint_enable">
-             <property name="text">
-              <string>所有电机使能</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="4">
-            <widget class="QPushButton" name="all_joint_disable">
-             <property name="text">
-              <string>所有电机失能</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
+           <item row="2" column="2" colspan="2">
             <widget class="QLineEdit" name="timer">
              <property name="minimumSize">
               <size>
@@ -604,6 +571,55 @@
              </property>
              <property name="text">
               <string>50.0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;time(ms)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QPushButton" name="send_joint">
+             <property name="text">
+              <string>send</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QPushButton" name="setZerobtn">
+             <property name="text">
+              <string>设置零点</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QPushButton" name="joint_enable">
+             <property name="text">
+              <string>电机使能</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QPushButton" name="joint_disable">
+             <property name="text">
+              <string>电机失能</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QPushButton" name="all_joint_enable">
+             <property name="text">
+              <string>所有电机使能</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="QPushButton" name="all_joint_disable">
+             <property name="text">
+              <string>所有电机失能</string>
              </property>
             </widget>
            </item>
@@ -952,7 +968,7 @@
         <string>remote</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_11">
-        <item row="0" column="0">
+        <item row="1" column="0">
          <widget class="QLabel" name="remote_img">
           <property name="minimumSize">
            <size>
@@ -968,13 +984,34 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
+        <item row="0" column="1" rowspan="2">
          <widget class="QWidget" name="widget_8" native="true">
           <layout class="QGridLayout" name="gridLayout_10">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_25">
+           <item row="2" column="0" colspan="2">
+            <widget class="QPushButton" name="remote_mapping_btn">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Remote:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>重映射</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLineEdit" name="remote_type">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_26">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Remote type:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;mapping:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
@@ -987,34 +1024,6 @@
              </item>
             </widget>
            </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_26">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Remote type:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="QLineEdit" name="remote_type">
-             <property name="readOnly">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0" colspan="2">
-            <widget class="QPushButton" name="remote_mapping_btn">
-             <property name="text">
-              <string>重映射</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_27">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;mapping:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
            <item row="4" column="0" colspan="3">
             <widget class="QTextEdit" name="remote_mapping_keys">
              <property name="styleSheet">
@@ -1022,15 +1031,40 @@
              </property>
             </widget>
            </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Remote:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="remote_jump_btn">
+             <property name="text">
+              <string>跳过该映射值</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="remote_mappint_tip">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(143, 240, 164);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
        </layout>
-      </widget>
-      <widget class="QWidget" name="tab">
-       <attribute name="title">
-        <string>virtualmotor</string>
-       </attribute>
       </widget>
      </widget>
     </item>
@@ -1041,7 +1075,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>970</width>
+     <width>1057</width>
      <height>27</height>
     </rect>
    </property>

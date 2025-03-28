@@ -1,0 +1,367 @@
+[0.000000] (-) TimerEvent: {}
+[0.000134] (CommunicationCenter) JobQueued: {'identifier': 'CommunicationCenter', 'dependencies': OrderedDict()}
+[0.000164] (agent) JobQueued: {'identifier': 'agent', 'dependencies': OrderedDict()}
+[0.000179] (mujoco_mapping) JobQueued: {'identifier': 'mujoco_mapping', 'dependencies': OrderedDict()}
+[0.000192] (nz-imu) JobQueued: {'identifier': 'nz-imu', 'dependencies': OrderedDict()}
+[0.000204] (CommunicationCenter) JobStarted: {'identifier': 'CommunicationCenter'}
+[0.012391] (agent) JobStarted: {'identifier': 'agent'}
+[0.017825] (mujoco_mapping) JobStarted: {'identifier': 'mujoco_mapping'}
+[0.025482] (nz-imu) JobStarted: {'identifier': 'nz-imu'}
+[0.032578] (CommunicationCenter) JobProgress: {'identifier': 'CommunicationCenter', 'progress': 'cmake'}
+[0.032686] (CommunicationCenter) JobProgress: {'identifier': 'CommunicationCenter', 'progress': 'build'}
+[0.032709] (CommunicationCenter) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter', '--', '-j12', '-l12'], 'cwd': '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/lib'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_deploy/src'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1654'), ('SYSTEMD_EXEC_PID', '1908'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3039'), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('http_proxy', 'http://127.0.0.1:7897'), ('JOURNAL_STREAM', '8:18706'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/albusgive2/Qt/6.8.2/gcc_64/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1881,unix/albusgive2:/tmp/.ICE-unix/1881'), ('INVOCATION_ID', '20c30074f4284fdba3c48df0b7a81a2d'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a92292e986.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[0.035331] (agent) JobProgress: {'identifier': 'agent', 'progress': 'cmake'}
+[0.035999] (agent) JobProgress: {'identifier': 'agent', 'progress': 'build'}
+[0.036294] (agent) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/albusgive2/rlfw/rlfw_deploy/build/agent', '--', '-j12', '-l12'], 'cwd': '/home/albusgive2/rlfw/rlfw_deploy/build/agent', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/lib'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_deploy/src'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1654'), ('SYSTEMD_EXEC_PID', '1908'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3039'), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('http_proxy', 'http://127.0.0.1:7897'), ('JOURNAL_STREAM', '8:18706'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/albusgive2/Qt/6.8.2/gcc_64/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1881,unix/albusgive2:/tmp/.ICE-unix/1881'), ('INVOCATION_ID', '20c30074f4284fdba3c48df0b7a81a2d'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a92292e986.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_deploy/build/agent'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[0.039145] (mujoco_mapping) JobProgress: {'identifier': 'mujoco_mapping', 'progress': 'cmake'}
+[0.039175] (mujoco_mapping) JobProgress: {'identifier': 'mujoco_mapping', 'progress': 'build'}
+[0.039189] (mujoco_mapping) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping', '--', '-j12', '-l12'], 'cwd': '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/lib'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_deploy/src'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1654'), ('SYSTEMD_EXEC_PID', '1908'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3039'), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('http_proxy', 'http://127.0.0.1:7897'), ('JOURNAL_STREAM', '8:18706'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/albusgive2/Qt/6.8.2/gcc_64/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1881,unix/albusgive2:/tmp/.ICE-unix/1881'), ('INVOCATION_ID', '20c30074f4284fdba3c48df0b7a81a2d'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a92292e986.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[0.042246] (nz-imu) JobProgress: {'identifier': 'nz-imu', 'progress': 'cmake'}
+[0.042773] (nz-imu) JobProgress: {'identifier': 'nz-imu', 'progress': 'build'}
+[0.043194] (nz-imu) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu', '--', '-j12', '-l12'], 'cwd': '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/lib'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_deploy/src'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1654'), ('SYSTEMD_EXEC_PID', '1908'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3039'), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('http_proxy', 'http://127.0.0.1:7897'), ('JOURNAL_STREAM', '8:18706'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/albusgive2/Qt/6.8.2/gcc_64/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1881,unix/albusgive2:/tmp/.ICE-unix/1881'), ('INVOCATION_ID', '20c30074f4284fdba3c48df0b7a81a2d'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a92292e986.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[0.079728] (CommunicationCenter) StdoutLine: {'line': b'[ 12%] Built target tinyxml2\n'}
+[0.087064] (nz-imu) StdoutLine: {'line': b'[100%] Built target hwt906\n'}
+[0.088260] (mujoco_mapping) StdoutLine: {'line': b'[100%] Built target mujoco_mapping\n'}
+[0.094579] (CommunicationCenter) StdoutLine: {'line': b'[ 25%] Built target xmltest\n'}
+[0.096836] (nz-imu) CommandEnded: {'returncode': 0}
+[0.097353] (nz-imu) JobProgress: {'identifier': 'nz-imu', 'progress': 'install'}
+[0.099377] (-) TimerEvent: {}
+[0.103610] (nz-imu) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu'], 'cwd': '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/lib'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_deploy/src'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1654'), ('SYSTEMD_EXEC_PID', '1908'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3039'), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('http_proxy', 'http://127.0.0.1:7897'), ('JOURNAL_STREAM', '8:18706'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/albusgive2/Qt/6.8.2/gcc_64/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1881,unix/albusgive2:/tmp/.ICE-unix/1881'), ('INVOCATION_ID', '20c30074f4284fdba3c48df0b7a81a2d'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a92292e986.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_deploy/build/nz-imu'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[0.105421] (mujoco_mapping) CommandEnded: {'returncode': 0}
+[0.107663] (mujoco_mapping) JobProgress: {'identifier': 'mujoco_mapping', 'progress': 'install'}
+[0.107719] (mujoco_mapping) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping'], 'cwd': '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/lib'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_deploy/src'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1654'), ('SYSTEMD_EXEC_PID', '1908'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3039'), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('http_proxy', 'http://127.0.0.1:7897'), ('JOURNAL_STREAM', '8:18706'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/albusgive2/Qt/6.8.2/gcc_64/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1881,unix/albusgive2:/tmp/.ICE-unix/1881'), ('INVOCATION_ID', '20c30074f4284fdba3c48df0b7a81a2d'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a92292e986.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_deploy/build/mujoco_mapping'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[0.108440] (CommunicationCenter) StdoutLine: {'line': b'[100%] Built target CommunicationCenter\n'}
+[0.110213] (nz-imu) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.110379] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/lib/nz-imu/hwt906\n'}
+[0.110504] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/package_run_dependencies/nz-imu\n'}
+[0.111290] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/parent_prefix_path/nz-imu\n'}
+[0.111375] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/ament_prefix_path.sh\n'}
+[0.111424] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/ament_prefix_path.dsv\n'}
+[0.111517] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/path.sh\n'}
+[0.111563] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/environment/path.dsv\n'}
+[0.111630] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.bash\n'}
+[0.111679] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.sh\n'}
+[0.111724] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.zsh\n'}
+[0.111767] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/local_setup.dsv\n'}
+[0.111811] (nz-imu) StdoutLine: {'line': b'-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/package.dsv\n'}
+[0.111916] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/ament_index/resource_index/packages/nz-imu\n'}
+[0.111963] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/cmake/nz-imuConfig.cmake\n'}
+[0.112009] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/cmake/nz-imuConfig-version.cmake\n'}
+[0.112054] (nz-imu) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/nz-imu/share/nz-imu/package.xml\n'}
+[0.112687] (nz-imu) CommandEnded: {'returncode': 0}
+[0.115174] (agent) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target agent\x1b[0m\n'}
+[0.116170] (mujoco_mapping) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.116755] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/lib/mujoco_mapping/mujoco_mapping\n'}
+[0.117366] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/ament_index/resource_index/package_run_dependencies/mujoco_mapping\n'}
+[0.117488] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/ament_index/resource_index/parent_prefix_path/mujoco_mapping\n'}
+[0.117595] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/environment/ament_prefix_path.sh\n'}
+[0.117641] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/environment/ament_prefix_path.dsv\n'}
+[0.117685] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/environment/path.sh\n'}
+[0.117725] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/environment/path.dsv\n'}
+[0.117975] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/local_setup.bash\n'}
+[0.118033] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/local_setup.sh\n'}
+[0.118080] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/local_setup.zsh\n'}
+[0.118124] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/local_setup.dsv\n'}
+[0.118194] (mujoco_mapping) StdoutLine: {'line': b'-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/package.dsv\n'}
+[0.118243] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/ament_index/resource_index/packages/mujoco_mapping\n'}
+[0.118287] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/cmake/mujoco_mappingConfig.cmake\n'}
+[0.118328] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/cmake/mujoco_mappingConfig-version.cmake\n'}
+[0.118370] (mujoco_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping/share/mujoco_mapping/package.xml\n'}
+[0.127736] (nz-imu) JobEnded: {'identifier': 'nz-imu', 'rc': 0}
+[0.128476] (mujoco_mapping) CommandEnded: {'returncode': 0}
+[0.137611] (mujoco_mapping) JobEnded: {'identifier': 'mujoco_mapping', 'rc': 0}
+[0.137943] (CommunicationCenter) CommandEnded: {'returncode': 0}
+[0.138306] (CommunicationCenter) JobProgress: {'identifier': 'CommunicationCenter', 'progress': 'install'}
+[0.138516] (CommunicationCenter) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter'], 'cwd': '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/lib'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_deploy/src'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1654'), ('SYSTEMD_EXEC_PID', '1908'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3039'), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('http_proxy', 'http://127.0.0.1:7897'), ('JOURNAL_STREAM', '8:18706'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/albusgive2/Qt/6.8.2/gcc_64/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1881,unix/albusgive2:/tmp/.ICE-unix/1881'), ('INVOCATION_ID', '20c30074f4284fdba3c48df0b7a81a2d'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a92292e986.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[0.144299] (CommunicationCenter) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.144481] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/CommunicationCenter/CommunicationCenter\n'}
+[0.144583] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/motor_cfg.xml\n'}
+[0.144637] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/ament_index/resource_index/package_run_dependencies/CommunicationCenter\n'}
+[0.144685] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/ament_index/resource_index/parent_prefix_path/CommunicationCenter\n'}
+[0.144729] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/ament_prefix_path.sh\n'}
+[0.144882] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/ament_prefix_path.dsv\n'}
+[0.144952] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/path.sh\n'}
+[0.144998] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/path.dsv\n'}
+[0.145038] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.bash\n'}
+[0.145081] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.sh\n'}
+[0.145123] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.zsh\n'}
+[0.145202] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.dsv\n'}
+[0.145265] (CommunicationCenter) StdoutLine: {'line': b'-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/package.dsv\n'}
+[0.145305] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/ament_index/resource_index/packages/CommunicationCenter\n'}
+[0.145346] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/cmake/CommunicationCenterConfig.cmake\n'}
+[0.145385] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/cmake/CommunicationCenterConfig-version.cmake\n'}
+[0.145422] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/package.xml\n'}
+[0.145459] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/libtinyxml2.a\n'}
+[0.145498] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-static-targets.cmake\n'}
+[0.145535] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-static-targets-noconfig.cmake\n'}
+[0.145573] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-config.cmake\n'}
+[0.145610] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-config-version.cmake\n'}
+[0.145647] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/include/tinyxml2.h\n'}
+[0.145684] (CommunicationCenter) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter/lib/pkgconfig/tinyxml2.pc\n'}
+[0.146430] (CommunicationCenter) CommandEnded: {'returncode': 0}
+[0.155341] (CommunicationCenter) JobEnded: {'identifier': 'CommunicationCenter', 'rc': 0}
+[0.178193] (agent) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/agent.dir/src/AgentNode.cpp.o\x1b[0m\n'}
+[0.183509] (agent) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/agent.dir/src/gs2mj.cpp.o\x1b[0m\n'}
+[0.199477] (-) TimerEvent: {}
+[0.299719] (-) TimerEvent: {}
+[0.399962] (-) TimerEvent: {}
+[0.500223] (-) TimerEvent: {}
+[0.600481] (-) TimerEvent: {}
+[0.700725] (-) TimerEvent: {}
+[0.800965] (-) TimerEvent: {}
+[0.901162] (-) TimerEvent: {}
+[1.001388] (-) TimerEvent: {}
+[1.101614] (-) TimerEvent: {}
+[1.201860] (-) TimerEvent: {}
+[1.302110] (-) TimerEvent: {}
+[1.402348] (-) TimerEvent: {}
+[1.502601] (-) TimerEvent: {}
+[1.602840] (-) TimerEvent: {}
+[1.703097] (-) TimerEvent: {}
+[1.803622] (-) TimerEvent: {}
+[1.903876] (-) TimerEvent: {}
+[2.004159] (-) TimerEvent: {}
+[2.104393] (-) TimerEvent: {}
+[2.204623] (-) TimerEvent: {}
+[2.304833] (-) TimerEvent: {}
+[2.405039] (-) TimerEvent: {}
+[2.505247] (-) TimerEvent: {}
+[2.605460] (-) TimerEvent: {}
+[2.707366] (-) TimerEvent: {}
+[2.807645] (-) TimerEvent: {}
+[2.907934] (-) TimerEvent: {}
+[3.008181] (-) TimerEvent: {}
+[3.108460] (-) TimerEvent: {}
+[3.208707] (-) TimerEvent: {}
+[3.308942] (-) TimerEvent: {}
+[3.409164] (-) TimerEvent: {}
+[3.509382] (-) TimerEvent: {}
+[3.609610] (-) TimerEvent: {}
+[3.709833] (-) TimerEvent: {}
+[3.810044] (-) TimerEvent: {}
+[3.910280] (-) TimerEvent: {}
+[4.010495] (-) TimerEvent: {}
+[4.110713] (-) TimerEvent: {}
+[4.210946] (-) TimerEvent: {}
+[4.311184] (-) TimerEvent: {}
+[4.411429] (-) TimerEvent: {}
+[4.511662] (-) TimerEvent: {}
+[4.611906] (-) TimerEvent: {}
+[4.712111] (-) TimerEvent: {}
+[4.812319] (-) TimerEvent: {}
+[4.912580] (-) TimerEvent: {}
+[5.012841] (-) TimerEvent: {}
+[5.113076] (-) TimerEvent: {}
+[5.213336] (-) TimerEvent: {}
+[5.313584] (-) TimerEvent: {}
+[5.413892] (-) TimerEvent: {}
+[5.514124] (-) TimerEvent: {}
+[5.614375] (-) TimerEvent: {}
+[5.714629] (-) TimerEvent: {}
+[5.814872] (-) TimerEvent: {}
+[5.915086] (-) TimerEvent: {}
+[6.015258] (-) TimerEvent: {}
+[6.115492] (-) TimerEvent: {}
+[6.215744] (-) TimerEvent: {}
+[6.315980] (-) TimerEvent: {}
+[6.416195] (-) TimerEvent: {}
+[6.516429] (-) TimerEvent: {}
+[6.617175] (-) TimerEvent: {}
+[6.717452] (-) TimerEvent: {}
+[6.817697] (-) TimerEvent: {}
+[6.917959] (-) TimerEvent: {}
+[7.018192] (-) TimerEvent: {}
+[7.118419] (-) TimerEvent: {}
+[7.218626] (-) TimerEvent: {}
+[7.318859] (-) TimerEvent: {}
+[7.419069] (-) TimerEvent: {}
+[7.519275] (-) TimerEvent: {}
+[7.619490] (-) TimerEvent: {}
+[7.719723] (-) TimerEvent: {}
+[7.819949] (-) TimerEvent: {}
+[7.920157] (-) TimerEvent: {}
+[8.020374] (-) TimerEvent: {}
+[8.120595] (-) TimerEvent: {}
+[8.220822] (-) TimerEvent: {}
+[8.321031] (-) TimerEvent: {}
+[8.421263] (-) TimerEvent: {}
+[8.521467] (-) TimerEvent: {}
+[8.621695] (-) TimerEvent: {}
+[8.721921] (-) TimerEvent: {}
+[8.822151] (-) TimerEvent: {}
+[8.922382] (-) TimerEvent: {}
+[9.022592] (-) TimerEvent: {}
+[9.122805] (-) TimerEvent: {}
+[9.223042] (-) TimerEvent: {}
+[9.323267] (-) TimerEvent: {}
+[9.423483] (-) TimerEvent: {}
+[9.523716] (-) TimerEvent: {}
+[9.623941] (-) TimerEvent: {}
+[9.724155] (-) TimerEvent: {}
+[9.824386] (-) TimerEvent: {}
+[9.924613] (-) TimerEvent: {}
+[10.024821] (-) TimerEvent: {}
+[10.125058] (-) TimerEvent: {}
+[10.225270] (-) TimerEvent: {}
+[10.325475] (-) TimerEvent: {}
+[10.425681] (-) TimerEvent: {}
+[10.525904] (-) TimerEvent: {}
+[10.626129] (-) TimerEvent: {}
+[10.726349] (-) TimerEvent: {}
+[10.826586] (-) TimerEvent: {}
+[10.926805] (-) TimerEvent: {}
+[11.027059] (-) TimerEvent: {}
+[11.127319] (-) TimerEvent: {}
+[11.227574] (-) TimerEvent: {}
+[11.327830] (-) TimerEvent: {}
+[11.428065] (-) TimerEvent: {}
+[11.528262] (-) TimerEvent: {}
+[11.628527] (-) TimerEvent: {}
+[11.728793] (-) TimerEvent: {}
+[11.829036] (-) TimerEvent: {}
+[11.929255] (-) TimerEvent: {}
+[12.029542] (-) TimerEvent: {}
+[12.129782] (-) TimerEvent: {}
+[12.230040] (-) TimerEvent: {}
+[12.330256] (-) TimerEvent: {}
+[12.430472] (-) TimerEvent: {}
+[12.530702] (-) TimerEvent: {}
+[12.630910] (-) TimerEvent: {}
+[12.731131] (-) TimerEvent: {}
+[12.831307] (-) TimerEvent: {}
+[12.931565] (-) TimerEvent: {}
+[13.031775] (-) TimerEvent: {}
+[13.131983] (-) TimerEvent: {}
+[13.232212] (-) TimerEvent: {}
+[13.332467] (-) TimerEvent: {}
+[13.432701] (-) TimerEvent: {}
+[13.533805] (-) TimerEvent: {}
+[13.634013] (-) TimerEvent: {}
+[13.734239] (-) TimerEvent: {}
+[13.834453] (-) TimerEvent: {}
+[13.934712] (-) TimerEvent: {}
+[14.034941] (-) TimerEvent: {}
+[14.135176] (-) TimerEvent: {}
+[14.235389] (-) TimerEvent: {}
+[14.335617] (-) TimerEvent: {}
+[14.435844] (-) TimerEvent: {}
+[14.536078] (-) TimerEvent: {}
+[14.636309] (-) TimerEvent: {}
+[14.736516] (-) TimerEvent: {}
+[14.836745] (-) TimerEvent: {}
+[14.936975] (-) TimerEvent: {}
+[15.037200] (-) TimerEvent: {}
+[15.137414] (-) TimerEvent: {}
+[15.237614] (-) TimerEvent: {}
+[15.337845] (-) TimerEvent: {}
+[15.438054] (-) TimerEvent: {}
+[15.538268] (-) TimerEvent: {}
+[15.638488] (-) TimerEvent: {}
+[15.738846] (-) TimerEvent: {}
+[15.839102] (-) TimerEvent: {}
+[15.939373] (-) TimerEvent: {}
+[16.039593] (-) TimerEvent: {}
+[16.139819] (-) TimerEvent: {}
+[16.240029] (-) TimerEvent: {}
+[16.340265] (-) TimerEvent: {}
+[16.440463] (-) TimerEvent: {}
+[16.540736] (-) TimerEvent: {}
+[16.640983] (-) TimerEvent: {}
+[16.741187] (-) TimerEvent: {}
+[16.841392] (-) TimerEvent: {}
+[16.941609] (-) TimerEvent: {}
+[17.041798] (-) TimerEvent: {}
+[17.142001] (-) TimerEvent: {}
+[17.242221] (-) TimerEvent: {}
+[17.342424] (-) TimerEvent: {}
+[17.442619] (-) TimerEvent: {}
+[17.542833] (-) TimerEvent: {}
+[17.643042] (-) TimerEvent: {}
+[17.743236] (-) TimerEvent: {}
+[17.843426] (-) TimerEvent: {}
+[17.943641] (-) TimerEvent: {}
+[18.043839] (-) TimerEvent: {}
+[18.144031] (-) TimerEvent: {}
+[18.244260] (-) TimerEvent: {}
+[18.344482] (-) TimerEvent: {}
+[18.444700] (-) TimerEvent: {}
+[18.544925] (-) TimerEvent: {}
+[18.645141] (-) TimerEvent: {}
+[18.745372] (-) TimerEvent: {}
+[18.845599] (-) TimerEvent: {}
+[18.945834] (-) TimerEvent: {}
+[19.046074] (-) TimerEvent: {}
+[19.148220] (-) TimerEvent: {}
+[19.248472] (-) TimerEvent: {}
+[19.348686] (-) TimerEvent: {}
+[19.448922] (-) TimerEvent: {}
+[19.549140] (-) TimerEvent: {}
+[19.649343] (-) TimerEvent: {}
+[19.749543] (-) TimerEvent: {}
+[19.849745] (-) TimerEvent: {}
+[19.949952] (-) TimerEvent: {}
+[20.050155] (-) TimerEvent: {}
+[20.150382] (-) TimerEvent: {}
+[20.250642] (-) TimerEvent: {}
+[20.350843] (-) TimerEvent: {}
+[20.451062] (-) TimerEvent: {}
+[20.551280] (-) TimerEvent: {}
+[20.651480] (-) TimerEvent: {}
+[20.751682] (-) TimerEvent: {}
+[20.851894] (-) TimerEvent: {}
+[20.952127] (-) TimerEvent: {}
+[21.052373] (-) TimerEvent: {}
+[21.152603] (-) TimerEvent: {}
+[21.252843] (-) TimerEvent: {}
+[21.353096] (-) TimerEvent: {}
+[21.453331] (-) TimerEvent: {}
+[21.552147] (agent) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable agent\x1b[0m\n'}
+[21.553389] (-) TimerEvent: {}
+[21.653583] (-) TimerEvent: {}
+[21.753822] (-) TimerEvent: {}
+[21.854081] (-) TimerEvent: {}
+[21.954372] (-) TimerEvent: {}
+[22.054646] (-) TimerEvent: {}
+[22.154889] (-) TimerEvent: {}
+[22.255136] (-) TimerEvent: {}
+[22.355409] (-) TimerEvent: {}
+[22.455645] (-) TimerEvent: {}
+[22.555902] (-) TimerEvent: {}
+[22.656133] (-) TimerEvent: {}
+[22.756379] (-) TimerEvent: {}
+[22.856627] (-) TimerEvent: {}
+[22.956881] (-) TimerEvent: {}
+[23.057147] (-) TimerEvent: {}
+[23.157374] (-) TimerEvent: {}
+[23.257660] (-) TimerEvent: {}
+[23.357907] (-) TimerEvent: {}
+[23.458167] (-) TimerEvent: {}
+[23.558392] (-) TimerEvent: {}
+[23.658627] (-) TimerEvent: {}
+[23.758871] (-) TimerEvent: {}
+[23.844012] (agent) StdoutLine: {'line': b'[100%] Built target agent\n'}
+[23.851296] (agent) CommandEnded: {'returncode': 0}
+[23.851747] (agent) JobProgress: {'identifier': 'agent', 'progress': 'install'}
+[23.851975] (agent) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/albusgive2/rlfw/rlfw_deploy/build/agent'], 'cwd': '/home/albusgive2/rlfw/rlfw_deploy/build/agent', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'albusgive2'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:/opt/mujoco/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64::/usr/local/cuda-12.4/lib64:/home/albusgive2/libtorch-cxx11-abi-shared-with-deps-2.6.0+cu124/libtorch/lib'), ('HOME', '/home/albusgive2'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/albusgive2/rlfw/rlfw_deploy/src'), ('TERM_PROGRAM_VERSION', '1.97.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1654'), ('SYSTEMD_EXEC_PID', '1908'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3039'), ('https_proxy', 'http://127.0.0.1:7897'), ('COLCON_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install:/home/albusgive2/rlfw/rlfw_interface/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'albusgive2'), ('http_proxy', 'http://127.0.0.1:7897'), ('JOURNAL_STREAM', '8:18706'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'albusgive2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/albusgive2/Qt/6.8.2/gcc_64/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/home/albusgive2/anaconda3/condabin:/home/albusgive2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/albusgive2/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/local/cuda-12.4/bin'), ('SESSION_MANAGER', 'local/albusgive2:@/tmp/.ICE-unix/1881,unix/albusgive2:/tmp/.ICE-unix/1881'), ('INVOCATION_ID', '20c30074f4284fdba3c48df0b7a81a2d'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a92292e986.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/albusgive2/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/albusgive2/rlfw/rlfw_deploy/build/agent'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/albusgive2/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/albusgive2/rlfw/rlfw_deploy/install/nz-imu:/home/albusgive2/rlfw/rlfw_deploy/install/mujoco_mapping:/home/albusgive2/rlfw/rlfw_deploy/install/agent:/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs:/opt/ros/humble')]), 'shell': False}
+[23.857435] (agent) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.857573] (agent) StdoutLine: {'line': b'-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/agent/lib/agent/agent\n'}
+[23.858918] (-) TimerEvent: {}
+[23.862336] (agent) StdoutLine: {'line': b'-- Set runtime path of "/home/albusgive2/rlfw/rlfw_deploy/install/agent/lib/agent/agent" to ""\n'}
+[23.862509] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/ament_index/resource_index/package_run_dependencies/agent\n'}
+[23.862565] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/ament_index/resource_index/parent_prefix_path/agent\n'}
+[23.862612] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/ament_prefix_path.sh\n'}
+[23.862656] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/ament_prefix_path.dsv\n'}
+[23.862691] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/path.sh\n'}
+[23.862737] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/environment/path.dsv\n'}
+[23.862780] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.bash\n'}
+[23.862818] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.sh\n'}
+[23.862892] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.zsh\n'}
+[23.862966] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/local_setup.dsv\n'}
+[23.863008] (agent) StdoutLine: {'line': b'-- Installing: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/package.dsv\n'}
+[23.863045] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/ament_index/resource_index/packages/agent\n'}
+[23.863082] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/cmake/agentConfig.cmake\n'}
+[23.863128] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/cmake/agentConfig-version.cmake\n'}
+[23.863174] (agent) StdoutLine: {'line': b'-- Up-to-date: /home/albusgive2/rlfw/rlfw_deploy/install/agent/share/agent/package.xml\n'}
+[23.864334] (agent) CommandEnded: {'returncode': 0}
+[23.871104] (agent) JobEnded: {'identifier': 'agent', 'rc': 0}
+[23.871678] (-) EventReactorShutdown: {}

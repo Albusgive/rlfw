@@ -63,13 +63,9 @@ public:
     QComboBox *add_joint_combox;
     QWidget *widget_4;
     QGridLayout *gridLayout_6;
-    QLabel *label_14;
-    QCheckBox *is_timer;
+    QLabel *label_8;
     QComboBox *ctrl_joint;
     QLabel *label_13;
-    QPushButton *joint_enable;
-    QPushButton *send_joint;
-    QLabel *label_8;
     QComboBox *ctrl_joint_type;
     QWidget *widget_5;
     QGridLayout *gridLayout_5;
@@ -83,10 +79,15 @@ public:
     QLineEdit *vel;
     QLineEdit *kp;
     QLineEdit *kd;
+    QCheckBox *is_timer;
+    QLineEdit *timer;
+    QLabel *label_14;
+    QPushButton *send_joint;
+    QPushButton *setZerobtn;
+    QPushButton *joint_enable;
     QPushButton *joint_disable;
     QPushButton *all_joint_enable;
     QPushButton *all_joint_disable;
-    QLineEdit *timer;
     QWidget *joint_plot;
     QWidget *com;
     QGridLayout *gridLayout_9;
@@ -123,14 +124,15 @@ public:
     QLabel *remote_img;
     QWidget *widget_8;
     QGridLayout *gridLayout_10;
-    QLabel *label_25;
-    QComboBox *remote_select;
-    QLabel *label_26;
-    QLineEdit *remote_type;
     QPushButton *remote_mapping_btn;
+    QLineEdit *remote_type;
+    QLabel *label_26;
     QLabel *label_27;
+    QComboBox *remote_select;
     QTextEdit *remote_mapping_keys;
-    QWidget *tab;
+    QLabel *label_25;
+    QPushButton *remote_jump_btn;
+    QLabel *remote_mappint_tip;
     QMenuBar *menubar;
     QMenu *menufile;
     QStatusBar *statusbar;
@@ -139,7 +141,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(970, 561);
+        MainWindow->resize(1057, 623);
         MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(183, 242, 226);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
@@ -221,7 +223,7 @@ public:
         widget_2 = new QWidget(joint);
         widget_2->setObjectName("widget_2");
         widget_2->setMinimumSize(QSize(0, 0));
-        widget_2->setMaximumSize(QSize(400, 16777215));
+        widget_2->setMaximumSize(QSize(500, 16777215));
         widget_2->setStyleSheet(QString::fromUtf8("background-color: rgb(153, 193, 241);"));
         gridLayout = new QGridLayout(widget_2);
         gridLayout->setObjectName("gridLayout");
@@ -271,48 +273,28 @@ public:
         widget_4 = new QWidget(joint);
         widget_4->setObjectName("widget_4");
         widget_4->setMinimumSize(QSize(0, 0));
-        widget_4->setMaximumSize(QSize(400, 16777215));
+        widget_4->setMaximumSize(QSize(500, 16777215));
         widget_4->setStyleSheet(QString::fromUtf8("background-color: rgb(68, 112, 199);"));
         gridLayout_6 = new QGridLayout(widget_4);
         gridLayout_6->setObjectName("gridLayout_6");
-        gridLayout_6->setContentsMargins(-1, 0, -1, -1);
-        label_14 = new QLabel(widget_4);
-        label_14->setObjectName("label_14");
-
-        gridLayout_6->addWidget(label_14, 2, 3, 1, 1);
-
-        is_timer = new QCheckBox(widget_4);
-        is_timer->setObjectName("is_timer");
-
-        gridLayout_6->addWidget(is_timer, 2, 0, 1, 2);
-
-        ctrl_joint = new QComboBox(widget_4);
-        ctrl_joint->addItem(QString());
-        ctrl_joint->setObjectName("ctrl_joint");
-
-        gridLayout_6->addWidget(ctrl_joint, 0, 1, 1, 2);
-
-        label_13 = new QLabel(widget_4);
-        label_13->setObjectName("label_13");
-        label_13->setMaximumSize(QSize(70, 16777215));
-
-        gridLayout_6->addWidget(label_13, 0, 3, 1, 1);
-
-        joint_enable = new QPushButton(widget_4);
-        joint_enable->setObjectName("joint_enable");
-
-        gridLayout_6->addWidget(joint_enable, 3, 0, 1, 1);
-
-        send_joint = new QPushButton(widget_4);
-        send_joint->setObjectName("send_joint");
-
-        gridLayout_6->addWidget(send_joint, 2, 4, 1, 1);
-
+        gridLayout_6->setContentsMargins(3, 3, 3, 3);
         label_8 = new QLabel(widget_4);
         label_8->setObjectName("label_8");
         label_8->setMaximumSize(QSize(70, 16777215));
 
         gridLayout_6->addWidget(label_8, 0, 0, 1, 1);
+
+        ctrl_joint = new QComboBox(widget_4);
+        ctrl_joint->addItem(QString());
+        ctrl_joint->setObjectName("ctrl_joint");
+
+        gridLayout_6->addWidget(ctrl_joint, 0, 2, 1, 2);
+
+        label_13 = new QLabel(widget_4);
+        label_13->setObjectName("label_13");
+        label_13->setMaximumSize(QSize(70, 16777215));
+
+        gridLayout_6->addWidget(label_13, 0, 4, 1, 1);
 
         ctrl_joint_type = new QComboBox(widget_4);
         ctrl_joint_type->addItem(QString());
@@ -322,7 +304,7 @@ public:
         ctrl_joint_type->addItem(QString());
         ctrl_joint_type->setObjectName("ctrl_joint_type");
 
-        gridLayout_6->addWidget(ctrl_joint_type, 0, 4, 1, 1);
+        gridLayout_6->addWidget(ctrl_joint_type, 0, 5, 1, 1);
 
         widget_5 = new QWidget(widget_4);
         widget_5->setObjectName("widget_5");
@@ -404,29 +386,54 @@ public:
         gridLayout_5->addWidget(kd, 1, 3, 1, 1);
 
 
-        gridLayout_6->addWidget(widget_5, 1, 0, 1, 5);
+        gridLayout_6->addWidget(widget_5, 1, 0, 1, 6);
 
-        joint_disable = new QPushButton(widget_4);
-        joint_disable->setObjectName("joint_disable");
+        is_timer = new QCheckBox(widget_4);
+        is_timer->setObjectName("is_timer");
 
-        gridLayout_6->addWidget(joint_disable, 3, 2, 1, 1);
-
-        all_joint_enable = new QPushButton(widget_4);
-        all_joint_enable->setObjectName("all_joint_enable");
-
-        gridLayout_6->addWidget(all_joint_enable, 3, 3, 1, 1);
-
-        all_joint_disable = new QPushButton(widget_4);
-        all_joint_disable->setObjectName("all_joint_disable");
-
-        gridLayout_6->addWidget(all_joint_disable, 3, 4, 1, 1);
+        gridLayout_6->addWidget(is_timer, 2, 0, 1, 2);
 
         timer = new QLineEdit(widget_4);
         timer->setObjectName("timer");
         timer->setMinimumSize(QSize(40, 0));
         timer->setMaximumSize(QSize(60, 16777215));
 
-        gridLayout_6->addWidget(timer, 2, 2, 1, 1);
+        gridLayout_6->addWidget(timer, 2, 2, 1, 2);
+
+        label_14 = new QLabel(widget_4);
+        label_14->setObjectName("label_14");
+
+        gridLayout_6->addWidget(label_14, 2, 4, 1, 1);
+
+        send_joint = new QPushButton(widget_4);
+        send_joint->setObjectName("send_joint");
+
+        gridLayout_6->addWidget(send_joint, 2, 5, 1, 1);
+
+        setZerobtn = new QPushButton(widget_4);
+        setZerobtn->setObjectName("setZerobtn");
+
+        gridLayout_6->addWidget(setZerobtn, 3, 0, 1, 1);
+
+        joint_enable = new QPushButton(widget_4);
+        joint_enable->setObjectName("joint_enable");
+
+        gridLayout_6->addWidget(joint_enable, 3, 1, 1, 2);
+
+        joint_disable = new QPushButton(widget_4);
+        joint_disable->setObjectName("joint_disable");
+
+        gridLayout_6->addWidget(joint_disable, 3, 3, 1, 1);
+
+        all_joint_enable = new QPushButton(widget_4);
+        all_joint_enable->setObjectName("all_joint_enable");
+
+        gridLayout_6->addWidget(all_joint_enable, 3, 4, 1, 1);
+
+        all_joint_disable = new QPushButton(widget_4);
+        all_joint_disable->setObjectName("all_joint_disable");
+
+        gridLayout_6->addWidget(all_joint_disable, 3, 5, 1, 1);
 
 
         gridLayout_2->addWidget(widget_4, 1, 1, 1, 1);
@@ -620,27 +627,16 @@ public:
         remote_img->setMinimumSize(QSize(598, 422));
         remote_img->setStyleSheet(QString::fromUtf8("background-color: rgb(143, 240, 164);"));
 
-        gridLayout_11->addWidget(remote_img, 0, 0, 1, 1);
+        gridLayout_11->addWidget(remote_img, 1, 0, 1, 1);
 
         widget_8 = new QWidget(remote);
         widget_8->setObjectName("widget_8");
         gridLayout_10 = new QGridLayout(widget_8);
         gridLayout_10->setObjectName("gridLayout_10");
-        label_25 = new QLabel(widget_8);
-        label_25->setObjectName("label_25");
+        remote_mapping_btn = new QPushButton(widget_8);
+        remote_mapping_btn->setObjectName("remote_mapping_btn");
 
-        gridLayout_10->addWidget(label_25, 0, 0, 1, 1);
-
-        remote_select = new QComboBox(widget_8);
-        remote_select->addItem(QString());
-        remote_select->setObjectName("remote_select");
-
-        gridLayout_10->addWidget(remote_select, 0, 1, 1, 2);
-
-        label_26 = new QLabel(widget_8);
-        label_26->setObjectName("label_26");
-
-        gridLayout_10->addWidget(label_26, 1, 0, 1, 1);
+        gridLayout_10->addWidget(remote_mapping_btn, 2, 0, 1, 2);
 
         remote_type = new QLineEdit(widget_8);
         remote_type->setObjectName("remote_type");
@@ -648,15 +644,21 @@ public:
 
         gridLayout_10->addWidget(remote_type, 1, 2, 1, 1);
 
-        remote_mapping_btn = new QPushButton(widget_8);
-        remote_mapping_btn->setObjectName("remote_mapping_btn");
+        label_26 = new QLabel(widget_8);
+        label_26->setObjectName("label_26");
 
-        gridLayout_10->addWidget(remote_mapping_btn, 2, 0, 1, 2);
+        gridLayout_10->addWidget(label_26, 1, 0, 1, 1);
 
         label_27 = new QLabel(widget_8);
         label_27->setObjectName("label_27");
 
         gridLayout_10->addWidget(label_27, 3, 0, 1, 1);
+
+        remote_select = new QComboBox(widget_8);
+        remote_select->addItem(QString());
+        remote_select->setObjectName("remote_select");
+
+        gridLayout_10->addWidget(remote_select, 0, 1, 1, 2);
 
         remote_mapping_keys = new QTextEdit(widget_8);
         remote_mapping_keys->setObjectName("remote_mapping_keys");
@@ -664,20 +666,34 @@ public:
 
         gridLayout_10->addWidget(remote_mapping_keys, 4, 0, 1, 3);
 
+        label_25 = new QLabel(widget_8);
+        label_25->setObjectName("label_25");
 
-        gridLayout_11->addWidget(widget_8, 0, 1, 1, 1);
+        gridLayout_10->addWidget(label_25, 0, 0, 1, 1);
+
+        remote_jump_btn = new QPushButton(widget_8);
+        remote_jump_btn->setObjectName("remote_jump_btn");
+
+        gridLayout_10->addWidget(remote_jump_btn, 2, 2, 1, 1);
+
+
+        gridLayout_11->addWidget(widget_8, 0, 1, 2, 1);
+
+        remote_mappint_tip = new QLabel(remote);
+        remote_mappint_tip->setObjectName("remote_mappint_tip");
+        remote_mappint_tip->setMaximumSize(QSize(16777215, 50));
+        remote_mappint_tip->setStyleSheet(QString::fromUtf8("background-color: rgb(143, 240, 164);"));
+
+        gridLayout_11->addWidget(remote_mappint_tip, 0, 0, 1, 1);
 
         virtualmotor->addTab(remote, QString());
-        tab = new QWidget();
-        tab->setObjectName("tab");
-        virtualmotor->addTab(tab, QString());
 
         gridLayout_4->addWidget(virtualmotor, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 970, 27));
+        menubar->setGeometry(QRect(0, 0, 1057, 27));
         menufile = new QMenu(menubar);
         menufile->setObjectName("menufile");
         MainWindow->setMenuBar(menubar);
@@ -720,14 +736,10 @@ public:
 
         add_joint_combox->setItemText(0, QCoreApplication::translate("MainWindow", "None", nullptr));
 
-        label_14->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>time(ms)</p></body></html>", nullptr));
-        is_timer->setText(QCoreApplication::translate("MainWindow", "\345\256\232\346\227\266\345\217\221\351\200\201", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">Joint:</span></p></body></html>", nullptr));
         ctrl_joint->setItemText(0, QCoreApplication::translate("MainWindow", "None", nullptr));
 
         label_13->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">type:</span></p></body></html>", nullptr));
-        joint_enable->setText(QCoreApplication::translate("MainWindow", "\347\224\265\346\234\272\344\275\277\350\203\275", nullptr));
-        send_joint->setText(QCoreApplication::translate("MainWindow", "send", nullptr));
-        label_8->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">Joint:</span></p></body></html>", nullptr));
         ctrl_joint_type->setItemText(0, QCoreApplication::translate("MainWindow", "None", nullptr));
         ctrl_joint_type->setItemText(1, QCoreApplication::translate("MainWindow", "MIT", nullptr));
         ctrl_joint_type->setItemText(2, QCoreApplication::translate("MainWindow", "POS", nullptr));
@@ -744,10 +756,15 @@ public:
         vel->setText(QCoreApplication::translate("MainWindow", "0.0", nullptr));
         kp->setText(QCoreApplication::translate("MainWindow", "0.0", nullptr));
         kd->setText(QCoreApplication::translate("MainWindow", "0.0", nullptr));
+        is_timer->setText(QCoreApplication::translate("MainWindow", "\345\256\232\346\227\266\345\217\221\351\200\201", nullptr));
+        timer->setText(QCoreApplication::translate("MainWindow", "50.0", nullptr));
+        label_14->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>time(ms)</p></body></html>", nullptr));
+        send_joint->setText(QCoreApplication::translate("MainWindow", "send", nullptr));
+        setZerobtn->setText(QCoreApplication::translate("MainWindow", "\350\256\276\347\275\256\351\233\266\347\202\271", nullptr));
+        joint_enable->setText(QCoreApplication::translate("MainWindow", "\347\224\265\346\234\272\344\275\277\350\203\275", nullptr));
         joint_disable->setText(QCoreApplication::translate("MainWindow", "\347\224\265\346\234\272\345\244\261\350\203\275", nullptr));
         all_joint_enable->setText(QCoreApplication::translate("MainWindow", "\346\211\200\346\234\211\347\224\265\346\234\272\344\275\277\350\203\275", nullptr));
         all_joint_disable->setText(QCoreApplication::translate("MainWindow", "\346\211\200\346\234\211\347\224\265\346\234\272\345\244\261\350\203\275", nullptr));
-        timer->setText(QCoreApplication::translate("MainWindow", "50.0", nullptr));
         virtualmotor->setTabText(virtualmotor->indexOf(joint), QCoreApplication::translate("MainWindow", "joint", nullptr));
         label_15->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">send history id:</span></p></body></html>", nullptr));
         label_24->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">send history data:</span></p></body></html>", nullptr));
@@ -771,14 +788,15 @@ public:
         label_21->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">CAN TYPE\357\274\232</span></p></body></html>", nullptr));
         virtualmotor->setTabText(virtualmotor->indexOf(com), QCoreApplication::translate("MainWindow", "com", nullptr));
         remote_img->setText(QString());
-        label_25->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">Remote:</span></p></body></html>", nullptr));
+        remote_mapping_btn->setText(QCoreApplication::translate("MainWindow", "\351\207\215\346\230\240\345\260\204", nullptr));
+        label_26->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">Remote type:</span></p></body></html>", nullptr));
+        label_27->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">mapping:</span></p></body></html>", nullptr));
         remote_select->setItemText(0, QCoreApplication::translate("MainWindow", "None", nullptr));
 
-        label_26->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">Remote type:</span></p></body></html>", nullptr));
-        remote_mapping_btn->setText(QCoreApplication::translate("MainWindow", "\351\207\215\346\230\240\345\260\204", nullptr));
-        label_27->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">mapping:</span></p></body></html>", nullptr));
+        label_25->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt;\">Remote:</span></p></body></html>", nullptr));
+        remote_jump_btn->setText(QCoreApplication::translate("MainWindow", "\350\267\263\350\277\207\350\257\245\346\230\240\345\260\204\345\200\274", nullptr));
+        remote_mappint_tip->setText(QString());
         virtualmotor->setTabText(virtualmotor->indexOf(remote), QCoreApplication::translate("MainWindow", "remote", nullptr));
-        virtualmotor->setTabText(virtualmotor->indexOf(tab), QCoreApplication::translate("MainWindow", "virtualmotor", nullptr));
         menufile->setTitle(QCoreApplication::translate("MainWindow", "file", nullptr));
     } // retranslateUi
 

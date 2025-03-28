@@ -154,6 +154,7 @@ public:
   // 扭矩/电流
   MiCANMsg *ctrl_torque(uint8_t motor_id, float torque) override;
 
+  MiCANMsg *setZeroPoint(uint8_t motor_id) override;
   // 设置运行模式
   MiCANMsg *setCtrlType(uint8_t motor_id) override;
   // 位置PD
