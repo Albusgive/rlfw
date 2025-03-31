@@ -4,7 +4,7 @@ int main(int argc, char **argv) {
   auto node = std::make_shared<MappingNode>(
       "mujoco_mapping",
       "/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/nz/scene.xml", 0.02,
-      "nz_imu", "B");
+      "nz_imu", "B","nz");
   rclcpp::spin(node);
   rclcpp::shutdown();
   return 0;

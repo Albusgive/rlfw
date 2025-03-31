@@ -8,10 +8,12 @@
 #include <thread>
 MappingNode::MappingNode(std::string node_name, std::string file, float dt,
                          std::string imu_topic_name,
-                         std::string body_quat_mapping_name)
+                         std::string body_quat_mapping_name,
+                         std::string robot_name)
     : rclcpp::Node(node_name), imu_topic_name(imu_topic_name), dt(dt) {
   mj_ = new mujoco_base(file);
   mj_->setDt(dt);
+  mj_->setRobotName(robot_name);
   mj_->getQuatBodyIdx(body_quat_mapping_name);
   rclcpp::QoS control_qos(10);
   control_qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
@@ -30,6 +32,8 @@ MappingNode::MappingNode(std::string node_name, std::string file, float dt,
       "rlfwJointCtrl", rclcpp::QoS(control_qos));
   joint_pub = this->create_publisher<rlfw_msgs::msg::Joint>(
       "rlfwJointBack", rclcpp::QoS(control_qos));
+  imu_pub = this->create_publisher<sensor_msgs::msg::Imu>(
+      "/mj_imu", rclcpp::QoS(control_qos));
   // 服务器
   request = this->create_service<rlfw_msgs::srv::ComParameter>(
       "MappingSrv", std::bind(&MappingNode::handle_request, this, _1, _2));
@@ -37,6 +41,7 @@ MappingNode::MappingNode(std::string node_name, std::string file, float dt,
   mj_->bindJointData(
       std::bind(&MappingNode::send_joint_data, this, _1, _2, _3));
   mj_->bindAskJoint(std::bind(&MappingNode::AskJoint, this, _1));
+  mj_->bindImuData(std::bind(&MappingNode::imu_send, this, _1, _2, _3));
   mj_->change_mode("step");
   mj_->render_and_forward_or_step();
 }
@@ -45,6 +50,25 @@ MappingNode::~MappingNode() {}
 void MappingNode::imu_back(const sensor_msgs::msg::Imu::SharedPtr msg) {
   mj_->setBodyQuat(msg->orientation.w, msg->orientation.x, msg->orientation.y,
                    msg->orientation.z);
+}
+
+void MappingNode::imu_send(std::vector<mjtNum> &orientation,
+                           std::vector<mjtNum> &base_ang_vel,
+                           std::vector<mjtNum> &base_acc) {
+  sensor_msgs::msg::Imu msg;
+  msg.header.stamp = this->now();
+  msg.header.frame_id = "mj_imu";
+  msg.angular_velocity.x = base_ang_vel[0];
+  msg.angular_velocity.y = base_ang_vel[1];
+  msg.angular_velocity.z = base_ang_vel[2];
+  msg.linear_acceleration.x = base_acc[0];
+  msg.linear_acceleration.y = base_acc[1];
+  msg.linear_acceleration.z = base_acc[2];
+  msg.orientation.w = orientation[0];
+  msg.orientation.x = orientation[1];
+  msg.orientation.y = orientation[2];
+  msg.orientation.z = orientation[3];
+  imu_pub->publish(msg);
 }
 
 void MappingNode::joint_back(const rlfw_msgs::msg::Joint::SharedPtr msg) {

@@ -1,0 +1,15 @@
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp:[m[K In member function ‘[01m[Kvoid mujoco_base::keyboard(int, int, int, int)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp:402:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscancode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  402 | void mujoco_base::keyboard(int key, [01;35m[Kint scancode[m[K, int act, int mods) {
+      |                                     [01;35m[K~~~~^~~~~~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp:402:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  402 | void mujoco_base::keyboard(int key, int scancode, int act, [01;35m[Kint mods[m[K) {
+      |                                                            [01;35m[K~~~~^~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp:[m[K In member function ‘[01m[Kvoid mujoco_base::mouse_button(int, int, int)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp:425:57:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  425 | void mujoco_base::mouse_button(int button, int act, [01;35m[Kint mods[m[K) {
+      |                                                     [01;35m[K~~~~^~~~[m[K
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp:[m[K In member function ‘[01m[Kvoid mujoco_base::scroll(double, double)[m[K’:
+[01m[K/home/albusgive2/rlfw/rlfw_deploy/src/mujoco_mapping/src/mujoco_base.cpp:518:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kxoffset[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  518 | void mujoco_base::scroll([01;35m[Kdouble xoffset[m[K, double yoffset) {
+      |                          [01;35m[K~~~~~~~^~~~~~~[m[K

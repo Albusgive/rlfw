@@ -18,3 +18,39 @@ ERROR: Load model error: XML Error: Schema violation: unique element 'geom' foun
 Element 'default', line 0
 
 
+Fri Mar 28 18:27:46 2025
+WARNING: Inertia matrix is too close to singular at DOF 4. Check model. Time = 0.0020.
+
+Fri Mar 28 18:27:46 2025
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0020.
+
+Fri Mar 28 18:27:46 2025
+ERROR: copyM2Sparse: unassigned index
+
+Fri Mar 28 18:28:44 2025
+WARNING: Inertia matrix is too close to singular at DOF 4. Check model. Time = 0.0020.
+
+Fri Mar 28 18:28:44 2025
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0020.
+
+Fri Mar 28 18:28:44 2025
+ERROR: copyM2Sparse: unassigned index
+
+Fri Mar 28 18:30:41 2025
+WARNING: Inertia matrix is too close to singular at DOF 4. Check model. Time = 0.0020.
+
+Fri Mar 28 18:30:41 2025
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0020.
+
+Fri Mar 28 18:30:41 2025
+ERROR: copyM2Sparse: unassigned index
+
+Fri Mar 28 18:32:24 2025
+WARNING: Inertia matrix is too close to singular at DOF 4. Check model. Time = 0.0020.
+
+Fri Mar 28 18:32:24 2025
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0020.
+
+Fri Mar 28 18:32:24 2025
+ERROR: copyM2Sparse: unassigned index
+

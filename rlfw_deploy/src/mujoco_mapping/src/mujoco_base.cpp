@@ -2,8 +2,10 @@
 #include <cstddef>
 #include <iomanip>
 #include <iostream>
+#include <mujoco/mjspec.h>
 #include <mujoco/mujoco.h>
 #include <mutex>
+#include <string>
 #include <vector>
 mujoco_base::mujoco_base(std::string model_file) {
   // load and compile model
@@ -17,7 +19,7 @@ mujoco_base::mujoco_base(std::string model_file) {
   if (!m) {
     mju_error("Load model error: %s", error);
   }
-
+  mocap_m = m;
   // make data
   d = mj_makeData(m);
   for (int i = 0; i < m->njnt; i++) {
@@ -44,6 +46,25 @@ mujoco_base::mujoco_base(std::string model_file) {
     joint_action_idx[name] = actuator_id;
     joint_action_idx[name + "_mapping"] = actuator_id;
   }
+  for (int i = 0; i < m->nsensor; i++) {
+    const char *sensor_name = mj_id2name(m, mjOBJ_SENSOR, i);
+    switch (m->sensor_type[i]) {
+    case mjSENS_ACCELEROMETER: {
+      acc_name = sensor_name;
+      break;
+    }
+    case mjSENS_GYRO: {
+      ang_vel_name = sensor_name;
+      break;
+    }
+    case mjSENS_FRAMEQUAT: {
+      orientation_name = sensor_name;
+      break;
+    }
+    }
+  }
+  // 构建动捕模型
+  buildLocModel(model_file);
 }
 
 mujoco_base::~mujoco_base() {
@@ -52,6 +73,14 @@ mujoco_base::~mujoco_base() {
   mj_deleteData(d);
   mj_deleteModel(m);
   glfwTerminate(); // 终止 GLFW
+}
+
+void mujoco_base::buildLocModel(std::string file) {
+  mjSpec *spec = mj_parseXML(file.c_str(), NULL, NULL, 0);
+  mjsBody *robot = mjs_findBody(spec, "B");
+  robot->mocap = 0;
+  mjs_addFreeJoint(robot);
+  loc_m = mj_compile(spec, NULL);
 }
 
 void mujoco_base::load_model(mjModel *m) {
@@ -120,7 +149,8 @@ void mujoco_base::render_and_forward_or_step() {
       auto now = std::chrono::high_resolution_clock::now();
       std::chrono::duration<float> duration_cs = now - start_time;
       if (duration_cs.count() > dt) {
-        if (mode.load()) {
+        switch (mode) {
+        case mujoco_mode::forward: {
           mj_forward(m, d);
           std::vector<float> dof_pos_;
           std::vector<float> dof_vel_;
@@ -136,10 +166,24 @@ void mujoco_base::render_and_forward_or_step() {
             ask_joint(joint_names);
           }
           last_joint_pos = dof_pos_;
-        } else {
+          break;
+        }
+        case mujoco_mode::step: {
           for (int i = 0; i < substeps; i++) {
             mj_step(m, d);
           }
+          break;
+        }
+        case mujoco_mode::loc: {
+          for (int i = 0; i < substeps; i++) {
+            mj_step(m, d);
+          }
+          auto orientation = get_sensor_data(orientation_name);
+          auto base_ang_vel = get_sensor_data(ang_vel_name);
+          auto base_acc = get_sensor_data(acc_name);
+          imu_data_lambda(orientation, base_ang_vel, base_acc);
+          break;
+        }
         }
         start_time = now;
       }
@@ -153,8 +197,22 @@ void mujoco_base::render_and_forward_or_step() {
 }
 
 void mujoco_base::change_mode(std::string mode) {
+  auto look_site = [this]() {
+    double *mocap_pos = d->mocap_pos + 3 * quat_body_idx;
+    lookat[0] = mocap_pos[0];
+    lookat[1] = mocap_pos[1];
+    lookat[2] = mocap_pos[2];
+  };
+  auto look_body = [this](std::string name) {
+    int body_id = mj_name2id(m, mjOBJ_BODY, name.c_str());
+    double *body_pos = d->xpos + 3 * body_id;
+    lookat[0] = body_pos[0];
+    lookat[1] = body_pos[1];
+    lookat[2] = body_pos[2];
+  };
   if (mode == "step") {
-    this->mode.store(false);
+    this->mode.store(mujoco_mode::step);
+    m = mocap_m;
     if (dt > 0.002) {
       substeps = static_cast<int>(dt / 0.002);
       m->opt.timestep = 0.002;
@@ -162,8 +220,24 @@ void mujoco_base::change_mode(std::string mode) {
     } else {
       substeps = 1;
     }
+    look_site();
   } else if (mode == "forward") {
-    this->mode.store(true);
+    m = mocap_m;
+    this->mode.store(mujoco_mode::forward);
+    m->opt.timestep = dt;
+    d = mj_makeData(m);
+    look_site();
+  } else if (mode == "loc") {
+    m = loc_m;
+    this->mode.store(mujoco_mode::loc);
+    if (dt > 0.002) {
+      substeps = static_cast<int>(dt / 0.002);
+      m->opt.timestep = 0.002;
+      d = mj_makeData(m);
+      look_body(robot_name);
+    } else {
+      substeps = 1;
+    }
   } else {
     std::cout << "mode error" << std::endl;
   }
@@ -194,17 +268,10 @@ void mujoco_base::setAction(std::string joint_name, float action) {
 void mujoco_base::getQuatBodyIdx(std::string quat_body_name) {
   int body_id = mj_name2id(m, mjOBJ_BODY, quat_body_name.c_str());
   quat_body_idx = m->body_mocapid[body_id];
-
-  int imu_id = mj_name2id(m, mjOBJ_SITE, "imu");
-  double *imu_pos = d->site_xpos + 3 * imu_id;
-  double *mocap_pos = d->mocap_pos + 3 * quat_body_idx;
-  lookat[0] = imu_pos[0] + mocap_pos[0];
-  lookat[1] = imu_pos[1] + mocap_pos[1];
-  lookat[2] = imu_pos[2] + mocap_pos[2];
 }
 
 void mujoco_base::setBodyQuat(float w, float x, float y, float z) {
-  if (!mode.load())
+  if (mode.load() != mujoco_mode::forward)
     return;
   std::lock_guard<std::mutex> lk(m_mtx);
   mjtNum *quat_ = d->mocap_quat + quat_body_idx * 4;
@@ -215,7 +282,7 @@ void mujoco_base::setBodyQuat(float w, float x, float y, float z) {
 }
 
 void mujoco_base::setJointPos(std::string joint_name, float pos) {
-  if (!mode.load())
+  if (mode.load() != mujoco_mode::forward)
     return;
   std::lock_guard<std::mutex> lk(m_mtx);
   auto it = joint_pos_idx.find(joint_name);
@@ -243,6 +310,13 @@ void mujoco_base::bindJointData(
 void mujoco_base::bindAskJoint(
     std::function<void(std::vector<std::string> &joint_name)> lambda) {
   ask_joint = lambda;
+}
+
+void mujoco_base::bindImuData(
+    std::function<void(std::vector<mjtNum> &acc, std::vector<mjtNum> &gyro,
+                       std::vector<mjtNum> &mag)>
+        lambda) {
+  imu_data_lambda = lambda;
 }
 
 bool mujoco_base::getJointData(std::string joint_name) {
@@ -367,6 +441,9 @@ void mujoco_base::keyboard(int key, int scancode, int act, int mods) {
   }
   if (act == GLFW_PRESS && key == GLFW_KEY_F2) {
     change_mode("forward");
+  }
+  if (act == GLFW_PRESS && key == GLFW_KEY_F3) {
+    change_mode("loc");
   }
 
   // update Ctrl state
@@ -511,8 +588,21 @@ void mujoco_base::updateRender() {
       mjr_render(viewport, &scn, &con);
 
       // 创建 FPS 文本
-      std::string fpsText = "FPS: " + std::to_string(fps) +
-                            "   mode: " + (mode.load() ? "forward" : "step");
+      std::string fpsText = "FPS: " + std::to_string(fps) + "   mode: ";
+      switch (mode.load()) {
+      case mujoco_mode::forward: {
+        fpsText += "   forward";
+        break;
+      }
+      case mujoco_mode::step: {
+        fpsText += "   step";
+        break;
+      }
+      case mujoco_mode::loc: {
+        fpsText += "   loc";
+        break;
+      }
+      }
 
       // 使用 mjr_overlay 显示 FPS
       mjr_overlay(mjFONT_NORMAL, mjGRID_TOPLEFT, viewport, fpsText.c_str(),

@@ -768,6 +768,30 @@ src/ParallelMechanism..cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ParallelMechanism..cpp.s
 .PHONY : src/ParallelMechanism..cpp.s
 
+src/SocketCan.o: src/SocketCan.cpp.o
+.PHONY : src/SocketCan.o
+
+# target to build an object file
+src/SocketCan.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/SocketCan.cpp.o
+.PHONY : src/SocketCan.cpp.o
+
+src/SocketCan.i: src/SocketCan.cpp.i
+.PHONY : src/SocketCan.i
+
+# target to preprocess a source file
+src/SocketCan.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/SocketCan.cpp.i
+.PHONY : src/SocketCan.cpp.i
+
+src/SocketCan.s: src/SocketCan.cpp.s
+.PHONY : src/SocketCan.s
+
+# target to generate assembly for a file
+src/SocketCan.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/SocketCan.cpp.s
+.PHONY : src/SocketCan.cpp.s
+
 src/XMLDecoder.o: src/XMLDecoder.cpp.o
 .PHONY : src/XMLDecoder.o
 
@@ -907,6 +931,9 @@ help:
 	@echo "... src/ParallelMechanism..o"
 	@echo "... src/ParallelMechanism..i"
 	@echo "... src/ParallelMechanism..s"
+	@echo "... src/SocketCan.o"
+	@echo "... src/SocketCan.i"
+	@echo "... src/SocketCan.s"
 	@echo "... src/XMLDecoder.o"
 	@echo "... src/XMLDecoder.i"
 	@echo "... src/XMLDecoder.s"

@@ -148,7 +148,7 @@
 
           <!-- 大腿 -->
           <body name="left_thigh" pos="-0.1737 0.0345 0" euler="0 0.436332313 0">
-            <joint name="left_thigh_joint" type="hinge" axis="0 1 0" damping="0.005" armature="0.0"
+            <joint name="left_thigh_joint" type="hinge" axis="0 1 0" damping="2" armature="0.008"
               stiffness="1.5" />
             <geom type="mesh" mesh="LeftThighBase" material="fiberglass" mass="0.111"
               class="collision" />
@@ -171,7 +171,7 @@
             <!-- 小腿 -->
             <body name="left_calf" pos="-0.0015 0.019 -0.17999"
               euler="0 -1.483529864 0">
-              <joint name="left_calf_joint" type="hinge" axis="0 1 0" damping="0.005" armature="0.0"
+              <joint name="left_calf_joint" type="hinge" axis="0 1 0" damping="1" armature="0.008"
                 stiffness="1.5" />
               <geom type="mesh" mesh="LeftCalfBase" material="fiberglass" mass="0.183"
                 class="collision" />
@@ -229,7 +229,7 @@
 
           <!-- 大腿 -->
           <body name="right_thigh" pos="-0.1737 -0.0343 0" euler="0 0.436332313 0">
-            <joint name="right_thigh_joint" type="hinge" axis="0 1 0" damping="0.005" armature="0.0"
+            <joint name="right_thigh_joint" type="hinge" axis="0 1 0" damping="2" armature="0.008"
               stiffness="1.5" />
             <geom type="mesh" mesh="RightThighBase" material="fiberglass" mass="0.111"
               class="collision" />
@@ -253,7 +253,7 @@
             <!-- 小腿 -->
             <body name="right_calf" pos="-0.00248 -0.019 -0.17998"
               euler="0 -1.483529864 0">
-              <joint name="right_calf_joint" type="hinge" axis="0 1 0" damping="0.005" armature="0.0"
+              <joint name="right_calf_joint" type="hinge" axis="0 1 0" damping="1" armature="0.008"
                 stiffness="1.5" />
               <geom type="mesh" mesh="RightCalfBase" mass="0.183" material="fiberglass"
                 class="collision" />
@@ -343,6 +343,6 @@
     <subtreelinvel name="base_lin_vel" body="nz" />
     <gyro name='base_ang_vel' site='imu' />
     <framepos name='base_pos' objtype='body' objname='nz' />
-    <!-- <accelerometer name="projected_gravity" site="imu" /> -->
+    <accelerometer name="base_acc" site="imu" />
   </sensor>
 </mujoco>
