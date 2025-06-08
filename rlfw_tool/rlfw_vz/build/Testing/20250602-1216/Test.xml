@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20250602-1216-Experimental"
+	Name="albusgive"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/clang++-14"
+	CompilerVersion="14.0.0"
+	OSName="Linux"
+	Hostname="albusgive"
+	OSRelease="6.8.0-52-generic"
+	OSVersion="#53~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jan 15 19:18:46 UTC 2"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="151"
+	ProcessorCacheSize="25600"
+	NumberOfLogicalCPU="20"
+	NumberOfPhysicalCPU="12"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="15827"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3341.55"
+	>
+	<Testing>
+		<StartDateTime>Jun 02 20:16 CST</StartDateTime>
+		<StartTestTime>1748866616</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jun 02 20:16 CST</EndDateTime>
+		<EndTestTime>1748866616</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

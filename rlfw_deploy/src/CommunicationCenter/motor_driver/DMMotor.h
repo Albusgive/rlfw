@@ -46,6 +46,7 @@ public:
 
   DMCANMsg *enableMotor(uint8_t motor_id, bool enable,
                         bool clear_fault = false) override;
+  DMCANMsg *clearErr(uint8_t /*motor_id*/) override { return nullptr; };
   MotorBack decode(CANMSG msg) override;
   // 运动控制
   DMCANMsg *locomotion(uint8_t motor_id, float torque, float pos, float ang_vel,

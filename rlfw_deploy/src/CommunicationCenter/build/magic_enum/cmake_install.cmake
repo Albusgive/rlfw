@@ -1,4 +1,4 @@
-# Install script for directory: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum
+# Install script for directory: /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump-14")
 endif()
 

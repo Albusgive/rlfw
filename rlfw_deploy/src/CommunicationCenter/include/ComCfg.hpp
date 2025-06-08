@@ -11,14 +11,24 @@ enum class ComType {
   ERR,
 };
 
-enum class Motortype { Mi, DM, RM, UNITREE, ERR };
+enum class Motortype { Mi, DM, RM, UNITREE, STW, ERR };
 
 // CFourBL ：CoaxialFourBarLinkage(双电机同轴) FourBL :FourBarLinkage(单电机)
 // FiveBL :FiveBarLinkage(双电机)
 enum class VirtualMotortype { CFourBL, FourBL, FiveBL, ERR };
 
 // 控制模式
-enum class MotorCtrlType { MIT = 0, POS, VEL, TORQUE, POS_VEL, ENABLE, DISABLE, SETZERO, ERR };
+enum class MotorCtrlType {
+  MIT = 0,
+  POS,
+  VEL,
+  TORQUE,
+  POS_VEL,
+  ENABLE,
+  DISABLE,
+  SETZERO,
+  ERR
+};
 
 enum class RemoteType { gamepad, keyboard, custom, ERR };
 
@@ -128,6 +138,7 @@ public:
   std::string attrs = ""; // 串口号
   std::string port = "";  // 端口名tty
   int bps;                // 115200
+  std::string brt = "1M"; // 字符形式的波特率
   int datasize;           // 5/6/7/8
   int parity;             // 0/1/2 无/奇/偶
   int stopbit;            // 1/2

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter
+CMAKE_SOURCE_DIR = /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build
+CMAKE_BINARY_DIR = /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

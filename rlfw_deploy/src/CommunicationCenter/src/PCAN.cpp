@@ -16,9 +16,48 @@ PCAN::~PCAN() {
   is_only_thread.store(false);
 }
 
-bool PCAN::initPCAN(TPCANHandle CANx, TPCANBaudrate Btr0Btr1) {
+bool PCAN::initPCAN(TPCANHandle CANx, TPCANBaudrate Btr) {
   // 初始化 PCAN 通道
-  TPCANStatus status = CAN_Initialize(CANx, Btr0Btr1);
+  TPCANStatus status = CAN_Initialize(CANx, Btr);
+  if (status != PCAN_ERROR_OK) {
+    // std::cout << "Failed to initialize PCAN channel. Error: " << std::hex
+    //           << status << std::endl;
+    return false;
+  }
+  return true;
+}
+
+bool PCAN::initPCAN(CANBps Btr) {
+  // 初始化 PCAN 通道
+  TPCANBaudrate bps = BAUD_1MBPS;
+  switch (Btr) {
+  case CANBps::Brt_1M:{bps = BAUD_1MBPS;}break;
+  case CANBps::Brt_800k:{bps = BAUD_800KBPS;}break;
+  case CANBps::Brt_500k:{bps = BAUD_500KBPS;}break;
+  case CANBps::Brt_250k:{bps = BAUD_250KBPS;}break;
+  case CANBps::Brt_125k:{bps = BAUD_125KBPS;}break;
+  case CANBps::Brt_100k:{bps = BAUD_100KBPS;}break;
+  }
+  TPCANStatus status = CAN_Initialize(this->channel, bps);
+  if (status != PCAN_ERROR_OK) {
+    // std::cout << "Failed to initialize PCAN channel. Error: " << std::hex
+    //           << status << std::endl;
+    return false;
+  }
+  return true;
+}
+
+bool PCAN::initPCAN(TPCANHandle CANx, CANBps Btr) {
+  // 初始化 PCAN 通道
+  TPCANBaudrate bps = BAUD_1MBPS;
+  switch (Btr) {
+  case CANBps::Brt_1M:{bps = BAUD_1MBPS;}break;
+  case CANBps::Brt_800k:{bps = BAUD_800KBPS;}break;
+  case CANBps::Brt_500k:{bps = BAUD_500KBPS;}break;
+  case CANBps::Brt_250k:{bps = BAUD_250KBPS;}break;
+  case CANBps::Brt_100k:{bps = BAUD_100KBPS;}break;
+  }
+  TPCANStatus status = CAN_Initialize(CANx, bps);
   if (status != PCAN_ERROR_OK) {
     // std::cout << "Failed to initialize PCAN channel. Error: " << std::hex
     //           << status << std::endl;

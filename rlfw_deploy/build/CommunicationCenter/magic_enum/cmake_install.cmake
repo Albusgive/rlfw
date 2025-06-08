@@ -1,8 +1,8 @@
-# Install script for directory: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum
+# Install script for directory: /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/magic_enum
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/albusgive2/rlfw/rlfw_deploy/install/CommunicationCenter")
+  set(CMAKE_INSTALL_PREFIX "/home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

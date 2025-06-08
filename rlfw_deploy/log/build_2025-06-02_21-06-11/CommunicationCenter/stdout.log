@@ -1,0 +1,38 @@
+[35m[1mConsolidate compiler generated dependencies of target tinyxml2[0m
+[ 11%] Built target tinyxml2
+[35m[1mConsolidate compiler generated dependencies of target xmltest[0m
+[35m[1mConsolidate compiler generated dependencies of target CommunicationCenter[0m
+[ 23%] Built target xmltest
+[ 47%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/STWMotor.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o[0m
+[ 58%] [32m[1mLinking CXX executable CommunicationCenter[0m
+[100%] Built target CommunicationCenter
+-- Install configuration: ""
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/lib/CommunicationCenter/CommunicationCenter
+-- Set runtime path of "/home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/lib/CommunicationCenter/CommunicationCenter" to ""
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/robot_cfg.xml
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/ament_index/resource_index/package_run_dependencies/CommunicationCenter
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/ament_index/resource_index/parent_prefix_path/CommunicationCenter
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/ament_prefix_path.sh
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/ament_prefix_path.dsv
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/path.sh
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/environment/path.dsv
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.bash
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.sh
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.zsh
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/local_setup.dsv
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/package.dsv
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/ament_index/resource_index/packages/CommunicationCenter
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/cmake/CommunicationCenterConfig.cmake
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/cmake/CommunicationCenterConfig-version.cmake
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/share/CommunicationCenter/package.xml
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/lib/libtinyxml2.a
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-static-targets.cmake
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-static-targets-noconfig.cmake
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-config.cmake
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/lib/cmake/tinyxml2/tinyxml2-config-version.cmake
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/include/tinyxml2.h
+-- Installing: /home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter/lib/pkgconfig/tinyxml2.pc

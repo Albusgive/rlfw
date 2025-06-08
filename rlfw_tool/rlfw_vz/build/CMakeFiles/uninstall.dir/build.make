@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/albusgive2/rlfw/rlfw_tool/rlfw_vz
+CMAKE_SOURCE_DIR = /home/albusgive/rlfw/rlfw_tool/rlfw_vz
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build
+CMAKE_BINARY_DIR = /home/albusgive/rlfw/rlfw_tool/rlfw_vz/build
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/albusgive2/rlfw/rlfw_tool/rlfw_vz /home/albusgive2/rlfw/rlfw_tool/rlfw_vz /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build /home/albusgive2/rlfw/rlfw_tool/rlfw_vz/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/albusgive/rlfw/rlfw_tool/rlfw_vz/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/albusgive/rlfw/rlfw_tool/rlfw_vz /home/albusgive/rlfw/rlfw_tool/rlfw_vz /home/albusgive/rlfw/rlfw_tool/rlfw_vz/build /home/albusgive/rlfw/rlfw_tool/rlfw_vz/build /home/albusgive/rlfw/rlfw_tool/rlfw_vz/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

@@ -27,7 +27,7 @@ file(GLOB REMOTE ${CMAKE_CURRENT_SOURCE_DIR}/remote_driver/*.cpp)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/magic_enum)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tinyxml2)
 
-file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/motor_cfg.xml" DESTINATION "${CMAKE_BINARY_DIR}")
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/robot_cfg.xml" DESTINATION "${CMAKE_BINARY_DIR}")
 
 add_executable(CommunicationCenter
 ${SRC}
@@ -38,13 +38,13 @@ ${REMOTE}
 target_compile_definitions(CommunicationCenter 
   PRIVATE PROJECT_NAME="${PROJECT_NAME}"
 )
-target_link_libraries(CommunicationCenter udev libpcanbasic.so magic_enum::magic_enum tinyxml2)
+target_link_libraries(CommunicationCenter udev libpcanbasic.so magic_enum::magic_enum tinyxml2 libusbcan.so)
 ament_target_dependencies(CommunicationCenter rclcpp example_interfaces rlfw_msgs tf2_geometry_msgs std_msgs sensor_msgs)
 install(TARGETS
 CommunicationCenter
   DESTINATION lib/${PROJECT_NAME}
 )
-install(FILES motor_cfg.xml DESTINATION share)
+install(FILES robot_cfg.xml DESTINATION share)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

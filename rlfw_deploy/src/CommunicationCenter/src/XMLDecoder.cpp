@@ -33,6 +33,7 @@ bool XMLDecoder::load(std::string path) {
       ComCfg.port = Attribute2String(com->Attribute("port"));
       // std::cout<<"com port:"<<ComCfg.port<<std::endl;
       ComCfg.bps = com->IntAttribute("bps", 115200);
+      ComCfg.brt = Attribute2String(com->Attribute("bps"),"1M");
       ComCfg.datasize = com->IntAttribute("datasize", 8);
       ComCfg.parity = com->IntAttribute("parity", 0);
       ComCfg.stopbit = com->IntAttribute("stopbit", 1);

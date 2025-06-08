@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter
+CMAKE_SOURCE_DIR = /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter
+CMAKE_BINARY_DIR = /home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter/CMakeFiles /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter/CMakeFiles /home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -672,6 +672,30 @@ motor_driver/RMMotor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.s
 .PHONY : motor_driver/RMMotor.cpp.s
 
+motor_driver/STWMotor.o: motor_driver/STWMotor.cpp.o
+.PHONY : motor_driver/STWMotor.o
+
+# target to build an object file
+motor_driver/STWMotor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/motor_driver/STWMotor.cpp.o
+.PHONY : motor_driver/STWMotor.cpp.o
+
+motor_driver/STWMotor.i: motor_driver/STWMotor.cpp.i
+.PHONY : motor_driver/STWMotor.i
+
+# target to preprocess a source file
+motor_driver/STWMotor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/motor_driver/STWMotor.cpp.i
+.PHONY : motor_driver/STWMotor.cpp.i
+
+motor_driver/STWMotor.s: motor_driver/STWMotor.cpp.s
+.PHONY : motor_driver/STWMotor.s
+
+# target to generate assembly for a file
+motor_driver/STWMotor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/motor_driver/STWMotor.cpp.s
+.PHONY : motor_driver/STWMotor.cpp.s
+
 remote_driver/gamepad.o: remote_driver/gamepad.cpp.o
 .PHONY : remote_driver/gamepad.o
 
@@ -768,29 +792,29 @@ src/ParallelMechanism..cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ParallelMechanism..cpp.s
 .PHONY : src/ParallelMechanism..cpp.s
 
-src/SocketCan.o: src/SocketCan.cpp.o
-.PHONY : src/SocketCan.o
+src/SocketCAN.o: src/SocketCAN.cpp.o
+.PHONY : src/SocketCAN.o
 
 # target to build an object file
-src/SocketCan.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/SocketCan.cpp.o
-.PHONY : src/SocketCan.cpp.o
+src/SocketCAN.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/SocketCAN.cpp.o
+.PHONY : src/SocketCAN.cpp.o
 
-src/SocketCan.i: src/SocketCan.cpp.i
-.PHONY : src/SocketCan.i
+src/SocketCAN.i: src/SocketCAN.cpp.i
+.PHONY : src/SocketCAN.i
 
 # target to preprocess a source file
-src/SocketCan.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/SocketCan.cpp.i
-.PHONY : src/SocketCan.cpp.i
+src/SocketCAN.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/SocketCAN.cpp.i
+.PHONY : src/SocketCAN.cpp.i
 
-src/SocketCan.s: src/SocketCan.cpp.s
-.PHONY : src/SocketCan.s
+src/SocketCAN.s: src/SocketCAN.cpp.s
+.PHONY : src/SocketCAN.s
 
 # target to generate assembly for a file
-src/SocketCan.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/SocketCan.cpp.s
-.PHONY : src/SocketCan.cpp.s
+src/SocketCAN.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/SocketCAN.cpp.s
+.PHONY : src/SocketCAN.cpp.s
 
 src/XMLDecoder.o: src/XMLDecoder.cpp.o
 .PHONY : src/XMLDecoder.o
@@ -815,6 +839,30 @@ src/XMLDecoder.s: src/XMLDecoder.cpp.s
 src/XMLDecoder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.s
 .PHONY : src/XMLDecoder.cpp.s
+
+src/ZCAN_USBCAN.o: src/ZCAN_USBCAN.cpp.o
+.PHONY : src/ZCAN_USBCAN.o
+
+# target to build an object file
+src/ZCAN_USBCAN.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ZCAN_USBCAN.cpp.o
+.PHONY : src/ZCAN_USBCAN.cpp.o
+
+src/ZCAN_USBCAN.i: src/ZCAN_USBCAN.cpp.i
+.PHONY : src/ZCAN_USBCAN.i
+
+# target to preprocess a source file
+src/ZCAN_USBCAN.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ZCAN_USBCAN.cpp.i
+.PHONY : src/ZCAN_USBCAN.cpp.i
+
+src/ZCAN_USBCAN.s: src/ZCAN_USBCAN.cpp.s
+.PHONY : src/ZCAN_USBCAN.s
+
+# target to generate assembly for a file
+src/ZCAN_USBCAN.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ZCAN_USBCAN.cpp.s
+.PHONY : src/ZCAN_USBCAN.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -919,6 +967,9 @@ help:
 	@echo "... motor_driver/RMMotor.o"
 	@echo "... motor_driver/RMMotor.i"
 	@echo "... motor_driver/RMMotor.s"
+	@echo "... motor_driver/STWMotor.o"
+	@echo "... motor_driver/STWMotor.i"
+	@echo "... motor_driver/STWMotor.s"
 	@echo "... remote_driver/gamepad.o"
 	@echo "... remote_driver/gamepad.i"
 	@echo "... remote_driver/gamepad.s"
@@ -931,12 +982,15 @@ help:
 	@echo "... src/ParallelMechanism..o"
 	@echo "... src/ParallelMechanism..i"
 	@echo "... src/ParallelMechanism..s"
-	@echo "... src/SocketCan.o"
-	@echo "... src/SocketCan.i"
-	@echo "... src/SocketCan.s"
+	@echo "... src/SocketCAN.o"
+	@echo "... src/SocketCAN.i"
+	@echo "... src/SocketCAN.s"
 	@echo "... src/XMLDecoder.o"
 	@echo "... src/XMLDecoder.i"
 	@echo "... src/XMLDecoder.s"
+	@echo "... src/ZCAN_USBCAN.o"
+	@echo "... src/ZCAN_USBCAN.i"
+	@echo "... src/ZCAN_USBCAN.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

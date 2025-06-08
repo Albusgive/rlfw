@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-fd9c9e87c0d63ffe2aa3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "rlfw_msgs__py",
+					"jsonFile" : "directory-rlfw_msgs__py-0c36b0edef0bc1566a6b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs/rlfw_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "rlfw_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_rlfw_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_rlfw_msgs_egg-4269787232801acca00c.json",
+					"name" : "ament_cmake_python_build_rlfw_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_rlfw_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_rlfw_msgs-dbd1489b25ac4f7da1da.json",
+					"name" : "ament_cmake_python_copy_rlfw_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs-3dfd4c33c81070dbfb57.json",
+					"name" : "rlfw_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__cpp-30b28a729dcc264b0b6c.json",
+					"name" : "rlfw_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "rlfw_msgs__py::@9a8592d5532ad55e7a43",
+					"jsonFile" : "target-rlfw_msgs__py-e6f3b9b65f44deb0440f.json",
+					"name" : "rlfw_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_generator_c-0f15f21d77db299ea1b8.json",
+					"name" : "rlfw_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_generator_py-72f3e1142d53347277c6.json",
+					"name" : "rlfw_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_typesupport_c-ce961293229fb6019741.json",
+					"name" : "rlfw_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_typesupport_c__pyext-849e7afb70eb32b2345e.json",
+					"name" : "rlfw_msgs__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_typesupport_cpp-c46307556cef667561e2.json",
+					"name" : "rlfw_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_typesupport_fastrtps_c-15da9d4799ea1fddce86.json",
+					"name" : "rlfw_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_typesupport_fastrtps_c__pyext-5bdcc40367035bb73f80.json",
+					"name" : "rlfw_msgs__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_typesupport_fastrtps_cpp-db8de4938514c1d12ec8.json",
+					"name" : "rlfw_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_typesupport_introspection_c-860198214fb6ac8d840c.json",
+					"name" : "rlfw_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_typesupport_introspection_c__pyext-b8ab9048ecb0e2c653b7.json",
+					"name" : "rlfw_msgs__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs__rosidl_typesupport_introspection_cpp-91a7b3a59d3fb9710675.json",
+					"name" : "rlfw_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rlfw_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rlfw_msgs_uninstall-d0e548178fe1bd924723.json",
+					"name" : "rlfw_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-a03a4802a005242885bc.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs",
+		"source" : "/home/albusgive/rlfw/rlfw_interface/src/rlfw_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

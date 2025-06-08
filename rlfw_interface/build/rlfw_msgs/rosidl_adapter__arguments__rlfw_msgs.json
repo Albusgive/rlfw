@@ -1,11 +1,11 @@
 {
   "package_name": "rlfw_msgs",
   "non_idl_tuples": [
-    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/Joint.msg",
-    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/JointCtrl.msg",
-    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/CanMsg.msg",
-    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/SerialMsg.msg",
-    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:msg/Remote.msg",
-    "/home/albusgive2/rlfw/rlfw_interface/src/rlfw_msgs:srv/ComParameter.srv"
+    "/home/albusgive/rlfw/rlfw_interface/src/rlfw_msgs:msg/Joint.msg",
+    "/home/albusgive/rlfw/rlfw_interface/src/rlfw_msgs:msg/JointCtrl.msg",
+    "/home/albusgive/rlfw/rlfw_interface/src/rlfw_msgs:msg/CanMsg.msg",
+    "/home/albusgive/rlfw/rlfw_interface/src/rlfw_msgs:msg/SerialMsg.msg",
+    "/home/albusgive/rlfw/rlfw_interface/src/rlfw_msgs:msg/Remote.msg",
+    "/home/albusgive/rlfw/rlfw_interface/src/rlfw_msgs:srv/ComParameter.srv"
   ]
 }

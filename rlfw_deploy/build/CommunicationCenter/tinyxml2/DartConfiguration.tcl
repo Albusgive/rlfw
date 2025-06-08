@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/tinyxml2
-BuildDirectory: /home/albusgive2/rlfw/rlfw_deploy/build/CommunicationCenter/tinyxml2
+SourceDirectory: /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/tinyxml2
+BuildDirectory: /home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter/tinyxml2
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: albusgive2
+Site: albusgive
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/tinyxml2"
+ConfigureCommand: "/usr/bin/cmake" "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/tinyxml2"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
@@ -63,7 +63,7 @@ UpdateType: git
 
 # Compiler info
 Compiler: /usr/bin/c++
-CompilerVersion: 12.3.0
+CompilerVersion: 13.1.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
@@ -75,12 +75,12 @@ CudaSanitizerCommand:
 CudaSanitizerCommandOptions: 
 MemoryCheckType: 
 MemoryCheckSanitizerOptions: 
-MemoryCheckCommand: /usr/local/cuda/bin/compute-sanitizer
+MemoryCheckCommand: /usr/bin/valgrind
 MemoryCheckCommandOptions: 
 MemoryCheckSuppressionFile: 
 
 # Coverage
-CoverageCommand: /usr/bin/gcov
+CoverageCommand: COVERAGE_COMMAND-NOTFOUND
 CoverageExtraFlags: -l
 
 # Testing options

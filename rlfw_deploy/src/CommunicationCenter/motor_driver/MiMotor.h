@@ -145,6 +145,7 @@ public:
   // 运动控制
   MiCANMsg *locomotion(uint8_t motor_id, float torque, float pos, float ang_vel,
                        float kp, float kd) override;
+  MiCANMsg *clearErr(uint8_t /*motor_id*/) override{return nullptr;};
   // 速度控制
   MiCANMsg *ctrl_vel(uint8_t motor_id, float vel) override;
   // 位置

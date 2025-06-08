@@ -1,0 +1,394 @@
+[0.005s] Invoking command in '/home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/albusgive/rlfw/rlfw_interface/src/rlfw_msgs -DCMAKE_INSTALL_PREFIX=/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs
+[0.050s] -- The C compiler identification is GNU 11.4.0
+[0.110s] -- The CXX compiler identification is GNU 11.4.0
+[0.115s] -- Detecting C compiler ABI info
+[0.240s] -- Detecting C compiler ABI info - done
+[0.251s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.252s] -- Detecting C compile features
+[0.252s] -- Detecting C compile features - done
+[0.259s] -- Detecting CXX compiler ABI info
+[0.409s] -- Detecting CXX compiler ABI info - done
+[0.414s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.414s] -- Detecting CXX compile features
+[0.415s] -- Detecting CXX compile features - done
+[0.416s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.526s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.573s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.592s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.594s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.598s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.604s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.611s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.627s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.920s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.319s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.464s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.482s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.484s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.507s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.507s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.507s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.508s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.525s] -- Found PythonExtra: .so  
+[1.605s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.620s] -- Added test 'lint_cmake' to check CMake code style
+[1.621s] -- Added test 'xmllint' to check XML markup files
+[1.622s] -- Configuring done
+[1.674s] -- Generating done
+[1.680s] -- Build files have been written to: /home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs
+[1.684s] Invoked command in '/home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/albusgive/rlfw/rlfw_interface/src/rlfw_msgs -DCMAKE_INSTALL_PREFIX=/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs
+[1.685s] Invoking command in '/home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs -- -j20 -l20
+[1.729s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.738s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.747s] [  2%] Built target ament_cmake_python_copy_rlfw_msgs
+[1.872s] running egg_info
+[1.872s] creating rlfw_msgs.egg-info
+[1.872s] writing rlfw_msgs.egg-info/PKG-INFO
+[1.872s] writing dependency_links to rlfw_msgs.egg-info/dependency_links.txt
+[1.872s] writing top-level names to rlfw_msgs.egg-info/top_level.txt
+[1.872s] writing manifest file 'rlfw_msgs.egg-info/SOURCES.txt'
+[1.875s] reading manifest file 'rlfw_msgs.egg-info/SOURCES.txt'
+[1.875s] writing manifest file 'rlfw_msgs.egg-info/SOURCES.txt'
+[1.891s] [  2%] Built target ament_cmake_python_build_rlfw_msgs_egg
+[2.219s] [  8%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/remote__functions.c.o[0m
+[2.219s] [  8%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/joint__functions.c.o[0m
+[2.219s] [  8%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/can_msg__functions.c.o[0m
+[2.219s] [  8%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/serial_msg__functions.c.o[0m
+[2.219s] [  8%] Built target rlfw_msgs__cpp
+[2.221s] [  9%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/srv/detail/com_parameter__functions.c.o[0m
+[2.221s] [ 11%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_c.dir/rosidl_generator_c/rlfw_msgs/msg/detail/joint_ctrl__functions.c.o[0m
+[2.226s] [ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.226s] [ 15%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.226s] [ 15%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.286s] [ 16%] [32m[1mLinking C shared library librlfw_msgs__rosidl_generator_c.so[0m
+[2.313s] [ 16%] Built target rlfw_msgs__rosidl_generator_c
+[2.319s] [ 18%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.319s] [ 19%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.321s] [ 21%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.525s] [ 25%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rlfw_msgs/msg/remote__type_support.cpp.o[0m
+[2.525s] [ 25%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rlfw_msgs/msg/joint__type_support.cpp.o[0m
+[2.525s] [ 25%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rlfw_msgs/msg/joint_ctrl__type_support.cpp.o[0m
+[2.526s] [ 26%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rlfw_msgs/msg/can_msg__type_support.cpp.o[0m
+[2.526s] [ 28%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rlfw_msgs/msg/serial_msg__type_support.cpp.o[0m
+[2.526s] [ 29%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rlfw_msgs/srv/com_parameter__type_support.cpp.o[0m
+[2.573s] [ 30%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rlfw_msgs/msg/detail/joint__type_support.cpp.o[0m
+[2.573s] [ 32%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rlfw_msgs/msg/detail/remote__type_support.cpp.o[0m
+[2.573s] [ 33%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rlfw_msgs/msg/detail/can_msg__type_support.cpp.o[0m
+[2.573s] [ 35%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rlfw_msgs/msg/detail/joint_ctrl__type_support.cpp.o[0m
+[2.574s] [ 38%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rlfw_msgs/msg/detail/serial_msg__type_support.cpp.o[0m
+[2.574s] [ 38%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rlfw_msgs/srv/detail/com_parameter__type_support.cpp.o[0m
+[2.596s] [ 45%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/can_msg__type_support.cpp.o[0m
+[2.596s] [ 45%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/serial_msg__type_support.cpp.o[0m
+[2.596s] [ 45%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/joint_ctrl__type_support.cpp.o[0m
+[2.596s] [ 45%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/joint__type_support.cpp.o[0m
+[2.596s] [ 45%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/msg/detail/dds_fastrtps/remote__type_support.cpp.o[0m
+[2.725s] [ 46%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/joint__type_support.cpp.o[0m
+[2.842s] [ 47%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/joint_ctrl__type_support.cpp.o[0m
+[2.934s] [ 49%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/can_msg__type_support.cpp.o[0m
+[3.007s] [ 50%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/serial_msg__type_support.cpp.o[0m
+[3.029s] [ 52%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/msg/remote__type_support.cpp.o[0m
+[3.029s] [ 53%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rlfw_msgs/msg/detail/joint__type_support.c.o[0m
+[3.039s] [ 54%] [32m[1mLinking CXX shared library librlfw_msgs__rosidl_typesupport_cpp.so[0m
+[3.048s] [ 57%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rlfw_msgs/msg/detail/joint_ctrl__type_support.c.o[0m
+[3.048s] [ 57%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rlfw_msgs/srv/detail/dds_fastrtps/com_parameter__type_support.cpp.o[0m
+[3.048s] [ 59%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rlfw_msgs/srv/com_parameter__type_support.cpp.o[0m
+[3.055s] [ 60%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rlfw_msgs/msg/detail/can_msg__type_support.c.o[0m
+[3.072s] [ 61%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rlfw_msgs/msg/detail/serial_msg__type_support.c.o[0m
+[3.088s] [ 63%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rlfw_msgs/msg/detail/remote__type_support.c.o[0m
+[3.088s] [ 64%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rlfw_msgs/msg/detail/joint__type_support_c.cpp.o[0m
+[3.111s] [ 67%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rlfw_msgs/msg/detail/joint_ctrl__type_support_c.cpp.o[0m
+[3.111s] [ 67%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rlfw_msgs/srv/detail/com_parameter__type_support.c.o[0m
+[3.117s] [ 69%] [32m[1mLinking CXX shared library librlfw_msgs__rosidl_typesupport_c.so[0m
+[3.118s] [ 69%] Built target rlfw_msgs__rosidl_typesupport_cpp
+[3.133s] [ 70%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rlfw_msgs/msg/detail/serial_msg__type_support_c.cpp.o[0m
+[3.134s] [ 71%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rlfw_msgs/msg/detail/remote__type_support_c.cpp.o[0m
+[3.134s] [ 73%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rlfw_msgs/msg/detail/can_msg__type_support_c.cpp.o[0m
+[3.157s] [ 74%] [32mBuilding CXX object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rlfw_msgs/srv/detail/com_parameter__type_support_c.cpp.o[0m
+[3.193s] [ 76%] [32m[1mLinking C shared library librlfw_msgs__rosidl_typesupport_introspection_c.so[0m
+[3.230s] [ 76%] Built target rlfw_msgs__rosidl_typesupport_c
+[3.246s] [ 76%] Built target rlfw_msgs__rosidl_typesupport_introspection_c
+[3.253s] [ 77%] [32m[1mLinking CXX shared library librlfw_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[3.375s] [ 77%] Built target rlfw_msgs__rosidl_typesupport_introspection_cpp
+[3.439s] [ 78%] [32m[1mLinking CXX shared library librlfw_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[3.457s] [ 80%] [32m[1mLinking CXX shared library librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.489s] [ 80%] Built target rlfw_msgs__rosidl_typesupport_fastrtps_c
+[3.507s] [ 80%] Built target rlfw_msgs__rosidl_typesupport_fastrtps_cpp
+[3.520s] [ 80%] Built target rlfw_msgs
+[3.559s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.152s] [ 81%] Built target rlfw_msgs__py
+[4.168s] [ 85%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_can_msg_s.c.o[0m
+[4.168s] [ 85%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_ctrl_s.c.o[0m
+[4.168s] [ 85%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_joint_s.c.o[0m
+[4.169s] [ 87%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_remote_s.c.o[0m
+[4.169s] [ 88%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/srv/_com_parameter_s.c.o[0m
+[4.169s] [ 90%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_generator_py.dir/rosidl_generator_py/rlfw_msgs/msg/_serial_msg_s.c.o[0m
+[4.324s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/rlfw_msgs/librlfw_msgs__rosidl_generator_py.so[0m
+[4.361s] [ 91%] Built target rlfw_msgs__rosidl_generator_py
+[4.384s] [ 94%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.384s] [ 94%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[4.388s] [ 95%] [32mBuilding C object CMakeFiles/rlfw_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.446s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.446s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.450s] [100%] [32m[1mLinking C shared library rosidl_generator_py/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.467s] [100%] Built target rlfw_msgs__rosidl_typesupport_c__pyext
+[4.470s] [100%] Built target rlfw_msgs__rosidl_typesupport_fastrtps_c__pyext
+[4.474s] [100%] Built target rlfw_msgs__rosidl_typesupport_introspection_c__pyext
+[4.481s] Invoked command in '/home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs -- -j20 -l20
+[4.488s] Invoking command in '/home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs
+[4.493s] -- Install configuration: ""
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/ament_index/resource_index/rosidl_interfaces/rlfw_msgs
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint_ctrl.h
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/remote.h
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__functions.h
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.h
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__struct.h
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__functions.c
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__type_support.h
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__functions.h
+[4.493s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__functions.c
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__type_support.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__functions.c
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__struct.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__functions.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__functions.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__functions.c
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__functions.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__struct.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__struct.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__functions.c
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/can_msg.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__struct.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__type_support.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__functions.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__functions.c
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/com_parameter.h
+[4.494s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/environment/library_path.sh
+[4.539s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/environment/library_path.dsv
+[4.540s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_generator_c.so
+[4.541s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_generator_c.so" to ""
+[4.542s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs
+[4.542s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg
+[4.542s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail
+[4.542s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__rosidl_typesupport_fastrtps_c.h
+[4.542s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__rosidl_typesupport_fastrtps_c.h
+[4.543s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__rosidl_typesupport_fastrtps_c.h
+[4.543s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__rosidl_typesupport_fastrtps_c.h
+[4.543s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__rosidl_typesupport_fastrtps_c.h
+[4.543s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.544s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv
+[4.544s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail
+[4.545s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__rosidl_typesupport_fastrtps_c.h
+[4.545s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_fastrtps_c.so
+[4.546s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[4.547s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs
+[4.547s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg
+[4.547s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/serial_msg.hpp
+[4.547s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/remote.hpp
+[4.547s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail
+[4.547s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.hpp
+[4.548s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__struct.hpp
+[4.548s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__traits.hpp
+[4.548s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__traits.hpp
+[4.548s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__struct.hpp
+[4.548s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__type_support.hpp
+[4.548s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__struct.hpp
+[4.548s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__builder.hpp
+[4.549s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__traits.hpp
+[4.549s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.hpp
+[4.549s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__traits.hpp
+[4.549s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__builder.hpp
+[4.549s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__builder.hpp
+[4.549s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__builder.hpp
+[4.549s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__struct.hpp
+[4.550s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__type_support.hpp
+[4.550s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__builder.hpp
+[4.550s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.hpp
+[4.550s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__traits.hpp
+[4.550s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__struct.hpp
+[4.550s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/can_msg.hpp
+[4.550s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[4.551s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint.hpp
+[4.551s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/joint_ctrl.hpp
+[4.551s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv
+[4.551s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail
+[4.551s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__type_support.hpp
+[4.551s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__struct.hpp
+[4.552s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__builder.hpp
+[4.552s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__traits.hpp
+[4.552s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/com_parameter.hpp
+[4.552s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs
+[4.552s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg
+[4.552s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail
+[4.552s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[4.553s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__rosidl_typesupport_fastrtps_cpp.hpp
+[4.553s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[4.553s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/dds_fastrtps
+[4.553s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__rosidl_typesupport_fastrtps_cpp.hpp
+[4.553s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__rosidl_typesupport_fastrtps_cpp.hpp
+[4.553s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.553s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv
+[4.554s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail
+[4.554s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/dds_fastrtps
+[4.554s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__rosidl_typesupport_fastrtps_cpp.hpp
+[4.554s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so
+[4.554s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.554s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs
+[4.555s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg
+[4.555s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail
+[4.555s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__rosidl_typesupport_introspection_c.h
+[4.555s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__rosidl_typesupport_introspection_c.h
+[4.555s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__rosidl_typesupport_introspection_c.h
+[4.555s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.c
+[4.555s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.c
+[4.555s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__type_support.c
+[4.555s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.c
+[4.556s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__rosidl_typesupport_introspection_c.h
+[4.556s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__rosidl_typesupport_introspection_c.h
+[4.556s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__type_support.c
+[4.556s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.556s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv
+[4.556s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail
+[4.556s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__type_support.c
+[4.556s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__rosidl_typesupport_introspection_c.h
+[4.556s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_introspection_c.so
+[4.557s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_introspection_c.so" to ""
+[4.557s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_c.so
+[4.557s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_c.so" to ""
+[4.557s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs
+[4.557s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg
+[4.557s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__type_support.cpp
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__rosidl_typesupport_introspection_cpp.hpp
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__rosidl_typesupport_introspection_cpp.hpp
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__type_support.cpp
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__type_support.cpp
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/remote__rosidl_typesupport_introspection_cpp.hpp
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/serial_msg__rosidl_typesupport_introspection_cpp.hpp
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint__rosidl_typesupport_introspection_cpp.hpp
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/can_msg__type_support.cpp
+[4.558s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/msg/detail/joint_ctrl__type_support.cpp
+[4.558s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv
+[4.559s] -- Up-to-date: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail
+[4.559s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__rosidl_typesupport_introspection_cpp.hpp
+[4.559s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/include/rlfw_msgs/rlfw_msgs/srv/detail/com_parameter__type_support.cpp
+[4.559s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_introspection_cpp.so
+[4.559s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[4.559s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_cpp.so
+[4.559s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_typesupport_cpp.so" to ""
+[4.560s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/environment/pythonpath.sh
+[4.560s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/environment/pythonpath.dsv
+[4.560s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs-0.0.0-py3.10.egg-info
+[4.560s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[4.560s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_c.c
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/_rlfw_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/librlfw_msgs__rosidl_generator_py.so
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_can_msg_s.c
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_remote_s.c
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_serial_msg.py
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_remote.py
+[4.561s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_serial_msg_s.c
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_joint_ctrl_s.c
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_can_msg.py
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_joint_ctrl.py
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/__init__.py
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_joint_s.c
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_joint.py
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/srv
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/srv/_com_parameter_s.c
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/srv/_com_parameter.py
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/srv/__init__.py
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.562s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/__init__.py
+[4.641s] Listing '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs'...
+[4.642s] Compiling '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/__init__.py'...
+[4.642s] Listing '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg'...
+[4.642s] Compiling '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/__init__.py'...
+[4.642s] Compiling '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_can_msg.py'...
+[4.642s] Compiling '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_joint.py'...
+[4.642s] Compiling '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_joint_ctrl.py'...
+[4.642s] Compiling '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_remote.py'...
+[4.642s] Compiling '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/msg/_serial_msg.py'...
+[4.642s] Listing '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/srv'...
+[4.642s] Compiling '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/srv/__init__.py'...
+[4.642s] Compiling '/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/srv/_com_parameter.py'...
+[4.644s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.644s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.644s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.644s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.644s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.645s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/local/lib/python3.10/dist-packages/rlfw_msgs/rlfw_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_generator_py.so
+[4.645s] -- Set runtime path of "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib/librlfw_msgs__rosidl_generator_py.so" to ""
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/Joint.idl
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/JointCtrl.idl
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/CanMsg.idl
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/SerialMsg.idl
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/Remote.idl
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/srv/ComParameter.idl
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/Joint.msg
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/JointCtrl.msg
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/CanMsg.msg
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/SerialMsg.msg
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/msg/Remote.msg
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/srv/ComParameter.srv
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/srv/ComParameter_Request.msg
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/srv/ComParameter_Response.msg
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/ament_index/resource_index/package_run_dependencies/rlfw_msgs
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/ament_index/resource_index/parent_prefix_path/rlfw_msgs
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/environment/ament_prefix_path.sh
+[4.645s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/environment/ament_prefix_path.dsv
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/environment/path.sh
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/environment/path.dsv
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/local_setup.bash
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/local_setup.sh
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/local_setup.zsh
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/local_setup.dsv
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/package.dsv
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/ament_index/resource_index/packages/rlfw_msgs
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/export_rlfw_msgs__rosidl_generator_cExport.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/export_rlfw_msgs__rosidl_generator_cExport-noconfig.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/export_rlfw_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/export_rlfw_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/export_rlfw_msgs__rosidl_generator_cppExport.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/export_rlfw_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/export_rlfw_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgs__rosidl_typesupport_introspection_cExport.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgs__rosidl_typesupport_cExport.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgs__rosidl_typesupport_cppExport.cmake
+[4.646s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/export_rlfw_msgs__rosidl_generator_pyExport.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/export_rlfw_msgs__rosidl_generator_pyExport-noconfig.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rosidl_cmake-extras.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgsConfig.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake/rlfw_msgsConfig-version.cmake
+[4.647s] -- Installing: /home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/package.xml
+[4.649s] Invoked command in '/home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs

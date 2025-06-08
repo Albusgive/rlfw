@@ -1,4 +1,4 @@
-# Install script for directory: /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter
+# Install script for directory: /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump-14")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -49,29 +49,29 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CommunicationCenter/CommunicationCenter"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/CommunicationCenter" TYPE EXECUTABLE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CommunicationCenter")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/CommunicationCenter" TYPE EXECUTABLE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/CommunicationCenter")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CommunicationCenter/CommunicationCenter" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CommunicationCenter/CommunicationCenter")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CommunicationCenter/CommunicationCenter"
-         OLD_RPATH "/opt/ros/humble/lib:/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CommunicationCenter/CommunicationCenter")
+      execute_process(COMMAND "/usr/bin/llvm-strip-14" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CommunicationCenter/CommunicationCenter")
     endif()
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/motor_cfg.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/robot_cfg.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/CommunicationCenter")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/CommunicationCenter")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/CommunicationCenter")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/CommunicationCenter")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -79,7 +79,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter/environment" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter/environment" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -87,48 +87,48 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter/environment" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter/environment" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_index/share/ament_index/resource_index/packages/CommunicationCenter")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_index/share/ament_index/resource_index/packages/CommunicationCenter")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter/cmake" TYPE FILE FILES
-    "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_core/CommunicationCenterConfig.cmake"
-    "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_core/CommunicationCenterConfig-version.cmake"
+    "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_core/CommunicationCenterConfig.cmake"
+    "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/ament_cmake_core/CommunicationCenterConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/CommunicationCenter" TYPE FILE FILES "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/magic_enum/cmake_install.cmake")
-  include("/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/tinyxml2/cmake_install.cmake")
+  include("/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/magic_enum/cmake_install.cmake")
+  include("/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/tinyxml2/cmake_install.cmake")
 
 endif()
 
@@ -140,5 +140,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

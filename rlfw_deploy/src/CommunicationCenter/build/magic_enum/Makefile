@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter
+CMAKE_SOURCE_DIR = /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build
+CMAKE_BINARY_DIR = /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/magic_enum//CMakeFiles/progress.marks
-	cd /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 magic_enum/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles 0
+	cd /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/magic_enum//CMakeFiles/progress.marks
+	cd /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 magic_enum/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 magic_enum/clean
+	cd /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 magic_enum/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,17 +158,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 magic_enum/preinstall
+	cd /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 magic_enum/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 magic_enum/preinstall
+	cd /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 magic_enum/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -195,6 +195,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -3,9 +3,10 @@
 #include "BaseRemote.h"
 #include "DMMotor.h"
 #include "MiMotor.h"
+#include "STWMotor.h"
 #include "Motor.hpp"
 #include "PCAN.hpp"
-#include "SocketCan.h"
+#include "SocketCAN.h"
 #include "XMLDecoder.hpp"
 #include "gamepad.h"
 #include "geometry_msgs/msg/twist.hpp"
@@ -51,7 +52,6 @@ public:
   void fromSerialMotor() {};
   void fromRemote(std::vector<std::string> &key, std::vector<float> &value);
   // 所有com的接收均在独立线程
-  void RunRecv();
 
 private:
   // 在主线程的端口发送 pcan发送一次约0.14ms(12400f)
@@ -79,8 +79,8 @@ private:
       const std::shared_ptr<rlfw_msgs::srv::ComParameter::Request> request,
       std::shared_ptr<rlfw_msgs::srv::ComParameter::Response> response);
 
-  std::string motor_cfg_path =
-      "./install/" + std::string(PROJECT_NAME) + "/share/motor_cfg.xml";
+  std::string robot_cfg_path =
+      "./install/" + std::string(PROJECT_NAME) + "/share/robot_cfg.xml";
   // 加载配置
   XMLDecoder xml_decoder;
   // 注册电机解码器

@@ -1,0 +1,800 @@
+[0.006s] Invoking command in '/home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter -DCMAKE_INSTALL_PREFIX=/home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter
+[0.171s] -- The C compiler identification is GNU 13.1.0
+[0.225s] -- The CXX compiler identification is GNU 13.1.0
+[0.253s] -- Detecting C compiler ABI info
+[0.381s] -- Detecting C compiler ABI info - done
+[0.388s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.391s] -- Detecting C compile features
+[0.391s] -- Detecting C compile features - done
+[0.394s] -- Detecting CXX compiler ABI info
+[0.493s] -- Detecting CXX compiler ABI info - done
+[0.500s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.500s] -- Detecting CXX compile features
+[0.501s] -- Detecting CXX compile features - done
+[0.527s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.678s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.736s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.778s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.781s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.786s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.793s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.801s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.823s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.824s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.897s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.939s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.968s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.976s] -- Looking for pthread.h
+[1.088s] -- Looking for pthread.h - found
+[1.088s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.191s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.192s] -- Found Threads: TRUE  
+[1.224s] -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
+[1.253s] -- Found rlfw_msgs: 0.0.0 (/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs/share/rlfw_msgs/cmake)
+[1.264s] -- Found tf2_geometry_msgs: 0.25.11 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.283s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.283s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.283s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.326s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.342s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.371s] WARNING: Package name "CommunicationCenter" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[1.396s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.396s] -- Configured cppcheck include dirs: /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/include;/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver;/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/remote_driver
+[1.396s] -- Configured cppcheck exclude dirs and/or files: 
+[1.398s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.401s] -- Added test 'lint_cmake' to check CMake code style
+[1.403s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.416s] -- Added test 'uncrustify' to check C / C++ code style
+[1.416s] -- Configured uncrustify additional arguments: 
+[1.418s] -- Added test 'xmllint' to check XML markup files
+[1.419s] -- Configuring done
+[1.431s] -- Generating done
+[1.436s] -- Build files have been written to: /home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter
+[1.443s] Invoked command in '/home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter -DCMAKE_INSTALL_PREFIX=/home/albusgive/rlfw/rlfw_deploy/install/CommunicationCenter
+[1.444s] Invoking command in '/home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter -- -j20 -l20
+[1.488s] [  5%] [32mBuilding CXX object tinyxml2/CMakeFiles/tinyxml2.dir/tinyxml2.cpp.o[0m
+[1.670s] [ 11%] [32m[1mLinking CXX static library libtinyxml2.a[0m
+[1.731s] [ 11%] Built target tinyxml2
+[1.759s] [ 17%] [32mBuilding CXX object tinyxml2/CMakeFiles/xmltest.dir/xmltest.cpp.o[0m
+[1.759s] [ 35%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/DMMotor.cpp.o[0m
+[1.759s] [ 35%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/serial.cpp.o[0m
+[1.759s] [ 35%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.o[0m
+[1.759s] [ 41%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/SocketCan.cpp.o[0m
+[1.759s] [ 47%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/MiMotor.cpp.o[0m
+[1.759s] [ 52%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/STWMotor.cpp.o[0m
+[1.760s] [ 64%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/PCAN.cpp.o[0m
+[1.760s] [ 64%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/ParallelMechanism..cpp.o[0m
+[1.760s] [ 70%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/remote_driver/gamepad.cpp.o[0m
+[1.760s] [ 76%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o[0m
+[1.762s] [ 82%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/src/main.cpp.o[0m
+[1.763s] [ 88%] [32mBuilding CXX object CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.o[0m
+[2.080s] [ 94%] [32m[1mLinking CXX executable xmltest[0m
+[2.248s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In lambda function:
+[2.248s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:394:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<unsigned char>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.248s]   394 |       if ([01;35m[Klast_size == recv_queue.size()[m[K) {
+[2.248s]       |           [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[2.337s] In file included from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:4[m[K,
+[2.337s]                  from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:1[m[K:
+[2.337s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:273:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K()[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.337s]   273 |   MotorBack [01;35m[Kdecode[m[K() override { return MotorBack(); };
+[2.338s]       |             [01;35m[K^~~~~~[m[K
+[2.338s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:69:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack STWMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.338s]    69 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.338s]       |             [01;36m[K^~~~~~[m[K
+[2.338s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:272:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K(UnitreeMsg)[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.338s]   272 |   MotorBack [01;35m[Kdecode[m[K(UnitreeMsg /*msg*/) override { return MotorBack(); };
+[2.338s]       |             [01;35m[K^~~~~~[m[K
+[2.338s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:69:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack STWMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.338s]    69 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.338s]       |             [01;36m[K^~~~~~[m[K
+[2.338s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_pos[m[K(uint8_t, float)[m[K’:
+[2.338s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:76:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.338s]    76 |   STWCANMsg *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) override { return nullptr; };
+[2.338s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.338s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:76:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.339s]    76 |   STWCANMsg *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override { return nullptr; };
+[2.339s]       |                                         [01;35m[K~~~~~~^~~[m[K
+[2.339s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_vel[m[K(uint8_t, float)[m[K’:
+[2.339s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:78:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.339s]    78 |   STWCANMsg *ctrl_vel([01;35m[Kuint8_t motor_id[m[K, float vel) override { return nullptr; };
+[2.339s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.339s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:78:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.339s]    78 |   STWCANMsg *ctrl_vel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override { return nullptr; };
+[2.339s]       |                                         [01;35m[K~~~~~~^~~[m[K
+[2.339s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_pos_vel[m[K(uint8_t, float, float)[m[K’:
+[2.339s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:80:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.339s]    80 |   STWCANMsg *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) override {
+[2.339s]       |                           [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.339s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:80:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.340s]    80 |   STWCANMsg *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) override {
+[2.340s]       |                                             [01;35m[K~~~~~~^~~[m[K
+[2.340s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:80:62:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.340s]    80 |   STWCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) override {
+[2.340s]       |                                                        [01;35m[K~~~~~~^~~[m[K
+[2.340s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_torque[m[K(uint8_t, float)[m[K’:
+[2.340s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:84:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.340s]    84 |   STWCANMsg *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.340s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.340s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:84:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.340s]    84 |   STWCANMsg *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.340s]       |                                            [01;35m[K~~~~~~^~~~~~[m[K
+[2.340s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetPosKP[m[K(uint8_t, float)[m[K’:
+[2.340s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:90:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.340s]    90 |   STWCANMsg *setPosKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.341s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.341s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:90:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.341s]    90 |   STWCANMsg *setPosKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.341s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.341s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetPosKD[m[K(uint8_t, float)[m[K’:
+[2.341s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:91:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.341s]    91 |   STWCANMsg *setPosKD([01;35m[Kuint8_t motor_id[m[K, float kd) override { return nullptr; };
+[2.341s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.341s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:91:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.341s]    91 |   STWCANMsg *setPosKD(uint8_t motor_id, [01;35m[Kfloat kd[m[K) override { return nullptr; };
+[2.341s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.341s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetVelKP[m[K(uint8_t, float)[m[K’:
+[2.341s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:93:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.341s]    93 |   STWCANMsg *setVelKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.341s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.342s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:93:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.342s]    93 |   STWCANMsg *setVelKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.342s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.342s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetVelKI[m[K(uint8_t, float)[m[K’:
+[2.342s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:94:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.342s]    94 |   STWCANMsg *setVelKI([01;35m[Kuint8_t motor_id[m[K, float ki) override { return nullptr; };
+[2.342s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.342s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:94:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.342s]    94 |   STWCANMsg *setVelKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override { return nullptr; };
+[2.342s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.342s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetTorqueKP[m[K(uint8_t, float)[m[K’:
+[2.342s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:96:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.342s]    96 |   STWCANMsg *setTorqueKP([01;35m[Kuint8_t motor_id[m[K, float kp) override {
+[2.342s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.342s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:96:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.342s]    96 |   STWCANMsg *setTorqueKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override {
+[2.342s]       |                                            [01;35m[K~~~~~~^~[m[K
+[2.343s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetTorqueKI[m[K(uint8_t, float)[m[K’:
+[2.343s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:99:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.343s]    99 |   STWCANMsg *setTorqueKI([01;35m[Kuint8_t motor_id[m[K, float ki) override {
+[2.343s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.343s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:99:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.343s]    99 |   STWCANMsg *setTorqueKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override {
+[2.343s]       |                                            [01;35m[K~~~~~~^~[m[K
+[2.343s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetSafeTorque[m[K(uint8_t, float)[m[K’:
+[2.343s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:103:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.343s]   103 |   STWCANMsg *setSafeTorque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.343s]       |                            [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.343s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:103:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.343s]   103 |   STWCANMsg *setSafeTorque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.343s]       |                                              [01;35m[K~~~~~~^~~~~~[m[K
+[2.343s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetSafePos[m[K(uint8_t, float)[m[K’:
+[2.344s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:106:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.344s]   106 |   STWCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) override {
+[2.344s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.344s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:106:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.344s]   106 |   STWCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override {
+[2.344s]       |                                           [01;35m[K~~~~~~^~~[m[K
+[2.344s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetSafeVel[m[K(uint8_t, float)[m[K’:
+[2.344s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:109:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.344s]   109 |   STWCANMsg *setSafeVel([01;35m[Kuint8_t motor_id[m[K, float vel) override {
+[2.344s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.344s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:109:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.344s]   109 |   STWCANMsg *setSafeVel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override {
+[2.344s]       |                                           [01;35m[K~~~~~~^~~[m[K
+[2.344s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KenableMotor[m[K(uint8_t, bool, bool)[m[K’:
+[2.344s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:7:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kclear_fault[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.344s]     7 |                                  [01;35m[Kbool clear_fault[m[K) {
+[2.345s]       |                                  [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[2.345s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetCtrlType[m[K(uint8_t)[m[K’:
+[2.345s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:138:10:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KMIT[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+[2.345s]   138 |   switch [01;35m[K([m[Kctrl_type) {
+[2.345s]       |          [01;35m[K^[m[K
+[2.345s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:138:10:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KPOS_VEL[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+[2.345s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:138:10:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KENABLE[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+[2.345s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:138:10:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KDISABLE[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+[2.345s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:138:10:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KSETZERO[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+[2.345s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.cpp:138:10:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KERR[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+[2.348s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:[m[K In member function ‘[01m[Kbool Serial::[01;32m[KOpenSerial[m[K(std::string, int, int, int, int)[m[K’:
+[2.348s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:41:17:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[2.348s]    41 |     Opt.c_cflag [01;35m[K|[m[K= CS6;
+[2.348s]       |                 [01;35m[K^[m[K
+[2.348s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/serial.cpp:42:3:[m[K [01;36m[Knote: [m[Khere
+[2.348s]    42 |   [01;36m[Kcase[m[K 7:
+[2.348s]       |   [01;36m[K^~~~[m[K
+[2.357s] [ 94%] Built target xmltest
+[2.424s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.cpp:[m[K In member function ‘[01m[Kvirtual MiCANMsg* MiMotor::[01;32m[KsetCtrlType[m[K(uint8_t)[m[K’:
+[2.424s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.cpp:174:10:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KDISABLE[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+[2.424s]   174 |   switch [01;35m[K([m[Kctrl_type) {
+[2.424s]       |          [01;35m[K^[m[K
+[2.424s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/MiMotor.cpp:174:10:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KSETZERO[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+[2.431s] In file included from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:3[m[K,
+[2.431s]                  from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.cpp:1[m[K:
+[2.431s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:273:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K()[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.431s]   273 |   MotorBack [01;35m[Kdecode[m[K() override { return MotorBack(); };
+[2.431s]       |             [01;35m[K^~~~~~[m[K
+[2.431s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:50:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack DMMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.431s]    50 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.432s]       |             [01;36m[K^~~~~~[m[K
+[2.432s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:272:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K(UnitreeMsg)[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.432s]   272 |   MotorBack [01;35m[Kdecode[m[K(UnitreeMsg /*msg*/) override { return MotorBack(); };
+[2.432s]       |             [01;35m[K^~~~~~[m[K
+[2.432s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:50:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack DMMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.432s]    50 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.432s]       |             [01;36m[K^~~~~~[m[K
+[2.432s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetCtrlType[m[K(uint8_t)[m[K’:
+[2.432s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:55:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.432s]    55 |   DMCANMsg *setCtrlType([01;35m[Kuint8_t motor_id[m[K) override { return nullptr; };
+[2.432s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.432s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_pos[m[K(uint8_t, float)[m[K’:
+[2.432s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.432s]    57 |   DMCANMsg *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) override { return nullptr; };
+[2.432s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.432s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.432s]    57 |   DMCANMsg *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override { return nullptr; };
+[2.432s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[2.432s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_vel[m[K(uint8_t, float)[m[K’:
+[2.432s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.432s]    59 |   DMCANMsg *ctrl_vel([01;35m[Kuint8_t motor_id[m[K, float vel) override { return nullptr; };
+[2.432s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.433s]    59 |   DMCANMsg *ctrl_vel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override { return nullptr; };
+[2.433s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_pos_vel[m[K(uint8_t, float, float)[m[K’:
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:61:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.433s]    61 |   DMCANMsg *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) override {
+[2.433s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:61:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.433s]    61 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) override {
+[2.433s]       |                                            [01;35m[K~~~~~~^~~[m[K
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:61:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.433s]    61 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) override {
+[2.433s]       |                                                       [01;35m[K~~~~~~^~~[m[K
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_torque[m[K(uint8_t, float)[m[K’:
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.433s]    65 |   DMCANMsg *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.433s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.433s]    65 |   DMCANMsg *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.433s]       |                                           [01;35m[K~~~~~~^~~~~~[m[K
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetPosKP[m[K(uint8_t, float)[m[K’:
+[2.433s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:70:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.433s]    70 |   DMCANMsg *setPosKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.434s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.434s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:70:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.434s]    70 |   DMCANMsg *setPosKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.434s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.434s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetPosKD[m[K(uint8_t, float)[m[K’:
+[2.434s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.434s]    71 |   DMCANMsg *setPosKD([01;35m[Kuint8_t motor_id[m[K, float kd) override { return nullptr; };
+[2.434s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.434s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.434s]    71 |   DMCANMsg *setPosKD(uint8_t motor_id, [01;35m[Kfloat kd[m[K) override { return nullptr; };
+[2.434s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.434s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetVelKP[m[K(uint8_t, float)[m[K’:
+[2.434s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:73:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.434s]    73 |   DMCANMsg *setVelKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.434s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.434s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:73:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.434s]    73 |   DMCANMsg *setVelKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.434s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.434s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetVelKI[m[K(uint8_t, float)[m[K’:
+[2.434s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.434s]    74 |   DMCANMsg *setVelKI([01;35m[Kuint8_t motor_id[m[K, float ki) override { return nullptr; };
+[2.434s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.435s]    74 |   DMCANMsg *setVelKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override { return nullptr; };
+[2.435s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetTorqueKP[m[K(uint8_t, float)[m[K’:
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.435s]    76 |   DMCANMsg *setTorqueKP([01;35m[Kuint8_t motor_id[m[K, float kp) override {
+[2.435s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.435s]    76 |   DMCANMsg *setTorqueKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override {
+[2.435s]       |                                           [01;35m[K~~~~~~^~[m[K
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetTorqueKI[m[K(uint8_t, float)[m[K’:
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:79:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.435s]    79 |   DMCANMsg *setTorqueKI([01;35m[Kuint8_t motor_id[m[K, float ki) override {
+[2.435s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:79:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.435s]    79 |   DMCANMsg *setTorqueKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override {
+[2.435s]       |                                           [01;35m[K~~~~~~^~[m[K
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetSafeTorque[m[K(uint8_t, float)[m[K’:
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:83:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.435s]    83 |   DMCANMsg *setSafeTorque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.435s]       |                           [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.435s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:83:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.436s]    83 |   DMCANMsg *setSafeTorque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.436s]       |                                             [01;35m[K~~~~~~^~~~~~[m[K
+[2.436s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetSafePos[m[K(uint8_t, float)[m[K’:
+[2.436s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:86:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.436s]    86 |   DMCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) override {
+[2.436s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.436s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:86:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.436s]    86 |   DMCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override {
+[2.436s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[2.436s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetSafeVel[m[K(uint8_t, float)[m[K’:
+[2.436s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:89:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.436s]    89 |   DMCANMsg *setSafeVel([01;35m[Kuint8_t motor_id[m[K, float vel) override {
+[2.436s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.436s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:89:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.436s]    89 |   DMCANMsg *setSafeVel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override {
+[2.436s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[2.463s] In file included from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:3[m[K,
+[2.463s]                  from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.hpp:4[m[K,
+[2.463s]                  from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:1[m[K:
+[2.463s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:273:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K()[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.463s]   273 |   MotorBack [01;35m[Kdecode[m[K() override { return MotorBack(); };
+[2.463s]       |             [01;35m[K^~~~~~[m[K
+[2.463s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:50:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack DMMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.463s]    50 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.463s]       |             [01;36m[K^~~~~~[m[K
+[2.463s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:272:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K(UnitreeMsg)[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.464s]   272 |   MotorBack [01;35m[Kdecode[m[K(UnitreeMsg /*msg*/) override { return MotorBack(); };
+[2.464s]       |             [01;35m[K^~~~~~[m[K
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:50:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack DMMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.464s]    50 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.464s]       |             [01;36m[K^~~~~~[m[K
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetCtrlType[m[K(uint8_t)[m[K’:
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:55:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.464s]    55 |   DMCANMsg *setCtrlType([01;35m[Kuint8_t motor_id[m[K) override { return nullptr; };
+[2.464s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_pos[m[K(uint8_t, float)[m[K’:
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.464s]    57 |   DMCANMsg *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) override { return nullptr; };
+[2.464s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.464s]    57 |   DMCANMsg *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override { return nullptr; };
+[2.464s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_vel[m[K(uint8_t, float)[m[K’:
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.464s]    59 |   DMCANMsg *ctrl_vel([01;35m[Kuint8_t motor_id[m[K, float vel) override { return nullptr; };
+[2.464s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.464s]    59 |   DMCANMsg *ctrl_vel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override { return nullptr; };
+[2.464s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[2.464s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_pos_vel[m[K(uint8_t, float, float)[m[K’:
+[2.465s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:61:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.465s]    61 |   DMCANMsg *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) override {
+[2.465s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.465s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:61:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.465s]    61 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) override {
+[2.465s]       |                                            [01;35m[K~~~~~~^~~[m[K
+[2.465s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:61:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.465s]    61 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) override {
+[2.465s]       |                                                       [01;35m[K~~~~~~^~~[m[K
+[2.465s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_torque[m[K(uint8_t, float)[m[K’:
+[2.465s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.465s]    65 |   DMCANMsg *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.465s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.465s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.465s]    65 |   DMCANMsg *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.465s]       |                                           [01;35m[K~~~~~~^~~~~~[m[K
+[2.465s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetPosKP[m[K(uint8_t, float)[m[K’:
+[2.465s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:70:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.465s]    70 |   DMCANMsg *setPosKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.465s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.465s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:70:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.466s]    70 |   DMCANMsg *setPosKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.466s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.466s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetPosKD[m[K(uint8_t, float)[m[K’:
+[2.466s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.466s]    71 |   DMCANMsg *setPosKD([01;35m[Kuint8_t motor_id[m[K, float kd) override { return nullptr; };
+[2.466s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.466s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.466s]    71 |   DMCANMsg *setPosKD(uint8_t motor_id, [01;35m[Kfloat kd[m[K) override { return nullptr; };
+[2.466s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.466s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetVelKP[m[K(uint8_t, float)[m[K’:
+[2.466s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:73:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.466s]    73 |   DMCANMsg *setVelKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.466s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.466s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:73:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.466s]    73 |   DMCANMsg *setVelKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.466s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.466s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetVelKI[m[K(uint8_t, float)[m[K’:
+[2.466s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.466s]    74 |   DMCANMsg *setVelKI([01;35m[Kuint8_t motor_id[m[K, float ki) override { return nullptr; };
+[2.466s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.467s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.467s]    74 |   DMCANMsg *setVelKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override { return nullptr; };
+[2.467s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.467s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetTorqueKP[m[K(uint8_t, float)[m[K’:
+[2.467s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.467s]    76 |   DMCANMsg *setTorqueKP([01;35m[Kuint8_t motor_id[m[K, float kp) override {
+[2.467s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.467s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.467s]    76 |   DMCANMsg *setTorqueKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override {
+[2.467s]       |                                           [01;35m[K~~~~~~^~[m[K
+[2.467s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetTorqueKI[m[K(uint8_t, float)[m[K’:
+[2.467s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:79:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.467s]    79 |   DMCANMsg *setTorqueKI([01;35m[Kuint8_t motor_id[m[K, float ki) override {
+[2.467s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.467s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:79:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.467s]    79 |   DMCANMsg *setTorqueKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override {
+[2.468s]       |                                           [01;35m[K~~~~~~^~[m[K
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetSafeTorque[m[K(uint8_t, float)[m[K’:
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:83:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.468s]    83 |   DMCANMsg *setSafeTorque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.468s]       |                           [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:83:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.468s]    83 |   DMCANMsg *setSafeTorque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.468s]       |                                             [01;35m[K~~~~~~^~~~~~[m[K
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetSafePos[m[K(uint8_t, float)[m[K’:
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:86:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.468s]    86 |   DMCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) override {
+[2.468s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:86:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.468s]    86 |   DMCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override {
+[2.468s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetSafeVel[m[K(uint8_t, float)[m[K’:
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:89:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.468s]    89 |   DMCANMsg *setSafeVel([01;35m[Kuint8_t motor_id[m[K, float vel) override {
+[2.468s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:89:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.468s]    89 |   DMCANMsg *setSafeVel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override {
+[2.468s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[2.468s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:[m[K At global scope:
+[2.469s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:273:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K()[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.469s]   273 |   MotorBack [01;35m[Kdecode[m[K() override { return MotorBack(); };
+[2.469s]       |             [01;35m[K^~~~~~[m[K
+[2.469s] In file included from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.hpp:6[m[K:
+[2.469s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:69:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack STWMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.469s]    69 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.469s]       |             [01;36m[K^~~~~~[m[K
+[2.469s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:272:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K(UnitreeMsg)[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.469s]   272 |   MotorBack [01;35m[Kdecode[m[K(UnitreeMsg /*msg*/) override { return MotorBack(); };
+[2.469s]       |             [01;35m[K^~~~~~[m[K
+[2.469s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:69:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack STWMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.469s]    69 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.469s]       |             [01;36m[K^~~~~~[m[K
+[2.469s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_pos[m[K(uint8_t, float)[m[K’:
+[2.469s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:76:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.469s]    76 |   STWCANMsg *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) override { return nullptr; };
+[2.470s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.470s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:76:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.470s]    76 |   STWCANMsg *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override { return nullptr; };
+[2.470s]       |                                         [01;35m[K~~~~~~^~~[m[K
+[2.470s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_vel[m[K(uint8_t, float)[m[K’:
+[2.470s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:78:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.470s]    78 |   STWCANMsg *ctrl_vel([01;35m[Kuint8_t motor_id[m[K, float vel) override { return nullptr; };
+[2.470s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.470s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:78:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.470s]    78 |   STWCANMsg *ctrl_vel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override { return nullptr; };
+[2.470s]       |                                         [01;35m[K~~~~~~^~~[m[K
+[2.470s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_pos_vel[m[K(uint8_t, float, float)[m[K’:
+[2.470s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:80:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.470s]    80 |   STWCANMsg *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) override {
+[2.470s]       |                           [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.470s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:80:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.471s]    80 |   STWCANMsg *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) override {
+[2.471s]       |                                             [01;35m[K~~~~~~^~~[m[K
+[2.471s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:80:62:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.471s]    80 |   STWCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) override {
+[2.471s]       |                                                        [01;35m[K~~~~~~^~~[m[K
+[2.471s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_torque[m[K(uint8_t, float)[m[K’:
+[2.471s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:84:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.471s]    84 |   STWCANMsg *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.471s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.471s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:84:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.471s]    84 |   STWCANMsg *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.471s]       |                                            [01;35m[K~~~~~~^~~~~~[m[K
+[2.471s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetPosKP[m[K(uint8_t, float)[m[K’:
+[2.471s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:90:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.472s]    90 |   STWCANMsg *setPosKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.472s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.472s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:90:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.472s]    90 |   STWCANMsg *setPosKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.472s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.472s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetPosKD[m[K(uint8_t, float)[m[K’:
+[2.472s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:91:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.472s]    91 |   STWCANMsg *setPosKD([01;35m[Kuint8_t motor_id[m[K, float kd) override { return nullptr; };
+[2.472s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.472s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:91:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.472s]    91 |   STWCANMsg *setPosKD(uint8_t motor_id, [01;35m[Kfloat kd[m[K) override { return nullptr; };
+[2.472s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.472s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetVelKP[m[K(uint8_t, float)[m[K’:
+[2.472s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:93:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.472s]    93 |   STWCANMsg *setVelKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.472s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.473s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:93:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.473s]    93 |   STWCANMsg *setVelKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.473s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.473s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetVelKI[m[K(uint8_t, float)[m[K’:
+[2.473s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:94:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.473s]    94 |   STWCANMsg *setVelKI([01;35m[Kuint8_t motor_id[m[K, float ki) override { return nullptr; };
+[2.473s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.473s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:94:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.473s]    94 |   STWCANMsg *setVelKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override { return nullptr; };
+[2.473s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.473s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetTorqueKP[m[K(uint8_t, float)[m[K’:
+[2.473s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:96:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.473s]    96 |   STWCANMsg *setTorqueKP([01;35m[Kuint8_t motor_id[m[K, float kp) override {
+[2.473s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.473s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:96:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.473s]    96 |   STWCANMsg *setTorqueKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override {
+[2.473s]       |                                            [01;35m[K~~~~~~^~[m[K
+[2.473s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetTorqueKI[m[K(uint8_t, float)[m[K’:
+[2.474s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:99:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.474s]    99 |   STWCANMsg *setTorqueKI([01;35m[Kuint8_t motor_id[m[K, float ki) override {
+[2.474s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.474s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:99:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.474s]    99 |   STWCANMsg *setTorqueKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override {
+[2.474s]       |                                            [01;35m[K~~~~~~^~[m[K
+[2.474s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetSafeTorque[m[K(uint8_t, float)[m[K’:
+[2.474s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:103:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.474s]   103 |   STWCANMsg *setSafeTorque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.474s]       |                            [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.474s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:103:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.474s]   103 |   STWCANMsg *setSafeTorque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.474s]       |                                              [01;35m[K~~~~~~^~~~~~[m[K
+[2.474s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetSafePos[m[K(uint8_t, float)[m[K’:
+[2.474s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:106:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.474s]   106 |   STWCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) override {
+[2.474s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.474s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:106:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.475s]   106 |   STWCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override {
+[2.475s]       |                                           [01;35m[K~~~~~~^~~[m[K
+[2.475s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetSafeVel[m[K(uint8_t, float)[m[K’:
+[2.475s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:109:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.475s]   109 |   STWCANMsg *setSafeVel([01;35m[Kuint8_t motor_id[m[K, float vel) override {
+[2.475s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.475s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:109:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.475s]   109 |   STWCANMsg *setSafeVel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override {
+[2.475s]       |                                           [01;35m[K~~~~~~^~~[m[K
+[2.607s] In file included from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:3[m[K,
+[2.607s]                  from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.hpp:4[m[K,
+[2.607s]                  from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/main.cpp:1[m[K:
+[2.607s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:273:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K()[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.607s]   273 |   MotorBack [01;35m[Kdecode[m[K() override { return MotorBack(); };
+[2.607s]       |             [01;35m[K^~~~~~[m[K
+[2.607s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:50:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack DMMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.608s]    50 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.608s]       |             [01;36m[K^~~~~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:272:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K(UnitreeMsg)[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.608s]   272 |   MotorBack [01;35m[Kdecode[m[K(UnitreeMsg /*msg*/) override { return MotorBack(); };
+[2.608s]       |             [01;35m[K^~~~~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:50:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack DMMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.608s]    50 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.608s]       |             [01;36m[K^~~~~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetCtrlType[m[K(uint8_t)[m[K’:
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:55:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.608s]    55 |   DMCANMsg *setCtrlType([01;35m[Kuint8_t motor_id[m[K) override { return nullptr; };
+[2.608s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_pos[m[K(uint8_t, float)[m[K’:
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.608s]    57 |   DMCANMsg *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) override { return nullptr; };
+[2.608s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:57:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.608s]    57 |   DMCANMsg *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override { return nullptr; };
+[2.608s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_vel[m[K(uint8_t, float)[m[K’:
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.608s]    59 |   DMCANMsg *ctrl_vel([01;35m[Kuint8_t motor_id[m[K, float vel) override { return nullptr; };
+[2.608s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:59:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.608s]    59 |   DMCANMsg *ctrl_vel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override { return nullptr; };
+[2.608s]       |                                        [01;35m[K~~~~~~^~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_pos_vel[m[K(uint8_t, float, float)[m[K’:
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:61:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.608s]    61 |   DMCANMsg *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) override {
+[2.608s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:61:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.608s]    61 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) override {
+[2.608s]       |                                            [01;35m[K~~~~~~^~~[m[K
+[2.608s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:61:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.608s]    61 |   DMCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) override {
+[2.609s]       |                                                       [01;35m[K~~~~~~^~~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[Kctrl_torque[m[K(uint8_t, float)[m[K’:
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    65 |   DMCANMsg *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.609s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:65:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    65 |   DMCANMsg *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.609s]       |                                           [01;35m[K~~~~~~^~~~~~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetPosKP[m[K(uint8_t, float)[m[K’:
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:70:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    70 |   DMCANMsg *setPosKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.609s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:70:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    70 |   DMCANMsg *setPosKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.609s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetPosKD[m[K(uint8_t, float)[m[K’:
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    71 |   DMCANMsg *setPosKD([01;35m[Kuint8_t motor_id[m[K, float kd) override { return nullptr; };
+[2.609s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:71:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    71 |   DMCANMsg *setPosKD(uint8_t motor_id, [01;35m[Kfloat kd[m[K) override { return nullptr; };
+[2.609s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetVelKP[m[K(uint8_t, float)[m[K’:
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:73:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    73 |   DMCANMsg *setVelKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.609s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:73:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    73 |   DMCANMsg *setVelKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.609s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetVelKI[m[K(uint8_t, float)[m[K’:
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    74 |   DMCANMsg *setVelKI([01;35m[Kuint8_t motor_id[m[K, float ki) override { return nullptr; };
+[2.609s]       |                      [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:74:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    74 |   DMCANMsg *setVelKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override { return nullptr; };
+[2.609s]       |                                        [01;35m[K~~~~~~^~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetTorqueKP[m[K(uint8_t, float)[m[K’:
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    76 |   DMCANMsg *setTorqueKP([01;35m[Kuint8_t motor_id[m[K, float kp) override {
+[2.609s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:76:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    76 |   DMCANMsg *setTorqueKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override {
+[2.609s]       |                                           [01;35m[K~~~~~~^~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetTorqueKI[m[K(uint8_t, float)[m[K’:
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:79:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    79 |   DMCANMsg *setTorqueKI([01;35m[Kuint8_t motor_id[m[K, float ki) override {
+[2.609s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:79:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.609s]    79 |   DMCANMsg *setTorqueKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override {
+[2.609s]       |                                           [01;35m[K~~~~~~^~[m[K
+[2.609s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetSafeTorque[m[K(uint8_t, float)[m[K’:
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:83:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.610s]    83 |   DMCANMsg *setSafeTorque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.610s]       |                           [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:83:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.610s]    83 |   DMCANMsg *setSafeTorque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.610s]       |                                             [01;35m[K~~~~~~^~~~~~[m[K
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetSafePos[m[K(uint8_t, float)[m[K’:
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:86:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.610s]    86 |   DMCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) override {
+[2.610s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:86:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.610s]    86 |   DMCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override {
+[2.610s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:[m[K In member function ‘[01m[Kvirtual DMCANMsg* DMMotor::[01;32m[KsetSafeVel[m[K(uint8_t, float)[m[K’:
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:89:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.610s]    89 |   DMCANMsg *setSafeVel([01;35m[Kuint8_t motor_id[m[K, float vel) override {
+[2.610s]       |                        [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/DMMotor.h:89:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.610s]    89 |   DMCANMsg *setSafeVel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override {
+[2.610s]       |                                          [01;35m[K~~~~~~^~~[m[K
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:[m[K At global scope:
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:273:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K()[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.610s]   273 |   MotorBack [01;35m[Kdecode[m[K() override { return MotorBack(); };
+[2.610s]       |             [01;35m[K^~~~~~[m[K
+[2.610s] In file included from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.hpp:6[m[K:
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:69:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack STWMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.610s]    69 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.610s]       |             [01;36m[K^~~~~~[m[K
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:272:13:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual MotorBack CANMotor::[01;32m[Kdecode[m[K(UnitreeMsg)[m[K’ was hidden [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverloaded-virtual=-Woverloaded-virtual=]8;;[m[K]
+[2.610s]   272 |   MotorBack [01;35m[Kdecode[m[K(UnitreeMsg /*msg*/) override { return MotorBack(); };
+[2.610s]       |             [01;35m[K^~~~~~[m[K
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:69:13:[m[K [01;36m[Knote: [m[K  by ‘[01m[Kvirtual MotorBack STWMotor::[01;32m[Kdecode[m[K(CANMSG)[m[K’
+[2.610s]    69 |   MotorBack [01;36m[Kdecode[m[K(CANMSG msg) override;
+[2.610s]       |             [01;36m[K^~~~~~[m[K
+[2.610s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_pos[m[K(uint8_t, float)[m[K’:
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:76:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    76 |   STWCANMsg *ctrl_pos([01;35m[Kuint8_t motor_id[m[K, float pos) override { return nullptr; };
+[2.611s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:76:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    76 |   STWCANMsg *ctrl_pos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override { return nullptr; };
+[2.611s]       |                                         [01;35m[K~~~~~~^~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_vel[m[K(uint8_t, float)[m[K’:
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:78:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    78 |   STWCANMsg *ctrl_vel([01;35m[Kuint8_t motor_id[m[K, float vel) override { return nullptr; };
+[2.611s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:78:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    78 |   STWCANMsg *ctrl_vel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override { return nullptr; };
+[2.611s]       |                                         [01;35m[K~~~~~~^~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_pos_vel[m[K(uint8_t, float, float)[m[K’:
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:80:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    80 |   STWCANMsg *ctrl_pos_vel([01;35m[Kuint8_t motor_id[m[K, float pos, float vel) override {
+[2.611s]       |                           [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:80:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    80 |   STWCANMsg *ctrl_pos_vel(uint8_t motor_id, [01;35m[Kfloat pos[m[K, float vel) override {
+[2.611s]       |                                             [01;35m[K~~~~~~^~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:80:62:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    80 |   STWCANMsg *ctrl_pos_vel(uint8_t motor_id, float pos, [01;35m[Kfloat vel[m[K) override {
+[2.611s]       |                                                        [01;35m[K~~~~~~^~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[Kctrl_torque[m[K(uint8_t, float)[m[K’:
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:84:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    84 |   STWCANMsg *ctrl_torque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.611s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:84:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    84 |   STWCANMsg *ctrl_torque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.611s]       |                                            [01;35m[K~~~~~~^~~~~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetPosKP[m[K(uint8_t, float)[m[K’:
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:90:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    90 |   STWCANMsg *setPosKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.611s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:90:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    90 |   STWCANMsg *setPosKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.611s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetPosKD[m[K(uint8_t, float)[m[K’:
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:91:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    91 |   STWCANMsg *setPosKD([01;35m[Kuint8_t motor_id[m[K, float kd) override { return nullptr; };
+[2.611s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.611s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:91:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.611s]    91 |   STWCANMsg *setPosKD(uint8_t motor_id, [01;35m[Kfloat kd[m[K) override { return nullptr; };
+[2.611s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetVelKP[m[K(uint8_t, float)[m[K’:
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:93:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]    93 |   STWCANMsg *setVelKP([01;35m[Kuint8_t motor_id[m[K, float kp) override { return nullptr; };
+[2.612s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:93:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]    93 |   STWCANMsg *setVelKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override { return nullptr; };
+[2.612s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetVelKI[m[K(uint8_t, float)[m[K’:
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:94:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]    94 |   STWCANMsg *setVelKI([01;35m[Kuint8_t motor_id[m[K, float ki) override { return nullptr; };
+[2.612s]       |                       [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:94:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]    94 |   STWCANMsg *setVelKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override { return nullptr; };
+[2.612s]       |                                         [01;35m[K~~~~~~^~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetTorqueKP[m[K(uint8_t, float)[m[K’:
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:96:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]    96 |   STWCANMsg *setTorqueKP([01;35m[Kuint8_t motor_id[m[K, float kp) override {
+[2.612s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:96:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]    96 |   STWCANMsg *setTorqueKP(uint8_t motor_id, [01;35m[Kfloat kp[m[K) override {
+[2.612s]       |                                            [01;35m[K~~~~~~^~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetTorqueKI[m[K(uint8_t, float)[m[K’:
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:99:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]    99 |   STWCANMsg *setTorqueKI([01;35m[Kuint8_t motor_id[m[K, float ki) override {
+[2.612s]       |                          [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:99:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kki[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]    99 |   STWCANMsg *setTorqueKI(uint8_t motor_id, [01;35m[Kfloat ki[m[K) override {
+[2.612s]       |                                            [01;35m[K~~~~~~^~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetSafeTorque[m[K(uint8_t, float)[m[K’:
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:103:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]   103 |   STWCANMsg *setSafeTorque([01;35m[Kuint8_t motor_id[m[K, float torque) override {
+[2.612s]       |                            [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:103:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktorque[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]   103 |   STWCANMsg *setSafeTorque(uint8_t motor_id, [01;35m[Kfloat torque[m[K) override {
+[2.612s]       |                                              [01;35m[K~~~~~~^~~~~~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetSafePos[m[K(uint8_t, float)[m[K’:
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:106:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]   106 |   STWCANMsg *setSafePos([01;35m[Kuint8_t motor_id[m[K, float pos) override {
+[2.612s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:106:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]   106 |   STWCANMsg *setSafePos(uint8_t motor_id, [01;35m[Kfloat pos[m[K) override {
+[2.612s]       |                                           [01;35m[K~~~~~~^~~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:[m[K In member function ‘[01m[Kvirtual STWCANMsg* STWMotor::[01;32m[KsetSafeVel[m[K(uint8_t, float)[m[K’:
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:109:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmotor_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]   109 |   STWCANMsg *setSafeVel([01;35m[Kuint8_t motor_id[m[K, float vel) override {
+[2.612s]       |                         [01;35m[K~~~~~~~~^~~~~~~~[m[K
+[2.612s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/STWMotor.h:109:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.612s]   109 |   STWCANMsg *setSafeVel(uint8_t motor_id, [01;35m[Kfloat vel[m[K) override {
+[2.612s]       |                                           [01;35m[K~~~~~~^~~[m[K
+[4.713s] In file included from [01m[K/usr/include/c++/13/bits/alloc_traits.h:33[m[K,
+[4.713s]                  from [01m[K/usr/include/c++/13/ext/alloc_traits.h:34[m[K,
+[4.713s]                  from [01m[K/usr/include/c++/13/bits/hashtable_policy.h:39[m[K,
+[4.713s]                  from [01m[K/usr/include/c++/13/bits/hashtable.h:35[m[K,
+[4.713s]                  from [01m[K/usr/include/c++/13/bits/unordered_map.h:33[m[K,
+[4.713s]                  from [01m[K/usr/include/c++/13/unordered_map:41[m[K,
+[4.713s]                  from [01m[K/usr/include/c++/13/functional:63[m[K,
+[4.713s]                  from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/include/BaseCAN.h:4[m[K,
+[4.713s]                  from [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/include/CommunicationCenter.hpp:2[m[K:
+[4.713s] /usr/include/c++/13/bits/stl_construct.h: In instantiation of ‘[01m[Kvoid std::[01;32m[K_Construct[m[K(_Tp*, _Args&& ...) [35m[K[with _Tp = VirtualMotor; _Args = {}][m[K[m[K’:
+[4.713s] [01m[K/usr/include/c++/13/bits/alloc_traits.h:660:19:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<void> >::[01;32m[Kconstruct[m[K(allocator_type&, _Up*, _Args&& ...) [35m[K[with _Up = VirtualMotor; _Args = {}; allocator_type = std::allocator<void>][m[K[m[K’
+[4.713s] [01m[K/usr/include/c++/13/bits/shared_ptr_base.h:604:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::[01;32m[K_Sp_counted_ptr_inplace[m[K(_Alloc, _Args&& ...) [35m[K[with _Args = {}; _Tp = VirtualMotor; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[4.713s] [01m[K/usr/include/c++/13/bits/shared_ptr_base.h:971:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::[01;32m[K__shared_count[m[K(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [35m[K[with _Tp = VirtualMotor; _Alloc = std::allocator<void>; _Args = {}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[4.713s] [01m[K/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::[01;32m[K__shared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {}; _Tp = VirtualMotor; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[4.713s] [01m[K/usr/include/c++/13/bits/shared_ptr.h:464:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::[01;32m[Kshared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {}; _Tp = VirtualMotor][m[K[m[K’
+[4.713s] [01m[K/usr/include/c++/13/bits/shared_ptr.h:1009:14:[m[K   required from ‘[01m[Kstd::shared_ptr<typename std::enable_if<(! std::is_array< <template-parameter-1-1> >::value), _Tp>::type> std::[01;32m[Kmake_shared[m[K(_Args&& ...) [35m[K[with _Tp = VirtualMotor; _Args = {}; typename enable_if<(! is_array< <template-parameter-1-1> >::value), _Tp>::type = VirtualMotor][m[K[m[K’
+[4.713s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:431:39:[m[K   required from here
+[4.713s] [01m[K/usr/include/c++/13/bits/stl_construct.h:119:7:[m[K [01;31m[Kerror: [m[Kinvalid new-expression of abstract class type ‘[01m[KVirtualMotor[m[K’
+[4.713s]   119 |       [01;31m[K::new((void*)__p) _Tp(std::forward<_Args>(__args)...)[m[K;
+[4.713s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.713s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:278:7:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[KVirtualMotor[m[K’:
+[4.713s]   278 | class [01;36m[KVirtualMotor[m[K : public BaseMotor {
+[4.713s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[4.713s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/motor_driver/Motor.hpp:110:16:[m[K [01;36m[Knote: [m[K    ‘[01m[Kvirtual void BaseMotor::[01;32m[KclearErr[m[K()[m[K’
+[4.713s]   110 |   virtual void [01;36m[KclearErr[m[K() = 0;
+[4.713s]       |                [01;36m[K^~~~~~~~[m[K
+[6.427s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:[m[K In member function ‘[01m[Kvoid CommunicationCenter::[01;32m[KsendMotor[m[K(std::shared_ptr<rlfw_msgs::msg::JointCtrl_<std::allocator<void> > >)[m[K’:
+[6.427s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:199:23:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[6.427s]   199 |     [01;35m[Kmotor->enableMotor(true)[m[K;
+[6.427s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[6.427s] [01m[K/home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/src/CommunicationCenter.cpp:201:3:[m[K [01;36m[Knote: [m[Khere
+[6.427s]   201 |   [01;36m[Kcase[m[K MotorCtrlType::DISABLE: {
+[6.427s]       |   [01;36m[K^~~~[m[K
+[6.475s] gmake[2]: *** [CMakeFiles/CommunicationCenter.dir/build.make:76：CMakeFiles/CommunicationCenter.dir/src/CommunicationCenter.cpp.o] 错误 1
+[6.475s] gmake[1]: *** [CMakeFiles/Makefile2:202：CMakeFiles/CommunicationCenter.dir/all] 错误 2
+[6.476s] gmake: *** [Makefile:146：all] 错误 2
+[6.477s] Invoked command in '/home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/albusgive/rlfw/rlfw_deploy/build/CommunicationCenter -- -j20 -l20

@@ -30,18 +30,22 @@ enum class MotorWarning {
   MosOverTemperature,  // MOS管过温
   CoilOverTemperature, // 线圈过温
   OverLoad,            // 过载
+  ControllerError,     // 控制器错误
+  MotorError,          //电机错误
 };
 
 class MotorBack {
 public:
   int id;
-  std::string joint_name;
   float angle = 0;
   float number_laps = 0; // 圈数
   float vel = 0;
   float torque = 0;
   float current = 0;
-  float temperature = 0; // 摄氏度
+  float temperature = 0;  // 摄氏度
+  int lifeCounter = 0;    //心跳
+  uint32_t errorCode = 0; // 错误码
+  bool is_update = true;  //是否真正更新关节数据
 
   MotorWarning warning = MotorWarning::Normal;
   void print() {
@@ -103,6 +107,7 @@ public:
   virtual void ctrl_pos_vel(float pos, float vel) = 0;
   virtual void ctrl_torque(float torque) = 0;
   virtual void enableMotor(bool enable, bool clear_fault = false) = 0;
+  virtual void clearErr() = 0;
   virtual void setZeroPoint() = 0;
   virtual void setPosKP(float kp) = 0;
   virtual void setPosKD(float kd) = 0;
@@ -147,6 +152,7 @@ public:
   // 电机使能/失能 清除错误
   virtual CANMSG *enableMotor(uint8_t /*motor_id*/, bool /*enable*/,
                               bool /*clear_fault*/ = false) = 0;
+  virtual CANMSG *clearErr(uint8_t /*motor_id*/) = 0;
   /*--------电机参数设置--------*/
   virtual CANMSG *setZeroPoint(uint8_t /*motor_id*/) = 0;
   virtual CANMSG *setCtrlType(uint8_t /*motor_id*/) = 0;
@@ -173,91 +179,94 @@ public:
     float vel_ = clip(vel, vel_range[0], vel_range[1]);
     float angle = pos_ + default_;
     if (invert)
-      can->send(can->channel, locomotion(id, -torque_, -angle, -vel_, kp, kd));
+      can->send(locomotion(id, -torque_, -angle, -vel_, kp, kd));
     else
-      can->send(can->channel, locomotion(id, torque_, angle, vel_, kp, kd));
+      can->send(locomotion(id, torque_, angle, vel_, kp, kd));
   }
   void ctrl_pos(float pos) override {
     float pos_ = clip(pos, pos_range[0], pos_range[1]);
     float angle = pos_ + default_;
     if (invert)
-      can->send(can->channel, ctrl_pos(id, -angle));
+      can->send(ctrl_pos(id, -angle));
     else
-      can->send(can->channel, ctrl_pos(id, angle));
+      can->send(ctrl_pos(id, angle));
   }
   void ctrl_vel(float vel) override {
     float vel_ = clip(vel, vel_range[0], vel_range[1]);
     if (invert)
-      can->send(can->channel, ctrl_vel(id, -vel_));
+      can->send(ctrl_vel(id, -vel_));
     else
-      can->send(can->channel, ctrl_vel(id, vel_));
+      can->send(ctrl_vel(id, vel_));
   }
   void ctrl_pos_vel(float pos, float vel) override {
     float pos_ = clip(pos, pos_range[0], pos_range[1]);
     float vel_ = clip(vel, vel_range[0], vel_range[1]);
     float angle = pos_ + default_;
     if (invert)
-      can->send(can->channel, ctrl_pos_vel(id, -angle, -vel_));
+      can->send(ctrl_pos_vel(id, -angle, -vel_));
     else
-      can->send(can->channel, ctrl_pos_vel(id, angle, vel_));
+      can->send(ctrl_pos_vel(id, angle, vel_));
   }
   void ctrl_torque(float torque) override {
     float torque_ = clip(torque, torque_range[0], torque_range[1]);
     if (invert)
-      can->send(can->channel, ctrl_torque(id, -torque_));
+      can->send(ctrl_torque(id, -torque_));
     else
-      can->send(can->channel, ctrl_torque(id, torque_));
+      can->send(ctrl_torque(id, torque_));
   }
   void enableMotor(bool enable, bool clear_fault = false) override {
-    can->send(can->channel, enableMotor(id, enable, clear_fault));
+    can->send(enableMotor(id, enable, clear_fault));
+  }
+  void clearErr() override {
+    can->send(clearErr(id));
   }
   /*----------设置电机参数----------*/
-  void setZeroPoint() override { can->send(can->channel, setZeroPoint(id)); }
-  void setCtrlType() override { can->send(can->channel, setCtrlType(id)); }
+  void setZeroPoint() override { can->send(setZeroPoint(id)); }
+  void setCtrlType() override { can->send(setCtrlType(id)); }
   void setPosKP(float kp) override {
     if (kp == -1)
       return;
-    can->send(can->channel, setPosKP(id, kp));
+    can->send(setPosKP(id, kp));
   }
   void setPosKD(float kd) override {
     if (kd == -1)
       return;
-    can->send(can->channel, setPosKD(id, kd));
+    can->send(setPosKD(id, kd));
   }
   void setVelKP(float kp) override {
     if (kp == -1)
       return;
-    can->send(can->channel, setVelKP(id, kp));
+    can->send(setVelKP(id, kp));
   }
   void setVelKI(float ki) override {
     if (ki == -1)
       return;
-    can->send(can->channel, setVelKI(id, ki));
+    can->send(setVelKI(id, ki));
   }
   void setTorqueKP(float kp) override {
     if (kp == -1)
       return;
-    can->send(can->channel, setTorqueKP(id, kp));
+    can->send(setTorqueKP(id, kp));
   }
   void setTorqueKI(float ki) override {
     if (ki == -1)
       return;
-    can->send(can->channel, setTorqueKI(id, ki));
+    can->send(setTorqueKI(id, ki));
   }
   void setSafeTorque(float torque) override {
     if (torque == -1)
       return;
-    can->send(can->channel, setSafeTorque(id, torque));
+    can->send(setSafeTorque(id, torque));
   }
   void setSafePos(float pos) override {
     if (pos == -1)
       return;
-    can->send(can->channel, setSafePos(id, pos));
+    can->send(setSafePos(id, pos));
   }
   void setSafeVel(float vel) override {
     if (vel == -1)
       return;
-    can->send(can->channel, setSafeVel(id, vel));
+    can->send(setSafeVel(id, vel));
   }
   // 没有用的虚函数
   MotorBack decode(UnitreeMsg /*msg*/) override { return MotorBack(); };
@@ -270,7 +279,7 @@ class VirtualMotor : public BaseMotor {
 public:
   VirtualMotortype type = VirtualMotortype::ERR;
   /*--------电机控制--------*/
-  bool terminal = false;        // 虚拟末端解算 角度,角速度,末端距离
+  bool terminal = false; // 虚拟末端解算 角度,角速度,末端距离
   float default_theta = M_PI_4; // 默认45度
   std::shared_ptr<BaseMotor> motor1;
   std::shared_ptr<BaseMotor> motor2;
@@ -395,6 +404,10 @@ public:
     motor1->enableMotor(enable, clear_fault);
     motor2->enableMotor(enable, clear_fault);
   }
+  void clearErr() override{
+    motor1->clearErr();
+    motor2->clearErr();
+  }
   /*----------更新电机参数----------*/
   void update() {
     switch (type) {
@@ -448,5 +461,5 @@ public:
   MotorBack decode(CANMSG /*msg*/) override { return MotorBack(); };
   MotorBack decode(UnitreeMsg /*msg*/) override { return MotorBack(); };
   MotorBack decode() override { return MotorBack(); };
-  void setCtrlType() override {};
+  void setCtrlType() override{};
 };

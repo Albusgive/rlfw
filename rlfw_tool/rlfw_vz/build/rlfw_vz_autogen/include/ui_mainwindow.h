@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.8.2
+** Created by: Qt User Interface Compiler version 6.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -161,35 +161,35 @@ public:
         label = new QLabel(widget);
         label->setObjectName("label");
 
-        formLayout->setWidget(0, QFormLayout::LabelRole, label);
+        formLayout->setWidget(0, QFormLayout::ItemRole::LabelRole, label);
 
         coms_text_edit = new QTextEdit(widget);
         coms_text_edit->setObjectName("coms_text_edit");
         coms_text_edit->setStyleSheet(QString::fromUtf8("background-color: rgb(204, 255, 244);"));
 
-        formLayout->setWidget(0, QFormLayout::FieldRole, coms_text_edit);
+        formLayout->setWidget(0, QFormLayout::ItemRole::FieldRole, coms_text_edit);
 
         label_2 = new QLabel(widget);
         label_2->setObjectName("label_2");
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, label_2);
+        formLayout->setWidget(1, QFormLayout::ItemRole::LabelRole, label_2);
 
         joints_text_edit = new QTextEdit(widget);
         joints_text_edit->setObjectName("joints_text_edit");
         joints_text_edit->setStyleSheet(QString::fromUtf8("background-color: rgb(204, 255, 244);"));
 
-        formLayout->setWidget(1, QFormLayout::FieldRole, joints_text_edit);
+        formLayout->setWidget(1, QFormLayout::ItemRole::FieldRole, joints_text_edit);
 
         label_3 = new QLabel(widget);
         label_3->setObjectName("label_3");
 
-        formLayout->setWidget(3, QFormLayout::LabelRole, label_3);
+        formLayout->setWidget(3, QFormLayout::ItemRole::LabelRole, label_3);
 
         remotes_text_edit = new QTextEdit(widget);
         remotes_text_edit->setObjectName("remotes_text_edit");
         remotes_text_edit->setStyleSheet(QString::fromUtf8("background-color: rgb(204, 255, 244);"));
 
-        formLayout->setWidget(3, QFormLayout::FieldRole, remotes_text_edit);
+        formLayout->setWidget(3, QFormLayout::ItemRole::FieldRole, remotes_text_edit);
 
 
         gridLayout_3->addWidget(widget, 0, 0, 1, 1);

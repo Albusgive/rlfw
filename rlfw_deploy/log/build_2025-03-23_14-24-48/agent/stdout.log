@@ -1,4 +1,0 @@
-[ 33%] [32mBuilding CXX object CMakeFiles/agent.dir/src/AgentNode.cpp.o[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/agent.dir/src/gs2mj.cpp.o[0m
-[100%] [32m[1mLinking CXX executable agent[0m
-[100%] Built target agent

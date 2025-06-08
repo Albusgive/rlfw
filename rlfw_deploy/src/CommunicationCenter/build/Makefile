@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter
+CMAKE_SOURCE_DIR = /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build
+CMAKE_BINARY_DIR = /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive2/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/albusgive/rlfw/rlfw_deploy/src/CommunicationCenter/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -672,6 +672,30 @@ motor_driver/RMMotor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/motor_driver/RMMotor.cpp.s
 .PHONY : motor_driver/RMMotor.cpp.s
 
+motor_driver/STWMotor.o: motor_driver/STWMotor.cpp.o
+.PHONY : motor_driver/STWMotor.o
+
+# target to build an object file
+motor_driver/STWMotor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/motor_driver/STWMotor.cpp.o
+.PHONY : motor_driver/STWMotor.cpp.o
+
+motor_driver/STWMotor.i: motor_driver/STWMotor.cpp.i
+.PHONY : motor_driver/STWMotor.i
+
+# target to preprocess a source file
+motor_driver/STWMotor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/motor_driver/STWMotor.cpp.i
+.PHONY : motor_driver/STWMotor.cpp.i
+
+motor_driver/STWMotor.s: motor_driver/STWMotor.cpp.s
+.PHONY : motor_driver/STWMotor.s
+
+# target to generate assembly for a file
+motor_driver/STWMotor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/motor_driver/STWMotor.cpp.s
+.PHONY : motor_driver/STWMotor.cpp.s
+
 remote_driver/gamepad.o: remote_driver/gamepad.cpp.o
 .PHONY : remote_driver/gamepad.o
 
@@ -816,6 +840,30 @@ src/XMLDecoder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/XMLDecoder.cpp.s
 .PHONY : src/XMLDecoder.cpp.s
 
+src/ZCAN.o: src/ZCAN.cpp.o
+.PHONY : src/ZCAN.o
+
+# target to build an object file
+src/ZCAN.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ZCAN.cpp.o
+.PHONY : src/ZCAN.cpp.o
+
+src/ZCAN.i: src/ZCAN.cpp.i
+.PHONY : src/ZCAN.i
+
+# target to preprocess a source file
+src/ZCAN.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ZCAN.cpp.i
+.PHONY : src/ZCAN.cpp.i
+
+src/ZCAN.s: src/ZCAN.cpp.s
+.PHONY : src/ZCAN.s
+
+# target to generate assembly for a file
+src/ZCAN.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommunicationCenter.dir/build.make CMakeFiles/CommunicationCenter.dir/src/ZCAN.cpp.s
+.PHONY : src/ZCAN.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -919,6 +967,9 @@ help:
 	@echo "... motor_driver/RMMotor.o"
 	@echo "... motor_driver/RMMotor.i"
 	@echo "... motor_driver/RMMotor.s"
+	@echo "... motor_driver/STWMotor.o"
+	@echo "... motor_driver/STWMotor.i"
+	@echo "... motor_driver/STWMotor.s"
 	@echo "... remote_driver/gamepad.o"
 	@echo "... remote_driver/gamepad.i"
 	@echo "... remote_driver/gamepad.s"
@@ -937,6 +988,9 @@ help:
 	@echo "... src/XMLDecoder.o"
 	@echo "... src/XMLDecoder.i"
 	@echo "... src/XMLDecoder.s"
+	@echo "... src/ZCAN.o"
+	@echo "... src/ZCAN.i"
+	@echo "... src/ZCAN.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

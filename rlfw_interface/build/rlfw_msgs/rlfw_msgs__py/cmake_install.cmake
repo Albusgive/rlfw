@@ -1,8 +1,8 @@
-# Install script for directory: /home/albusgive2/rlfw/rlfw_interface/build/rlfw_msgs/rlfw_msgs__py
+# Install script for directory: /home/albusgive/rlfw/rlfw_interface/build/rlfw_msgs/rlfw_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/albusgive2/rlfw/rlfw_interface/install/rlfw_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/albusgive/rlfw/rlfw_interface/install/rlfw_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

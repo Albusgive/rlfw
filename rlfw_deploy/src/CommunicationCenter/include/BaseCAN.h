@@ -15,6 +15,8 @@
 #define CAN_ERRFRAME 0x40U
 #define CAN_STATUS 0x80U
 
+enum class CANBps { Brt_1M, Brt_800k, Brt_500k, Brt_250k, Brt_125k, Brt_100k };
+
 struct CANMSG {
   uint32_t ID;
   uint8_t MSGTYPE;
@@ -26,12 +28,13 @@ class BaseCAN {
 public:
   BaseCAN() {};
   int channel = -1;
+  std::vector<int> sub_channel;
+  std::vector<CANBps> sub_bps;
   std::string name;
   int decoder_idx=0;
   std::atomic_bool is_only_thread{false};
   virtual bool send(uint16_t /*CANx*/, CANMSG * /*msg*/) = 0;
   virtual std::pair<bool, CANMSG> receive(uint16_t /*CANx*/) = 0;
-
   bool send(CANMSG *msg) { return send(channel, msg); };
   std::pair<bool, CANMSG> receive() { return receive(channel); };
   virtual void

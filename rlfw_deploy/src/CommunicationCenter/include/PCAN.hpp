@@ -67,7 +67,9 @@ public:
   PCAN();
   ~PCAN();
   /*初始化CAN通道之后才能使用，RM电机则initPCAN之后使用readRMMotor为一组通道*/
-  bool initPCAN(TPCANHandle Channel, TPCANBaudrate Btr0Btr1);
+  bool initPCAN(CANBps Btr);
+  bool initPCAN(TPCANHandle CANx, CANBps Btr);
+  bool initPCAN(TPCANHandle Channel, TPCANBaudrate Btr);
   void readT(TPCANHandle CANx);
 
   /*以物理端口寻找PCAN设备，不是PCAN没有id，而是24块盗版更有性价比

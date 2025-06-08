@@ -2,7 +2,8 @@
 #include "BaseCAN.h"
 #include "ComCfg.hpp"
 #include "PCAN.hpp"
-#include "SocketCan.h"
+#include "STWMotor.h"
+#include "SocketCAN.h"
 #include "gamepad.h"
 #include "magic_enum/magic_enum.hpp"
 #include "serial.hpp"
@@ -27,7 +28,7 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
   // topic发送基础remote接收到的数据
   remote_publisher = this->create_publisher<rlfw_msgs::msg::Remote>(
       "rlfwRemoteBack", remote_qos);
-  xml_decoder.load(motor_cfg_path);
+  xml_decoder.load(robot_cfg_path);
   int his_size = 0;
   for (auto com : xml_decoder.coms) {
     for (auto m : com.xml_motors)
@@ -67,7 +68,6 @@ CommunicationCenter::CommunicationCenter(const std::string &node_name)
     std::cout << "xml load check succeed" << std::endl;
     buildMap();
   }
-  RunRecv();
 }
 
 CommunicationCenter::~CommunicationCenter() {
@@ -100,6 +100,8 @@ void CommunicationCenter::fromCan(CANMSG &msg, std::vector<int> &device_ids,
     motor_back = deceder->decode(msg);
     for (auto id : device_ids) {
       if (id == motor_back.id) {
+        if (!motor_back.is_update)
+          return;
         rlfw_msgs::msg::Joint pub_motor_msg;
         pub_motor_msg.set__joint_id(motor_back.id);
         rlfw_msgs::msg::Joint::_jointname_type jointname;
@@ -144,10 +146,6 @@ void CommunicationCenter::fromRemote(std::vector<std::string> &key,
   msg.set__key(key);
   msg.set__value(value);
   remote_publisher->publish(msg);
-}
-
-void CommunicationCenter::RunRecv() {
-
 }
 
 void CommunicationCenter::sendMotor(
@@ -198,14 +196,15 @@ void CommunicationCenter::sendMotor(
     break;
   }
   case MotorCtrlType::ENABLE: {
-    motor->enableMotor(true);
-  }
+    motor->clearErr(); //stw需要单独清除错误
+    motor->enableMotor(true,true);
+  }break;
   case MotorCtrlType::DISABLE: {
     motor->enableMotor(false);
     break;
   }
   case MotorCtrlType::SETZERO: {
-      motor->setZeroPoint();
+    motor->setZeroPoint();
     break;
   }
   case MotorCtrlType::ERR: {
@@ -353,7 +352,8 @@ void CommunicationCenter::buildMap() {
       auto pcan = std::make_shared<PCAN>();
       pcan->channel = PCAN1 + com.channel - 1;
       pcan->name = com.name;
-      if (pcan->initPCAN(pcan->channel, BAUD_1MBPS)) {
+      CANBps bps = xml_decoder.string2enum<CANBps>("Brt_" + com.brt);
+      if (pcan->initPCAN( bps)) {
         // 增加电机
         addCanMotor(pcan, com);
       } else {
@@ -471,7 +471,8 @@ void CommunicationCenter::addCanMotor(std::shared_ptr<BaseCAN> can,
   std::vector<std::shared_ptr<BaseMotor>> motor_decoders;
   for (auto motor : com_cfg.xml_motors) {
     can->devive_ids.push_back(motor.id);
-    if (motor.type == Motortype::Mi) {
+    switch (motor.type) {
+    case Motortype::Mi: {
       auto mi = std::make_shared<MiMotor>();
       mi->can = can;
       initMotor(mi, motor);
@@ -485,7 +486,8 @@ void CommunicationCenter::addCanMotor(std::shared_ptr<BaseCAN> can,
       }
       if (is)
         motor_decoders.push_back(mi);
-    } else if (motor.type == Motortype::DM) {
+    } break;
+    case (Motortype::DM): {
       auto dm = std::make_shared<DMMotor>();
       dm->can = can;
       initMotor(dm, motor);
@@ -498,8 +500,31 @@ void CommunicationCenter::addCanMotor(std::shared_ptr<BaseCAN> can,
       }
       if (is)
         motor_decoders.push_back(dm);
+    } break;
+    case (Motortype::STW): {
+      auto stw = std::make_shared<STWMotor>();
+      stw->can = can;
+      initMotor(stw, motor);
+      //清除数据
+      motor_map[motor.joint_name] = stw;
+      motorID_map[motor.id] = stw;
+      bool is = true;
+      for (auto decode : motor_decoders) {
+        if (decode->motor_type == stw->motor_type)
+          is = false;
+      }
+      if (is)
+        motor_decoders.push_back(stw);
+    } break;
+    case (Motortype::RM):
+      break;
+    case (Motortype::ERR):
+      break;
+    case (Motortype::UNITREE):
+      break;
     }
   }
+  // usb2can独立线程接收数据并解码
   can->connectDecode(
       std::bind(&CommunicationCenter::fromCan, this, _1, _2, _3, _4));
   can->RunRecv();
@@ -515,7 +540,7 @@ void CommunicationCenter::initMotor(std::shared_ptr<BaseMotor> _motor,
                                     XMLMotor xml_motor) {
   _motor->id = xml_motor.id;
   _motor->ctrl_type = xml_motor.ctrl_type;
-  _motor->enableMotor(true);
+  _motor->clearErr();
   _motor->setCtrlType();
   _motor->setPosKP(xml_motor.PosKP);
   _motor->setPosKP(xml_motor.PosKD);
@@ -532,5 +557,5 @@ void CommunicationCenter::initMotor(std::shared_ptr<BaseMotor> _motor,
   _motor->setTorqueRange(xml_motor.torque_range[0], xml_motor.torque_range[1]);
   _motor->setVelRange(xml_motor.vel_range[0], xml_motor.vel_range[1]);
   _motor->setPosRange(xml_motor.pos_range[0], xml_motor.pos_range[1]);
-  _motor->enableMotor(true);
+  _motor->enableMotor(true,true);
 }
